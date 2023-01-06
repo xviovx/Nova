@@ -161,18 +161,23 @@ namespace NovaApp.Views
             {
                 var items = await GetFundsAsync();
 
-                if (items != null)
+                FundsList.Clear();
+                GroupedFundsList.Clear();
+
+                if (items != null && items.Count > 0)
                 {
-                    FundsList.Clear();
                     foreach (var item in items)
                     {
                         FundsList.Add(item);
                     }
+                    GroupProjects();
+                    CalculateTotals();
+                    UpdateChartData();
                 }
-
-                GroupProjects();
-                CalculateTotals();
-                UpdateChartData();
+                else
+                {
+                    CalculateTotals(); 
+                }
             }
             catch (Exception e)
             {
@@ -234,6 +239,11 @@ namespace NovaApp.Views
         {
             ObservableCollection<Fund> tempGroup = null;
 
+            if (FundsList.Count == 0)
+            {
+                return;
+            }
+
             for (int i = 0; i < FundsList.Count; i++)
             {
                 if (i % 2 == 0)
@@ -275,6 +285,14 @@ namespace NovaApp.Views
 
         public void CalculateTotals()
         {
+            if (FundsList.Count == 0)
+            {
+                TotalReceivedLabel = "R0.00";
+                TotalSpentLabel = "R0.00";
+                TotalFundsLabel = "R0.00";
+                return;
+            }
+
             decimal totalReceived = FundsList.Sum(f => f.income);
             decimal totalSpent = FundsList.Sum(f => f.expenses);
             decimal totalFunds = totalReceived - totalSpent;
