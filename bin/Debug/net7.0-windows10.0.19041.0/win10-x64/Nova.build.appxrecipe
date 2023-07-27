@@ -34,6 +34,9 @@
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Nova.dll">
       <PackagePath>Nova.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\Assets\BackgroundImage.png">
+      <PackagePath>Assets\BackgroundImage.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Nova.exe</PackagePath>
     </AppxPackagedFile>
@@ -891,9 +894,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\nova_logo.scale-400.png">
       <PackagePath>nova_logo.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\Assets\BackgroundImage.png">
-      <PackagePath>Assets\BackgroundImage.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\Assets\logo.png">
       <PackagePath>Assets\logo.png</PackagePath>

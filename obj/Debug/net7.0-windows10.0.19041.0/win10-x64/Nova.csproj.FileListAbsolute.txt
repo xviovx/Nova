@@ -327,3 +327,4 @@ C:\Users\alexa\OneDrive\Documents\GitHub\Nova\obj\Debug\net7.0-windows10.0.19041
 C:\Users\alexa\OneDrive\Documents\GitHub\Nova\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\alexa\OneDrive\Documents\GitHub\Nova\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\alexa\OneDrive\Documents\GitHub\Nova\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\alexa\OneDrive\Documents\GitHub\Nova\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Assets\BackgroundImage.png

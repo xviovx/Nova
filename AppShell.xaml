@@ -6,58 +6,72 @@
     xmlns:local="clr-namespace:Nova"
     xmlns:views="clr-namespace:Nova.View"
     Shell.FlyoutBehavior="Locked"
-    BackgroundImageSource="Assets/BackgroundImage.png">
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#FF7070" >
 
-    <!--<ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />-->
+
+    <!--<Shell.FlyoutBackground>
+        <Image Source="Assets/logo.png"></Image>
+    </Shell.FlyoutBackground>-->
 
     <Shell.FlyoutHeader>
-        <Image Source="Assets/logo.png" HeightRequest="152"></Image>
+        <Image Source="Assets/logo.png" HeightRequest="124"></Image>
     </Shell.FlyoutHeader>
-
 
     <Shell.FlyoutFooter>
         <Label Text="Username" Padding="20"></Label>
     </Shell.FlyoutFooter>
 
-    <FlyoutItem Title="Dashboard" Icon="dotnet_bot.png">
+    <FlyoutItem Title="Dashboard">
         <Tab>
             <ShellContent 
-                Title="Dashboard"
-                ContentTemplate="{DataTemplate views:DashboardPage}"/>
-        </Tab>
-
-    </FlyoutItem>
-    <FlyoutItem Title="Clients" Icon="dotnet_bot.png">
-        <Tab>
-            <ShellContent 
-                Title="Clients"
-                ContentTemplate="{DataTemplate views:ClientListPage}"/>
-        </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="Staff" Icon="dotnet_bot.png">
-        <Tab>
-            <ShellContent 
-                Title="Staff"
-                ContentTemplate="{DataTemplate views:StaffListPage}"/>
-        </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="Projects" Icon="dotnet_bot.png">
-        <Tab>
-            <ShellContent 
-                Title="Projects"
-                ContentTemplate="{DataTemplate views:ProjectsPage}"/>
-        </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="Finances" Icon="dotnet_bot.png">
-        <Tab>
-            <ShellContent 
-                Title="Finances"
-                ContentTemplate="{DataTemplate views:FundsPage}"/>
+                ContentTemplate="{DataTemplate views:DashboardPage}"
+                Route="Dashboard"
+                Title=""
+                NavigationPage.HasNavigationBar="False" />
+            <!-- Hide the navigation bar -->
         </Tab>
     </FlyoutItem>
 
+    <FlyoutItem Title="Clients">
+        <Tab>
+            <ShellContent 
+                ContentTemplate="{DataTemplate views:ClientListPage}"
+                Route="Clients"
+                Title=""
+                NavigationPage.HasNavigationBar="False" />
+            <!-- Hide the navigation bar -->
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Staff">
+        <Tab>
+            <ShellContent 
+                ContentTemplate="{DataTemplate views:StaffListPage}"
+                Route="Staff"
+                NavigationPage.HasNavigationBar="False" />
+            <!-- Hide the navigation bar -->
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Projects">
+        <Tab>
+            <ShellContent 
+                ContentTemplate="{DataTemplate views:ProjectsPage}"
+                Route="Projects"
+                NavigationPage.HasNavigationBar="False" />
+            <!-- Hide the navigation bar -->
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Finances">
+        <Tab>
+            <ShellContent 
+                ContentTemplate="{DataTemplate views:FundsPage}"
+                Route="Finances"
+                NavigationPage.HasNavigationBar="False" />
+            <!-- Hide the navigation bar -->
+        </Tab>
+    </FlyoutItem>
 
 </Shell>

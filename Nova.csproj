@@ -3,6 +3,8 @@
 	<PropertyGroup>
 		<!--<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>-->
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFramework>net7.0-windows10.0.19041.0</TargetFramework>
+		<UsePreviewSdk>true</UsePreviewSdk>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!--<TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks>-->
 		<OutputType>Exe</OutputType>
@@ -50,6 +52,12 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Update="Assets\BackgroundImage.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
 	</ItemGroup>
 
 	<ItemGroup>

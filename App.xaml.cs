@@ -1,11 +1,15 @@
-﻿namespace Nova;
+﻿using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
-public partial class App : Application
+namespace Nova
 {
-	public App()
-	{
-		InitializeComponent();
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+            MainPage = new AppShell();
+        }
+    }
 }
