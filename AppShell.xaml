@@ -4,11 +4,60 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Nova"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:Nova.View"
+    Shell.FlyoutBehavior="Locked"
+    BackgroundImageSource="Assets/BackgroundImage.png">
 
-    <ShellContent
+    <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage" />-->
+
+    <Shell.FlyoutHeader>
+        <Image Source="Assets/logo.png" HeightRequest="152"></Image>
+    </Shell.FlyoutHeader>
+
+
+    <Shell.FlyoutFooter>
+        <Label Text="Username" Padding="20"></Label>
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem Title="Dashboard" Icon="dotnet_bot.png">
+        <Tab>
+            <ShellContent 
+                Title="Dashboard"
+                ContentTemplate="{DataTemplate views:DashboardPage}"/>
+        </Tab>
+
+    </FlyoutItem>
+    <FlyoutItem Title="Clients" Icon="dotnet_bot.png">
+        <Tab>
+            <ShellContent 
+                Title="Clients"
+                ContentTemplate="{DataTemplate views:ClientListPage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Staff" Icon="dotnet_bot.png">
+        <Tab>
+            <ShellContent 
+                Title="Staff"
+                ContentTemplate="{DataTemplate views:StaffListPage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Projects" Icon="dotnet_bot.png">
+        <Tab>
+            <ShellContent 
+                Title="Projects"
+                ContentTemplate="{DataTemplate views:ProjectsPage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Finances" Icon="dotnet_bot.png">
+        <Tab>
+            <ShellContent 
+                Title="Finances"
+                ContentTemplate="{DataTemplate views:FundsPage}"/>
+        </Tab>
+    </FlyoutItem>
+
 
 </Shell>

@@ -14,14 +14,13 @@
           "Microsoft.Extensions.Logging": "7.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
           "Microsoft.Extensions.Logging.Debug": "7.0.0",
-          "Microsoft.Maui.Graphics": "7.0.86",
-          "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": "7.0.86",
-          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.755",
+          "Microsoft.Maui.Graphics": "7.0.92",
+          "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": "7.0.92",
           "Microsoft.WindowsAppSDK": "1.2.221209.1",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.9",
-          "runtimepack.Microsoft.Maui.Core.Runtime.win": "7.0.86",
-          "runtimepack.Microsoft.Maui.Controls.Runtime.win": "7.0.86",
-          "runtimepack.Microsoft.Maui.Essentials.Runtime.win": "7.0.86",
+          "runtimepack.Microsoft.Maui.Core.Runtime.win": "7.0.92",
+          "runtimepack.Microsoft.Maui.Controls.Runtime.win": "7.0.92",
+          "runtimepack.Microsoft.Maui.Essentials.Runtime.win": "7.0.92",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.29"
         },
         "runtime": {
@@ -748,35 +747,35 @@
           }
         }
       },
-      "runtimepack.Microsoft.Maui.Core.Runtime.win/7.0.86": {
+      "runtimepack.Microsoft.Maui.Core.Runtime.win/7.0.92": {
         "runtime": {
           "Microsoft.Maui.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "7.0.70.16"
+            "fileVersion": "7.0.90.2"
           }
         }
       },
-      "runtimepack.Microsoft.Maui.Controls.Runtime.win/7.0.86": {
+      "runtimepack.Microsoft.Maui.Controls.Runtime.win/7.0.92": {
         "runtime": {
           "Microsoft.Maui.Controls.Compatibility.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "7.0.70.16"
+            "fileVersion": "7.0.90.2"
           },
           "Microsoft.Maui.Controls.Xaml.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "7.0.70.16"
+            "fileVersion": "7.0.90.2"
           },
           "Microsoft.Maui.Controls.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "7.0.70.16"
+            "fileVersion": "7.0.90.2"
           }
         }
       },
-      "runtimepack.Microsoft.Maui.Essentials.Runtime.win/7.0.86": {
+      "runtimepack.Microsoft.Maui.Essentials.Runtime.win/7.0.92": {
         "runtime": {
           "Microsoft.Maui.Essentials.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "7.0.70.16"
+            "fileVersion": "7.0.90.2"
           }
         }
       },
@@ -889,7 +888,7 @@
           }
         }
       },
-      "Microsoft.Graphics.Win2D/1.0.4": {
+      "Microsoft.Graphics.Win2D/1.0.5.1": {
         "dependencies": {
           "Microsoft.WindowsAppSDK": "1.2.221209.1"
         },
@@ -901,35 +900,36 @@
         },
         "native": {
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {
-            "fileVersion": "1.0.4.0"
+            "fileVersion": "1.0.5.0"
           }
         }
       },
-      "Microsoft.Maui.Graphics/7.0.86": {
+      "Microsoft.Maui.Graphics/7.0.92": {
         "runtime": {
           "lib/net7.0-windows10.0.19041/Microsoft.Maui.Graphics.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "7.0.70.16"
+            "fileVersion": "7.0.90.2"
           }
         }
       },
-      "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop/7.0.86": {
+      "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop/7.0.92": {
         "dependencies": {
-          "Microsoft.Graphics.Win2D": "1.0.4",
-          "Microsoft.Maui.Graphics": "7.0.86",
+          "Microsoft.Graphics.Win2D": "1.0.5.1",
+          "Microsoft.Maui.Graphics": "7.0.92",
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
           "Microsoft.WindowsAppSDK": "1.2.221209.1"
         },
         "runtime": {
           "lib/net7.0-windows10.0.19041/Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "7.0.70.16"
+            "fileVersion": "7.0.90.2"
           }
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.22621.755": {},
+      "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {},
       "Microsoft.WindowsAppSDK/1.2.221209.1": {
         "dependencies": {
-          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.755"
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756"
         },
         "runtime": {
           "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
@@ -1008,17 +1008,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Maui.Core.Runtime.win/7.0.86": {
+    "runtimepack.Microsoft.Maui.Core.Runtime.win/7.0.92": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Maui.Controls.Runtime.win/7.0.86": {
+    "runtimepack.Microsoft.Maui.Controls.Runtime.win/7.0.92": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Maui.Essentials.Runtime.win/7.0.86": {
+    "runtimepack.Microsoft.Maui.Essentials.Runtime.win/7.0.92": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
@@ -1091,33 +1091,33 @@
       "path": "microsoft.extensions.primitives/7.0.0",
       "hashPath": "microsoft.extensions.primitives.7.0.0.nupkg.sha512"
     },
-    "Microsoft.Graphics.Win2D/1.0.4": {
+    "Microsoft.Graphics.Win2D/1.0.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PmUO0B+gLdbxy1XCmX6pS57SL08roPKZC3sXKSRH4Qa1nX5RKwIdmmIxSvmV9irN57ABSMtDtWa+qNYnyzB/nw==",
-      "path": "microsoft.graphics.win2d/1.0.4",
-      "hashPath": "microsoft.graphics.win2d.1.0.4.nupkg.sha512"
+      "sha512": "sha512-9DVEVvyQWWz8kqhsFBAx9Zv4KRIAcmxuT7kFpK1Fgh6czSiMB+CQW0DlhZXT44Mtv41FRXG47lhEv+7a2YyiLA==",
+      "path": "microsoft.graphics.win2d/1.0.5.1",
+      "hashPath": "microsoft.graphics.win2d.1.0.5.1.nupkg.sha512"
     },
-    "Microsoft.Maui.Graphics/7.0.86": {
+    "Microsoft.Maui.Graphics/7.0.92": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-v0VB9NhVrJarOzl7BHs2LaFQE+syKQ8o1Wbs+I4CGxmQO4cosmoFPUa0ogp1oaJe8Tazu504+P8JDy8fhDsSKQ==",
-      "path": "microsoft.maui.graphics/7.0.86",
-      "hashPath": "microsoft.maui.graphics.7.0.86.nupkg.sha512"
+      "sha512": "sha512-fe9pKhm5LZGsAbEZQg7VEHGer76h8m8VPkGRWJ4P0+3QMu3yXOYmOiA60Wskjk8Mrd6eXZCQUWTTeley1agYQg==",
+      "path": "microsoft.maui.graphics/7.0.92",
+      "hashPath": "microsoft.maui.graphics.7.0.92.nupkg.sha512"
     },
-    "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop/7.0.86": {
+    "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop/7.0.92": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-o9nXvM81cu9PbdDBFcybMyM2hIgb0a8CLu3ZwD0cJrI01ujLoltwkqmlvOrVxgAwL9RvoLIjN51WFjPwvbPrkw==",
-      "path": "microsoft.maui.graphics.win2d.winui.desktop/7.0.86",
-      "hashPath": "microsoft.maui.graphics.win2d.winui.desktop.7.0.86.nupkg.sha512"
+      "sha512": "sha512-4snL9nMCGIzZ6utx8T8X42k3TjaA1PZY7Mpr1/LFyvxanja4f+zWroierjBCciBNoz8Zb0RJEMxxpr16SUcRGw==",
+      "path": "microsoft.maui.graphics.win2d.winui.desktop/7.0.92",
+      "hashPath": "microsoft.maui.graphics.win2d.winui.desktop.7.0.92.nupkg.sha512"
     },
-    "Microsoft.Windows.SDK.BuildTools/10.0.22621.755": {
+    "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zGXDCZc2/slVjpNtopNETCjnOqH9KiEdo9dPCcjtNWwK5W+EmOcEn7X5Ftj3tOE9kLvroga1s7WwLh2a5jQEEg==",
-      "path": "microsoft.windows.sdk.buildtools/10.0.22621.755",
-      "hashPath": "microsoft.windows.sdk.buildtools.10.0.22621.755.nupkg.sha512"
+      "sha512": "sha512-7ZL2sFSioYm1Ry067Kw1hg0SCcW5kuVezC2SwjGbcPE61Nn+gTbH86T73G3LcEOVj0S3IZzNuE/29gZvOLS7VA==",
+      "path": "microsoft.windows.sdk.buildtools/10.0.22621.756",
+      "hashPath": "microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512"
     },
     "Microsoft.WindowsAppSDK/1.2.221209.1": {
       "type": "package",
