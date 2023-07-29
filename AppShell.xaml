@@ -7,28 +7,31 @@
     xmlns:views="clr-namespace:Nova.View"
     Shell.FlyoutBehavior="Locked"
     Shell.NavBarIsVisible="False"
-    BackgroundColor="#FF7070" >
-
+    BackgroundColor="#FF7070" 
+    >
+    
 
     <!--<Shell.FlyoutBackground>
         <Image Source="Assets/logo.png"></Image>
     </Shell.FlyoutBackground>-->
 
     <Shell.FlyoutHeader>
-        <Image Source="Assets/logo.png" HeightRequest="124"></Image>
+        <Image Source="Assets/logo.png" HeightRequest="124" Margin="0,20,40,0"></Image>
     </Shell.FlyoutHeader>
 
     <Shell.FlyoutFooter>
-        <Label Text="Username" Padding="20"></Label>
+        <Label Text="Username" Padding="20" FontFamily="Poppins-Bold"></Label>
     </Shell.FlyoutFooter>
 
     <FlyoutItem Title="Dashboard">
-        <Tab>
+        <Tab Icon="dotnet_bot.png">
             <ShellContent 
                 ContentTemplate="{DataTemplate views:DashboardPage}"
                 Route="Dashboard"
                 Title=""
-                NavigationPage.HasNavigationBar="False" />
+                NavigationPage.HasNavigationBar="False" 
+                Shell.NavBarIsVisible="False"
+             />
             <!-- Hide the navigation bar -->
         </Tab>
     </FlyoutItem>

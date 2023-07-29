@@ -1,1 +1,1 @@
-C:\Users\alexa\OneDrive\Documents\GitHub\Nova\Nova.csproj;x64
+C:\Users\pharo\Desktop\Nova\Nova.csproj;x64
