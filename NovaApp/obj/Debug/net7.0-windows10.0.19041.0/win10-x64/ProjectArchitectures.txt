@@ -1,1 +1,1 @@
-C:\Users\alexa\OneDrive\Documents\GitHub\NovaApp\NovaApp\NovaApp.csproj;x64
+C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\NovaApp.csproj;x64
