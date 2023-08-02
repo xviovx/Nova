@@ -2,11 +2,56 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NovaApp.Views.FundsPage"
-             BackgroundColor="white" Opacity="0.4">
+             BackgroundColor="White" Opacity="1">
     <VerticalStackLayout>
         <Label 
             Text="Funds Page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            FontSize="32"
+            TextColor="Black"
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="StartAndExpand"
+            Padding="40, 20, 20, 0"
+            Opacity="1">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Funds" FontAttributes="Bold" />
+                    <Span Text=" Overview" FontAttributes="None" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label 
+            Text="Let's get an overview!"
+            FontSize="18"
+            TextColor="Black"
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="StartAndExpand"
+            Padding="40, 20, 20, 0"
+            Opacity="0.7">
+        </Label>
+
+        <Frame BackgroundColor="#F3DEDE" BorderColor="Transparent" Padding="10" Margin="40, 40, 40, 0" HorizontalOptions="Start">
+            <!-- Adjust the margin to control the distance from the previous content -->
+            <StackLayout WidthRequest="250">
+                <Label Text="Project Name" FontAttributes="Bold" FontSize="20" TextColor="Black" />
+                <Label Text="Client Owner" FontAttributes="None" FontSize="12" Margin="0, 20, 0, 0" TextColor="Black" />
+
+                <!-- Add two boxes at the bottom -->
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout VerticalOptions="Center" Padding="10" Spacing="10" BackgroundColor="#7988A3">
+                        <Label Text="Status" FontAttributes="Bold" FontSize="16" TextColor="Black" />
+                        <Label Text="Active" FontAttributes="None" FontSize="12" TextColor="Black" />
+                    </StackLayout>
+                    <StackLayout BackgroundColor="#F3DEDE">
+                        
+                    </StackLayout>
+                    <StackLayout VerticalOptions="Center" Padding="10" Spacing="10" BackgroundColor="#7988A3">
+                        <Label Text="Progress" FontAttributes="Bold" FontSize="16" TextColor="Black" />
+                        <Label Text="50%" FontAttributes="None" FontSize="12" TextColor="Black" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
     </VerticalStackLayout>
 </ContentView>
