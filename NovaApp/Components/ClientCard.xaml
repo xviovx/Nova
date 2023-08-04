@@ -4,7 +4,7 @@
              x:Class="NovaApp.Components.ClientCard">
     <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="350" HeightRequest="250">
         <Border.Shadow>
-            <Shadow Brush="#EBEBEB"
+            <Shadow Brush="#E9E9E9"
                            Offset="10,10"
                            Radius="20"
                            Opacity="1"/>

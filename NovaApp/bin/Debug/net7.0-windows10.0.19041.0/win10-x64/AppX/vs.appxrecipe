@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-08-04T09:12:44.280</Modified>
+      <Modified>2023-08-04T20:10:22.580</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.dll">
       <PackagePath>NovaApp.dll</PackagePath>
-      <Modified>2023-08-04T09:12:43.194</Modified>
+      <Modified>2023-08-04T20:10:21.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NovaApp.exe</PackagePath>
-      <Modified>2023-08-04T09:12:43.237</Modified>
+      <Modified>2023-08-04T20:10:21.411</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.deps.json">
       <PackagePath>NovaApp.deps.json</PackagePath>
