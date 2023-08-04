@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "qW8q5iT5o6vA3Ej73pRpCWQe+jjBxEd4445ZidRztYkUavxq/XwpUN2go6gCfr79VQ54gxwAyTF0wewm5pd2zg==",
+  "dgSpecHash": "VTBf8M/psr6BWbBPnleCIA6Atef5BaiMChGYFn/JHLeiEBanGG9Rxbu/MMemoakXEzwX+k5s5K8y1rA7EgdqCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\alexa\\OneDrive\\Documents\\GitHub\\Nova\\NovaApp\\NovaApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\alexa\\.nuget\\packages\\acrylicview.maui\\1.13.0\\acrylicview.maui.1.13.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",

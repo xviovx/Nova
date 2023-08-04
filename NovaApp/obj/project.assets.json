@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net7.0-windows10.0.19041": {
+      "AcrylicView.Maui/1.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -325,6 +334,15 @@
       }
     },
     "net7.0-windows10.0.19041/win10-x64": {
+      "AcrylicView.Maui/1.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -627,6 +645,30 @@
     }
   },
   "libraries": {
+    "AcrylicView.Maui/1.13.0": {
+      "sha512": "q/540iKKrC+ppqIl49IHhIBtkgoST5Ku06EPyXJ/zDdXRuFGRVzjU7ZYfkerfkhBqNv2fS/oRUdE0No7zcbg9A==",
+      "type": "package",
+      "path": "acrylicview.maui/1.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "acrylicview.maui.1.13.0.nupkg.sha512",
+        "acrylicview.maui.nuspec",
+        "ico.png",
+        "lib/net6.0-android31.0/Xe.AcrylicView.dll",
+        "lib/net6.0-android31.0/Xe.AcrylicView.xml",
+        "lib/net6.0-ios16.1/Xe.AcrylicView.dll",
+        "lib/net6.0-maccatalyst16.1/Xe.AcrylicView.dll",
+        "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll",
+        "lib/net7.0-android33.0/Xe.AcrylicView.aar",
+        "lib/net7.0-android33.0/Xe.AcrylicView.dll",
+        "lib/net7.0-android33.0/Xe.AcrylicView.xml",
+        "lib/net7.0-ios16.1/Xe.AcrylicView.dll",
+        "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll"
+      ]
+    },
     "Microsoft.Extensions.Configuration/7.0.0": {
       "sha512": "tldQUBWt/xeH2K7/hMPPo5g8zuLc3Ro9I5d4o/XrxvxOCA2EZBtW7bCHHTc49fcBtvB8tLAb/Qsmfrq+2SJ4vA==",
       "type": "package",
@@ -1847,6 +1889,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows10.0.19041": [
+      "AcrylicView.Maui >= 1.13.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
@@ -1903,6 +1946,10 @@
       "net7.0-windows10.0.19041": {
         "targetAlias": "net7.0-windows10.0.19041.0",
         "dependencies": {
+          "AcrylicView.Maui": {
+            "target": "Package",
+            "version": "[1.13.0, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[7.0.0, )",
