@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Xe.AcrylicView;
 
 namespace NovaApp;
 
@@ -9,6 +10,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseAcrylicView()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

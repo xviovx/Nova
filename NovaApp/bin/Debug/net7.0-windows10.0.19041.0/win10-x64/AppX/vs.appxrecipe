@@ -30,27 +30,53 @@
     <AppXManifest Include="C:\Users\pharo\Desktop\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< HEAD
       <Modified>2023-08-05T12:55:20.020</Modified>
+=======
+      <Modified>2023-08-05T09:29:28.909</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-08-05T12:55:19.706</Modified>
+=======
+      <Modified>2023-08-04T21:15:05.008</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.runtimeconfig.json">
       <PackagePath>NovaApp.runtimeconfig.json</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-08-01T18:46:57.437</Modified>
+=======
+      <Modified>2023-08-04T21:15:04.928</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.dll">
       <PackagePath>NovaApp.dll</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-08-05T12:55:18.709</Modified>
+=======
+      <Modified>2023-08-05T09:29:26.924</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NovaApp.exe</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-08-05T12:55:18.719</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.9\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
+=======
+      <Modified>2023-08-05T09:29:27.041</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.deps.json">
+      <PackagePath>NovaApp.deps.json</PackagePath>
+      <Modified>2023-08-04T21:15:04.891</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.9\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
       <Modified>2023-06-20T19:58:42.000</Modified>
     </AppxPackagedFile>
@@ -806,7 +832,15 @@
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2023-06-09T20:10:26.000</Modified>
     </AppxPackagedFile>
+<<<<<<< HEAD
     <AppxPackagedFile Include="C:\Users\pharo\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
+=======
+    <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\acrylicview.maui\1.13.0\lib\net6.0-windows10.0.19041\Xe.AcrylicView.dll">
+      <PackagePath>Xe.AcrylicView.dll</PackagePath>
+      <Modified>2023-05-17T10:40:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
       <Modified>2022-10-18T16:15:22.000</Modified>
     </AppxPackagedFile>
@@ -940,23 +974,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.793</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.241</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.794</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.257</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.795</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.273</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.795</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.296</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.796</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.383</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OFL.txt">
       <PackagePath>OFL.txt</PackagePath>
@@ -1004,217 +1058,449 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.770</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.447</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.770</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.641</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.771</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.651</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.771</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.659</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.772</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.672</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.772</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.720</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.773</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.506</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.773</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.509</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.774</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.519</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.774</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.512</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.774</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.514</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.775</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.490</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.775</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.492</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.775</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.504</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.776</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.495</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.776</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.498</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.777</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.456</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.777</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.458</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.778</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.461</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.778</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.465</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.779</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.469</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.779</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.472</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.779</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.475</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.780</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.487</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.780</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.477</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.781</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.481</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.781</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.557</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.781</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.561</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.782</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.566</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.782</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.572</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.783</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.583</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.783</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.537</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.784</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.540</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.784</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.543</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.785</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.547</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.785</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.553</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.785</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.522</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.786</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.525</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.786</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.528</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.786</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.530</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.787</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.535</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.787</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.588</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.788</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.593</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.788</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.599</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.788</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.609</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.789</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.632</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.789</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.484</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.791</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.492</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.791</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.503</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.792</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.522</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+<<<<<<< HEAD
       <Modified>2023-07-31T10:25:11.793</Modified>
+=======
+      <Modified>2023-08-04T21:15:03.559</Modified>
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\BackgroundImage.png">
       <PackagePath>Assets\BackgroundImage.png</PackagePath>
       <Modified>2023-07-31T10:25:09.437</Modified>
     </AppxPackagedFile>
+<<<<<<< HEAD
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\logo.png">
+=======
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\edit.png">
+      <PackagePath>Assets\Icons\edit.png</PackagePath>
+      <Modified>2023-08-03T13:34:48.277</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\moreInfo.png">
+      <PackagePath>Assets\Icons\moreInfo.png</PackagePath>
+      <Modified>2023-08-03T10:50:42.778</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\project.png">
+      <PackagePath>Assets\Icons\project.png</PackagePath>
+      <Modified>2023-08-04T08:55:50.836</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\salary.png">
+      <PackagePath>Assets\Icons\salary.png</PackagePath>
+      <Modified>2023-08-04T08:55:39.683</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\logo.png">
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
       <PackagePath>Assets\logo.png</PackagePath>
       <Modified>2023-07-31T10:25:09.439</Modified>
     </AppxPackagedFile>
+<<<<<<< HEAD
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\ProfileImg.png">
+=======
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\1.png">
+      <PackagePath>Assets\ProfileImages\1.png</PackagePath>
+      <Modified>2023-08-04T08:52:25.504</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImg.png">
+>>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
       <PackagePath>Assets\ProfileImg.png</PackagePath>
       <Modified>2023-07-31T10:25:09.438</Modified>
     </AppxPackagedFile>
