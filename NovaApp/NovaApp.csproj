@@ -49,6 +49,29 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="NewFolder1\**" />
+	  <Compile Remove="NewFolder2\**" />
+	  <Compile Remove="NewFolder3\**" />
+	  <Compile Remove="NewFolder\**" />
+	  <EmbeddedResource Remove="NewFolder1\**" />
+	  <EmbeddedResource Remove="NewFolder2\**" />
+	  <EmbeddedResource Remove="NewFolder3\**" />
+	  <EmbeddedResource Remove="NewFolder\**" />
+	  <MauiCss Remove="NewFolder1\**" />
+	  <MauiCss Remove="NewFolder2\**" />
+	  <MauiCss Remove="NewFolder3\**" />
+	  <MauiCss Remove="NewFolder\**" />
+	  <MauiXaml Remove="NewFolder1\**" />
+	  <MauiXaml Remove="NewFolder2\**" />
+	  <MauiXaml Remove="NewFolder3\**" />
+	  <MauiXaml Remove="NewFolder\**" />
+	  <None Remove="NewFolder1\**" />
+	  <None Remove="NewFolder2\**" />
+	  <None Remove="NewFolder3\**" />
+	  <None Remove="NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Remove="Component1.cs" />
 	  <Compile Remove="Component1.Designer.cs" />
 	  <Compile Remove="Views\NewPage1.xaml.cs" />
@@ -59,10 +82,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="AcrylicView.Maui" Version="1.13.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Components\ClientCard.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ClientPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -81,6 +108,22 @@
 	  <MauiXaml Update="Views\StaffPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PRIResource Remove="NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PRIResource Remove="NewFolder1\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PRIResource Remove="NewFolder2\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PRIResource Remove="NewFolder3\**" />
 	</ItemGroup>
 
 </Project>
