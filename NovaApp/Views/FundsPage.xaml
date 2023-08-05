@@ -30,35 +30,134 @@
             Opacity="0.7">
         </Label>
 
-        <Frame BackgroundColor="#F3DEDE" BorderColor="Transparent" Padding="10" Margin="40, 40, 20, 0" HorizontalOptions="Start">
-            <StackLayout>
-                <Label Text="Project Name" FontAttributes="Bold" FontSize="20" TextColor="Black" />
-                <Label Text="Client Owner" FontAttributes="None" FontSize="12" Margin="0, 10, 0, 15" TextColor="Black" />
+        <Grid VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
-                <StackLayout Orientation="Horizontal" Spacing="10">
-                    <Frame VerticalOptions="StartAndExpand" Padding="10" BackgroundColor="#7988A3" CornerRadius="10" BorderColor="Transparent">
-                        <StackLayout VerticalOptions="Start">
-                            <Label Text="R4590.23" FontAttributes="Bold" FontSize="16" TextColor="#EE6B8D" Margin="0, 0, 0, -20" />
-                            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
-                                <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalTextAlignment="Center" />
-                                <Label Text="Total Spent" FontAttributes="None" FontSize="12" TextColor="Black" />
-                            </StackLayout>
-                        </StackLayout>
-                    </Frame>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-                    <Frame VerticalOptions="StartAndExpand" Padding="10" BackgroundColor="#7988A3" CornerRadius="10" BorderColor="Transparent">
-                        <StackLayout VerticalOptions="Start">
-                            <Label Text="R45590.23" FontAttributes="Bold" FontSize="16" TextColor="#5BDA8C" Margin="0, 0, -20, 0" />
-                            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
-                                <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalTextAlignment="Center" />
-                                <Label Text="Total Received" FontAttributes="None" FontSize="12" TextColor="Black"/>
+            <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="#F3DEDE" BorderColor="Transparent" Padding="10" Margin="40, 40, 20, 0" HorizontalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="Project Name" FontAttributes="Bold" FontSize="20" TextColor="Black" />
+                    <Label Text="Client Owner" FontAttributes="None" FontSize="12" Margin="0, 10, 0, 15" TextColor="Black" />
+
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="StartAndExpand">
+                        <Frame VerticalOptions="StartAndExpand" Padding="10" BackgroundColor="#7988A3" CornerRadius="10" BorderColor="Transparent" HorizontalOptions="StartAndExpand">
+                            <StackLayout VerticalOptions="Center">
+                                <Label Text="R45720.80" FontAttributes="Bold" FontSize="16" TextColor="#FF7070" Margin="0, 0, 0, 0" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                    <Label Text="Total Sent" FontAttributes="None" FontSize="12" TextColor="Black" VerticalOptions="Center"/>
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </Frame>
+                        </Frame>
+
+                        <Frame VerticalOptions="StartAndExpand" Padding="10" BackgroundColor="#7988A3" CornerRadius="10" BorderColor="Transparent" HorizontalOptions="StartAndExpand">
+                            <StackLayout VerticalOptions="Center">
+                                <Label Text="R45590.23" FontAttributes="Bold" FontSize="16" TextColor="#5BDA8C" Margin="0, 0, 0, 0" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                    <Label Text="Total Received" FontAttributes="None" FontSize="12" TextColor="Black" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
                 </StackLayout>
+            </Frame>
 
-            </StackLayout>
-        </Frame>
+            <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="#F3DEDE" BorderColor="Transparent" Padding="10" Margin="20, 40, 40, 0" HorizontalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="Project Name" FontAttributes="Bold" FontSize="20" TextColor="Black" />
+                    <Label Text="Client Owner" FontAttributes="None" FontSize="12" Margin="0, 10, 0, 15" TextColor="Black" />
+
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="StartAndExpand">
+                        <Frame VerticalOptions="StartAndExpand" Padding="10" BackgroundColor="#7988A3" CornerRadius="10" BorderColor="Transparent" HorizontalOptions="StartAndExpand">
+                            <StackLayout VerticalOptions="Center">
+                                <Label Text="R45720.80" FontAttributes="Bold" FontSize="16" TextColor="#FF7070" Margin="0, 0, 0, 0" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                    <Label Text="Total Sent" FontAttributes="None" FontSize="12" TextColor="Black" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame VerticalOptions="StartAndExpand" Padding="10" BackgroundColor="#7988A3" CornerRadius="10" BorderColor="Transparent" HorizontalOptions="StartAndExpand">
+                            <StackLayout VerticalOptions="Center">
+                                <Label Text="R45590.23" FontAttributes="Bold" FontSize="16" TextColor="#5BDA8C" Margin="0, 0, 0, 0" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                    <Label Text="Total Received" FontAttributes="None" FontSize="12" TextColor="Black" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="#F3DEDE" BorderColor="Transparent" Padding="10" Margin="40, 20, 20, 40" HorizontalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="Project Name" FontAttributes="Bold" FontSize="20" TextColor="Black" />
+                    <Label Text="Client Owner" FontAttributes="None" FontSize="12" Margin="0, 10, 0, 15" TextColor="Black" />
+
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="StartAndExpand">
+                        <Frame VerticalOptions="StartAndExpand" Padding="10" BackgroundColor="#7988A3" CornerRadius="10" BorderColor="Transparent" HorizontalOptions="StartAndExpand">
+                            <StackLayout VerticalOptions="Center">
+                                <Label Text="R45720.80" FontAttributes="Bold" FontSize="16" TextColor="#FF7070" Margin="0, 0, 0, 0" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                    <Label Text="Total Sent" FontAttributes="None" FontSize="12" TextColor="Black" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame VerticalOptions="StartAndExpand" Padding="10" BackgroundColor="#7988A3" CornerRadius="10" BorderColor="Transparent" HorizontalOptions="StartAndExpand">
+                            <StackLayout VerticalOptions="Center">
+                                <Label Text="R45590.23" FontAttributes="Bold" FontSize="16" TextColor="#5BDA8C" Margin="0, 0, 0, 0" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                    <Label Text="Total Received" FontAttributes="None" FontSize="12" TextColor="Black" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="#F3DEDE" BorderColor="Transparent" Padding="10" Margin="20, 20, 40, 40" HorizontalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="Project Name" FontAttributes="Bold" FontSize="20" TextColor="Black" />
+                    <Label Text="Client Owner" FontAttributes="None" FontSize="12" Margin="0, 10, 0, 15" TextColor="Black" />
+
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="StartAndExpand">
+                        <Frame VerticalOptions="FillAndExpand" Padding="10" BackgroundColor="#7988A3" CornerRadius="10" BorderColor="Transparent" HorizontalOptions="StartAndExpand">
+                            <StackLayout VerticalOptions="Center">
+                                <Label Text="R45720.80" FontAttributes="Bold" FontSize="16" TextColor="#FF7070" Margin="0, 0, 0, 0" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                    <Label Text="Total Sent" FontAttributes="None" FontSize="12" TextColor="Black" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame VerticalOptions="StartAndExpand" Padding="10" BackgroundColor="#7988A3" CornerRadius="10" BorderColor="Transparent" HorizontalOptions="StartAndExpand">
+                            <StackLayout VerticalOptions="Center">
+                                <Label Text="R45590.23" FontAttributes="Bold" FontSize="16" TextColor="#5BDA8C" Margin="0, 0, 0, 0" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                    <Label Text="Total Received" FontAttributes="None" FontSize="12" TextColor="Black" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </Grid>
+
 
 
 
