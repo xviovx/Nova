@@ -6,7 +6,7 @@
     <acrylic:AcrylicView CornerRadius="50"
            TintColor="#FFFFFF" 
            TintOpacity="0.2"
-           BorderColor="Transparent"
+        BorderColor="Transparent"
            Padding="20">
         <Grid>
 

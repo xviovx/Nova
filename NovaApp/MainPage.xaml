@@ -61,13 +61,23 @@
         </StackLayout>
         
         <!-- Content area -->
-        <Frame x:Name="contentFrame" BackgroundColor="Transparent"
-               BorderColor="Transparent"
-               Margin="170,70,0,0" 
-               WidthRequest="1250" HeightRequest="650" CornerRadius="50"
-               VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-            <BoxView x:Name="tab" BackgroundColor="Aqua" WidthRequest="10" HeightRequest="30"
+        <Grid  WidthRequest="1250" HeightRequest="650" BackgroundColor="Transparent"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+            
+               Margin="170,70,0,0" >
+            <!--<Grid.Shadow>
+                <Shadow Brush="#C8C8C8"
+                           Offset="10,20"
+                           Radius="20"
+                           Opacity="0.4"></Shadow>
+            </Grid.Shadow>-->
+            <Frame 
+               CornerRadius="50"    BorderColor="Transparent" BackgroundColor="Transparent"  x:Name="contentFrame"
+              >
+                <BoxView x:Name="tab" BackgroundColor="Aqua" WidthRequest="10" HeightRequest="30"
                      VerticalOptions="Center" Margin="0,5,0,0" Opacity="0" />
-        </Frame>
+            </Frame>
+
+        </Grid>
+
     </Grid>
 </ContentPage>
