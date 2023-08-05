@@ -604,14 +604,10 @@
     <AppxPackagedFile Include="C:\Users\pharo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.29\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\pharo\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
-=======
-    <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\acrylicview.maui\1.13.0\lib\net6.0-windows10.0.19041\Xe.AcrylicView.dll">
+    <AppxPackagedFile Include="C:\Users\pharo\.nuget\packages\acrylicview.maui\1.13.0\lib\net6.0-windows10.0.19041\Xe.AcrylicView.dll">
       <PackagePath>Xe.AcrylicView.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
->>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
+    <AppxPackagedFile Include="C:\Users\pharo\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\.nuget\packages\microsoft.extensions.configuration.abstractions\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll">
@@ -914,32 +910,25 @@
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\BackgroundImage.png">
       <PackagePath>Assets\BackgroundImage.png</PackagePath>
     </AppxPackagedFile>
-<<<<<<< HEAD
+    <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\Icons\edit.png">
+      <PackagePath>Assets\Icons\edit.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\Icons\moreInfo.png">
+      <PackagePath>Assets\Icons\moreInfo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\Icons\project.png">
+      <PackagePath>Assets\Icons\project.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\Icons\salary.png">
+      <PackagePath>Assets\Icons\salary.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\logo.png">
       <PackagePath>Assets\logo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\ProfileImg.png">
-=======
-    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\edit.png">
-      <PackagePath>Assets\Icons\edit.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\moreInfo.png">
-      <PackagePath>Assets\Icons\moreInfo.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\project.png">
-      <PackagePath>Assets\Icons\project.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\salary.png">
-      <PackagePath>Assets\Icons\salary.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\logo.png">
-      <PackagePath>Assets\logo.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\1.png">
+    <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\ProfileImages\1.png">
       <PackagePath>Assets\ProfileImages\1.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImg.png">
->>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
+    <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\Assets\ProfileImg.png">
       <PackagePath>Assets\ProfileImg.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

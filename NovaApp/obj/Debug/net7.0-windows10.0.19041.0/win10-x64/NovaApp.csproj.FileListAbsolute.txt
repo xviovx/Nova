@@ -1001,3 +1001,4 @@ C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x
 =======
 C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Xe.AcrylicView.dll
 >>>>>>> 7b43a631fd4f1bc27f30ed0855cec9afdbd5a81e
+C:\Users\pharo\Desktop\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Xe.AcrylicView.dll
