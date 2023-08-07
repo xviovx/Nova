@@ -2,11 +2,312 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NovaApp.Views.DashboardPage"
-             BackgroundColor="white" Opacity="0.4" >
-    <VerticalStackLayout>
-        <Label 
-            Text="Dashboard Page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView">
+    
+
+    <acrylic:AcrylicView CornerRadius="50"
+           TintColor="#FFFFFF" 
+           TintOpacity="0.2"
+           BorderColor="Transparent"
+           Padding="20">
+        <Grid>
+
+
+            <!-- Column 1, Row 1: Client Page Text -->
+            <Label 
+                Text="Hello,"
+                Padding="20,15,20,0"
+                FontSize="40"
+                FontAttributes="Bold"
+                Grid.Row="0"
+                Grid.Column="0" />
+            <Label 
+                Text="Jessica"
+                Padding="140,15,20,0"
+                FontSize="40"
+                FontAttributes="None"
+                FontFamily="PoppinsThin"
+                Grid.Row="0"
+                Grid.Column="0" />
+
+            <!-- Column 1, Row 2: "Let's get an overview" Text -->
+            <Label 
+                Text="Let's get an overview!"
+                Padding="20,70,0,0"
+                FontSize="16"
+                Grid.Row="1"
+                Grid.Column="0" />
+
+            <!-- Column 1, Row 3: Container for client cards -->
+            <!-- Total Staff -->
+            <Grid BackgroundColor="Transparent" Margin="0,-180,0,0">
+                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="220" HeightRequest="130" HorizontalOptions="Start" Margin="20,0,0,0">
+                    <Border.Shadow>
+                        <Shadow Brush="#EBEBEB"
+                           Offset="10,10"
+                           Radius="20"
+                           Opacity="1"/>
+                    </Border.Shadow>
+                    <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
+                        <StackLayout Orientation="Vertical">
+                            <Grid>
+                                <Label Text="Staff" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
+                                <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,-20,0,0" />
+                            </Grid>
+
+                            <!-- Staff -->
+                            <Label Text="Total Staff" FontSize="10" TextColor="#7D8DA6" Margin="5,0,0,0" />
+
+                            <!-- Total Number -->
+                            <Label Text="20" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" />
+                        </StackLayout>
+                    </Frame>
+                </Border>
+            </Grid>
+
+            <!-- Total Clients -->
+            <Grid BackgroundColor="Transparent" Margin="250,-180,0,0">
+                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="220" HeightRequest="130" HorizontalOptions="Start" Margin="20,0,0,0">
+                    <Border.Shadow>
+                        <Shadow Brush="#EBEBEB"
+                           Offset="10,10"
+                           Radius="20"
+                           Opacity="1"/>
+                    </Border.Shadow>
+                    <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="#A7CBF6">
+                        <StackLayout Orientation="Vertical">
+                            <Grid>
+                                <Label Text="Clients" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
+                                <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,-20,0,0" />
+                            </Grid>
+
+                            <!-- Row 2: Staff -->
+                            <Label Text="Total Clients" FontSize="10" TextColor="#7D8DA6" Margin="5,0,0,0" />
+
+                            <!-- Row 1: Total Number -->
+                            <Label Text="15" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" />
+                        </StackLayout>
+                    </Frame>
+                </Border>
+            </Grid>
+            
+            <!-- Total Projects -->
+            <Grid BackgroundColor="Transparent" Margin="500,-180,0,0">
+                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="220" HeightRequest="130" HorizontalOptions="Start" Margin="20,0,0,0">
+                    <Border.Shadow>
+                        <Shadow Brush="#EBEBEB"
+                           Offset="10,10"
+                           Radius="20"
+                           Opacity="1"/>
+                    </Border.Shadow>
+                    <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
+                        <StackLayout Orientation="Vertical">
+                            <Grid>
+                                <Label Text="Projects" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
+                                <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,-20,0,0" />
+                            </Grid>
+
+                            <!-- Row 2: Staff -->
+                            <Label Text="Total Projects" FontSize="10" TextColor="#7D8DA6" Margin="5,0,0,0" />
+
+                            <!-- Row 1: Total Number -->
+                            <Label Text="15" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" />
+                        </StackLayout>
+                    </Frame>
+                </Border>
+                <!-- Column 1, Row 1: Client Page Text -->
+
+            </Grid>
+
+            <!-- Our Project -->
+            <Grid>
+                <Label 
+                Text="Our"
+                Padding="20,300,20,0"
+                FontSize="18"
+                FontAttributes="None"
+                Grid.Row="0"
+                Grid.Column="0" />
+                <Label 
+                Text="Projects"
+                Padding="57,300,20,0"
+                FontSize="18"
+                FontAttributes="Bold"
+                FontFamily="PoppinsThin"
+                Grid.Row="0"
+                Grid.Column="0" />
+                
+                <!-- Calendar -->
+                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="800" HeightRequest="200" HorizontalOptions="Start" Margin="20,330,0,0">
+                    <Border.Shadow>
+                        <Shadow Brush="Transparent"
+                           Offset="10,10"
+                           Radius="20"
+                           Opacity="1"/>
+                    </Border.Shadow>
+                    <Frame 
+                    BackgroundColor="White" 
+                    CornerRadius="30" 
+                    WidthRequest="800" 
+                    HeightRequest="200" 
+                    BorderColor="Transparent"
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.Column="2"
+                    HorizontalOptions="End"/>
+                </Border>
+            </Grid>
+            
+            <!-- Column 3, All Rows: Client Info Block (Right-aligned) -->
+            <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="310"          
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="2"
+                HorizontalOptions="End"
+                HeightRequest="544" >
+                <Border.Shadow>
+                    <Shadow Brush="#FF7070"
+                           Offset="5,10"
+                           Radius="20"
+                           Opacity="0.5"/>
+                </Border.Shadow>
+                <Frame 
+                BackgroundColor="#FF7070" 
+                CornerRadius="30" 
+                WidthRequest="310" 
+                HeightRequest="544" 
+                BorderColor="Transparent"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="2"
+                HorizontalOptions="End">
+
+                    <ScrollView>
+
+                        <StackLayout Orientation="Vertical">
+                        <Grid>
+                            <!-- Project Cards -->
+                            <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,50,0,0">
+                                <Border.Shadow>
+                                    <Shadow Brush="Transparent"
+                                       Offset="10,10"
+                                       Radius="20"
+                                       Opacity="1"/>
+                                            </Border.Shadow>
+                                <Frame 
+                                BackgroundColor="White" 
+                                CornerRadius="10" 
+                                WidthRequest="270" 
+                                HeightRequest="100" 
+                                BorderColor="Transparent"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="2"
+                                HorizontalOptions="End"/>
+                            </Border>
+
+                            <!-- Project Title -->
+                            <Label Text="Projects" FontSize="24" FontAttributes="None" Grid.Column="0" Margin="5,0,0,0" />
+                            </Grid>
+
+                            <!-- Row 2: Email -->
+                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
+
+                        <!-- Project Cards 2 -->
+                        <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
+                            <Border.Shadow>
+                                <Shadow Brush="Transparent"
+                                       Offset="10,10"
+                                       Radius="20"
+                                       Opacity="1"/>
+                            </Border.Shadow>
+                            <Frame 
+                                BackgroundColor="White" 
+                                CornerRadius="10" 
+                                WidthRequest="270" 
+                                HeightRequest="100" 
+                                BorderColor="Transparent"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="2"
+                                HorizontalOptions="End"/>
+                        </Border>
+                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
+
+
+                            <!-- Project Cards 3 -->
+                        <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
+                            <Border.Shadow>
+                                <Shadow Brush="Transparent"
+                                       Offset="10,10"
+                                       Radius="20"
+                                       Opacity="1"/>
+                            </Border.Shadow>
+                            <Frame 
+                                BackgroundColor="White" 
+                                CornerRadius="10" 
+                                WidthRequest="270" 
+                                HeightRequest="100" 
+                                BorderColor="Transparent"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="2"
+                                HorizontalOptions="End"/>
+                        </Border>
+                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
+
+
+                            <!-- Project Cards 4 -->
+                            <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
+                                <Border.Shadow>
+                                    <Shadow Brush="Transparent"
+                                       Offset="10,10"
+                                       Radius="20"
+                                       Opacity="1"/>
+                                </Border.Shadow>
+                                <Frame 
+                                BackgroundColor="White" 
+                                CornerRadius="10" 
+                                WidthRequest="270" 
+                                HeightRequest="100" 
+                                BorderColor="Transparent"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="2"
+                                HorizontalOptions="End"/>
+
+                            </Border>
+                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
+
+                            <!-- Project Cards 5 -->
+                            <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
+                                <Border.Shadow>
+                                    <Shadow Brush="Transparent"
+                                       Offset="10,10"
+                                       Radius="20"
+                                       Opacity="1"/>
+                                </Border.Shadow>
+                                <Frame 
+                                BackgroundColor="White" 
+                                CornerRadius="10" 
+                                WidthRequest="270" 
+                                HeightRequest="100" 
+                                BorderColor="Transparent"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="2"
+                                HorizontalOptions="End"/>
+                            </Border>
+                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
+
+
+
+
+                        </StackLayout>
+                    </ScrollView>
+
+                </Frame>
+            </Border>
+        </Grid>
+    </acrylic:AcrylicView>
 </ContentView>

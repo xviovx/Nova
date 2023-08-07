@@ -5,7 +5,7 @@
              BackgroundColor="white" Opacity="0.4">
     <VerticalStackLayout>
         <Label 
-            Text="Project Page"
+            Text="Projects Page"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
