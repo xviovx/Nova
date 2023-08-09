@@ -86,19 +86,7 @@
                                                     </StackLayout>
                                                 </StackLayout>
                                             </Frame>
-                                        </StackLayout>
-                                        <Grid Margin="5,30,0,0">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto" />
-                                                <RowDefinition Height="Auto" />
-                                            </Grid.RowDefinitions>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="*" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label Text="Hours" FontSize="14" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0" />
-                                            <Label Text="60%" FontSize="14" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="1" />
-                                        </Grid>
+                                        </StackLayout
                                     </StackLayout>
                                 </Frame>
                             </Border>
@@ -143,19 +131,7 @@
                                                     </StackLayout>
                                                 </StackLayout>
                                             </Frame>
-                                        </StackLayout>
-                                        <Grid Margin="5,30,0,0">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto" />
-                                                <RowDefinition Height="Auto" />
-                                            </Grid.RowDefinitions>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="*" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label Text="Hours" FontSize="14" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0" />
-                                            <Label Text="60%" FontSize="14" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="1" />
-                                        </Grid>
+                                        </StackLayout
                                     </StackLayout>
                                 </Frame>
                             </Border>
@@ -200,19 +176,7 @@
                                                     </StackLayout>
                                                 </StackLayout>
                                             </Frame>
-                                        </StackLayout>
-                                        <Grid Margin="5,30,0,0">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto" />
-                                                <RowDefinition Height="Auto" />
-                                            </Grid.RowDefinitions>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="*" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label Text="Hours" FontSize="14" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0" />
-                                            <Label Text="60%" FontSize="14" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="1" />
-                                        </Grid>
+                                        </StackLayout
                                     </StackLayout>
                                 </Frame>
                             </Border>
@@ -258,18 +222,6 @@
                                                 </StackLayout>
                                             </Frame>
                                         </StackLayout>
-                                        <Grid Margin="5,30,0,0">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto" />
-                                                <RowDefinition Height="Auto" />
-                                            </Grid.RowDefinitions>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="*" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label Text="Hours" FontSize="14" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0" />
-                                            <Label Text="60%" FontSize="14" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="1" />
-                                        </Grid>
                                     </StackLayout>
                                 </Frame>
                             </Border>

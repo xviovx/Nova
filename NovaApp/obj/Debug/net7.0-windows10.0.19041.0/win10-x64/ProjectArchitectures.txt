@@ -1,1 +1,1 @@
-C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\NovaApp.csproj;x64
+C:\Users\pharo\Desktop\Nova\NovaApp\NovaApp.csproj;x64
