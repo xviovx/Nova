@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-08-10T19:52:22.538</Modified>
+      <Modified>2023-08-10T20:17:23.438</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-08-10T19:52:22.337</Modified>
+      <Modified>2023-08-10T20:17:23.158</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.runtimeconfig.json">
       <PackagePath>NovaApp.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.dll">
       <PackagePath>NovaApp.dll</PackagePath>
-      <Modified>2023-08-10T19:52:21.322</Modified>
+      <Modified>2023-08-10T20:17:21.887</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NovaApp.exe</PackagePath>
-      <Modified>2023-08-10T19:52:21.327</Modified>
+      <Modified>2023-08-10T20:17:21.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.deps.json">
       <PackagePath>NovaApp.deps.json</PackagePath>
@@ -1222,6 +1222,10 @@
       <PackagePath>Assets\Icons\edit.png</PackagePath>
       <Modified>2023-08-07T08:13:49.578</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\lock.png">
+      <PackagePath>Assets\Icons\lock.png</PackagePath>
+      <Modified>2023-08-10T20:16:23.112</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\moreInfo.png">
       <PackagePath>Assets\Icons\moreInfo.png</PackagePath>
       <Modified>2023-08-07T08:13:49.586</Modified>
@@ -1233,6 +1237,10 @@
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\salary.png">
       <PackagePath>Assets\Icons\salary.png</PackagePath>
       <Modified>2023-08-07T08:13:49.586</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\user.png">
+      <PackagePath>Assets\Icons\user.png</PackagePath>
+      <Modified>2023-08-10T20:13:34.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\logo.png">
       <PackagePath>Assets\logo.png</PackagePath>

@@ -916,6 +916,9 @@
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\edit.png">
       <PackagePath>Assets\Icons\edit.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\lock.png">
+      <PackagePath>Assets\Icons\lock.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\moreInfo.png">
       <PackagePath>Assets\Icons\moreInfo.png</PackagePath>
     </AppxPackagedFile>
@@ -924,6 +927,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\salary.png">
       <PackagePath>Assets\Icons\salary.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\user.png">
+      <PackagePath>Assets\Icons\user.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\logo.png">
       <PackagePath>Assets\logo.png</PackagePath>
