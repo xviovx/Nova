@@ -64,17 +64,17 @@ build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Views.FundsPage.xa
 build_metadata.AdditionalFiles.TargetPath = Views\FundsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\FundsPage.xaml
 
-[C:/Users/anchi/OneDrive/Documents/GitHub/Nova/NovaApp/Views/LoginPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Views.LoginPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
-
 [C:/Users/anchi/OneDrive/Documents/GitHub/Nova/NovaApp/Views/ProjectsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Views.ProjectsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ProjectsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ProjectsPage.xaml
+
+[C:/Users/anchi/OneDrive/Documents/GitHub/Nova/NovaApp/Views/SignInPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Views.SignInPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SignInPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SignInPage.xaml
 
 [C:/Users/anchi/OneDrive/Documents/GitHub/Nova/NovaApp/Views/StaffPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

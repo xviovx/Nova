@@ -36,9 +36,11 @@
             <!-- Add SearchBar and Logout Button as needed -->
             <SearchBar x:Name="searchBar" Placeholder="SEARCH..." VerticalOptions="CenterAndExpand" Margin="250,25,0,0" 
                        PlaceholderColor="#DF5353" FontSize="32"  Style="{StaticResource CustomSearchBarStyle}" IsTextPredictionEnabled="True"/>
-            <Button Text="Logout" BorderColor="Transparent" VerticalOptions="CenterAndExpand"  Margin="860,25,0,0" WidthRequest="100" CornerRadius="16"/>
-        </StackLayout>
 
+            <!--Navigate to Sign In Page: x:Name="buttonView6" Text="Logout" Clicked="OnLogInClicked" Style="{StaticResource NoDefaultButtonStyle}" HorizontalOptions="Start" -->
+            <Button  Text="Logout" BorderColor="Transparent" VerticalOptions="CenterAndExpand"  Margin="860,25,0,0" WidthRequest="100" CornerRadius="16"/>
+        </StackLayout>
+        
         <!-- Left navigation area -->
         <StackLayout x:Name="leftNavigation" WidthRequest="250" Padding="50,0,0,0" 
             BackgroundColor="Transparent"
@@ -50,6 +52,8 @@
             <Button x:Name="buttonView3" Text="Staff" Clicked="OnStaffClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="Start" />
             <Button x:Name="buttonView4" Text="Projects" Clicked="OnProjectClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="Start" />
             <Button x:Name="buttonView5" Text="Finances" Clicked="OnFundsClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="Start" />
+            
+            <Button x:Name="buttonView7" Text="Sign In" Clicked="OnLogInClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="Start" />
 
             <StackLayout Orientation="Horizontal" Padding="20" VerticalOptions="Start" Margin="-46,225,0,0" >
                 <Image Source="Assets/ProfileImg.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFit" VerticalOptions="CenterAndExpand" />

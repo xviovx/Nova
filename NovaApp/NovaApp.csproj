@@ -100,10 +100,10 @@
 	  <MauiXaml Update="Views\FundsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\LoginPage.xaml">
+	  <MauiXaml Update="Views\ProjectsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ProjectsPage.xaml">
+	  <MauiXaml Update="Views\SignInPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\StaffPage.xaml">

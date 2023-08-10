@@ -19,6 +19,11 @@ namespace Nova
             buttonView4.FontAttributes = FontAttributes.None; // Set inactive button text normal
             buttonView5.TextColor = Colors.Black;
             buttonView5.FontAttributes = FontAttributes.None; // Set inactive button text normal
+            buttonView7.TextColor = Colors.Black;
+            buttonView7.FontAttributes = FontAttributes.None; // Set inactive button text normal
+
+            //buttonView6.TextColor = Colors.Black;
+            //buttonView6.FontAttributes = FontAttributes.None; // Set inactive button text normal
 
             activeButton.TextColor = Colors.White; // Set active button color
             activeButton.FontAttributes = FontAttributes.Bold; // Set active button text bold
@@ -68,5 +73,20 @@ namespace Nova
             contentFrame.Content = new ProjectsPage();
             SetActiveButton(buttonView4);
         }
+
+        private void OnLogInClicked(object sender, EventArgs e)
+        {
+            // Set the content to MyView2 when the "View 2" button is clicked
+            contentFrame.Content = new SignInPage();
+            SetActiveButton(buttonView7);
+        }
+
+        //private void OnLogInClicked(object sender, EventArgs e)
+        //{
+        // Set the content to MyView2 when the "View 6" button is clicked
+        //contentFrame.Content = new LoginPage();
+        //SetActiveButton(buttonView6);
+        //}
+
     }
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovaApp.Views.SignInPage"
+             xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView">
+
+
+
+    <acrylic:AcrylicView CornerRadius="50"
+           TintColor="#FFFFFF" 
+           TintOpacity="0.2"
+           BorderColor="Transparent"
+           Padding="20">
+        <Grid>
+            <Label 
+                Text="Login"
+                TextColor="#DF5353"
+                Padding="500,80,20,0"
+                FontSize="40"
+                FontAttributes="Bold"
+                Grid.Row="0"
+                Grid.Column="0" />
+
+            <Frame BackgroundColor="White" HeightRequest="40" WidthRequest="300" BorderColor="White" Margin="-40,-100,0,0">
+                <StackLayout Orientation="Vertical">
+                    <Grid>
+                        <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,-20,0,0" />
+                        <Label Text="Username" FontSize="13" FontAttributes="None" Grid.Column="0" Margin="20,-7,0,0" />
+                    </Grid>
+                </StackLayout>
+
+            </Frame>
+        </Grid>
+    </acrylic:AcrylicView>
+
+</ContentView>
