@@ -10,7 +10,8 @@
 
 
     <acrylic:AcrylicView CornerRadius="50"
-           WidthRequest="600"
+           WidthRequest="420"
+           HeightRequest="450"
            TintColor="#FFFFFF" 
            TintOpacity="0.2"
            BorderColor="Transparent"
@@ -19,13 +20,14 @@
             <Label 
                 Text="Login"
                 TextColor="#DF5353"
-                Padding="200,80,20,0"
+                Padding="0,50,0,0"
                 FontSize="40"
                 FontAttributes="Bold"
                 Grid.Row="0"
-                Grid.Column="0" />
+                Grid.Column="0" 
+                HorizontalOptions="Center"/>
 
-            <Frame BackgroundColor="White" HeightRequest="40" CornerRadius="20" WidthRequest="300" BorderColor="White" Margin="-40,-100,0,0">
+                <Frame BackgroundColor="White" HeightRequest="40" CornerRadius="20" WidthRequest="300" BorderColor="White" Margin="0,-50,0,0" HorizontalOptions="Center">
                 <StackLayout Orientation="Vertical">
                     <Grid>
                         <Image Source="Assets/Icons/user.png" WidthRequest="20" Grid.Column="1" Margin="-250,-12,0,0" />
@@ -34,7 +36,7 @@
                 </StackLayout>
             </Frame>
 
-            <Frame BackgroundColor="White" HeightRequest="40" CornerRadius="20" WidthRequest="300" BorderColor="White" Margin="-40,40,0,0">
+                <Frame HorizontalOptions="Center" BackgroundColor="White" HeightRequest="40" CornerRadius="20" WidthRequest="300" BorderColor="White" Margin="0,90,0,0">
                 <StackLayout Orientation="Vertical">
                     <Grid>
                         <Image Source="Assets/Icons/lock.png" WidthRequest="20" Grid.Column="1" Margin="-250,-12,0,0" />
@@ -45,11 +47,12 @@
 
             <Button 
                 Text="Login"
-                WidthRequest="120"
+                WidthRequest="300"
                 HeightRequest="30"
                 Grid.Row="0"
                 Grid.Column="1"
-                Margin="-40,300,0,0"
+                Margin="0,270,0,0"
+                HorizontalOptions="Center"
                 CornerRadius="20"/>
 
         </Grid>
