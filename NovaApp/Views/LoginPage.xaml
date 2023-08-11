@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovaApp.Views.LoginPage"
+              xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView">
+
+    <Grid>
+        <!-- Background Image -->
+        <Image Source="Assets/BackgroundImageLogin.png" Aspect="AspectFill" />
+
+
+    <acrylic:AcrylicView CornerRadius="50"
+           WidthRequest="600"
+           TintColor="#FFFFFF" 
+           TintOpacity="0.2"
+           BorderColor="Transparent"
+           Padding="20">
+        <Grid>
+            <Label 
+                Text="Login"
+                TextColor="#DF5353"
+                Padding="200,80,20,0"
+                FontSize="40"
+                FontAttributes="Bold"
+                Grid.Row="0"
+                Grid.Column="0" />
+
+            <Frame BackgroundColor="White" HeightRequest="40" CornerRadius="20" WidthRequest="300" BorderColor="White" Margin="-40,-100,0,0">
+                <StackLayout Orientation="Vertical">
+                    <Grid>
+                        <Image Source="Assets/Icons/user.png" WidthRequest="20" Grid.Column="1" Margin="-250,-12,0,0" />
+                        <Label Text="Username" FontSize="13" FontAttributes="None" Grid.Column="0" Margin="25,-7,0,0" />
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="White" HeightRequest="40" CornerRadius="20" WidthRequest="300" BorderColor="White" Margin="-40,40,0,0">
+                <StackLayout Orientation="Vertical">
+                    <Grid>
+                        <Image Source="Assets/Icons/lock.png" WidthRequest="20" Grid.Column="1" Margin="-250,-12,0,0" />
+                        <Label Text="Password" FontSize="13" FontAttributes="None" Grid.Column="0" Margin="25,-7,0,0" />
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+            <Button 
+                Text="Login"
+                WidthRequest="120"
+                HeightRequest="30"
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="-40,300,0,0"
+                CornerRadius="20"/>
+
+        </Grid>
+    </acrylic:AcrylicView>
+    </Grid>
+</ContentPage>

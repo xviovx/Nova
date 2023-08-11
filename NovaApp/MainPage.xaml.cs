@@ -35,6 +35,8 @@ namespace Nova
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasBackButton(this, false);
+            NavigationPage.SetHasNavigationBar(this, false);
             contentFrame.Content = new DashboardPage(); // Set the initial content to MyView1
             SetActiveButton(buttonView1);
         }
@@ -74,11 +76,16 @@ namespace Nova
             SetActiveButton(buttonView4);
         }
 
-        private void OnLogInClicked(object sender, EventArgs e)
+        //private void OnLogInClicked(object sender, EventArgs e)
+        //{
+        //    // Set the content to MyView2 when the "View 2" button is clicked
+        //    contentFrame.Content = new SignInPage();
+        //    SetActiveButton(buttonView7);
+        //}
+        private async void OnLogInClicked(object sender, EventArgs e)
         {
-            // Set the content to MyView2 when the "View 2" button is clicked
-            contentFrame.Content = new SignInPage();
-            SetActiveButton(buttonView7);
+            // Navigate to the LoginPage
+            await Navigation.PushAsync(new LoginPage());
         }
 
         //private void OnLogInClicked(object sender, EventArgs e)
