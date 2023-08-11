@@ -19,8 +19,7 @@ namespace Nova
             buttonView4.FontAttributes = FontAttributes.None; // Set inactive button text normal
             buttonView5.TextColor = Colors.Black;
             buttonView5.FontAttributes = FontAttributes.None; // Set inactive button text normal
-            buttonView7.TextColor = Colors.Black;
-            buttonView7.FontAttributes = FontAttributes.None; // Set inactive button text normal
+          
 
             //buttonView6.TextColor = Colors.Black;
             //buttonView6.FontAttributes = FontAttributes.None; // Set inactive button text normal
