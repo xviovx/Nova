@@ -1,0 +1,10 @@
+/bin/
+/obj/
+/.vscode/
+/.idea/
+/UserSecretsId.json
+/packages/
+/.vs/
+/.suo
+/.user
+/.DS_Store
