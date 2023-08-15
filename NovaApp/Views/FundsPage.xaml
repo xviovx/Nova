@@ -27,7 +27,6 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 TextColor="Black"/>
-
             <!-- overview text -->
             <Label 
                 Text="Let's get an overview!"
@@ -39,7 +38,7 @@
 
             <!-- scroll view with cards -->
 
-            <ScrollView>
+            <ScrollView HeightRequest="360">
                 <StackLayout>
                     <Grid>
                         <Grid.RowDefinitions>
@@ -47,7 +46,7 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
-                        <Grid BackgroundColor="Transparent" Margin="0,-180,0,0">
+                        <Grid BackgroundColor="Transparent" Margin="0,0,0,500">
                             <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="350" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
                                 <Border.Shadow>
                                     <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
@@ -92,7 +91,7 @@
                             </Border>
                         </Grid>
 
-                        <Grid BackgroundColor="Transparent" Margin="400,-180,0,0">
+                        <Grid BackgroundColor="Transparent" Margin="400,0,0,500">
                             <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="350" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
                                 <Border.Shadow>
                                     <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
@@ -137,7 +136,7 @@
                             </Border>
                         </Grid>
 
-                        <Grid BackgroundColor="Transparent" Margin="0,400,0,0">
+                        <Grid BackgroundColor="Transparent" Margin="0,40,0,0">
                             <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="350" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
                                 <Border.Shadow>
                                     <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
@@ -182,7 +181,97 @@
                             </Border>
                         </Grid>
 
-                        <Grid BackgroundColor="Transparent" Margin="400,400,0,0">
+                        <Grid BackgroundColor="Transparent" Margin="400,40,0,0">
+                            <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="350" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
+                                <Border.Shadow>
+                                    <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
+                                </Border.Shadow>
+                                <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
+                                    <StackLayout Orientation="Vertical">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="Project Name" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
+                                            <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="60,-5,0,0" />
+                                        </Grid>
+                                        <Label Text="Client Owner" FontSize="16" TextColor="#7D8DA6" Margin="5,-20,0,0" />
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame CornerRadius="10" BackgroundColor="#EEF7FF" Padding="10" HorizontalOptions="Start" Margin="5,20,0,0" BorderColor="Transparent" WidthRequest="120">
+                                                <StackLayout Orientation="Vertical">
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="R4590.23" TextColor="#FF7070" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,0,0,15"/>
+                                                    </StackLayout>
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start" />
+                                                        <Label Text="Total Spent" FontSize="12" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Frame>
+                                            <Frame CornerRadius="10" BackgroundColor="#EEF7FF" Padding="10" HorizontalOptions="Start" Margin="5,20,0,0" BorderColor="Transparent" WidthRequest="120">
+                                                <StackLayout Orientation="Vertical">
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="R4590.23" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,0,0,15"/>
+                                                    </StackLayout>
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start" />
+                                                        <Label Text="Total Received" FontSize="12" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </Border>
+                        </Grid>
+
+                        <Grid BackgroundColor="Transparent" Margin="0,580,0,0">
+                            <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="350" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
+                                <Border.Shadow>
+                                    <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
+                                </Border.Shadow>
+                                <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
+                                    <StackLayout Orientation="Vertical">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="Project Name" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
+                                            <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="60,-5,0,0" />
+                                        </Grid>
+                                        <Label Text="Client Owner" FontSize="16" TextColor="#7D8DA6" Margin="5,-20,0,0" />
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame CornerRadius="10" BackgroundColor="#EEF7FF" Padding="10" HorizontalOptions="Start" Margin="5,20,0,0" BorderColor="Transparent" WidthRequest="120">
+                                                <StackLayout Orientation="Vertical">
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="R4590.23" TextColor="#FF7070" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,0,0,15"/>
+                                                    </StackLayout>
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start" />
+                                                        <Label Text="Total Spent" FontSize="12" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Frame>
+                                            <Frame CornerRadius="10" BackgroundColor="#EEF7FF" Padding="10" HorizontalOptions="Start" Margin="5,20,0,0" BorderColor="Transparent" WidthRequest="120">
+                                                <StackLayout Orientation="Vertical">
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="R4590.23" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,0,0,15"/>
+                                                    </StackLayout>
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start" />
+                                                        <Label Text="Total Received" FontSize="12" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </Border>
+                        </Grid>
+
+                        <Grid BackgroundColor="Transparent" Margin="400,580,0,0">
                             <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="350" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
                                 <Border.Shadow>
                                     <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
