@@ -144,11 +144,10 @@ Visit the [GitHub repository](https://github.com/xviovx/Nova) for an overview of
 
 ## Authors
 
-- **Anchen Ayres** - [AlexaPea](https://github.com/anchenayres)
-- **Caidyn Ginger** - [AlexaPea](https://github.com/CaidynGinger)
 - **Alexa Pettitt** - [AlexaPea](https://github.com/AlexaPea)
-- **Kyle Pharogh** - [AlexaPea](https://github.com/xviovx)
-
+- **Caidyn Ginger** - [CaidynGinger](https://github.com/CaidynGinger)
+- **Kyle Pharogh** - [xviovx](https://github.com/xviovx)
+- **Anchen Ayres** - [anchenayres](https://github.com/anchenayres)
 
 ## License
 
