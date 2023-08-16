@@ -949,6 +949,21 @@
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\navImg.png">
       <PackagePath>Assets\navImg.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\nav\navImg1.png">
+      <PackagePath>Assets\nav\navImg1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\nav\navImg2.png">
+      <PackagePath>Assets\nav\navImg2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\nav\navImg3.png">
+      <PackagePath>Assets\nav\navImg3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\nav\navImg4.png">
+      <PackagePath>Assets\nav\navImg4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\nav\navImg5.png">
+      <PackagePath>Assets\nav\navImg5.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\1.png">
       <PackagePath>Assets\ProfileImages\1.png</PackagePath>
     </AppxPackagedFile>
