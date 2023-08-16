@@ -58,14 +58,35 @@
             BackgroundColor="Transparent"
             VerticalOptions="FillAndExpand" HorizontalOptions="Start">
             <!-- Set HorizontalOptions to "Start" -->
-            <Image Source="Assets/logo.png" HeightRequest="200"  Margin="0,20,0,0"/>
-            <Button x:Name="buttonView1" Text="Dashboard" Clicked="OnView1Clicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="Start" />
-            <Button x:Name="buttonView2" Text="Clients" Clicked="OnClientClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="Start" />
-            <Button x:Name="buttonView3" Text="Staff" Clicked="OnStaffClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="Start" />
-            <Button x:Name="buttonView4" Text="Projects" Clicked="OnProjectClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="Start" />
-            <Button x:Name="buttonView5" Text="Finances" Clicked="OnFundsClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="Start" />
-            
-         
+            <Image Source="Assets/logo.png" HeightRequest="200" Margin="0,20,0,0"/>
+
+            <StackLayout Orientation="Vertical" Spacing="5">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image x:Name="imageButton1" Source="Assets/navImg.png" WidthRequest="50" VerticalOptions="Center" Margin="-52, 0,0,0"/>
+                    <Button x:Name="buttonView1" Text="Dashboard" Clicked="OnView1Clicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Image x:Name="imageButton2" Source="Assets/navImg.png" WidthRequest="50"  VerticalOptions="Center" Margin="-52, 0,0,0"/>
+                    <Button x:Name="buttonView2" Text="Clients" Clicked="OnClientClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Image x:Name="imageButton3" Source="Assets/navImg.png" WidthRequest="50"  VerticalOptions="Center" Margin="-52, 0,0,0"/>
+                    <Button x:Name="buttonView3" Text="Staff" Clicked="OnStaffClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Image x:Name="imageButton4" Source="Assets/navImg.png" WidthRequest="50"  VerticalOptions="Center" Margin="-52, 0,0,0"/>
+                    <Button x:Name="buttonView4" Text="Projects" Clicked="OnProjectClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Image x:Name="imageButton5" Source="Assets/navImg.png" WidthRequest="50"  VerticalOptions="Center" Margin="-52, 0,0,0"/>
+                    <Button x:Name="buttonView5" Text="Finances" Clicked="OnFundsClicked" Style="{StaticResource NoDefaultButtonStyle}" BorderColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                </StackLayout>
+            </StackLayout>
+
 
             <StackLayout Orientation="Horizontal" Padding="20" VerticalOptions="Start" Margin="-46,225,0,0" >
                 <Image Source="Assets/ProfileImg.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFit" VerticalOptions="CenterAndExpand" />

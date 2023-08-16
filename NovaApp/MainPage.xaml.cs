@@ -9,6 +9,13 @@ namespace Nova
     {
         private void SetActiveButton(Button activeButton)
         {
+            // Reset all images to inactive opacity
+            imageButton1.Opacity = 0;
+            imageButton2.Opacity = 0;
+            imageButton3.Opacity = 0;
+            imageButton4.Opacity = 0;
+            imageButton5.Opacity = 0;
+
             buttonView1.TextColor = Colors.Black;
             buttonView1.FontAttributes = FontAttributes.None; // Set inactive button text normal
             buttonView2.TextColor = Colors.Black;
@@ -19,15 +26,22 @@ namespace Nova
             buttonView4.FontAttributes = FontAttributes.None; // Set inactive button text normal
             buttonView5.TextColor = Colors.Black;
             buttonView5.FontAttributes = FontAttributes.None; // Set inactive button text normal
-          
 
-            //buttonView6.TextColor = Colors.Black;
-            //buttonView6.FontAttributes = FontAttributes.None; // Set inactive button text normal
-
+            // Set active button styles
             activeButton.TextColor = Colors.White; // Set active button color
             activeButton.FontAttributes = FontAttributes.Bold; // Set active button text bold
 
-       
+            // Set active image opacity
+            if (activeButton == buttonView1)
+                imageButton1.Opacity = 1;
+            else if (activeButton == buttonView2)
+                imageButton2.Opacity = 1;
+            else if (activeButton == buttonView3)
+                imageButton3.Opacity = 1;
+            else if (activeButton == buttonView4)
+                imageButton4.Opacity = 1;
+            else if (activeButton == buttonView5)
+                imageButton5.Opacity = 1;
         }
 
         public MainPage()
