@@ -913,6 +913,15 @@
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\BackgroundImageLogin.png">
       <PackagePath>Assets\BackgroundImageLogin.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\folder1.png">
+      <PackagePath>Assets\folder1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\folder2.png">
+      <PackagePath>Assets\folder2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\folder3.png">
+      <PackagePath>Assets\folder3.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\GraphImgDel.png">
       <PackagePath>Assets\GraphImgDel.png</PackagePath>
     </AppxPackagedFile>

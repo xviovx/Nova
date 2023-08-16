@@ -27,8 +27,7 @@ namespace Nova
             activeButton.TextColor = Colors.White; // Set active button color
             activeButton.FontAttributes = FontAttributes.Bold; // Set active button text bold
 
-            tab.Margin = new Thickness(0, activeButton.Height + 5, 0, 0); // Position tab below the active button
-            tab.Opacity = 1; // Show the tab
+       
         }
 
         public MainPage()

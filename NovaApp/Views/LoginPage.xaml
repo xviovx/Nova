@@ -22,7 +22,7 @@
                 TextColor="#DF5353"
                 Padding="0,50,0,0"
                 FontSize="40"
-                FontAttributes="Bold"
+                FontFamily="PoppinsBold"
                 Grid.Row="0"
                 Grid.Column="0" 
                 HorizontalOptions="Center"/>

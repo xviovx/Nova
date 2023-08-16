@@ -18,7 +18,7 @@
                 Text="Hello,"
                 Padding="20,15,20,0"
                 FontSize="40"
-                FontAttributes="Bold"
+                FontFamily="PoppinsSemibold"
                 Grid.Row="0"
                 Grid.Column="0" />
             <Label 
@@ -26,14 +26,15 @@
                 Padding="140,15,20,0"
                 FontSize="40"
                 FontAttributes="None"
-                FontFamily="PoppinsThin"
+                FontFamily="PoppinsLight"
                 Grid.Row="0"
                 Grid.Column="0" />
 
             <!-- Column 1, Row 2: "Let's get an overview" Text -->
             <Label 
                 Text="Let's get an overview!"
-                Padding="20,70,0,0"
+                FontFamily="PoppinsRegular"
+                Padding="20,73,0,0"
                 FontSize="16"
                 Grid.Row="1"
                 Grid.Column="0" />
@@ -41,104 +42,119 @@
             <!-- Column 1, Row 3: Container for client cards -->
             <!-- Total Staff -->
             <Grid BackgroundColor="Transparent" Margin="0,-180,0,0">
-                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="220" HeightRequest="130" HorizontalOptions="Start" Margin="20,0,0,0">
+              
+                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="220" HeightRequest="180" HorizontalOptions="Start" Margin="20,0,0,0">
                     <Border.Shadow>
                         <Shadow Brush="#EBEBEB"
                            Offset="10,10"
                            Radius="20"
                            Opacity="1"/>
                     </Border.Shadow>
-                    <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
-                        <StackLayout Orientation="Vertical">
-                            <Grid>
-                                <Label Text="Staff" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
-                                <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,-20,0,0" />
-                            </Grid>
+                    <Grid>
+                        <Image Source="../Assets/folder1.png" Aspect="AspectFit" />
+                        <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
+                            <StackLayout Orientation="Vertical">
+                                <Grid>
+                                    <Label Text="Staff" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="25,55,0,0" />
+                                    <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,20,0,0" />
+                                </Grid>
 
-                            <!-- Staff -->
-                            <Label Text="Total Staff" FontSize="10" TextColor="#7D8DA6" Margin="5,0,0,0" />
+                                <!-- Staff -->
+                                <Label Text="Total Staff" FontSize="10" TextColor="#898989" Margin="25,0,0,0" />
 
-                            <!-- Total Number -->
-                            <Label Text="20" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" />
-                        </StackLayout>
-                    </Frame>
+                                <!-- Total Number -->
+                                <Label Text="20" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
                 </Border>
             </Grid>
 
             <!-- Total Clients -->
-            <Grid BackgroundColor="Transparent" Margin="250,-180,0,0">
-                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="220" HeightRequest="130" HorizontalOptions="Start" Margin="20,0,0,0">
+            <Grid BackgroundColor="Transparent" Margin="0,-180,0,0">
+
+                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="220" HeightRequest="180" HorizontalOptions="Start" Margin="270,0,0,0">
                     <Border.Shadow>
                         <Shadow Brush="#EBEBEB"
                            Offset="10,10"
                            Radius="20"
                            Opacity="1"/>
                     </Border.Shadow>
-                    <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="#A7CBF6">
-                        <StackLayout Orientation="Vertical">
-                            <Grid>
-                                <Label Text="Clients" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
-                                <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,-20,0,0" />
-                            </Grid>
+                    <Grid>
+                        <Image Source="../Assets/folder2.png" Aspect="AspectFit" />
+                        <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
+                            <StackLayout Orientation="Vertical">
+                                <Grid>
+                                    <Label Text="Clients" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="25,55,0,0" />
+                                    <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,20,0,0" />
+                                </Grid>
 
-                            <!-- Row 2: Staff -->
-                            <Label Text="Total Clients" FontSize="10" TextColor="#7D8DA6" Margin="5,0,0,0" />
+                                <!-- Staff -->
+                                <Label Text="Total Clients" FontSize="10" TextColor="#898989" Margin="25,0,0,0" />
 
-                            <!-- Row 1: Total Number -->
-                            <Label Text="15" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" />
-                        </StackLayout>
-                    </Frame>
+                                <!-- Total Number -->
+                                <Label Text="15" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
                 </Border>
             </Grid>
-            
+
             <!-- Total Projects -->
-            <Grid BackgroundColor="Transparent" Margin="500,-180,0,0">
-                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="220" HeightRequest="130" HorizontalOptions="Start" Margin="20,0,0,0">
+            <Grid BackgroundColor="Transparent" Margin="0,-180,0,0">
+
+                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="220" HeightRequest="180" HorizontalOptions="Start" Margin="520,0,0,0">
                     <Border.Shadow>
                         <Shadow Brush="#EBEBEB"
                            Offset="10,10"
                            Radius="20"
                            Opacity="1"/>
                     </Border.Shadow>
-                    <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
-                        <StackLayout Orientation="Vertical">
-                            <Grid>
-                                <Label Text="Projects" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
-                                <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,-20,0,0" />
-                            </Grid>
+                    <Grid>
+                        <Image Source="../Assets/folder3.png" Aspect="AspectFit" />
+                        <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
+                            <StackLayout Orientation="Vertical">
+                                <Grid>
+                                    <Label Text="Projects" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="25,55,0,0" />
+                                    <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,20,0,0" />
+                                </Grid>
 
-                            <!-- Row 2: Staff -->
-                            <Label Text="Total Projects" FontSize="10" TextColor="#7D8DA6" Margin="5,0,0,0" />
+                                <!-- Staff -->
+                                <Label Text="Total Projects" FontSize="10" TextColor="#444444" Margin="25,0,0,0" />
 
-                            <!-- Row 1: Total Number -->
-                            <Label Text="15" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" />
-                        </StackLayout>
-                    </Frame>
+                                <!-- Total Number -->
+                                <Label Text="20" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,0" FontFamily="PoppinsSemibold"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
                 </Border>
-                <!-- Column 1, Row 1: Client Page Text -->
-
             </Grid>
+            <!-- Column 1, Row 1: Client Page Text -->
+ 
 
-            <!-- Our Project -->
+
+        <!-- Our Timeline -->
             <Grid>
                 <Label 
                 Text="Our"
-                Padding="20,300,20,0"
-                FontSize="18"
+                Padding="20,290,20,0"
+                FontSize="24"
                 FontAttributes="None"
+                    FontFamily="PoppinsRegular"
                 Grid.Row="0"
                 Grid.Column="0" />
                 <Label 
-                Text="Projects"
-                Padding="57,300,20,0"
-                FontSize="18"
+                Text="Timeline"
+                Padding="72
+                    ,290,20,0"
+                FontSize="24"
                 FontAttributes="Bold"
-                FontFamily="PoppinsThin"
+                FontFamily="PoppinsSemibold"
                 Grid.Row="0"
                 Grid.Column="0" />
                 
                 <!-- Calendar -->
-                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="800" HeightRequest="200" HorizontalOptions="Start" Margin="20,330,0,0">
+                <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="720" HeightRequest="200" HorizontalOptions="Start" Margin="20,330,0,0">
                     <Border.Shadow>
                         <Shadow Brush="Transparent"
                            Offset="10,10"
@@ -148,7 +164,7 @@
                     <Frame 
                     BackgroundColor="White" 
                     CornerRadius="30" 
-                    WidthRequest="800" 
+                    WidthRequest="720" 
                     HeightRequest="200" 
                     BorderColor="Transparent"
                     Grid.Row="0"
@@ -159,22 +175,23 @@
             </Grid>
             
             <!-- Column 3, All Rows: Client Info Block (Right-aligned) -->
-            <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="310"          
+            <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="380"          
                 Grid.Row="0"
                 Grid.RowSpan="2"
                 Grid.Column="2"
                 HorizontalOptions="End"
-                HeightRequest="544" >
+                HeightRequest="544"
+                    Margin="0,0,15,0">
                 <Border.Shadow>
                     <Shadow Brush="#FF7070"
-                           Offset="5,10"
+                           Offset="10,10"
                            Radius="20"
                            Opacity="0.5"/>
                 </Border.Shadow>
                 <Frame 
                 BackgroundColor="#FF7070" 
                 CornerRadius="30" 
-                WidthRequest="310" 
+                WidthRequest="380" 
                 HeightRequest="544" 
                 BorderColor="Transparent"
                 Grid.Row="0"
@@ -185,15 +202,53 @@
                     <ScrollView>
 
                         <StackLayout Orientation="Vertical">
-                        <Grid>
-                            <!-- Project Cards -->
-                            <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,50,0,0">
+                            <Grid>
+                                <!-- Project Cards -->
+                                <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,120,0,0">
+                                    <Border.Shadow>
+                                        <Shadow Brush="Transparent"
+                                       Offset="10,10"
+                                       Radius="20"
+                                       Opacity="1"/>
+                                    </Border.Shadow>
+                                    <Frame 
+                                BackgroundColor="White" 
+                                CornerRadius="10" 
+                                WidthRequest="270" 
+                                HeightRequest="100" 
+                                BorderColor="Transparent"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="2"
+                                HorizontalOptions="End"/>
+                                </Border>
+
+                                <!-- Project Title -->
+                                <Label Text="Past Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="10,15,0,0">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Past" FontSize="24" FontFamily="PoppinsSemibold" />
+                                            <Span Text=" Projects" FontSize="24" FontFamily="PoppinsLight" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Text="A summary of the impending projects nearing completion." FontSize="12" HorizontalTextAlignment="Start" TextColor="White" Margin="10,55,0,0"></Label>
+
+
+                            </Grid>
+
+                            <!-- Row 2: Email -->
+                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
+
+                            <!-- Project Cards 2 -->
+                            <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
                                 <Border.Shadow>
                                     <Shadow Brush="Transparent"
                                        Offset="10,10"
                                        Radius="20"
                                        Opacity="1"/>
-                                            </Border.Shadow>
+                                </Border.Shadow>
                                 <Frame 
                                 BackgroundColor="White" 
                                 CornerRadius="10" 
@@ -205,45 +260,18 @@
                                 Grid.Column="2"
                                 HorizontalOptions="End"/>
                             </Border>
-
-                            <!-- Project Title -->
-                            <Label Text="Projects" FontSize="24" FontAttributes="None" Grid.Column="0" Margin="5,0,0,0" />
-                            </Grid>
-
-                            <!-- Row 2: Email -->
-                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
-
-                        <!-- Project Cards 2 -->
-                        <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
-                            <Border.Shadow>
-                                <Shadow Brush="Transparent"
-                                       Offset="10,10"
-                                       Radius="20"
-                                       Opacity="1"/>
-                            </Border.Shadow>
-                            <Frame 
-                                BackgroundColor="White" 
-                                CornerRadius="10" 
-                                WidthRequest="270" 
-                                HeightRequest="100" 
-                                BorderColor="Transparent"
-                                Grid.Row="0"
-                                Grid.RowSpan="2"
-                                Grid.Column="2"
-                                HorizontalOptions="End"/>
-                        </Border>
                             <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
 
 
                             <!-- Project Cards 3 -->
-                        <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
-                            <Border.Shadow>
-                                <Shadow Brush="Transparent"
+                            <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
+                                <Border.Shadow>
+                                    <Shadow Brush="Transparent"
                                        Offset="10,10"
                                        Radius="20"
                                        Opacity="1"/>
-                            </Border.Shadow>
-                            <Frame 
+                                </Border.Shadow>
+                                <Frame 
                                 BackgroundColor="White" 
                                 CornerRadius="10" 
                                 WidthRequest="270" 
@@ -253,7 +281,7 @@
                                 Grid.RowSpan="2"
                                 Grid.Column="2"
                                 HorizontalOptions="End"/>
-                        </Border>
+                            </Border>
                             <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
 
 

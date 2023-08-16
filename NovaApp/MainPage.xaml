@@ -8,6 +8,8 @@
             <Setter Property="BackgroundColor" Value="Transparent" />
             <Setter Property="TextColor" Value="Black" />
             <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="FontFamily" Value="PoppinsMedium" />
+            <Setter Property="FontSize" Value="16" />
             <!-- Add more setters for other properties if needed -->
         </Style>
 
@@ -19,6 +21,15 @@
             <Setter Property="Background" Value="{x:Null}" />
             <Setter Property="Margin" Value="250,25,0,0" />
 
+        </Style>
+
+        <Style x:Key="ActiveButtonIndicatorStyle" TargetType="BoxView">
+            <Setter Property="BackgroundColor" Value="Aqua" />
+            <Setter Property="WidthRequest" Value="10" />
+            <Setter Property="HeightRequest" Value="30" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="0,5,0,0" />
+            <Setter Property="Opacity" Value="0" />
         </Style>
 
     </ContentPage.Resources>
@@ -63,8 +74,9 @@
                     <Label Text="StaffEmail@gmail.com" TextColor="#AAAAAA" FontSize="14" />
                 </StackLayout>
             </StackLayout>
+
         </StackLayout>
-        
+
         <!-- Content area -->
         <Grid  WidthRequest="1250" HeightRequest="650" BackgroundColor="Transparent"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
             
@@ -78,8 +90,7 @@
             <Frame 
                CornerRadius="50"    BorderColor="Transparent" BackgroundColor="Transparent"  x:Name="contentFrame"
               >
-                <BoxView x:Name="tab" BackgroundColor="Aqua" WidthRequest="10" HeightRequest="30"
-                     VerticalOptions="Center" Margin="0,5,0,0" Opacity="0" />
+           
             </Frame>
 
         </Grid>
