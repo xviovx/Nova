@@ -2,6 +2,7 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
              x:Class="NovaApp.Views.FundsPage">
     <acrylic:AcrylicView CornerRadius="50"
            TintColor="#FFFFFF" 
@@ -477,10 +478,7 @@
 
                         <!-- Row 4?: Graph -->
                         <Frame CornerRadius="10" BackgroundColor="#FFFFFF" Padding="10" HorizontalOptions="Start" Margin="10,10,0,0" BorderColor="Transparent" WidthRequest="290" HeightRequest="180">
-                            <StackLayout Orientation="Vertical">
-                                <!-- TODO: Replace with actual graph -->
-                                <Image Source="Assets/GraphImgDel.png" Aspect="AspectFit" />
-                            </StackLayout>
+                            <microcharts:ChartView x:Name="chartView"/>
                         </Frame>
 
                     </StackLayout>
