@@ -378,21 +378,18 @@
             <!-- Button -->
             <!-- TODO: turn button into dropdown -->
 
-            <Button 
-                Text="Sort By"
-                WidthRequest="150"
-                HeightRequest="50"
-                Grid.Row="0"
-                Grid.Column="1"
-                Margin="210,-495,0,0"
-                CornerRadius="15"
-                TextColor="Black"
-                BorderColor="#84DCCF"
-                BorderWidth="1.3"
-                FontAttributes="Bold"
-                BackgroundColor="Transparent"
-                
-            />
+            <Picker Title="Filter:"  Margin="160,30,0,0" TextColor="White" BackgroundColor="#FF7070" WidthRequest="200">
+                <Picker.Items>
+                    <x:String>Baboon</x:String>
+                    <x:String>Capuchin Monkey</x:String>
+                    <x:String>Blue Monkey</x:String>
+                    <x:String>Squirrel Monkey</x:String>
+                    <x:String>Golden Lion Tamarin</x:String>
+                    <x:String>Howler Monkey</x:String>
+                    <x:String>Japanese Macaque</x:String>
+                </Picker.Items>
+            </Picker>
+
 
             <!-- total info block -->
             <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="350"          

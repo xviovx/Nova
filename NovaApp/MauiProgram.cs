@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Xe.AcrylicView;
+using Microcharts.Maui;
 
 namespace NovaApp;
 
@@ -11,6 +12,7 @@ public static class MauiProgram
 		builder
 			.UseMauiApp<App>()
 			.UseAcrylicView()
+			.UseMicrocharts()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
