@@ -379,15 +379,12 @@
             <!-- Button -->
             <!-- TODO: turn button into dropdown -->
 
-            <Picker Title="Filter:"  Margin="160,30,0,0" TextColor="White" BackgroundColor="#FF7070" WidthRequest="200">
+            <Picker x:Name="filterCards" Margin="160,30,0,0" TextColor="White" BackgroundColor="LightGrey" WidthRequest="200">
                 <Picker.Items>
-                    <x:String>Baboon</x:String>
-                    <x:String>Capuchin Monkey</x:String>
-                    <x:String>Blue Monkey</x:String>
-                    <x:String>Squirrel Monkey</x:String>
-                    <x:String>Golden Lion Tamarin</x:String>
-                    <x:String>Howler Monkey</x:String>
-                    <x:String>Japanese Macaque</x:String>
+                    <x:String>Spent Asc.</x:String>
+                    <x:String>Received Asc.</x:String>
+                    <x:String>Spent Desc.</x:String>
+                    <x:String>Received Desc.</x:String>
                 </Picker.Items>
             </Picker>
 
@@ -484,7 +481,6 @@
                                 </Picker.Items>
                             </Picker>
                         </StackLayout>
-
 
                         <!-- Row 4?: Graph -->
                         <Frame CornerRadius="10" BackgroundColor="#FFFFFF" Padding="10" HorizontalOptions="Start" Margin="10,10,0,0" BorderColor="Transparent" WidthRequest="290" HeightRequest="180">
