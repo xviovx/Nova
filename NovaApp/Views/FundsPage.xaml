@@ -469,12 +469,22 @@
                         </Grid>
 
                         <!-- Row 3: Overview label -->
-                        <Frame BackgroundColor="Transparent" Padding="10" HorizontalOptions="Start" Margin="5,10,0,0" WidthRequest="240" BorderColor="Transparent">
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Financial " TextColor="White" FontSize="16" FontAttributes="None" HorizontalTextAlignment="Center"/>
-                                <Label Text=" Overview" TextColor="White" FontSize="16"  FontFamily="PoppinsSemibold" HorizontalTextAlignment="Center"/>
-                            </StackLayout>
-                        </Frame>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="Transparent" Padding="10" HorizontalOptions="Start" Margin="5,10,0,0" WidthRequest="240" BorderColor="Transparent">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Financial " TextColor="White" FontSize="16" FontAttributes="None" HorizontalTextAlignment="Center"/>
+                                    <Label Text=" Overview" TextColor="White" FontSize="16" FontFamily="PoppinsSemibold" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Picker x:Name="dataPicker" Margin="-70,10,0,0" TextColor="{Binding PickerTextColor}" BackgroundColor="{Binding PickerBackgroundColor}" WidthRequest="120" HeightRequest="20" SelectedIndexChanged="OnDataPickerSelectedIndexChanged">
+                                <Picker.Items>
+                                    <x:String>Received</x:String>
+                                    <x:String>Spent</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+
 
                         <!-- Row 4?: Graph -->
                         <Frame CornerRadius="10" BackgroundColor="#FFFFFF" Padding="10" HorizontalOptions="Start" Margin="10,10,0,0" BorderColor="Transparent" WidthRequest="290" HeightRequest="180">
