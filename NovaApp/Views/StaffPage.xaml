@@ -7,7 +7,8 @@
            TintColor="#FFFFFF" 
            TintOpacity="0.2"
         BorderColor="Transparent"
-           Padding="20">
+           Padding="20"
+                         x:Name="mainGrid">
         <Grid>
 
 
@@ -21,7 +22,7 @@
                 Grid.Column="0" />
             <Label 
                 Text="List"
-                Padding="125,15,20,0"
+                Padding="120,15,20,0"
                 FontSize="40"
                 FontAttributes="None"
                 FontFamily="PoppinsLight"
@@ -110,7 +111,8 @@
                 Grid.Row="0"
                 Grid.Column="1"
                 Margin="290,-495,0,0"
-                CornerRadius="15"/>
+                CornerRadius="15"
+                Clicked="OnAddNewClicked"/>
 
             <!-- Column 3, All Rows: Client Info Block (Right-aligned) -->
             <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="310"          

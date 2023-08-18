@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "VTBf8M/psr6BWbBPnleCIA6Atef5BaiMChGYFn/JHLeiEBanGG9Rxbu/MMemoakXEzwX+k5s5K8y1rA7EgdqCA==",
+  "dgSpecHash": "6UYR78qmkTMinB6qYa7PTl47ucHv4xL4tMOB6xhhRjyO9LYAmxbaezdaCXOCCB8E5KmdGmYIb+xFaL8C3weaDg==",
   "success": true,
   "projectFilePath": "C:\\Users\\alexa\\OneDrive\\Documents\\GitHub\\Nova\\NovaApp\\NovaApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\acrylicview.maui\\1.13.0\\acrylicview.maui.1.13.0.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\asyncawaitbestpractices\\6.0.4\\asyncawaitbestpractices.6.0.4.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
@@ -19,6 +20,7 @@
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\7.0.92\\microsoft.maui.graphics.win2d.winui.desktop.7.0.92.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.windowsappsdk\\1.2.221209.1\\microsoft.windowsappsdk.1.2.221209.1.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\mopups\\1.1.0\\mopups.1.1.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.maui.essentials.ref.win\\7.0.92\\microsoft.maui.essentials.ref.win.7.0.92.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.maui.core.runtime.win\\7.0.92\\microsoft.maui.core.runtime.win.7.0.92.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.29\\microsoft.windows.sdk.net.ref.10.0.19041.29.nupkg.sha512",

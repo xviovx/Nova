@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             x:Class="NovaApp.Popups.AddClient"    
+             Title="AddClient"
+             CloseWhenBackgroundIsClicked="False"
+             >
+    <mopups:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+            DurationIn="400"
+            EasingIn="Fade"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1"
+            ScaleOut="0.7"></mopupsanim:ScaleAnimation>
+    </mopups:PopupPage.Animation>
+
+    <acrylic:AcrylicView CornerRadius="0"
+                         TintColor="#FF7070" 
+                         TintOpacity="0.3"
+                         BorderColor="Transparent"
+                         Padding="20">
+        <Grid>
+            <acrylic:AcrylicView CornerRadius="50"
+                                 TintColor="#FFFFFF" 
+                                 TintOpacity="0.5"
+                                 BorderColor="Transparent"
+                                 Padding="20"
+                                 WidthRequest="610"
+                                 HeightRequest="500"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center">
+
+                <Grid>
+                    <Button Text="X"
+                            FontSize="24"
+                            FontAttributes="Bold"
+                            BackgroundColor="Transparent"
+                            TextColor="#000000"
+                            HorizontalOptions="End"
+                            VerticalOptions="Start"
+                            Margin="0,10,10,0"
+                            Clicked="OnCloseButtonClicked"
+                            ZIndex="10"/>
+                    <!-- Heading -->
+                    <Label Text="Add a New"
+                           Padding="20,15,20,0"
+                           FontSize="34"
+                           FontFamily="PoppinsLight"
+                           Grid.Row="0"
+                           Grid.Column="0" />
+                    <Label Text="Client"
+                           Padding="210,15,20,0"
+                           FontSize="34"
+                           FontAttributes="None"
+                           FontFamily="PoppinsSemibold"
+                           Grid.Row="0"
+                           Grid.Column="0" />
+
+                    <!-- Description -->
+                    <Label Text="Time to welcome a new client!"
+                           Padding="20,68,0,0"
+                           FontSize="16"
+                           Grid.Row="1"
+                           Grid.Column="0" />
+
+
+
+                    <!-- Column 1, Row 3: First Name and Last Name Input Fields -->
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Vertical">
+
+                            <StackLayout Orientation="Vertical"
+                                     HorizontalOptions="StartAndExpand"
+                                     Spacing="20"
+                                      Margin="20,20,0,5">
+
+                                <Label Text="Company Name" 
+                                      FontFamily="PoppinsLight"
+                                       Margin="0,105,0,-10" />
+                                <Entry Placeholder="Company Name"
+                                       
+                                       BackgroundColor="White" />
+
+                                <Label Text="Email" 
+                                    FontSize="14"
+                                    Margin="0,0,0,-15"
+                                    FontFamily="PoppinsLight"
+                                   />
+
+                                <Entry Placeholder="Email"
+                                   WidthRequest="300"
+                                   BackgroundColor="White" />
+
+
+                            </StackLayout>
+                        </StackLayout>
+
+                        <!-- Column 1, Row 5: Radio Button Options -->
+
+                        <Label Text="Client Type" 
+                                   FontSize="14"
+                                    FontFamily="PoppinsLight"
+                                    Margin="20,20,0,5"
+                                   />
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Start"
+                                     Spacing="10"
+                                     Margin="20,5,0,0"
+                                     Grid.Row="4">
+
+                            <RadioButton GroupName="RoleGroup" Content="Standard" />
+                            <RadioButton GroupName="RoleGroup" Content="Priority" />
+                        </StackLayout>
+
+                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" ></Button>
+                    </StackLayout>
+
+
+
+                </Grid>
+            </acrylic:AcrylicView>
+        </Grid>
+    </acrylic:AcrylicView>
+</mopups:PopupPage>

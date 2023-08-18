@@ -9,15 +9,15 @@
         <Image Source="Assets/BackgroundImageLogin.png" Aspect="AspectFill" />
 
 
-    <acrylic:AcrylicView CornerRadius="50"
+        <acrylic:AcrylicView CornerRadius="50"
            WidthRequest="420"
            HeightRequest="450"
            TintColor="#FFFFFF" 
            TintOpacity="0.2"
            BorderColor="Transparent"
            Padding="20">
-        <Grid>
-            <Label 
+            <Grid>
+                <Label 
                 Text="Login"
                 TextColor="#DF5353"
                 Padding="0,50,0,0"
@@ -28,24 +28,24 @@
                 HorizontalOptions="Center"/>
 
                 <Frame BackgroundColor="White" HeightRequest="40" CornerRadius="20" WidthRequest="300" BorderColor="White" Margin="0,-50,0,0" HorizontalOptions="Center">
-                <StackLayout Orientation="Vertical">
-                    <Grid>
-                        <Image Source="Assets/Icons/user.png" WidthRequest="20" Grid.Column="1" Margin="-250,-12,0,0" />
-                        <Label Text="Username" FontSize="13" FontAttributes="None" Grid.Column="0" Margin="25,-7,0,0" />
-                    </Grid>
-                </StackLayout>
-            </Frame>
+                    <StackLayout Orientation="Vertical">
+                        <Grid>
+                            <Image Source="Assets/Icons/user.png" WidthRequest="20" Grid.Column="1" Margin="-250,-12,0,0" />
+                            <Label Text="Username" FontSize="13" FontAttributes="None" Grid.Column="0" Margin="25,-7,0,0" />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
 
                 <Frame HorizontalOptions="Center" BackgroundColor="White" HeightRequest="40" CornerRadius="20" WidthRequest="300" BorderColor="White" Margin="0,90,0,0">
-                <StackLayout Orientation="Vertical">
-                    <Grid>
-                        <Image Source="Assets/Icons/lock.png" WidthRequest="20" Grid.Column="1" Margin="-250,-12,0,0" />
-                        <Label Text="Password" FontSize="13" FontAttributes="None" Grid.Column="0" Margin="25,-7,0,0" />
-                    </Grid>
-                </StackLayout>
-            </Frame>
+                    <StackLayout Orientation="Vertical">
+                        <Grid>
+                            <Image Source="Assets/Icons/lock.png" WidthRequest="20" Grid.Column="1" Margin="-250,-12,0,0" />
+                            <Label Text="Password" FontSize="13" FontAttributes="None" Grid.Column="0" Margin="25,-7,0,0" />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
 
-            <Button 
+                <Button 
                 Text="Login"
                 WidthRequest="300"
                 HeightRequest="30"
@@ -55,7 +55,7 @@
                 HorizontalOptions="Center"
                 CornerRadius="20"/>
 
-        </Grid>
-    </acrylic:AcrylicView>
+            </Grid>
+        </acrylic:AcrylicView>
     </Grid>
 </ContentPage>

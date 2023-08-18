@@ -610,6 +610,9 @@
     <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\acrylicview.maui\1.13.0\lib\net6.0-windows10.0.19041\Xe.AcrylicView.dll">
       <PackagePath>Xe.AcrylicView.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\asyncawaitbestpractices\6.0.4\lib\netstandard2.1\AsyncAwaitBestPractices.dll">
+      <PackagePath>AsyncAwaitBestPractices.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
     </AppxPackagedFile>
@@ -687,6 +690,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\mopups\1.1.0\lib\net7.0-windows10.0.19041\Mopups.dll">
+      <PackagePath>Mopups.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
@@ -966,6 +972,21 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\1.png">
       <PackagePath>Assets\ProfileImages\1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\2.png">
+      <PackagePath>Assets\ProfileImages\2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\3.png">
+      <PackagePath>Assets\ProfileImages\3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\4.png">
+      <PackagePath>Assets\ProfileImages\4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\5.png">
+      <PackagePath>Assets\ProfileImages\5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\6.png">
+      <PackagePath>Assets\ProfileImages\6.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImg.png">
       <PackagePath>Assets\ProfileImg.png</PackagePath>

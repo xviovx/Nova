@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Mopups.Hosting;
 using Xe.AcrylicView;
 
 namespace NovaApp;
@@ -10,6 +11,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.ConfigureMopups()
 			.UseAcrylicView()
 			.ConfigureFonts(fonts =>
 			{
