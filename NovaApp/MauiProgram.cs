@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Mopups.Hosting;
 using Xe.AcrylicView;
 using Microcharts.Maui;
 
@@ -11,6 +12,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.ConfigureMopups()
 			.UseAcrylicView()
 			.UseMicrocharts()
 			.ConfigureFonts(fonts =>
