@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using Mopups.Hosting;
 using Xe.AcrylicView;
+using Microcharts.Maui;
 
 namespace NovaApp;
 
@@ -13,6 +14,7 @@ public static class MauiProgram
 			.UseMauiApp<App>()
 			.ConfigureMopups()
 			.UseAcrylicView()
+			.UseMicrocharts()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
