@@ -20,6 +20,7 @@
           "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": "7.0.86",
           "Microsoft.Windows.SDK.BuildTools": "10.0.22621.755",
           "Microsoft.WindowsAppSDK": "1.2.221209.1",
+          "Mopups": "1.1.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.9",
           "runtimepack.Microsoft.Maui.Core.Runtime.win": "7.0.86",
           "runtimepack.Microsoft.Maui.Controls.Runtime.win": "7.0.86",
@@ -802,6 +803,14 @@
           }
         }
       },
+      "AsyncAwaitBestPractices/6.0.4": {
+        "runtime": {
+          "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "assemblyVersion": "6.0.4.0",
+            "fileVersion": "6.0.4.0"
+          }
+        }
+      },
       "Microcharts.Maui/1.0.0": {
         "dependencies": {
           "SkiaSharp.Views.Maui.Controls": "2.88.3"
@@ -1016,6 +1025,17 @@
           }
         }
       },
+      "Mopups/1.1.0": {
+        "dependencies": {
+          "AsyncAwaitBestPractices": "6.0.4"
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/Mopups.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
       "SkiaSharp/2.88.3": {
         "dependencies": {
           "SkiaSharp.NativeAssets.Win32": "2.88.3",
@@ -1110,6 +1130,13 @@
       "sha512": "sha512-q/540iKKrC+ppqIl49IHhIBtkgoST5Ku06EPyXJ/zDdXRuFGRVzjU7ZYfkerfkhBqNv2fS/oRUdE0No7zcbg9A==",
       "path": "acrylicview.maui/1.13.0",
       "hashPath": "acrylicview.maui.1.13.0.nupkg.sha512"
+    },
+    "AsyncAwaitBestPractices/6.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dO/ZfaT+5DMMnYUCmxAk2s1jEXUTDcgethroMj1kcmedO0MAu6WgvPP4gPYem/0kJASrnBcem+kr5ju3LaNdMw==",
+      "path": "asyncawaitbestpractices/6.0.4",
+      "hashPath": "asyncawaitbestpractices.6.0.4.nupkg.sha512"
     },
     "Microcharts.Maui/1.0.0": {
       "type": "package",
@@ -1215,6 +1242,13 @@
       "sha512": "sha512-1Y8KDCmUqytdduubaQhRz6aqaP7YhVSPE/fHeqLMsK3DrV+eBThrqkM6R/8N2lu0mwkNfKSTSAhixrTR72nyWA==",
       "path": "microsoft.windowsappsdk/1.2.221209.1",
       "hashPath": "microsoft.windowsappsdk.1.2.221209.1.nupkg.sha512"
+    },
+    "Mopups/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eDmMTnWUFHHAOnLa0W5HmDocdyRow4JsJGQ1LpzT1voJnMu6Skkg2aUcr4BVffW3LHFf0xKx40NQap5KBmOjsA==",
+      "path": "mopups/1.1.0",
+      "hashPath": "mopups.1.1.0.nupkg.sha512"
     },
     "SkiaSharp/2.88.3": {
       "type": "package",

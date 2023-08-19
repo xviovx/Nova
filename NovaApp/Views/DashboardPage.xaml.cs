@@ -5,27 +5,125 @@ namespace NovaApp.Views
 {
     public partial class DashboardPage : ContentView
     {
-        private ChartEntry[] receivedEntries;
+        private ChartEntry[] projectZeroCompletion;
+        private ChartEntry[] projectOneCompletion;
+        private ChartEntry[] projectTwoCompletion;
+        private ChartEntry[] projectThreeCompletion;
 
         public DashboardPage()
         {
             InitializeComponent();
 
-            // dummy data for received entries
-            receivedEntries = new[]
+            // dummy data for charts
+            //chart zero data
+            projectZeroCompletion = new[]
             {
-                new ChartEntry(200) { Label = "Mon", ValueLabel = "200", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(250) { Label = "Tue", ValueLabel = "250", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(95)
+                {
+                    Label = "Complete",
+                    ValueLabel = "95%",
+                    Color = SKColor.Parse("#343434"),
+                    ValueLabelColor = SKColors.Black,
+                },
+                new ChartEntry(5)
+                {
+                    Label = "Incomplete",
+                    ValueLabel = "5%",
+                    Color = SKColor.Parse("#EEEEEE"),
+                    ValueLabelColor = SKColors.Gray, // Change the color as needed
+                }
             };
 
-            var chart = new DonutChart
+            //chart one data
+            projectOneCompletion = new[]
             {
-                Entries = receivedEntries,
-                LabelTextSize = 12f
+                new ChartEntry(80)
+                {
+                    Label = "Complete",
+                    ValueLabel = "80%",
+                    Color = SKColor.Parse("#343434"),
+                    ValueLabelColor = SKColors.Black,
+                },
+                new ChartEntry(20)
+                {
+                    Label = "Incomplete",
+                    ValueLabel = "20%",
+                    Color = SKColor.Parse("#EEEEEE"),
+                    ValueLabelColor = SKColors.Gray, // Change the color as needed
+                }
+            };
+
+            //chart two data
+            projectTwoCompletion = new[]
+            {
+                new ChartEntry(55)
+                {
+                    Label = "Complete",
+                    ValueLabel = "55%",
+                    Color = SKColor.Parse("#343434"),
+                    ValueLabelColor = SKColors.Black,
+                },
+                new ChartEntry(45)
+                {
+                    Label = "Incomplete",
+                    ValueLabel = "45%",
+                    Color = SKColor.Parse("#EEEEEE"),
+                    ValueLabelColor = SKColors.Gray, // Change the color as needed
+                }
+            };
+
+            //chart three data
+            projectThreeCompletion = new[]
+            {
+                new ChartEntry(20)
+                {
+                    Label = "Complete",
+                    ValueLabel = "20%",
+                    Color = SKColor.Parse("#343434"),
+                    ValueLabelColor = SKColors.Black,
+                },
+                new ChartEntry(80)
+                {
+                    Label = "Incomplete",
+                    ValueLabel = "80%",
+                    Color = SKColor.Parse("#EEEEEE"),
+                    ValueLabelColor = SKColors.Gray, // Change the color as needed
+                }
+            };
+
+            var chartZero = new DonutChart
+            {
+                Entries = projectZeroCompletion,
+                LabelTextSize = 12f,
+                LabelMode = LabelMode.LeftAndRight
+            };
+
+            var chartOne = new DonutChart
+            {
+                Entries = projectOneCompletion,
+                LabelTextSize = 12f,
+                LabelMode = LabelMode.LeftAndRight
+            };
+
+            var chartTwo = new DonutChart
+            {
+                Entries = projectTwoCompletion,
+                LabelTextSize = 12f,
+                LabelMode = LabelMode.LeftAndRight
+            };
+
+            var chartThree = new DonutChart
+            {
+                Entries = projectThreeCompletion,
+                LabelTextSize = 12f,
+                LabelMode = LabelMode.LeftAndRight
             };
 
             // assign chart to view
-            chartView.Chart = chart;
+            chartViewZero.Chart = chartZero;
+            chartViewOne.Chart = chartOne;
+            chartViewTwo.Chart = chartTwo;
+            chartViewThree.Chart = chartThree;
         }
     }
 }

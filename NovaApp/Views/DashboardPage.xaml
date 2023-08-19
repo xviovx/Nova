@@ -221,7 +221,9 @@
                                 Grid.Row="0"
                                 Grid.RowSpan="2"
                                 Grid.Column="2"
-                                HorizontalOptions="End"/>
+                                HorizontalOptions="End">
+                                        <microcharts:ChartView x:Name="chartViewZero" Margin="0,2,0,0"/>
+                                    </Frame>
                                 </Border>
 
                                 <!-- Project Title -->
@@ -262,7 +264,7 @@
                                 Grid.Column="2"
                                 HorizontalOptions="End">
 
-                                    <microcharts:ChartView x:Name="chartView"/>
+                                    <microcharts:ChartView x:Name="chartViewOne" Margin="0,2,0,0"/>
                                 </Frame>
                             </Border>
                             <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
@@ -285,7 +287,11 @@
                                 Grid.Row="0"
                                 Grid.RowSpan="2"
                                 Grid.Column="2"
-                                HorizontalOptions="End"/>
+                                HorizontalOptions="End"
+                                    >
+                                    <microcharts:ChartView x:Name="chartViewTwo" Margin="0,2,0,0"/>
+                                </Frame>
+                                    
                             </Border>
                             <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
 
@@ -307,7 +313,9 @@
                                 Grid.Row="0"
                                 Grid.RowSpan="2"
                                 Grid.Column="2"
-                                HorizontalOptions="End"/>
+                                HorizontalOptions="End">
+                                    <microcharts:ChartView x:Name="chartViewThree" Margin="0,2,0,0"/>
+                                </Frame>
 
                             </Border>
                             <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
@@ -331,7 +339,7 @@
                                 Grid.Column="2"
                                 HorizontalOptions="End"/>
                             </Border>
-                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
+                            <Label Text="Why can't I scroll down here lmao???"  FontSize="10" TextColor="Black" Margin="10,-90,0,0" />
 
 
 

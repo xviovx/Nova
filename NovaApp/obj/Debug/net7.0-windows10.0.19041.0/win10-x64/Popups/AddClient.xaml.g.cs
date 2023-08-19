@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("NovaApp.Popups.AddStaff.xaml", "Popups/AddStaff.xaml", typeof(global::NovaApp.Popups.AddStaff))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("NovaApp.Popups.AddClient.xaml", "Popups/AddClient.xaml", typeof(global::NovaApp.Popups.AddClient))]
 
 namespace NovaApp.Popups {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Popups\\AddStaff.xaml")]
-    public partial class AddStaff : global::Mopups.Pages.PopupPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Popups\\AddClient.xaml")]
+    public partial class AddClient : global::Mopups.Pages.PopupPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AddStaff));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AddClient));
         }
     }
 }
