@@ -35,11 +35,11 @@
     </ContentPage.Resources>
 
 
-    
-  
 
 
-    <Grid>
+
+
+    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <!-- Background Image -->
         <Image Source="Assets/BackgroundImage.png" Aspect="AspectFill" />
 
@@ -88,7 +88,7 @@
             </StackLayout>
 
 
-            <StackLayout Orientation="Horizontal" Padding="20" VerticalOptions="Start" Margin="-46,225,0,0" >
+            <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" Padding="20" Margin="-46,0,0,40" >
                 <Image Source="Assets/ProfileImg.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFit" VerticalOptions="CenterAndExpand" />
                 <StackLayout VerticalOptions="CenterAndExpand" Spacing="5" Margin="10,0,0,0">
                     <Label Text="Staff Name" FontSize="14" />
@@ -99,9 +99,9 @@
         </StackLayout>
 
         <!-- Content area -->
-        <Grid  WidthRequest="1250" HeightRequest="650" BackgroundColor="Transparent"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+        <Grid BackgroundColor="Transparent"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="100"
             
-               Margin="170,70,0,0" >
+               Margin="180,40,0,0" >
             <!--<Grid.Shadow>
                 <Shadow Brush="#C8C8C8"
                            Offset="10,20"
