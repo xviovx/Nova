@@ -2,6 +2,7 @@
 using Microsoft.Maui.Controls;
 using NovaApp.Views;
 using Microsoft.Maui.Graphics;
+using System.Diagnostics;
 
 namespace Nova
 {
@@ -49,8 +50,26 @@ namespace Nova
             InitializeComponent();
             NavigationPage.SetHasBackButton(this, false);
             NavigationPage.SetHasNavigationBar(this, false);
-            contentFrame.Content = new DashboardPage(); // Set the initial content to MyView1
-            SetActiveButton(buttonView1);
+
+
+            SetupPageContentAsync();
+
+
+        }
+
+        private async void SetupPageContentAsync()
+        {
+            string JWT = await SecureStorage.GetAsync("JWT") ?? string.Empty;
+
+            if (string.IsNullOrEmpty(JWT))
+            {
+                await Navigation.PushAsync(new LoginPage());
+            }
+            else
+            {
+                contentFrame.Content = new DashboardPage(); // Set the initial content to MyView1
+                SetActiveButton(buttonView1);
+            }
         }
 
         private void OnView1Clicked(object sender, EventArgs e)
@@ -94,10 +113,11 @@ namespace Nova
         //    contentFrame.Content = new SignInPage();
         //    SetActiveButton(buttonView7);
         //}
-        private async void OnLogInClicked(object sender, EventArgs e)
+        private void OnLogInClicked(object sender, EventArgs e)
         {
             // Navigate to the LoginPage
-            await Navigation.PushAsync(new LoginPage());
+            SecureStorage.Remove("JWT");
+            SetupPageContentAsync();
         }
 
         //private void OnLogInClicked(object sender, EventArgs e)
