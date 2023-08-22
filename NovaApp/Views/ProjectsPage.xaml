@@ -19,7 +19,13 @@
                 <ColumnDefinition Width="Auto" />
                 <!-- Right column for buttons -->
             </Grid.ColumnDefinitions>
-            <StackLayout Orientation="Vertical" Grid.Column="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -61,6 +67,9 @@
                     />
                     </Grid>
                 </StackLayout>
+            <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="Azure">
+                
+            </Frame>
             <Frame 
                 Grid.Column="1"
                 HorizontalOptions="End"
