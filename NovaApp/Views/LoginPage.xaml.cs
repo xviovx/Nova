@@ -1,10 +1,20 @@
 using Nova;
+using System;
+using System.Diagnostics;
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace NovaApp.Views;
 
 public partial class LoginPage : ContentPage
 {
-	public LoginPage()
+
+    static string BaseUrl = "http://localhost:3000";
+    static HttpClient client = new HttpClient();
+
+    public LoginPage()
 	{
 		InitializeComponent();
         NavigationPage.SetHasBackButton(this, false);
@@ -34,9 +44,23 @@ public partial class LoginPage : ContentPage
 
     public async Task<bool> OnLogoutHandler(string username, string password)
     {
-        if (username == "user" && password == "pass")
+        if (username != null && password != null)
         {
             // Simulate getting a JWT token from a server
+
+
+            string loginUrl = $"{BaseUrl}/users/signin"; // Replace with your login endpoint
+
+            var postData = new { email = username, password = password };
+            string jsonData = JsonSerializer.Serialize(postData);
+            StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = await client.PostAsync(loginUrl, content);
+
+            string responseBody = await response.Content.ReadAsStringAsync();
+
+            Debug.WriteLine(responseBody);
+
             string jwtToken = "your_jwt_token_here";
 
             // Store the JWT token securely
