@@ -3,34 +3,59 @@ using System.Net.Http;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
+using NovaApp.Models;
+using System.Text.Json;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Collections.ObjectModel;
 
 namespace NovaApp.Views;
 
 public partial class ProjectsPage : ContentView
 {
-    static string BaseUrl = "http://localhost:3000";
-    static HttpClient client = new HttpClient();
+    
+
+    private ProjectsViewModel viewModel;
+    public List<Project> ProjectsList = null;
     public ProjectsPage()
     {
 
         InitializeComponent();
-        Debug.WriteLine("Projects lanched");
-        Task.Run(async () => await GetProjects());
-
+        viewModel = new ProjectsViewModel();
+        BindingContext = viewModel;
+        LoadProjects();
     }
 
-    public static async Task GetProjects()
+    private async void LoadProjects()
     {
-        HttpResponseMessage response = await client.GetAsync(new Uri(new Uri(BaseUrl), "/projects"));
-        if (response.IsSuccessStatusCode)
+        await viewModel.LoadProjectsAsync();
+    }
+
+
+}
+
+public class ProjectsViewModel : BindableObject
+{
+    static string BaseUrl = "http://localhost:3000";
+    static HttpClient client = new HttpClient();
+    private ObservableCollection<Project> projects = new ObservableCollection<Project>();
+    public ObservableCollection<Project> Projects
+    {
+        get => projects;
+        set
         {
-            string responseBody = await response.Content.ReadAsStringAsync();
-            // Process responseBody here
-            Debug.WriteLine(responseBody);
+            projects = value;
+            OnPropertyChanged();
         }
-        else
+    }
+
+    public async Task LoadProjectsAsync()
+    {
+        using (var httpClient = new HttpClient())
         {
-            Debug.WriteLine("Request failed");
+            var response = await httpClient.GetStringAsync(new Uri(new Uri(BaseUrl), "/projects")); // Replace with your API URL
+            var projectsList = JsonSerializer.Deserialize<List<Project>>(response);
+            Projects = new ObservableCollection<Project>(projectsList);
         }
     }
 }

@@ -12,18 +12,15 @@
            Padding="35">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <!-- Left column for the title -->
-                <ColumnDefinition Width="Auto" />
-                <!-- Middle column for spacing -->
-                <ColumnDefinition Width="Auto" />
-                <!-- Right column for buttons -->
+                <ColumnDefinition Width="*"/>
+                <!-- First Column: Equal width -->
+                <ColumnDefinition Width="Auto"/>
+                <!-- Second Column: Equal width -->
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0">
                     <Grid>
@@ -32,27 +29,30 @@
                             <!-- Left column for the title -->
                             <ColumnDefinition Width="Auto" />
                             <!-- Middle column for spacing -->
-                            <ColumnDefinition Width="Auto" />
-                            <!-- Right column for buttons -->
                         </Grid.ColumnDefinitions>
 
-                        <StackLayout VerticalOptions="Center" Grid.Column="0" Orientation="Vertical">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout VerticalOptions="Start" Grid.Column="0" Grid.Row="0" Orientation="Vertical">
                             <StackLayout Orientation="Horizontal">
-                                <Label 
-                        Text="Projects"
-                        FontSize="40"
-                        FontAttributes="Bold"/>
-                                <Label 
-                        Text="OverView"
-                        Padding="7,5,0,0"
-                        FontSize="35"
-                        FontAttributes="None"
-                        FontFamily="PoppinsThin"/>
+                            <Label 
+                                Text="Projects"
+                                FontSize="40"
+                                FontAttributes="Bold"/>
+                            <Label 
+                                Text="OverView"
+                                Padding="7,5,0,0"
+                                FontSize="35"
+                                FontAttributes="None"
+                                FontFamily="PoppinsThin"/>
                             </StackLayout>
                             <Label 
-                    Text="Let's get an overview!"
-                    FontSize="16"
-                   />
+                                Text="Let's get an overview!"
+                                FontSize="16"
+                            />
                         </StackLayout>
 
                         <!-- Spacer column -->
@@ -67,16 +67,28 @@
                     />
                     </Grid>
                 </StackLayout>
-            <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="Azure">
-                
-            </Frame>
+                <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" BorderColor="Transparent" VerticalOptions="FillAndExpand">
+                    <CollectionView ItemsSource="{Binding Projects}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                <Frame BackgroundColor="White" BorderColor="Transparent">
+                                        <Label Text="{Binding title}" />
+                                    </Frame>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Frame>    
+
             <Frame 
                 Grid.Column="1"
                 HorizontalOptions="End"
                 BackgroundColor="#FF7070" 
                 CornerRadius="30" 
                 Margin="40,0,0,0"
-                WidthRequest="450"
+                Grid.RowSpan="2"
+                WidthRequest="310"
                 VerticalOptions="FillAndExpand"
                 BorderColor="Transparent">
                 <StackLayout Orientation="Vertical">
