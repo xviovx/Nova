@@ -16,12 +16,32 @@
            TintOpacity="0.2"
            BorderColor="Transparent"
            Padding="20">
-            <StackLayout>
-                <Label Text="Login"/>
-                <Entry Placeholder="Username" x:Name="UsernameEntry" />
-                <Entry Placeholder="Password" x:Name="PasswordEntry" IsPassword="True" />
-                <Button Text="Login" Clicked="OnLoginButtonClicked" />
-            </StackLayout>
+
+
+            
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- Label -->
+                <Label Grid.Row="0" Text="Login" Margin="0,40,0,0"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="40" FontFamily="PoppinsSemibold" TextColor="#FF7070" />
+
+                <!-- Username Entry -->
+                <Entry Grid.Row="1" Placeholder="Email" x:Name="UsernameEntry" Margin="20"/>
+
+                <!-- Password Entry -->
+                <Entry Grid.Row="2" Placeholder="Password" x:Name="PasswordEntry" IsPassword="True" Margin="20" />
+
+                <!-- Login Button -->
+                <Button Grid.Row="3" Text="Login" Clicked="OnLoginButtonClicked" Margin="20" />
+            </Grid>
+
+
         </acrylic:AcrylicView>
     </Grid>
 </ContentPage>

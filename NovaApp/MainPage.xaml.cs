@@ -51,9 +51,7 @@ namespace Nova
             NavigationPage.SetHasBackButton(this, false);
             NavigationPage.SetHasNavigationBar(this, false);
 
-
             SetupPageContentAsync();
-
 
         }
 
