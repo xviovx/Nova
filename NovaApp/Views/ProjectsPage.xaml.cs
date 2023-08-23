@@ -49,6 +49,7 @@ public class ProjectsViewModel : BindableObject
         }
     }
 
+    // https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/rest
     public async Task LoadProjectsAsync()
     {
         using (var httpClient = new HttpClient())
