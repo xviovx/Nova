@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-08-23T00:44:01.000</Modified>
+      <Modified>2023-08-23T06:58:55.833</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-08-23T00:44:00.636</Modified>
+      <Modified>2023-08-23T06:58:55.617</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.runtimeconfig.json">
       <PackagePath>NovaApp.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.dll">
       <PackagePath>NovaApp.dll</PackagePath>
-      <Modified>2023-08-23T00:43:59.081</Modified>
+      <Modified>2023-08-23T06:58:54.428</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NovaApp.exe</PackagePath>
-      <Modified>2023-08-23T00:43:59.104</Modified>
+      <Modified>2023-08-23T06:58:54.436</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\anchi\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.deps.json">
       <PackagePath>NovaApp.deps.json</PackagePath>
