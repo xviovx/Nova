@@ -94,7 +94,7 @@
                                                         <RowDefinition Height="Auto" />
                                                     </Grid.RowDefinitions>
                                                     <Image Source="Assets/Icons/salary.png" Grid.Row="0" Grid.Column="0" WidthRequest="80" VerticalOptions="CenterAndExpand" ></Image>
-                                                            <Label Text="R12 000 /m" FontSize="14" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="#8BACCA" Margin="0,10,0,0" FontFamily="PoppinsMedium"/>
+                                                    <Label Text="{Binding Salary}" FontSize="14" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="#8BACCA" Margin="0,10,0,0" FontFamily="PoppinsMedium"/>
                                                 </Grid>
                                             </Frame>
                                             <Frame CornerRadius="20" BackgroundColor="#B9DDFF" BorderColor="Transparent" WidthRequest="130" HeightRequest="120" >

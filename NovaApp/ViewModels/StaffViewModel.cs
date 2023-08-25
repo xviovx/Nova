@@ -41,22 +41,39 @@ namespace NovaApp.ViewModels
 
             string staffType;
             string position;
+            int salary;
 
             if (IsEmployeeType)
             {
                 staffType = "Employee";
                 position = Position; // Use the inputted position for employees
+
+                if (position == "Junior Developer")
+                {
+                    salary = 400; // R400 per hour for Junior Developer
+                }
+                else if (position == "Senior Developer")
+                {
+                    salary = 600; // R600 per hour for Senior Developer
+                }
+                else
+                {
+                    // Handle other positions if needed
+                    salary = 0;
+                }
             }
             else if (IsAdminType)
             {
                 staffType = "Administrative Staff";
                 position = "Admin"; // Automatically set position to "Admin" for admin staff
+                salary = 17000; // R17000 per month for Administrative Staff
             }
             else
             {
                 // Handle case when neither radio button is selected
                 staffType = string.Empty;
                 position = string.Empty;
+                salary = 0;
             }
 
             // Set password based on staff type
@@ -69,6 +86,7 @@ namespace NovaApp.ViewModels
                 Email = Email,
                 StaffType = staffType,
                 Position = position, // Set position here
+                Salary = salary, // Set salary here
                 Password = password, // Set password here
                 AvailableHours = maxAvailableHours
             };

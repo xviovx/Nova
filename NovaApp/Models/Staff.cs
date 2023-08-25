@@ -14,6 +14,7 @@ namespace NovaApp.Models
         public string Email { get; set; } = string.Empty;
         public string StaffType { get; set; } = string.Empty;
         public string Position { get; set; } = string.Empty;
+        public int Salary { get; set; }
         public string Password { get; set; } = string.Empty;
         public int AvailableHours { get; set; }
     }

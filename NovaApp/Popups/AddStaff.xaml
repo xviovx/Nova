@@ -131,16 +131,20 @@
                             <Entry Placeholder="Email"
                                    WidthRequest="300"
                                    BackgroundColor="White" />
-
                             <Label Text="Position title/titles" 
                                    FontSize="14"
-                                    FontFamily="PoppinsLight"
-                                   Margin="0,0,0,-15"
-                                   />
+                                   FontFamily="PoppinsLight"
+                                   Margin="0,0,0,-15" />
 
-                            <Entry Placeholder="Position title/titles"
-                                   WidthRequest="300"
-                                   BackgroundColor="White" />
+                            <Picker x:Name="PositionPicker"
+                                Title="Select Position"
+                                WidthRequest="300"
+                                BackgroundColor="White">
+                                <Picker.Items>
+                                    <x:String>Senior Developer</x:String>
+                                    <x:String>Junior Developer</x:String>
+                                </Picker.Items>
+                            </Picker>
                         </StackLayout>
 
                         <!-- Column 1, Row 5: Radio Button Options -->
