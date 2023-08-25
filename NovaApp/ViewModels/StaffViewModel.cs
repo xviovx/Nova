@@ -35,7 +35,7 @@ namespace NovaApp.ViewModels
             AddNewStaffCommand = new Command(async () => await AddStaff());
         }
 
-        private async Task AddStaff()
+        public async Task AddStaff()
         {
             int maxAvailableHours = 40; // Assuming 40 hours is the max for a week
 
@@ -90,7 +90,7 @@ namespace NovaApp.ViewModels
         }
 
 
-        private async Task FetchAllStaff()
+        public async Task FetchAllStaff()
         {
             var staffMembers = await _restService.RefreshStaffAsync();
             StaffList.Clear();
