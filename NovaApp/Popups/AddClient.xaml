@@ -8,6 +8,7 @@
              Title="AddClient"
              CloseWhenBackgroundIsClicked="False"
              >
+
     <mopups:PopupPage.Animation>
         <mopupsanim:ScaleAnimation
             DurationIn="400"
@@ -81,9 +82,8 @@
                                 <Label Text="Company Name" 
                                       FontFamily="PoppinsLight"
                                        Margin="0,105,0,-10" />
-                                <Entry Placeholder="Company Name"
-                                       
-                                       BackgroundColor="White" />
+                                <Entry Placeholder="Company Name" BackgroundColor="White" Text="{Binding CompanyName}" />
+
 
                                 <Label Text="Email" 
                                     FontSize="14"
@@ -91,9 +91,8 @@
                                     FontFamily="PoppinsLight"
                                    />
 
-                                <Entry Placeholder="Email"
-                                   WidthRequest="300"
-                                   BackgroundColor="White" />
+                                <Entry Placeholder="Email" WidthRequest="300" BackgroundColor="White" Text="{Binding Email}" />
+
 
 
                             </StackLayout>
@@ -112,11 +111,12 @@
                                      Margin="20,5,0,0"
                                      Grid.Row="4">
 
-                            <RadioButton GroupName="RoleGroup" Content="Standard" />
-                            <RadioButton GroupName="RoleGroup" Content="Priority" />
+                            <RadioButton GroupName="RoleGroup" Content="Standard" Value="Standard" IsChecked="{Binding ClientType}" />
+                            <RadioButton GroupName="RoleGroup" Content="Priority" Value="Priority" IsChecked="{Binding ClientType}" />
                         </StackLayout>
 
-                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" ></Button>
+                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" Clicked="OnAddNewButtonClicked" ZIndex="99"/>
+
                     </StackLayout>
 
 

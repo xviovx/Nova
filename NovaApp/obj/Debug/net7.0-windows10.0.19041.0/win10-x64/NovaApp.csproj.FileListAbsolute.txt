@@ -1343,3 +1343,9 @@ C:\Users\pharo\Desktop\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x
 C:\Users\pharo\Desktop\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Core.dll
 C:\Users\pharo\Desktop\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Windows.dll
 C:\Users\pharo\Desktop\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\libSkiaSharp.dll
+C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microcharts.Maui.dll
+C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SkiaSharp.dll
+C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Controls.dll
+C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Core.dll
+C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Windows.dll
+C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\libSkiaSharp.dll
