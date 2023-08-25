@@ -1,6 +1,7 @@
 namespace NovaApp.Popups;
 using Mopups.Services;
 using NovaApp.ViewModels;
+using System.Diagnostics;
 
 public partial class AddStaff
 {
@@ -16,4 +17,24 @@ public partial class AddStaff
     {
         MopupService.Instance.PopAllAsync();
     }
+
+    private void IsEmployeeType_Checked(object sender, CheckedChangedEventArgs e)
+    {
+        bool isAdmin = !e.Value; // If Employee is checked, Admin is not checked
+        bool isEmployee = e.Value;
+
+        PositionPicker.IsVisible = isEmployee;
+        PasswordLayout.IsVisible = isAdmin;
+    }
+
+    private void IsAdminType_Checked(object sender, CheckedChangedEventArgs e)
+    {
+        bool isAdmin = e.Value;
+        bool isEmployee = !e.Value; // If Admin is checked, Employee is not checked
+
+        PositionPicker.IsVisible = isEmployee;
+        PasswordLayout.IsVisible = isAdmin;
+    }
+
+
 }

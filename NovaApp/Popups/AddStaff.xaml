@@ -67,15 +67,35 @@
                            Grid.Row="1"
                            Grid.Column="0" />
 
+                    <!-- Column 1, Row 5: Radio Button Options -->
+
+                    <Label Text="Role Type" 
+                                   FontSize="14"
+                                    FontFamily="PoppinsLight"
+                                    Margin="20,110,0,5"
+                                   />
+                    <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Start"
+                                     Spacing="10"
+                                     Margin="20,-335,0,0"
+                                     ZIndex="99"
+                                     Grid.Row="1">
+
+                        <RadioButton GroupName="RoleGroup" x:Name="IsEmployeeType" Content="Employee" CheckedChanged="IsEmployeeType_Checked" />
+                        <RadioButton GroupName="RoleGroup" x:Name="IsAdminType" Content="Administrative Staff" CheckedChanged="IsAdminType_Checked" />
+
+
+                    </StackLayout>
+
                     <!-- Profile Images Row -->
                     <Label Text="Select a Profile Image"
                            FontFamily="PoppinsLight"
-                           Padding="20,115,0,0"
+                           Padding="20,195,0,0"
                            FontSize="14" />
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="StartAndExpand"
                                  Spacing="15"
-                                 Margin="20,-295,0,0">
+                                 Margin="20,-150,0,0">
                         <!-- 6 profile images here -->
                         <Image Source="Assets/ProfileImages/1.png"
                                WidthRequest="50"
@@ -102,7 +122,7 @@
                         <StackLayout Orientation="Vertical">
                             <Label Text="First Name" 
                               FontFamily="PoppinsLight"
-                               Margin="20,235,0,5" />
+                               Margin="20,295,0,5" />
 
                             <StackLayout Orientation="Horizontal"
                                      HorizontalOptions="Start"
@@ -131,13 +151,26 @@
                             <Entry Placeholder="Email"
                                    WidthRequest="300"
                                    BackgroundColor="White" />
-                            <Label Text="Position title/titles" 
-                                   FontSize="14"
-                                   FontFamily="PoppinsLight"
-                                   Margin="0,0,0,-15" />
 
+
+                            <!-- Password Entry and Label -->
+                            <StackLayout x:Name="PasswordLayout" IsVisible="False">
+                                <Label Text="Password"
+                                   FontSize="14"
+                                   Margin="0,5,0,5"
+                                   FontFamily="PoppinsLight" />
+
+                                <Entry x:Name="PasswordEntry"
+                                   Placeholder="Password"
+                                   WidthRequest="300"
+                                   BackgroundColor="White" />
+                            </StackLayout>
+
+                            <!-- Position Picker -->
                             <Picker x:Name="PositionPicker"
                                 Title="Select Position"
+                                FontFamily="PoppinsLight"
+                                FontSize="14"
                                 WidthRequest="300"
                                 BackgroundColor="White">
                                 <Picker.Items>
@@ -147,22 +180,7 @@
                             </Picker>
                         </StackLayout>
 
-                        <!-- Column 1, Row 5: Radio Button Options -->
 
-                        <Label Text="Role Type" 
-                                   FontSize="14"
-                                    FontFamily="PoppinsLight"
-                                    Margin="20,20,0,5"
-                                   />
-                        <StackLayout Orientation="Horizontal"
-                                     HorizontalOptions="Start"
-                                     Spacing="10"
-                                     Margin="20,5,0,0"
-                                     Grid.Row="4">
-
-                            <RadioButton GroupName="RoleGroup" Content="Employee" IsChecked="{Binding IsEmployeeType}" />
-                            <RadioButton GroupName="RoleGroup" Content="Administrative Staff" IsChecked="{Binding IsAdminType}" />
-                        </StackLayout>
 
                         <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" Command="{Binding AddNewStaffCommand}"></Button>
                     </StackLayout>
