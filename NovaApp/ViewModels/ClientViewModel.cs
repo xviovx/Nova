@@ -29,7 +29,7 @@ namespace NovaApp.ViewModels
             AddNewClientCommand = new Command(async () => await AddClient());
         }
 
-        private async Task AddClient()
+        public async Task AddClient()
         {
             int maxAvailableHours = 40; // Assuming 40 hours is the max for a week
 
@@ -69,7 +69,7 @@ namespace NovaApp.ViewModels
             AvailableHours = 0;
         }
 
-        private async Task FetchAllClients()
+        public async Task FetchAllClients()
         {
             var clients = await _restService.RefreshClientsAsync();
             ClientList.Clear();

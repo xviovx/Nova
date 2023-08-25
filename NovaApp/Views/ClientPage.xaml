@@ -37,15 +37,19 @@
                 Grid.Column="0" />
 
             <!-- Column 1, Row 3: Container for client cards -->
-            <!-- Column 1, Row 3: Container for client cards -->
             <CollectionView
-                 ItemsSource="{Binding Clients}"
-                 SelectionMode="Single"
-                 Margin="0,-30,0,0"
-                 HorizontalOptions="FillAndExpand">
+                    ItemsSource="{Binding Clients}"
+                    SelectionMode="Single"
+                     HorizontalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                         Span="2" 
+                        VerticalItemSpacing="20"
+                         HorizontalItemSpacing="20" />
+                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="350" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,20">
+                        <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="350" HeightRequest="250" HorizontalOptions="Start">
                             <Border.Shadow>
                                 <Shadow Brush="#EBEBEB"
                             Offset="10,10"
