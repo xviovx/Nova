@@ -7,10 +7,11 @@ using NovaApp.ViewModels;
 namespace NovaApp.Popups
 {
 
-    private ClientViewModel _viewModel;
+    
     public partial class AddClient
     {
-        
+        private ClientViewModel _viewModel;
+
         public AddClient()
         {
             InitializeComponent();
@@ -19,32 +20,7 @@ namespace NovaApp.Popups
 
         }
 
-       public void OnAddNewButtonClicked(object sender, EventArgs e)
-        {
-            Debug.WriteLine("Clicked");
-
-            try
-            {
-                // Access the BindingContext (ClientData instance)
-                if (BindingContext is ClientData clientData)
-                {
-                    // Print data to console
-                    Debug.WriteLine($"Company Name: {clientData.CompanyName}");
-                    Debug.WriteLine($"Email: {clientData.Email}");
-                    Debug.WriteLine($"Client Type: {clientData.ClientType}");
-                }
-                else
-                {
-                    Debug.WriteLine("BindingContext is not a ClientData instance");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"An error occurred: {ex.Message}");
-            }
-        }
-
-       public void OnCloseButtonClicked(object sender, EventArgs e)
+        public void OnCloseButtonClicked(object sender, EventArgs e)
       {
          try
            {

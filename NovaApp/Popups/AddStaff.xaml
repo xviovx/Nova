@@ -156,11 +156,11 @@
                                      Margin="20,5,0,0"
                                      Grid.Row="4">
 
-                            <RadioButton GroupName="RoleGroup" Content="Employee" />
-                            <RadioButton GroupName="RoleGroup" Content="Administrative Staff" />
+                            <RadioButton GroupName="RoleGroup" Content="Employee" IsChecked="{Binding IsEmployeeType}" />
+                            <RadioButton GroupName="RoleGroup" Content="Administrative Staff" IsChecked="{Binding IsAdminType}" />
                         </StackLayout>
 
-                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" ></Button>
+                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" Command="{Binding AddNewStaffCommand}"></Button>
                     </StackLayout>
 
 

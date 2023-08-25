@@ -21,6 +21,9 @@ namespace NovaApp.ViewModels
         public string Position { get; set; }
         public string Password { get; set; }
         public int AvailableHours { get; set; } // Max hours an employee can work
+                                                // Boolean properties for radio button selection
+        public bool IsEmployeeType { get; set; }
+        public bool IsAdminType { get; set; }
 
         public ICommand AddNewStaffCommand { get; }
 
@@ -36,25 +39,37 @@ namespace NovaApp.ViewModels
         {
             int maxAvailableHours = 40; // Assuming 40 hours is the max for a week
 
-            if (StaffType == "Admin")
+            string staffType;
+            string position;
+
+            if (IsEmployeeType)
             {
-                Position = "Admin"; // Set title to "Admin" for admin employees
-    
+                staffType = "Employee";
+                position = Position; // Use the inputted position for employees
+            }
+            else if (IsAdminType)
+            {
+                staffType = "Administrative Staff";
+                position = "Admin"; // Automatically set position to "Admin" for admin staff
             }
             else
             {
-                // For non-admin employees, Titles is already set based on user input
-                Password = null; // Non-admin employees do not receive a password
+                // Handle case when neither radio button is selected
+                staffType = string.Empty;
+                position = string.Empty;
             }
+
+            // Set password based on staff type
+            string password = IsAdminType ? Password : string.Empty;
 
             var newStaff = new Staff
             {
                 ProfileImage = ProfileImage,
                 Name = Name,
                 Email = Email,
-                StaffType = StaffType,
-                Position = Position,
-                Password = Password,
+                StaffType = staffType,
+                Position = position, // Set position here
+                Password = password, // Set password here
                 AvailableHours = maxAvailableHours
             };
 
@@ -63,15 +78,17 @@ namespace NovaApp.ViewModels
             // Refresh the list of staff members after adding
             await FetchAllStaff();
 
-            // Clear input fields
+            // Clear input fields, radio button selections, and other properties
             ProfileImage = string.Empty;
             Name = string.Empty;
             Email = string.Empty;
-            StaffType = string.Empty;
+            IsEmployeeType = false;
+            IsAdminType = false;
             Position = string.Empty;
             Password = string.Empty;
             AvailableHours = 0;
         }
+
 
         private async Task FetchAllStaff()
         {

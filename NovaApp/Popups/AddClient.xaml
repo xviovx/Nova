@@ -111,11 +111,11 @@
                                      Margin="20,5,0,0"
                                      Grid.Row="4">
 
-                            <RadioButton GroupName="RoleGroup" Content="Standard" Value="Standard" IsChecked="{Binding ClientType}" />
-                            <RadioButton GroupName="RoleGroup" Content="Priority" Value="Priority" IsChecked="{Binding ClientType}" />
+                            <RadioButton GroupName="RoleGroup" Content="Standard" IsChecked="{Binding IsStandardType}" />
+                            <RadioButton GroupName="RoleGroup" Content="Priority" IsChecked="{Binding IsPriorityType}" />
                         </StackLayout>
 
-                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" Clicked="OnAddNewButtonClicked" ZIndex="99"/>
+                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" Clicked="OnAddNewButtonClicked" Command="{Binding AddNewClientCommand}" ZIndex="99"/>
 
                     </StackLayout>
 

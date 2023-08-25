@@ -16,7 +16,8 @@ namespace NovaApp.ViewModels
         // Adding Client Properties
         public string CompanyName { get; set; }
         public string Email { get; set; }
-        public string ClientType { get; set; }
+        public bool IsStandardType { get; set; }
+        public bool IsPriorityType { get; set; }
         public int AvailableHours { get; set; }
         public ICommand AddNewClientCommand { get; }
 
@@ -30,28 +31,29 @@ namespace NovaApp.ViewModels
 
         private async Task AddClient()
         {
-            int availableHours;
+            int maxAvailableHours = 40; // Assuming 40 hours is the max for a week
 
-            if (ClientType == "Priority")
+            string clientType;
+            if (IsStandardType)
             {
-                availableHours = 30;
+                clientType = "Standard";
             }
-            else if (ClientType == "Standard")
+            else if (IsPriorityType)
             {
-                availableHours = 15;
+                clientType = "Priority";
             }
             else
             {
-                // Set a default value or handle the case where ClientType is neither "Priority" nor "Standard"
-                availableHours = 0;
+                // Handle case when neither radio button is selected
+                clientType = string.Empty;
             }
 
             var newClient = new Client
             {
                 CompanyName = CompanyName,
                 Email = Email,
-                ClientType = ClientType,
-                AvailableHours = availableHours
+                ClientType = clientType,
+                AvailableHours = maxAvailableHours
             };
 
             await _restService.SaveClientAsync(newClient, true);
@@ -59,10 +61,11 @@ namespace NovaApp.ViewModels
             // Refresh the list of clients after adding
             await FetchAllClients();
 
-            // Clear input fields
+            // Clear input fields and radio button selections
             CompanyName = string.Empty;
             Email = string.Empty;
-            ClientType = string.Empty;
+            IsStandardType = false;
+            IsPriorityType = false;
             AvailableHours = 0;
         }
 
