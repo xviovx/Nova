@@ -87,35 +87,59 @@
 
                     </StackLayout>
 
-                    <!-- Profile Images Row -->
                     <Label Text="Select a Profile Image"
                            FontFamily="PoppinsLight"
                            Padding="20,195,0,0"
                            FontSize="14" />
-                    <StackLayout Orientation="Horizontal"
+
+                    <StackLayout  x:Name="ImageStackLayout" Orientation="Horizontal"
                                  HorizontalOptions="StartAndExpand"
                                  Spacing="15"
                                  Margin="20,-150,0,0">
-                        <!-- 6 profile images here -->
                         <Image Source="Assets/ProfileImages/1.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="Assets/ProfileImages/2.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="Assets/ProfileImages/3.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="Assets/ProfileImages/4.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="Assets/ProfileImages/5.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="Assets/ProfileImages/6.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnImageTapped" />
+                                </Image.GestureRecognizers>
+                            </Image>
                     </StackLayout>
+                    
 
                     <!-- Column 1, Row 3: First Name and Last Name Input Fields -->
                     <StackLayout Orientation="Vertical">

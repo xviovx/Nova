@@ -15,13 +15,21 @@ namespace NovaApp.ViewModels
 
         // Adding Staff Properties
         public string ProfileImage { get; set; }
+
+        private string _selectedImageSource;
+        public string SelectedImageSource
+        {
+            get { return _selectedImageSource; }
+            set { SetProperty(ref _selectedImageSource, value); }
+        }
         public string Name { get; set; }
         public string Email { get; set; }
         public string StaffType { get; set; }
         public string Position { get; set; }
         public string Password { get; set; }
         public int AvailableHours { get; set; } // Max hours an employee can work
-                                                // Boolean properties for radio button selection
+        
+        // Boolean properties for radio button selection
         public bool IsEmployeeType { get; set; }
         public bool IsAdminType { get; set; }
 
@@ -79,9 +87,12 @@ namespace NovaApp.ViewModels
             // Set password based on staff type
             string password = IsAdminType ? Password : string.Empty;
 
+            // Set the ProfileImage using the SelectedImageSource
+            string profileImage = _viewModel.SelectedImageSource;
+
             var newStaff = new Staff
             {
-                ProfileImage = ProfileImage,
+                ProfileImage = profileImage, // Set the profile image
                 Name = Name,
                 Email = Email,
                 StaffType = staffType,

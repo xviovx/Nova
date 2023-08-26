@@ -36,5 +36,36 @@ public partial class AddStaff
         PasswordLayout.IsVisible = isAdmin;
     }
 
+    private void OnImageTapped(object sender, EventArgs e)
+    {
+        try
+        {
+            if (sender is Image tappedImage)
+            {
+                // Reset opacity for all images within the named StackLayout
+                foreach (var child in ImageStackLayout.Children)
+                {
+                    if (child is Image image)
+                    {
+                        image.Opacity = 0.3;
+                    }
+                }
+
+                // Set tapped image's opacity to 1 and update SelectedImageSource
+                tappedImage.Opacity = 1;
+                _viewModel.SelectedImageSource = tappedImage.Source.ToString(); // Store the selected image source
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle the exception here
+            Debug.WriteLine($"An exception occurred: {ex.Message}");
+        }
+    }
+
+
+
+
+
 
 }
