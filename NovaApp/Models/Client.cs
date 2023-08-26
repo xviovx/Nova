@@ -13,6 +13,7 @@ namespace NovaApp.Models
         public string Email { get; set; } = string.Empty;
         public string ClientType { get; set; } = string.Empty;
         public int AvailableHours { get; set; }
+        public bool Active { get; set; }
 
     }
 }

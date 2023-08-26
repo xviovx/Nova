@@ -111,9 +111,16 @@
                                      Margin="20,5,0,0"
                                      Grid.Row="4">
 
-                            <RadioButton GroupName="RoleGroup" Content="Standard" IsChecked="{Binding IsStandardType}" />
-                            <RadioButton GroupName="RoleGroup" Content="Priority" IsChecked="{Binding IsPriorityType}" />
+                            <RadioButton GroupName="RoleGroup" Content="Standard" IsChecked="{Binding IsStandardType}" CheckedChanged="OnStandardRadioButtonClicked"  />
+                            <RadioButton GroupName="RoleGroup" Content="Priority" IsChecked="{Binding IsPriorityType}" CheckedChanged="OnPriorityRadioButtonClicked" />
                         </StackLayout>
+                        <Label Text=""
+                               x:Name="DescriptionLabel"
+                               Padding="20,0,0,0"
+                               FontSize="12"
+                               FontFamily="PoppinsLight"
+                               Grid.Row="5"
+                               Grid.Column="0" />
 
                         <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" Command="{Binding AddNewClientCommand}" ZIndex="99"/>
 

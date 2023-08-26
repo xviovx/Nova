@@ -80,9 +80,16 @@
                                      Margin="20,-335,0,0"
                                      ZIndex="99"
                                      Grid.Row="1">
-
-                        <RadioButton GroupName="RoleGroup" x:Name="IsEmployeeType" Content="Employee" CheckedChanged="IsEmployeeType_Checked" />
-                        <RadioButton GroupName="RoleGroup" x:Name="IsAdminType" Content="Administrative Staff" CheckedChanged="IsAdminType_Checked" />
+                        <RadioButton GroupName="RoleGroup"
+                             x:Name="IsEmployeeType" 
+                             Content="Employee"
+                             IsChecked="{Binding IsEmployeeType, Mode=TwoWay}" 
+                             CheckedChanged="IsEmployeeType_Checked" />
+                        <RadioButton GroupName="RoleGroup"
+                             x:Name="IsAdminType" 
+                             Content="Administrative Staff"
+                             IsChecked="{Binding IsAdminType, Mode=TwoWay}" 
+                             CheckedChanged="IsAdminType_Checked" />
 
 
                     </StackLayout>
@@ -151,13 +158,16 @@
                             <StackLayout Orientation="Horizontal"
                                      HorizontalOptions="Start"
                                      Spacing="10"
-                                     Margin="20,0,0,0" >
+                                     Margin="20,0,0,0" 
+                                         >
                                 <Entry Placeholder="First Name"
                                        WidthRequest="150"
-                                       BackgroundColor="White" />
+                                       BackgroundColor="White" 
+                                       Text="{Binding FirstName}"/>
                                 <Entry Placeholder="Last Name"
                                        WidthRequest="150"
-                                       BackgroundColor="White" />
+                                       BackgroundColor="White"
+                                        Text="{Binding LastName}"/>
                             </StackLayout>
                         </StackLayout>
 
@@ -174,7 +184,8 @@
 
                             <Entry Placeholder="Email"
                                    WidthRequest="300"
-                                   BackgroundColor="White" />
+                                   BackgroundColor="White"
+                                   Text="{Binding Email}"/>
 
 
                             <!-- Password Entry and Label -->
@@ -187,7 +198,8 @@
                                 <Entry x:Name="PasswordEntry"
                                    Placeholder="Password"
                                    WidthRequest="300"
-                                   BackgroundColor="White" />
+                                   BackgroundColor="White"
+                                   Text="{Binding Password}"/>
                             </StackLayout>
 
                             <!-- Position Picker -->
@@ -196,7 +208,9 @@
                                 FontFamily="PoppinsLight"
                                 FontSize="14"
                                 WidthRequest="300"
-                                BackgroundColor="White">
+                                BackgroundColor="White"
+                                ItemsSource="{Binding PositionOptions}"
+                                SelectedItem="{Binding Position}">
                                 <Picker.Items>
                                     <x:String>Senior Developer</x:String>
                                     <x:String>Junior Developer</x:String>

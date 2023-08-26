@@ -29,11 +29,12 @@ public partial class AddStaff
 
     private void IsAdminType_Checked(object sender, CheckedChangedEventArgs e)
     {
+        Debug.WriteLine("Is Admin");
         bool isAdmin = e.Value;
         bool isEmployee = !e.Value; // If Admin is checked, Employee is not checked
 
-        PositionPicker.IsVisible = isEmployee;
-        PasswordLayout.IsVisible = isAdmin;
+        PasswordLayout.IsVisible = isAdmin; // Set password layout visibility
+        PositionPicker.IsVisible = isEmployee; // Set position picker visibility
     }
 
     private void OnImageTapped(object sender, EventArgs e)

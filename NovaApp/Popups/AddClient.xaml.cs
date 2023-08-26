@@ -32,5 +32,23 @@ namespace NovaApp.Popups
                 
            }
         }
+
+        private void OnStandardRadioButtonClicked(object sender, CheckedChangedEventArgs e)
+        {
+            if (e.Value)
+            {
+                DescriptionLabel.Text = "Allocated 15 hours a week";
+            }
+        }
+
+        private void OnPriorityRadioButtonClicked(object sender, CheckedChangedEventArgs e)
+        {
+            if (e.Value)
+            {
+                DescriptionLabel.Text = "Allocated 30 hours per week";
+            }
+        }
+
+
     }
 }

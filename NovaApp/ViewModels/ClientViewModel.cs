@@ -19,6 +19,7 @@ namespace NovaApp.ViewModels
         public bool IsStandardType { get; set; }
         public bool IsPriorityType { get; set; }
         public int AvailableHours { get; set; }
+        public bool Active { get; set; }
         public ICommand AddNewClientCommand { get; }
 
         public ClientViewModel(RestService restService)
@@ -31,16 +32,18 @@ namespace NovaApp.ViewModels
 
         public async Task AddClient()
         {
-            int maxAvailableHours = 40; // Assuming 40 hours is the max for a week
-
+            int availableHours =0;
             string clientType;
+
             if (IsStandardType)
             {
                 clientType = "Standard";
+                availableHours = 15;
             }
             else if (IsPriorityType)
             {
                 clientType = "Priority";
+                availableHours = 30;
             }
             else
             {
@@ -48,12 +51,15 @@ namespace NovaApp.ViewModels
                 clientType = string.Empty;
             }
 
+            Debug.WriteLine($"Adding new client with: CompanyName={CompanyName}, Email={Email}, ClientType={clientType}, AvailableHours={availableHours}");
+
             var newClient = new Client
             {
                 CompanyName = CompanyName,
                 Email = Email,
                 ClientType = clientType,
-                AvailableHours = maxAvailableHours
+                AvailableHours = availableHours,
+                Active = true
             };
 
             await _restService.SaveClientAsync(newClient, true);

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.Networking;
 
 namespace NovaApp.ViewModels
 {
@@ -15,52 +16,73 @@ namespace NovaApp.ViewModels
 
         // Adding Staff Properties
         public string ProfileImage { get; set; }
+        public string SelectedImageSource { get; set; } // Changed from private to public
 
-        private string _selectedImageSource;
-        public string SelectedImageSource
-        {
-            get { return _selectedImageSource; }
-            set { SetProperty(ref _selectedImageSource, value); }
-        }
         public string Name { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string Email { get; set; }
         public string StaffType { get; set; }
-        public string Position { get; set; }
+
+        private string _position;
+        public string Position
+        {
+            get { return _position; }
+            set { SetProperty(ref _position, value); }
+        }
+
+
         public string Password { get; set; }
         public int AvailableHours { get; set; } // Max hours an employee can work
-        
+
         // Boolean properties for radio button selection
         public bool IsEmployeeType { get; set; }
         public bool IsAdminType { get; set; }
 
         public ICommand AddNewStaffCommand { get; }
 
+        // ObservableCollection to store position options for the Picker
+        public ObservableCollection<string> PositionOptions { get; }
+
         public StaffViewModel(RestService restService)
         {
             _restService = restService;
             StaffList = new ObservableCollection<Staff>();
+
+            // Initialize PositionOptions
+            PositionOptions = new ObservableCollection<string>
+                {
+                    "Senior Developer",
+                    "Junior Developer"
+                };
+
+            // Set the default position to admin
+            Position = "Admin";
 
             AddNewStaffCommand = new Command(async () => await AddStaff());
         }
 
         public async Task AddStaff()
         {
+            Debug.WriteLine("AddStaff method started...");
             int maxAvailableHours = 40; // Assuming 40 hours is the max for a week
 
             string staffType;
-            string position;
             int salary;
 
             if (IsEmployeeType)
             {
                 staffType = "Employee";
-                position = Position; // Use the inputted position for employees
+                if (string.IsNullOrEmpty(Position))
+                {
+                    Position = PositionOptions[0]; // Set default position if not selected
+                }
 
-                if (position == "Junior Developer")
+                if (Position == "Junior Developer")
                 {
                     salary = 400; // R400 per hour for Junior Developer
                 }
-                else if (position == "Senior Developer")
+                else if (Position == "Senior Developer")
                 {
                     salary = 600; // R600 per hour for Senior Developer
                 }
@@ -73,32 +95,34 @@ namespace NovaApp.ViewModels
             else if (IsAdminType)
             {
                 staffType = "Administrative Staff";
-                position = "Admin"; // Automatically set position to "Admin" for admin staff
                 salary = 17000; // R17000 per month for Administrative Staff
+       
             }
             else
             {
                 // Handle case when neither radio button is selected
                 staffType = string.Empty;
-                position = string.Empty;
+                Position = string.Empty;
                 salary = 0;
             }
 
             // Set password based on staff type
             string password = IsAdminType ? Password : string.Empty;
 
-            // Set the ProfileImage using the SelectedImageSource
-            string profileImage = _viewModel.SelectedImageSource;
+            // Concatenate FirstName and LastName for the Name property
+            string fullName = $"{FirstName} {LastName}";
+
+            Debug.WriteLine($"Creating newStaff object with: ProfileImage={SelectedImageSource}, Name={fullName}, Email={Email}, Position={Position}, StaffType={staffType}, Salary={salary}, Password={password}");
 
             var newStaff = new Staff
             {
-                ProfileImage = profileImage, // Set the profile image
-                Name = Name,
+                ProfileImage = SelectedImageSource, // Use the SelectedImageSource directly
+                Name = fullName,
                 Email = Email,
                 StaffType = staffType,
-                Position = position, // Set position here
-                Salary = salary, // Set salary here
-                Password = password, // Set password here
+                Position = Position,
+                Salary = salary,
+                Password = password,
                 AvailableHours = maxAvailableHours
             };
 
@@ -109,7 +133,8 @@ namespace NovaApp.ViewModels
 
             // Clear input fields, radio button selections, and other properties
             ProfileImage = string.Empty;
-            Name = string.Empty;
+            FirstName = string.Empty; // Clear the FirstName
+            LastName = string.Empty;  // Clear the LastName
             Email = string.Empty;
             IsEmployeeType = false;
             IsAdminType = false;
@@ -117,7 +142,6 @@ namespace NovaApp.ViewModels
             Password = string.Empty;
             AvailableHours = 0;
         }
-
 
         public async Task FetchAllStaff()
         {
