@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Popups.UpdateClien
 build_metadata.AdditionalFiles.TargetPath = Popups\UpdateClient.xaml
 build_metadata.AdditionalFiles.RelativePath = Popups\UpdateClient.xaml
 
+[C:/Users/alexa/OneDrive/Documents/GitHub/Nova/NovaApp/Popups/UpdateStaff.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Popups.UpdateStaff.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\UpdateStaff.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\UpdateStaff.xaml
+
 [C:/Users/alexa/OneDrive/Documents/GitHub/Nova/NovaApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Resources.Styles.Colors.xaml
