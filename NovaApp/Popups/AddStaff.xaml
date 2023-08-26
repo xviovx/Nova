@@ -220,7 +220,7 @@
 
 
 
-                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" Command="{Binding AddNewStaffCommand}"></Button>
+                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,30,20,-15" Command="{Binding AddNewStaffCommand}"></Button>
                     </StackLayout>
 
 
