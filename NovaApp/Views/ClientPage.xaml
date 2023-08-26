@@ -155,7 +155,11 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Text="Company Name" FontSize="24" FontFamily="PoppinsSemibold" Grid.Column="0" Margin="5,50,0,0" />
-                            <Image Source="Assets/Icons/edit.png" WidthRequest="35" Grid.Column="1" Margin="20,-28,0,0" />
+                            <Image Source="Assets/Icons/edit.png" WidthRequest="35" Grid.Column="1" Margin="20,-28,0,0">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEditTapped"/>
+                                </Image.GestureRecognizers>
+                            </Image>
                         </Grid>
 
                         <!-- Row 2: Email -->

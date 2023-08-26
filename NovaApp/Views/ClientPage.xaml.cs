@@ -26,5 +26,10 @@ namespace NovaApp.Views
         {
             MopupService.Instance.PushAsync(new AddClient());
         }
+
+        private void OnEditTapped(object sender, EventArgs e)
+        {
+            MopupService.Instance.PushAsync(new UpdateClient());
+        }
     }
 }

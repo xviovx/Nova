@@ -22,6 +22,7 @@ namespace NovaApp.ViewModels
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
+        public bool Active { get; set; }
         public string StaffType { get; set; }
 
         private string _position;
@@ -123,7 +124,8 @@ namespace NovaApp.ViewModels
                 Position = Position,
                 Salary = salary,
                 Password = password,
-                AvailableHours = maxAvailableHours
+                AvailableHours = maxAvailableHours,
+                Active = true
             };
 
             await _restService.SaveStaffAsync(newStaff, true);
