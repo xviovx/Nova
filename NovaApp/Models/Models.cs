@@ -4,37 +4,25 @@ namespace NovaApp.Models
 {
     public class Project
     {
-        [JsonPropertyName("id")]
         public long Id { get; set; }
+        public string title { get; set; }
 
-        [JsonPropertyName("title")]
-        public string Title { get; set; }
-
-        [JsonPropertyName("description")]
         public string Description { get; set; } = string.Empty;
 
-        [JsonPropertyName("clientOwner")]
         public User ClientOwner { get; set; }
 
-        [JsonPropertyName("jobs")]
         public List<int> Jobs { get; set; } = new List<int>();
 
-        [JsonPropertyName("createdDate")]
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
 
-        [JsonPropertyName("deadlineDate")]
         public DateTime? DeadlineDate { get; set; }
 
-        [JsonPropertyName("completedDate")]
         public DateTime? CompletedDate { get; set; }
 
-        [JsonPropertyName("notes")]
         public List<Note> Notes { get; set; } = new List<Note>();
 
-        [JsonPropertyName("funds")]
         public List<Fund> Funds { get; set; } = new List<Fund>();
 
-        [JsonPropertyName("profile")]
         public int? Profile { get; set; }
     }
 
