@@ -1,62 +1,42 @@
-using System;
-using System.Net.Http;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using Microsoft.Maui.Controls;
 using NovaApp.Models;
-using System.Text.Json;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
+using System.Text.Json;
 
 namespace NovaApp.Views;
 
+
+
 public partial class ProjectsPage : ContentView
 {
-    
 
-    private ProjectsViewModel viewModel;
-    public List<Project> ProjectsList = null;
+    public ObservableCollection<Project> ProjectsList { get; set; } = new ObservableCollection<Project>();
+    static readonly string BaseUrl = "http://localhost:3000";
+
     public ProjectsPage()
     {
-
         InitializeComponent();
-        viewModel = new ProjectsViewModel();
-        BindingContext = viewModel;
-        LoadProjects();
-    }
+         _ = LoadItems(); // Use _ to discard the task, as we're not doing anything with it in this context.
+        BindingContext = this; // Set the BindingContext after loading data
 
-    private async void LoadProjects()
-    {
-        await viewModel.LoadProjectsAsync();
     }
 
 
-}
-
-public class ProjectsViewModel : BindableObject
-{
-    static string BaseUrl = "http://localhost:3000";
-    static HttpClient client = new HttpClient();
-    private ObservableCollection<Project> projects = new ObservableCollection<Project>();
-    public ObservableCollection<Project> Projects
+    public async Task LoadItems()
     {
-        get => projects;
-        set
+        var items = await GetProjectsAsync();
+        foreach (var item in items)
         {
-            projects = value;
-            OnPropertyChanged();
+            ProjectsList.Add(item);
         }
     }
 
     // https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/rest
-    public async Task LoadProjectsAsync()
+    public static async Task<List<Project>> GetProjectsAsync()
     {
-        using (var httpClient = new HttpClient())
-        {
-            var response = await httpClient.GetStringAsync(new Uri(new Uri(BaseUrl), "/projects")); // Replace with your API URL
-            var projectsList = JsonSerializer.Deserialize<List<Project>>(response);
-            Projects = new ObservableCollection<Project>(projectsList);
-        }
+        using var httpClient = new HttpClient();
+        var response = await httpClient.GetAsync(new Uri(new Uri(BaseUrl), "/projects")); // Replace with your API URL
+        var json = await response.Content.ReadAsStringAsync();
+        var projectsList = JsonSerializer.Deserialize<List<Project>>(json);
+        return projectsList;
     }
 }

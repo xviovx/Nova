@@ -10,19 +10,9 @@
            TintOpacity="0.2"
            BorderColor="Transparent"
            Padding="35">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <!-- First Column: Equal width -->
-                <ColumnDefinition Width="Auto"/>
-                <!-- Second Column: Equal width -->
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0">
+        <FlexLayout>
+            <FlexLayout FlexLayout.Grow="1"> <!-- -->
+                <FlexLayout FlexLayout.Grow="1" Direction="Column">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -31,18 +21,18 @@
                             <!-- Middle column for spacing -->
                         </Grid.ColumnDefinitions>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
 
-                    <StackLayout VerticalOptions="Start" Grid.Column="0" Grid.Row="0" Orientation="Vertical">
+                        <StackLayout VerticalOptions="Start" Grid.Column="0" Grid.Row="0" Orientation="Vertical">
                             <StackLayout Orientation="Horizontal">
-                            <Label 
+                                <Label 
                                 Text="Projects"
                                 FontSize="40"
                                 FontAttributes="Bold"/>
-                            <Label 
+                                <Label 
                                 Text="OverView"
                                 Padding="7,5,0,0"
                                 FontSize="35"
@@ -66,52 +56,33 @@
                         HorizontalOptions="End"
                     />
                     </Grid>
-                </StackLayout>
-                <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" BorderColor="Transparent" VerticalOptions="FillAndExpand">
-                    <CollectionView ItemsSource="{Binding Projects}">
+                    <!--https://www.youtube.com/watch?v=gf6abNRAhuY-->
+                    <CollectionView ItemsSource="{Binding ProjectsList}" VerticalOptions="FillAndExpand" SelectionMode="Single" FlexLayout.Grow="1" ItemsLayout="VerticalGrid, 2">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Grid>
-                                <Frame BackgroundColor="White" BorderColor="Transparent">
-                                        <Label Text="{Binding title}" />
-                                    </Frame>
-                                </Grid>
+                                <VerticalStackLayout BackgroundColor="Red" Padding="20" Margin="0,0,0,0">
+                                    <Label Text="{Binding Title}" />
+                                </VerticalStackLayout>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                </Frame>    
 
-            <Frame 
-                Grid.Column="1"
+                </FlexLayout>
+                
+            </FlexLayout>
+            <Frame
                 HorizontalOptions="End"
                 BackgroundColor="#FF7070" 
                 CornerRadius="30" 
-                Margin="40,0,0,0"
+                Margin="20,0,0,0"
                 Grid.RowSpan="2"
                 WidthRequest="310"
                 VerticalOptions="FillAndExpand"
                 BorderColor="Transparent">
-                <StackLayout Orientation="Vertical">
-                    <Grid HeightRequest="50">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <!-- Left column for the title -->
-                            <ColumnDefinition Width="Auto" />
-                            <!-- Middle column for spacing -->
-                            <ColumnDefinition Width="Auto" />
-                            <!-- Right column for buttons -->
-                        </Grid.ColumnDefinitions>
-                      
-                        <StackLayout Orientation="Horizontal" Spacing="5">
-                            <Image Source="Assets/Icons/edit.png" WidthRequest="35" Grid.Column="1"  />
-                        </StackLayout>
-                    </Grid>
-                    <Label Text="Description"/>
-                    <Label Text="this is a dec of what the project is about"/>
-                </StackLayout>
                 
             </Frame>
-        </Grid>
+        </FlexLayout>
+        
         
         
         
