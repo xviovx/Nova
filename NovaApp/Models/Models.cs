@@ -76,15 +76,15 @@ namespace NovaApp.Models
 
     public class Fund
     {
-        public long Id { get; set; }
+        public long id { get; set; }
 
-        public int Expenses { get; set; } = 0;
+        public int expenses { get; set; } = 0;
 
-        public int Income { get; set; } = 0;
+        public int income { get; set; } = 0;
 
-        public string Note { get; set; } = string.Empty;
+        public string note { get; set; } = string.Empty;
 
-        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
+        public DateTime createdDate { get; set; } = DateTime.UtcNow;
 
         public Project Project { get; set; }
 

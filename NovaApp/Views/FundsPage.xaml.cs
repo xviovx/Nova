@@ -1,5 +1,8 @@
 using Microcharts;
+using NovaApp.Models;
 using SkiaSharp;
+using System.Collections.ObjectModel;
+using System.Text.Json;
 
 namespace NovaApp.Views
 {
@@ -47,7 +50,7 @@ namespace NovaApp.Views
                 LabelOrientation = Orientation.Horizontal
             };
 
-            // customize appearance
+            // change appearance
             chart.LabelTextSize = 12f;
 
             // assign chart to view
@@ -78,6 +81,38 @@ namespace NovaApp.Views
                 };
                 chart.LabelTextSize = 12f;
                 chartView.Chart = chart;
+            }
+        }
+
+        public ObservableCollection<Fund> FundsList { get; set; } = new ObservableCollection<Fund>();
+        static readonly string BaseUrl = "http://localhost:3000";
+        private HttpClient httpClient = new HttpClient();
+
+        public async Task LoadItems()
+        {
+            var items = await GetFundsAsync();
+            foreach (var item in items)
+            {
+                FundsList.Add(item);
+            }
+        }
+
+        public async Task<List<Fund>> GetFundsAsync()
+        {
+            try
+            {
+                var response = await httpClient.GetAsync(new Uri(new Uri(BaseUrl), "/funds"));
+                response.EnsureSuccessStatusCode(); // Ensure the HTTP request was successful
+
+                var json = await response.Content.ReadAsStringAsync();
+                var fundsList = JsonSerializer.Deserialize<List<Fund>>(json);
+                return fundsList;
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception gracefully (show an error message, log, etc.)
+                Console.WriteLine($"Error fetching funds: {ex.Message}");
+                return new List<Fund>(); // Return an empty list or handle appropriately
             }
         }
     }
