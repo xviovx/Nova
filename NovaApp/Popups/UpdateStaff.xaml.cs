@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace NovaApp.Popups;
 
-public partial class UpdateStaff 
+public partial class UpdateStaff
 {
     private StaffViewModel _viewModel;
     public UpdateStaff()
-	{
+    {
         InitializeComponent();
         _viewModel = new StaffViewModel(new Services.RestService()); //init our service
         BindingContext = _viewModel; //the context of the xaml is this viewmodel

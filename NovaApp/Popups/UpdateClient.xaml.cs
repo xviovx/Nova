@@ -10,8 +10,8 @@ public partial class UpdateClient
 {
     private ClientViewModel _viewModel;
     public UpdateClient()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         _viewModel = new ClientViewModel(new Services.RestService()); //init our service
         BindingContext = _viewModel; //the context of the xaml is this viewmodel
 

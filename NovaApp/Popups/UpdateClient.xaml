@@ -124,7 +124,7 @@
 
                         <Button Text="De-Activate" WidthRequest="150" HorizontalOptions="Start" Margin="240,-5,20,0" Command="{Binding RemoveClientCommand}" ZIndex="99" BackgroundColor="Transparent" BorderColor='#84DCCF' BorderWidth="3"/>
                         <Button Text="Update" WidthRequest="150" HorizontalOptions="End" Margin="0,-50,20,0" Command="{Binding UpdateClientCommand}" ZIndex="99"/>
-                       
+
 
                     </StackLayout>
 

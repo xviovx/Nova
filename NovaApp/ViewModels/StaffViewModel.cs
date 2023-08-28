@@ -97,7 +97,7 @@ namespace NovaApp.ViewModels
             {
                 staffType = "Administrative Staff";
                 salary = 17000; // R17000 per month for Administrative Staff
-       
+
             }
             else
             {

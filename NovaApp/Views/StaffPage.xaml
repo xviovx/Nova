@@ -50,11 +50,11 @@
                         <DataTemplate>
                             <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="410" HeightRequest="315" HorizontalOptions="Start" Margin="20,0,0,0">
                                 <Border.Shadow>
-                        <Shadow Brush="#E9E9E9"
+                                    <Shadow Brush="#E9E9E9"
                    Offset="10,10"
                    Radius="20"
                    Opacity="1"/>
-                    </Border.Shadow>
+                                </Border.Shadow>
                                 <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
                                     <Grid>
                                         <!-- Row 1: Profile Image and Company Name -->
@@ -104,7 +104,7 @@
                                                         <RowDefinition Height="Auto" />
                                                     </Grid.RowDefinitions>
                                                     <Image Source="Assets/Icons/project.png" Grid.Row="0" Grid.Column="0" WidthRequest="80" VerticalOptions="CenterAndExpand"></Image>
-                                                            <Label Text="24 Projects" FontSize="14" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="#8BACCA" Margin="0,10,0,0" FontFamily="PoppinsMedium"/>
+                                                    <Label Text="24 Projects" FontSize="14" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="#8BACCA" Margin="0,10,0,0" FontFamily="PoppinsMedium"/>
                                                 </Grid>
                                             </Frame>
                                         </StackLayout>
@@ -158,7 +158,7 @@
                                 <ColumnDefinition Width="300" />
                             </Grid.ColumnDefinitions>
 
-                          
+
 
                             <Grid Grid.Column="1" Padding="0,15,0,15">
                                 <!-- Row 1: Company Name and Image -->
@@ -171,10 +171,10 @@
 
                                 <Image Source="Assets/ProfileImages/1.png" WidthRequest="70"  Grid.Column="0" HorizontalOptions="Start"></Image>
                                 <Image Source="Assets/Icons/edit.png" WidthRequest="35" Grid.Column="1" Margin="150,-28,0,0" ZIndex="99">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnEditTapped"/>
-                                </Image.GestureRecognizers>
-                            </Image>
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnEditTapped"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </Grid>
                         </Grid>
 
@@ -194,7 +194,7 @@
                                 <Label Text="TECH LEAD" TextColor="White" FontSize="12" CharacterSpacing="3" FontFamily="PoppinsBlack" HorizontalTextAlignment="Center"/>
                             </Frame>
                         </StackLayout>
-                        
+
                         <!-- Row 4: Salary  -->
 
 
@@ -203,9 +203,9 @@
                         <Frame  Margin="0,10,0,0" BackgroundColor="#FF8D8D"  BorderColor="Transparent" CornerRadius="20" Padding="20,10,10,10">
                             <Label Text="R12 000 /m" FontSize="14" HorizontalTextAlignment="Start"  FontFamily="PoppinsMedium" TextColor="White" />
                         </Frame>
-                       
 
-                       
+
+
 
 
                         <Label Text="Current Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">

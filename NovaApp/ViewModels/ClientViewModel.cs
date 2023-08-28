@@ -32,7 +32,7 @@ namespace NovaApp.ViewModels
 
         public async Task AddClient()
         {
-            int availableHours =0;
+            int availableHours = 0;
             string clientType;
 
             if (IsStandardType)
