@@ -39,69 +39,81 @@
 
             <!-- Column 1, Row 3: Container for client cards -->
             <Grid BackgroundColor="Transparent" Margin="0,20,0,0">
-                <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="410" HeightRequest="315" HorizontalOptions="Start" Margin="20,0,0,0">
-                    <Border.Shadow>
-                        <Shadow Brush="#E9E9E9"
+                <CollectionView ItemsSource="{Binding StaffList}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                             Span="2"
+                             VerticalItemSpacing="20"
+                             HorizontalItemSpacing="20" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="410" HeightRequest="315" HorizontalOptions="Start" Margin="20,0,0,0">
+                                <Border.Shadow>
+                                    <Shadow Brush="#E9E9E9"
                    Offset="10,10"
                    Radius="20"
                    Opacity="1"/>
-                    </Border.Shadow>
-                    <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
-                        <Grid>
-                            <!-- Row 1: Profile Image and Company Name -->
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Image Source="Assets/ProfileImages/1.png" WidthRequest="70" Grid.Row="0" Grid.Column="0" Margin="0,10,0,0"></Image>
-                            <Label Text="Tannie Bettie" FontSize="24" FontFamily="PoppinsSemibold" Margin="15,15,0,0" Grid.Row="0" Grid.Column="1"/>
-                            <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Margin="230,-10,0,0" Grid.Row="0" Grid.Column="2"/>
-
-                            <!-- Row 2: Email -->
-                            <Label Text="Tannibetty@gmail.com" FontSize="16" TextColor="#7D8DA6" Margin="15,-30,0,0" Grid.Row="1" Grid.Column="1" />
-
-                            <!-- Row 3: Web Designer and Tech Lead -->
-                            <StackLayout Orientation="Horizontal" Margin="5,20,0,0" Grid.Row="2" Grid.Column="1">
-                                <Frame CornerRadius="18" BackgroundColor="Transparent" Padding="10" Margin="0,0,10,0" BorderColor="#FF7070" WidthRequest="140">
-                                    <Label Text="WEB DESIGNER" TextColor="#FF7070" FontSize="12" CharacterSpacing="3" FontFamily="PoppinsBlack" HorizontalTextAlignment="Center"/>
-                                </Frame>
-                                <Frame CornerRadius="18" BackgroundColor="#FF7070" Padding="10" BorderColor="#FF7070" WidthRequest="110">
-                                    <Label Text="TECH LEAD" TextColor="White" FontSize="12" CharacterSpacing="3" FontAttributes="Bold" HorizontalTextAlignment="Center" FontFamily="PoppinsBlack"/>
-                                </Frame>
-                            </StackLayout>
-
-                            <!-- Row 4: Salary and Project -->
-                            <StackLayout Orientation="Horizontal" Margin="0,20,0,0" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
-                                <Frame CornerRadius="20" BackgroundColor="#B9DDFF" BorderColor="Transparent" Margin="0,0,10,0" WidthRequest="130" HeightRequest="120" >
-                                    <Grid BackgroundColor="#B9DDFF">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
-                                        <Image Source="Assets/Icons/salary.png" Grid.Row="0" Grid.Column="0" WidthRequest="80" VerticalOptions="CenterAndExpand" ></Image>
-                                                <Label Text="R12 000 /m" FontSize="14" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="#8BACCA" Margin="0,10,0,0" FontFamily="PoppinsMedium"/>
-                                    </Grid>
-                                </Frame>
-                                <Frame CornerRadius="20" BackgroundColor="#B9DDFF" BorderColor="Transparent" WidthRequest="130" HeightRequest="120" >
+                                </Border.Shadow>
+                                <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
                                     <Grid>
+                                        <!-- Row 1: Profile Image and Company Name -->
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
-                                        <Image Source="Assets/Icons/project.png" Grid.Row="0" Grid.Column="0" WidthRequest="80" VerticalOptions="CenterAndExpand"></Image>
-                                                <Label Text="24 Projects" FontSize="14" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="#8BACCA" Margin="0,10,0,0" FontFamily="PoppinsMedium"/>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="Assets/ProfileImages/1.png" WidthRequest="70" Grid.Row="0" Grid.Column="0" Margin="0,10,0,0"></Image>
+                                        <Label Text="{Binding Name}" FontSize="24" FontFamily="PoppinsSemibold" Margin="15,15,0,0" Grid.Row="0" Grid.Column="1"/>
+                                        <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Margin="230,-10,0,0" Grid.Row="0" Grid.Column="2"/>
+
+                                        <!-- Row 2: Email -->
+                                        <Label Text="{Binding Email}" FontSize="16" TextColor="#7D8DA6" Margin="15,-30,0,0" Grid.Row="1" Grid.Column="1" />
+
+                                        <!-- Row 3: Web Designer and Tech Lead -->
+                                        <StackLayout Orientation="Horizontal" Margin="5,20,0,0" Grid.Row="2" Grid.Column="1">
+                                            <Frame CornerRadius="18" BackgroundColor="Transparent" Padding="10" Margin="0,0,10,0" BorderColor="#FF7070" WidthRequest="140">
+                                                <Label Text="{Binding Position}" TextColor="#FF7070" FontSize="12" CharacterSpacing="3" FontFamily="PoppinsBlack" HorizontalTextAlignment="Center"/>
+                                            </Frame>
+                                            <Frame CornerRadius="18" BackgroundColor="#FF7070" Padding="10" BorderColor="#FF7070" WidthRequest="110">
+                                                <Label Text="{Binding Position}" TextColor="White" FontSize="12" CharacterSpacing="3" FontAttributes="Bold" HorizontalTextAlignment="Center" FontFamily="PoppinsBlack"/>
+                                            </Frame>
+                                        </StackLayout>
+
+                                        <!-- Row 4: Salary and Project -->
+                                        <StackLayout Orientation="Horizontal" Margin="0,20,0,0" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+                                            <Frame CornerRadius="20" BackgroundColor="#B9DDFF" BorderColor="Transparent" Margin="0,0,10,0" WidthRequest="130" HeightRequest="120" >
+                                                <Grid BackgroundColor="#B9DDFF">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*" />
+                                                        <RowDefinition Height="Auto" />
+                                                    </Grid.RowDefinitions>
+                                                    <Image Source="Assets/Icons/salary.png" Grid.Row="0" Grid.Column="0" WidthRequest="80" VerticalOptions="CenterAndExpand" ></Image>
+                                                    <Label Text="{Binding Salary}" FontSize="14" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="#8BACCA" Margin="0,10,0,0" FontFamily="PoppinsMedium"/>
+                                                </Grid>
+                                            </Frame>
+                                            <Frame CornerRadius="20" BackgroundColor="#B9DDFF" BorderColor="Transparent" WidthRequest="130" HeightRequest="120" >
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*" />
+                                                        <RowDefinition Height="Auto" />
+                                                    </Grid.RowDefinitions>
+                                                    <Image Source="Assets/Icons/project.png" Grid.Row="0" Grid.Column="0" WidthRequest="80" VerticalOptions="CenterAndExpand"></Image>
+                                                    <Label Text="24 Projects" FontSize="14" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="#8BACCA" Margin="0,10,0,0" FontFamily="PoppinsMedium"/>
+                                                </Grid>
+                                            </Frame>
+                                        </StackLayout>
                                     </Grid>
                                 </Frame>
-                            </StackLayout>
-                        </Grid>
-                    </Frame>
-                </Border>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </Grid>
             <!-- Column 2, Row 1: Button -->
             <Button 
@@ -146,7 +158,7 @@
                                 <ColumnDefinition Width="300" />
                             </Grid.ColumnDefinitions>
 
-                          
+
 
                             <Grid Grid.Column="1" Padding="0,15,0,15">
                                 <!-- Row 1: Company Name and Image -->
@@ -158,7 +170,11 @@
 
 
                                 <Image Source="Assets/ProfileImages/1.png" WidthRequest="70"  Grid.Column="0" HorizontalOptions="Start"></Image>
-                                <Image Source="Assets/Icons/edit.png" WidthRequest="35" Grid.Column="1" Margin="150,-28,0,0" />
+                                <Image Source="Assets/Icons/edit.png" WidthRequest="35" Grid.Column="1" Margin="150,-28,0,0" ZIndex="99">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnEditTapped"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </Grid>
                         </Grid>
 
@@ -178,7 +194,7 @@
                                 <Label Text="TECH LEAD" TextColor="White" FontSize="12" CharacterSpacing="3" FontFamily="PoppinsBlack" HorizontalTextAlignment="Center"/>
                             </Frame>
                         </StackLayout>
-                        
+
                         <!-- Row 4: Salary  -->
 
 
@@ -187,9 +203,9 @@
                         <Frame  Margin="0,10,0,0" BackgroundColor="#FF8D8D"  BorderColor="Transparent" CornerRadius="20" Padding="20,10,10,10">
                             <Label Text="R12 000 /m" FontSize="14" HorizontalTextAlignment="Start"  FontFamily="PoppinsMedium" TextColor="White" />
                         </Frame>
-                       
 
-                       
+
+
 
 
                         <Label Text="Current Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">

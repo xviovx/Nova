@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             x:Class="NovaApp.Popups.UpdateStaff"    
+             Title="UpdateStaff"
+             CloseWhenBackgroundIsClicked="False"
+             >
+    <mopups:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+            DurationIn="400"
+            EasingIn="Fade"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1"
+            ScaleOut="0.7"></mopupsanim:ScaleAnimation>
+    </mopups:PopupPage.Animation>
+
+    <acrylic:AcrylicView CornerRadius="0"
+                         TintColor="#FF7070" 
+                         TintOpacity="0.3"
+                         BorderColor="Transparent"
+                         Padding="20">
+        <Grid>
+            <acrylic:AcrylicView CornerRadius="50"
+                                 TintColor="#FFFFFF" 
+                                 TintOpacity="0.5"
+                                 BorderColor="Transparent"
+                                 Padding="20"
+                                 WidthRequest="610"
+                                 HeightRequest="700"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center">
+
+                <Grid>
+                    <Button Text="X"
+                            FontSize="24"
+                            FontAttributes="Bold"
+                            BackgroundColor="Transparent"
+                            TextColor="#000000"
+                            HorizontalOptions="End"
+                            VerticalOptions="Start"
+                            Margin="0,10,10,0"
+                            Clicked="OnCloseButtonClicked" 
+                            ZIndex="10"/>
+                    <!-- Heading -->
+                    <Label Text="Update"
+                           Padding="20,15,20,0"
+                           FontSize="34"
+                           FontFamily="PoppinsLight"
+                           Grid.Row="0"
+                           Grid.Column="0" />
+                    <Label Text="Staff Information"
+                           Padding="155,15,20,0"
+                           FontSize="34"
+                           FontAttributes="None"
+                           FontFamily="PoppinsSemibold"
+                           Grid.Row="0"
+                           Grid.Column="0" />
+
+                    <!-- Description -->
+                    <Label Text="Contribute to accurate staff data for seamless operations."
+                           Padding="20,68,0,0"
+                           FontSize="16"
+                           Grid.Row="1"
+                           Grid.Column="0" />
+
+                    <!-- Column 1, Row 5: Radio Button Options -->
+
+                    <Label Text="Role Type" 
+                                   FontSize="14"
+                                    FontFamily="PoppinsLight"
+                                    Margin="20,110,0,5"
+                                   />
+                    <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Start"
+                                     Spacing="10"
+                                     Margin="20,-335,0,0"
+                                     ZIndex="99"
+                                     Grid.Row="1">
+                        <RadioButton GroupName="RoleGroup"
+                             x:Name="IsEmployeeType" 
+                             Content="Employee"
+                             IsChecked="{Binding IsEmployeeType, Mode=TwoWay}" 
+                             CheckedChanged="IsEmployeeType_Checked" />
+                        <RadioButton GroupName="RoleGroup"
+                             x:Name="IsAdminType" 
+                             Content="Administrative Staff"
+                             IsChecked="{Binding IsAdminType, Mode=TwoWay}" 
+                             CheckedChanged="IsAdminType_Checked" />
+
+
+                    </StackLayout>
+
+                    <Label Text="Select a Profile Image"
+                           FontFamily="PoppinsLight"
+                           Padding="20,195,0,0"
+                           FontSize="14" />
+
+                    <StackLayout  x:Name="ImageStackLayout" Orientation="Horizontal"
+                                 HorizontalOptions="StartAndExpand"
+                                 Spacing="15"
+                                 Margin="20,-150,0,0">
+                        <Image Source="Assets/ProfileImages/1.png"
+                               WidthRequest="50"
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="Assets/ProfileImages/2.png"
+                               WidthRequest="50"
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="Assets/ProfileImages/3.png"
+                               WidthRequest="50"
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="Assets/ProfileImages/4.png"
+                               WidthRequest="50"
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="Assets/ProfileImages/5.png"
+                               WidthRequest="50"
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="Assets/ProfileImages/6.png"
+                               WidthRequest="50"
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+
+
+                    <!-- Column 1, Row 3: First Name and Last Name Input Fields -->
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="First Name" 
+                              FontFamily="PoppinsLight"
+                               Margin="20,295,0,5" />
+
+                            <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Start"
+                                     Spacing="10"
+                                     Margin="20,0,0,0" 
+                                         >
+                                <Entry Placeholder="First Name"
+                                       WidthRequest="150"
+                                       BackgroundColor="White" 
+                                       Text="{Binding FirstName}"/>
+                                <Entry Placeholder="Last Name"
+                                       WidthRequest="150"
+                                       BackgroundColor="White"
+                                        Text="{Binding LastName}"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <!-- Column 1, Row 4: Email and Position Input Fields -->
+                        <StackLayout Orientation="Vertical"
+                                     HorizontalOptions="StartAndExpand"
+                                     Spacing="20"
+                                      Margin="20,20,0,5">
+                            <Label Text="Email" 
+                                    FontSize="14"
+                                    Margin="0,0,0,-15"
+                                    FontFamily="PoppinsLight"
+                                   />
+
+                            <Entry Placeholder="Email"
+                                   WidthRequest="300"
+                                   BackgroundColor="White"
+                                   Text="{Binding Email}"/>
+
+
+                            <!-- Password Entry and Label -->
+                            <StackLayout x:Name="PasswordLayout" IsVisible="False">
+                                <Label Text="Password"
+                                   FontSize="14"
+                                   Margin="0,5,0,5"
+                                   FontFamily="PoppinsLight" />
+
+                                <Entry x:Name="PasswordEntry"
+                                   Placeholder="Password"
+                                   WidthRequest="300"
+                                   BackgroundColor="White"
+                                   Text="{Binding Password}"/>
+                            </StackLayout>
+
+                            <!-- Position Picker -->
+                            <Picker x:Name="PositionPicker"
+                                Title="Select Position"
+                                FontFamily="PoppinsLight"
+                                FontSize="14"
+                                WidthRequest="300"
+                                BackgroundColor="White"
+                                ItemsSource="{Binding PositionOptions}"
+                                SelectedItem="{Binding Position}">
+                                <Picker.Items>
+                                    <x:String>Senior Developer</x:String>
+                                    <x:String>Junior Developer</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+
+
+
+                        <Button Text="De-Activate" WidthRequest="150" HorizontalOptions="Start" Margin="235,33,20,-25" Command="{Binding RemoveStaffCommand}" ZIndex="99" BackgroundColor="Transparent" BorderColor='#84DCCF' BorderWidth="3"/>
+                        <Button Text="Update" WidthRequest="150" HorizontalOptions="End" Margin="0,-20,20,0" Command="{Binding UpdateStaffCommand}" ZIndex="99"/>
+                    </StackLayout>
+
+
+
+                </Grid>
+            </acrylic:AcrylicView>
+        </Grid>
+    </acrylic:AcrylicView>
+</mopups:PopupPage>
