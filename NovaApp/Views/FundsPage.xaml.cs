@@ -47,7 +47,7 @@ namespace NovaApp.Views
                 LabelOrientation = Orientation.Horizontal
             };
 
-            // change appearance
+            // customize appearance
             chart.LabelTextSize = 12f;
 
             // assign chart to view
