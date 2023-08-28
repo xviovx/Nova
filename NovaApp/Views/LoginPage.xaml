@@ -32,7 +32,7 @@
                 <Label Grid.Row="0" Text="Login" Margin="0,40,0,0"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="40" FontFamily="PoppinsSemibold" TextColor="#FF7070" />
 
                 <!-- Username Entry -->
-                <Entry Grid.Row="1" Placeholder="Username" x:Name="UsernameEntry" Margin="20"/>
+                <Entry Grid.Row="1" Placeholder="Email" x:Name="UsernameEntry" Margin="20"/>
 
                 <!-- Password Entry -->
                 <Entry Grid.Row="2" Placeholder="Password" x:Name="PasswordEntry" IsPassword="True" Margin="20" />
