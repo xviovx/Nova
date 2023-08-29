@@ -38,6 +38,19 @@
                 Grid.Column="0"
                 TextColor="Black"/>
 
+            <CollectionView ItemsSource="{Binding ProjectsList}" VerticalOptions="FillAndExpand" SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="White" Padding="20" Margin="10">
+                            <Label Text="{Binding title}" />
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
             <!-- scroll view with cards -->
 
             <ScrollView HeightRequest="400" Margin="0,70,0,0">
@@ -73,7 +86,7 @@
                                                 <StackLayout Orientation="Vertical">
 
                                                     <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
+                                                        <Label Text="{Binding title}" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
                                                     </StackLayout>
 
                                                     <StackLayout Orientation="Horizontal">

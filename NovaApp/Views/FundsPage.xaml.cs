@@ -10,10 +10,14 @@ namespace NovaApp.Views
     {
         private ChartEntry[] receivedEntries;
         private ChartEntry[] spentEntries;
+        public ObservableCollection<Project> ProjectsList { get; set; } = new ObservableCollection<Project>();
+        static readonly string BaseUrl = "http://localhost:3000";
 
         public FundsPage()
         {
             InitializeComponent();
+            _ = LoadItems(); // Use _ to discard the task, as we're not doing anything with it in this context.
+            BindingContext = this; // Set the BindingContext after loading data
             filterCards.SelectedIndex = 0;
 
             // dummy data for received entries
@@ -84,36 +88,24 @@ namespace NovaApp.Views
             }
         }
 
-        public ObservableCollection<Fund> FundsList { get; set; } = new ObservableCollection<Fund>();
-        static readonly string BaseUrl = "http://localhost:3000";
-        private HttpClient httpClient = new HttpClient();
-
         public async Task LoadItems()
         {
-            var items = await GetFundsAsync();
+            var items = await GetProjectsAsync();
             foreach (var item in items)
             {
-                FundsList.Add(item);
+                ProjectsList.Add(item);
             }
+
         }
 
-        public async Task<List<Fund>> GetFundsAsync()
+        // https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/rest
+        public static async Task<List<Project>> GetProjectsAsync()
         {
-            try
-            {
-                var response = await httpClient.GetAsync(new Uri(new Uri(BaseUrl), "/funds"));
-                response.EnsureSuccessStatusCode(); // Ensure the HTTP request was successful
-
-                var json = await response.Content.ReadAsStringAsync();
-                var fundsList = JsonSerializer.Deserialize<List<Fund>>(json);
-                return fundsList;
-            }
-            catch (Exception ex)
-            {
-                // Handle the exception gracefully (show an error message, log, etc.)
-                Console.WriteLine($"Error fetching funds: {ex.Message}");
-                return new List<Fund>(); // Return an empty list or handle appropriately
-            }
+            using var httpClient = new HttpClient();
+            var response = await httpClient.GetAsync(new Uri(new Uri(BaseUrl), "/projects")); // Replace with your API URL
+            var json = await response.Content.ReadAsStringAsync();
+            var projectsList = JsonSerializer.Deserialize<List<Project>>(json);
+            return projectsList;
         }
     }
 }
