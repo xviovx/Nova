@@ -38,19 +38,6 @@
                 Grid.Column="0"
                 TextColor="Black"/>
 
-            <CollectionView ItemsSource="{Binding ProjectsList}" VerticalOptions="FillAndExpand" SelectionMode="Single">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BackgroundColor="White" Padding="20" Margin="10">
-                            <Label Text="{Binding title}" />
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
             <!-- scroll view with cards -->
 
             <ScrollView HeightRequest="400" Margin="0,70,0,0">
@@ -61,329 +48,73 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
-                        <Grid BackgroundColor="Transparent" Margin="0,0,0,500">
-                            <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="345" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
-                                <Border.Shadow>
-                                    <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
-                                </Border.Shadow>
-                                <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
-                                    <StackLayout Orientation="Vertical">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label Text="Project Name" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
-                                            <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
-                                        </Grid>
-                                        <Label Text="Client Owner" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="10,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
+                        <CollectionView ItemsSource="{Binding ProjectsList}" VerticalOptions="Start" HorizontalOptions="Start" SelectionMode="Single">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Frame BackgroundColor="White" Margin="20,0" WidthRequest="370" HeightRequest="280">
+                                            <Frame.Shadow>
+                                                <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
+                                            </Frame.Shadow>
+                                            <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
                                                 <StackLayout Orientation="Vertical">
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Text="Project Name" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="0,0,0,0" />
+                                                        <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
+                                                    </Grid>
+                                                    <Label Text="Client Owner" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
 
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="{Binding title}" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
+                                                        <Frame BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="0,20,0,0" CornerRadius="10" WidthRequest="130" HeightRequest="110">
+                                                            <StackLayout Orientation="Vertical">
 
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,15,5,0" />
-                                                        <Label Text="Total Spent" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End" Margin="0,20,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
+                                                                <StackLayout Orientation="Vertical">
+                                                                    <Label Text="{Binding title}" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
+                                                                </StackLayout>
+
+                                                                <StackLayout Orientation="Horizontal">
+                                                                    <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,15,5,0" />
+                                                                    <Label Text="Total Spent" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End" Margin="0,20,0,0" FontFamily="PoppinsMedium"  />
+                                                                </StackLayout>
+                                                            </StackLayout>
+                                                        </Frame>
+
+                                                        <Frame BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="155,20,0,0" CornerRadius="10" WidthRequest="130" HeightRequest="110">
+                                                            <StackLayout Orientation="Vertical">
+
+                                                                <StackLayout Orientation="Vertical">
+                                                                    <Label Text="R4590.00" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
+                                                                </StackLayout>
+
+                                                                <StackLayout Orientation="Horizontal">
+                                                                    <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,20,5,0"/>
+                                                                    <Label Text="Total Received" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End"  Margin="0,15,0,0" FontFamily="PoppinsMedium"  />
+                                                                </StackLayout>
+                                                            </StackLayout>
+                                                        </Frame>
+                                                    </Grid>
                                                 </StackLayout>
                                             </Frame>
+                                        </Frame>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
 
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="155,20,0,0" BorderColor="Transparent"  WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,20,5,0"/>
-                                                        <Label Text="Total Received" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End"  Margin="0,15,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-                                        </Grid>
-                                    </StackLayout>
-                                </Frame>
-                            </Border>
-                        </Grid>
-
-                        <Grid BackgroundColor="Transparent" Margin="400,0,0,500">
-                            <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="345" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
-                                <Border.Shadow>
-                                    <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
-                                </Border.Shadow>
-                                <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
-                                    <StackLayout Orientation="Vertical">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label Text="Project Name" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
-                                            <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
-                                        </Grid>
-                                        <Label Text="Client Owner" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="10,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,15,5,0" />
-                                                        <Label Text="Total Spent" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End" Margin="0,20,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="155,20,0,0" BorderColor="Transparent"  WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,20,5,0"/>
-                                                        <Label Text="Total Received" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End"  Margin="0,15,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-                                        </Grid>
-                                    </StackLayout>
-                                </Frame>
-                            </Border>
-                        </Grid>
-
-                        <Grid BackgroundColor="Transparent" Margin="0,40,0,0">
-                            <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="345" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
-                                <Border.Shadow>
-                                    <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
-                                </Border.Shadow>
-                                <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
-                                    <StackLayout Orientation="Vertical">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label Text="Project Name" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
-                                            <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
-                                        </Grid>
-                                        <Label Text="Client Owner" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="10,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,15,5,0" />
-                                                        <Label Text="Total Spent" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End" Margin="0,20,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="155,20,0,0" BorderColor="Transparent"  WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,20,5,0"/>
-                                                        <Label Text="Total Received" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End"  Margin="0,15,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-                                        </Grid>
-                                    </StackLayout>
-                                </Frame>
-                            </Border>
-                        </Grid>
-
-                        <Grid BackgroundColor="Transparent" Margin="400,40,0,0">
-                            <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="345" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
-                                <Border.Shadow>
-                                    <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
-                                </Border.Shadow>
-                                <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
-                                    <StackLayout Orientation="Vertical">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label Text="Project Name" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
-                                            <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
-                                        </Grid>
-                                        <Label Text="Client Owner" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="10,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,15,5,0" />
-                                                        <Label Text="Total Spent" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End" Margin="0,20,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="155,20,0,0" BorderColor="Transparent"  WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,20,5,0"/>
-                                                        <Label Text="Total Received" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End"  Margin="0,15,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-                                        </Grid>
-                                    </StackLayout>
-                                </Frame>
-                            </Border>
-                        </Grid>
-
-                        <Grid BackgroundColor="Transparent" Margin="0,580,0,0">
-                            <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="345" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
-                                <Border.Shadow>
-                                    <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
-                                </Border.Shadow>
-                                <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
-                                    <StackLayout Orientation="Vertical">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label Text="Project Name" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
-                                            <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
-                                        </Grid>
-                                        <Label Text="Client Owner" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="10,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,15,5,0" />
-                                                        <Label Text="Total Spent" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End" Margin="0,20,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="155,20,0,0" BorderColor="Transparent"  WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,20,5,0"/>
-                                                        <Label Text="Total Received" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End"  Margin="0,15,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-                                        </Grid>
-                                    </StackLayout>
-                                </Frame>
-                            </Border>
-                        </Grid>
-
-                        <Grid BackgroundColor="Transparent" Margin="400,580,0,0">
-                            <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="345" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
-                                <Border.Shadow>
-                                    <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
-                                </Border.Shadow>
-                                <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
-                                    <StackLayout Orientation="Vertical">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <Label Text="Project Name" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
-                                            <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
-                                        </Grid>
-                                        <Label Text="Client Owner" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="10,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,15,5,0" />
-                                                        <Label Text="Total Spent" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End" Margin="0,20,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-
-                                            <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="155,20,0,0" BorderColor="Transparent"  WidthRequest="130"  HeightRequest="110">
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Vertical">
-                                                        <Label Text="R4590.00" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,20,5,0"/>
-                                                        <Label Text="Total Received" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End"  Margin="0,15,0,0" FontFamily="PoppinsMedium"  />
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </Frame>
-                                        </Grid>
-                                    </StackLayout>
-                                </Frame>
-                            </Border>
-                        </Grid>
                     </Grid>
                 </StackLayout>
             </ScrollView>
