@@ -42,6 +42,23 @@ namespace NovaApp.ViewModels
 
         public ICommand AddNewStaffCommand { get; }
 
+
+        // Error properties and visibility flags
+        public string FirstNameError { get; private set; }
+        public bool IsFirstNameInvalid { get; private set; }
+
+        public string LastNameError { get; private set; }
+        public bool IsLastNameInvalid { get; private set; }
+
+        public string EmailError { get; private set; }
+        public bool IsEmailInvalid { get; private set; }
+
+        public string PasswordError { get; private set; }
+        public bool IsPasswordInvalid { get; private set; }
+
+        public string PositionError { get; private set; }
+        public bool IsPositionInvalid { get; private set; }
+
         // ObservableCollection to store position options for the Picker
         public ObservableCollection<string> PositionOptions { get; }
 
@@ -63,6 +80,69 @@ namespace NovaApp.ViewModels
             AddNewStaffCommand = new Command(async () => await AddStaff());
         }
 
+        private bool ValidateInput()
+        {
+            bool isValid = true;
+
+            // Validate FirstName
+            if (string.IsNullOrWhiteSpace(FirstName))
+            {
+                FirstNameError = "First Name is required.";
+                IsFirstNameInvalid = true;
+                Debug.WriteLine(FirstNameError);
+                isValid = false;
+            }
+            else
+            {
+                FirstNameError = string.Empty;
+                IsFirstNameInvalid = false;
+            }
+
+            // Validate LastName
+            if (string.IsNullOrWhiteSpace(LastName))
+            {
+                LastNameError = "Last Name is required.";
+                IsLastNameInvalid = true;
+                isValid = false;
+            }
+            else
+            {
+                LastNameError = string.Empty;
+                IsLastNameInvalid = false;
+            }
+
+            // Validate Password
+            if (IsAdminType && string.IsNullOrWhiteSpace(Password))
+            {
+                PasswordError = "Password is required for administrative staff.";
+                IsPasswordInvalid = true;
+                isValid = false;
+            }
+            else
+            {
+                PasswordError = string.Empty;
+                IsPasswordInvalid = false;
+            }
+
+            // Validate Position
+            if (IsEmployeeType && string.IsNullOrWhiteSpace(Position))
+            {
+                PositionError = "Position is required for employees.";
+                IsPositionInvalid = true;
+                isValid = false;
+            }
+            else
+            {
+                PositionError = string.Empty;
+                IsPositionInvalid = false;
+            }
+
+
+
+
+            return isValid;
+        }
+
         public async Task AddStaff()
         {
             //do if Id doesnt exist
@@ -71,6 +151,16 @@ namespace NovaApp.ViewModels
 
             string staffType;
             int salary;
+
+            // Validation logic
+            bool isValid = ValidateInput();
+
+            if (!isValid)
+            {
+                // Validation failed, display error messages
+                return;
+            }
+
 
             if (IsEmployeeType)
             {

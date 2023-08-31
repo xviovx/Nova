@@ -164,10 +164,17 @@
                                        WidthRequest="150"
                                        BackgroundColor="White" 
                                        Text="{Binding FirstName}"/>
+                                <Label Text="{Binding FirstNameError}"
+                                        IsVisible="{Binding IsFirstNameInvalid}"
+                                         TextColor="#FF7070" />
+                                
                                 <Entry Placeholder="Last Name"
                                        WidthRequest="150"
                                        BackgroundColor="White"
                                         Text="{Binding LastName}"/>
+                                <Label Text="{Binding LastNameError}"
+                                        IsVisible="{Binding IsLastNameInvalid}"
+                                        TextColor="#FF7070" />
                             </StackLayout>
                         </StackLayout>
 
@@ -186,6 +193,10 @@
                                    WidthRequest="300"
                                    BackgroundColor="White"
                                    Text="{Binding Email}"/>
+                            <Label Text="{Binding EmailError}"
+                                   IsVisible="{Binding IsEmailInvalid}"
+                                   TextColor="#FF7070"
+                                   FontSize="Small"/>
 
 
                             <!-- Password Entry and Label -->
@@ -200,6 +211,10 @@
                                    WidthRequest="300"
                                    BackgroundColor="White"
                                    Text="{Binding Password}"/>
+                                <Label Text="{Binding PasswordError}"
+                                       IsVisible="{Binding IsPasswordInvalid}"
+                                       TextColor="#FF7070"
+                                       FontSize="Small"/>
                             </StackLayout>
 
                             <!-- Position Picker -->
@@ -216,6 +231,10 @@
                                     <x:String>Junior Developer</x:String>
                                 </Picker.Items>
                             </Picker>
+                            <Label Text="{Binding PositionError}"
+                                   IsVisible="{Binding IsPositionInvalid}"
+                                   TextColor="#FF7070"
+                                   FontSize="Small"/>
                         </StackLayout>
 
 
