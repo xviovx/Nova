@@ -67,53 +67,107 @@
                            Grid.Row="1"
                            Grid.Column="0" />
 
-                    <!-- Profile Images Row -->
+                    <!-- Column 1, Row 5: Radio Button Options -->
+
+                    <Label Text="Role Type" 
+                                   FontSize="14"
+                                    FontFamily="PoppinsLight"
+                                    Margin="20,110,0,5"
+                                   />
+                    <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Start"
+                                     Spacing="10"
+                                     Margin="20,-335,0,0"
+                                     ZIndex="99"
+                                     Grid.Row="1">
+                        <RadioButton GroupName="RoleGroup"
+                             x:Name="IsEmployeeType" 
+                             Content="Employee"
+                             IsChecked="{Binding IsEmployeeType, Mode=TwoWay}" 
+                             CheckedChanged="IsEmployeeType_Checked" />
+                        <RadioButton GroupName="RoleGroup"
+                             x:Name="IsAdminType" 
+                             Content="Administrative Staff"
+                             IsChecked="{Binding IsAdminType, Mode=TwoWay}" 
+                             CheckedChanged="IsAdminType_Checked" />
+
+
+                    </StackLayout>
+
                     <Label Text="Select a Profile Image"
                            FontFamily="PoppinsLight"
-                           Padding="20,115,0,0"
+                           Padding="20,195,0,0"
                            FontSize="14" />
-                    <StackLayout Orientation="Horizontal"
+
+                    <StackLayout  x:Name="ImageStackLayout" Orientation="Horizontal"
                                  HorizontalOptions="StartAndExpand"
                                  Spacing="15"
-                                 Margin="20,-295,0,0">
-                        <!-- 6 profile images here -->
+                                 Margin="20,-150,0,0">
                         <Image Source="Assets/ProfileImages/1.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="Assets/ProfileImages/2.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="Assets/ProfileImages/3.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="Assets/ProfileImages/4.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="Assets/ProfileImages/5.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="Assets/ProfileImages/6.png"
                                WidthRequest="50"
-                               HeightRequest="50" />
+                               HeightRequest="50">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
                     </StackLayout>
+
 
                     <!-- Column 1, Row 3: First Name and Last Name Input Fields -->
                     <StackLayout Orientation="Vertical">
                         <StackLayout Orientation="Vertical">
                             <Label Text="First Name" 
                               FontFamily="PoppinsLight"
-                               Margin="20,235,0,5" />
+                               Margin="20,295,0,5" />
 
                             <StackLayout Orientation="Horizontal"
                                      HorizontalOptions="Start"
                                      Spacing="10"
-                                     Margin="20,0,0,0" >
+                                     Margin="20,0,0,0" 
+                                         >
                                 <Entry Placeholder="First Name"
                                        WidthRequest="150"
-                                       BackgroundColor="White" />
+                                       BackgroundColor="White" 
+                                       Text="{Binding FirstName}"/>
                                 <Entry Placeholder="Last Name"
                                        WidthRequest="150"
-                                       BackgroundColor="White" />
+                                       BackgroundColor="White"
+                                        Text="{Binding LastName}"/>
                             </StackLayout>
                         </StackLayout>
 
@@ -130,37 +184,43 @@
 
                             <Entry Placeholder="Email"
                                    WidthRequest="300"
-                                   BackgroundColor="White" />
+                                   BackgroundColor="White"
+                                   Text="{Binding Email}"/>
 
-                            <Label Text="Position title/titles" 
+
+                            <!-- Password Entry and Label -->
+                            <StackLayout x:Name="PasswordLayout" IsVisible="False">
+                                <Label Text="Password"
                                    FontSize="14"
-                                    FontFamily="PoppinsLight"
-                                   Margin="0,0,0,-15"
-                                   />
+                                   Margin="0,5,0,5"
+                                   FontFamily="PoppinsLight" />
 
-                            <Entry Placeholder="Position title/titles"
+                                <Entry x:Name="PasswordEntry"
+                                   Placeholder="Password"
                                    WidthRequest="300"
-                                   BackgroundColor="White" />
+                                   BackgroundColor="White"
+                                   Text="{Binding Password}"/>
+                            </StackLayout>
+
+                            <!-- Position Picker -->
+                            <Picker x:Name="PositionPicker"
+                                Title="Select Position"
+                                FontFamily="PoppinsLight"
+                                FontSize="14"
+                                WidthRequest="300"
+                                BackgroundColor="White"
+                                ItemsSource="{Binding PositionOptions}"
+                                SelectedItem="{Binding Position}">
+                                <Picker.Items>
+                                    <x:String>Senior Developer</x:String>
+                                    <x:String>Junior Developer</x:String>
+                                </Picker.Items>
+                            </Picker>
                         </StackLayout>
 
-                        <!-- Column 1, Row 5: Radio Button Options -->
 
-                        <Label Text="Role Type" 
-                                   FontSize="14"
-                                    FontFamily="PoppinsLight"
-                                    Margin="20,20,0,5"
-                                   />
-                        <StackLayout Orientation="Horizontal"
-                                     HorizontalOptions="Start"
-                                     Spacing="10"
-                                     Margin="20,5,0,0"
-                                     Grid.Row="4">
 
-                            <RadioButton GroupName="RoleGroup" Content="Employee" />
-                            <RadioButton GroupName="RoleGroup" Content="Administrative Staff" />
-                        </StackLayout>
-
-                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" ></Button>
+                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,30,20,-15" Command="{Binding AddNewStaffCommand}"></Button>
                     </StackLayout>
 
 

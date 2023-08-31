@@ -65,6 +65,7 @@ namespace NovaApp.ViewModels
 
         public async Task AddStaff()
         {
+            //do if Id doesnt exist
             Debug.WriteLine("AddStaff method started...");
             int maxAvailableHours = 40; // Assuming 40 hours is the max for a week
 
