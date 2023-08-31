@@ -8,15 +8,15 @@ namespace NovaApp.Models
 {
     public class Staff
     {
-        public int Id { get; set; }
-        public string ProfileImage { get; set; } = string.Empty;
-        public string Name { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
-        public string StaffType { get; set; } = string.Empty;
-        public string Position { get; set; } = string.Empty;
-        public int Salary { get; set; }
-        public string Password { get; set; } = string.Empty;
-        public int AvailableHours { get; set; }
-        public bool Active { get; set; }
+        public int id { get; set; }
+        public string profileImage { get; set; } = string.Empty;
+        public string username { get; set; } = string.Empty;
+        public string email { get; set; } = string.Empty;
+        public string staffType { get; set; } = string.Empty;
+        public string position { get; set; } = string.Empty;
+        public int payPerHour { get; set; }
+        public string password { get; set; } = string.Empty;
+        public int availableHours { get; set; }
+        public bool active { get; set; }
     }
 }

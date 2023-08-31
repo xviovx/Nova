@@ -55,11 +55,11 @@ namespace NovaApp.ViewModels
 
             var newClient = new Client
             {
-                CompanyName = CompanyName,
-                Email = Email,
-                ClientType = clientType,
-                AvailableHours = availableHours,
-                Active = true
+                companyName = CompanyName,
+                email = Email,
+                clientType = clientType,
+                availableHours = availableHours,
+                active = true
             };
 
             await _restService.SaveClientAsync(newClient, true);
@@ -82,7 +82,7 @@ namespace NovaApp.ViewModels
             foreach (var client in clients)
             {
                 ClientList.Add(client);
-                Debug.WriteLine(client.CompanyName);
+                Debug.WriteLine(client.companyName);
             }
         }
     }

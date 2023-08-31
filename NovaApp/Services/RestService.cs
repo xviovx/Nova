@@ -18,7 +18,7 @@ namespace NovaApp.Services
 
 
         //base api url
-        internal string baseUrl = "https://localhost:7139/api/";
+        internal string baseUrl = "http://localhost:3000/users/";
 
         //list of Clients & Staff
         public List<Client> Clients { get; private set; }
@@ -41,7 +41,7 @@ namespace NovaApp.Services
         {
             Clients = new List<Client>();
 
-            Uri uri = new(string.Format($"{baseUrl}Clients", string.Empty));
+            Uri uri = new(string.Format($"{baseUrl}clients", string.Empty));
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
@@ -62,7 +62,7 @@ namespace NovaApp.Services
         //add or update a Client 
         public async Task SaveClientAsync(Client item, bool isNewItem = false)
         {
-            Uri uri = new(string.Format($"{baseUrl}TodoItems", string.Empty));
+            Uri uri = new(string.Format($"{baseUrl}clients", string.Empty));
 
             try
             {
@@ -76,7 +76,7 @@ namespace NovaApp.Services
                     response = await _client.PutAsync(uri, content);
 
                 if (response.IsSuccessStatusCode)
-                    Debug.WriteLine(@"\tTodoItem successfully saved.");
+                    Debug.WriteLine("Client successfully saved.");
             }
             catch (Exception ex)
             {
@@ -89,7 +89,7 @@ namespace NovaApp.Services
         {
             var staffList = new List<Staff>();
 
-            Uri uri = new(string.Format($"{baseUrl}Staff", string.Empty));
+            Uri uri = new(string.Format($"{baseUrl}staff", string.Empty));
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
@@ -111,7 +111,7 @@ namespace NovaApp.Services
         //add or update a Staff 
         public async Task SaveStaffAsync(Staff item, bool isNewItem = false)
         {
-            Uri uri = new(string.Format($"{baseUrl}Staff", string.Empty));
+            Uri uri = new(string.Format($"{baseUrl}staff", string.Empty));
 
             try
             {
@@ -125,11 +125,11 @@ namespace NovaApp.Services
                     response = await _client.PutAsync(uri, content);
 
                 if (response.IsSuccessStatusCode)
-                    Debug.WriteLine(@"\tTodoItem successfully saved.");
+                    Debug.WriteLine("Staff successfully saved.");
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(@"\tERROR {0}", ex.Message);
+                Debug.WriteLine("ERROR {0}", ex.Message);
             }
         }
 

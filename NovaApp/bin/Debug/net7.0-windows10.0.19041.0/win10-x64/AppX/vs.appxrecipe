@@ -30,29 +30,29 @@
     <AppXManifest Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-08-28T09:05:17.994</Modified>
+      <Modified>2023-08-31T08:51:52.366</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-08-28T09:05:17.737</Modified>
+      <Modified>2023-08-31T08:35:52.228</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.runtimeconfig.json">
       <PackagePath>NovaApp.runtimeconfig.json</PackagePath>
-      <Modified>2023-08-28T09:05:17.538</Modified>
+      <Modified>2023-08-31T07:54:18.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.dll">
       <PackagePath>NovaApp.dll</PackagePath>
-      <Modified>2023-08-28T09:05:15.880</Modified>
+      <Modified>2023-08-31T08:51:50.673</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NovaApp.exe</PackagePath>
-      <Modified>2023-08-28T09:05:15.967</Modified>
+      <Modified>2023-08-31T08:51:50.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.deps.json">
       <PackagePath>NovaApp.deps.json</PackagePath>
-      <Modified>2023-08-28T09:05:17.443</Modified>
+      <Modified>2023-08-31T07:54:18.673</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.9\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

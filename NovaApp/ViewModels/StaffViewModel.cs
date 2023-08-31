@@ -18,7 +18,7 @@ namespace NovaApp.ViewModels
         public string ProfileImage { get; set; }
         public string SelectedImageSource { get; set; } // Changed from private to public
 
-        public string Name { get; set; }
+        public string Username { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
@@ -118,15 +118,15 @@ namespace NovaApp.ViewModels
 
             var newStaff = new Staff
             {
-                ProfileImage = SelectedImageSource, // Use the SelectedImageSource directly
-                Name = fullName,
-                Email = Email,
-                StaffType = staffType,
-                Position = Position,
-                Salary = salary,
-                Password = password,
-                AvailableHours = maxAvailableHours,
-                Active = true
+                profileImage = SelectedImageSource,
+                username = fullName,
+                email = Email,
+                staffType = staffType,
+                position = Position,
+                payPerHour = salary,
+                password = password,
+                availableHours = maxAvailableHours,
+                active = true
             };
 
             await _restService.SaveStaffAsync(newStaff, true);
@@ -153,7 +153,7 @@ namespace NovaApp.ViewModels
             foreach (var staff in staffMembers)
             {
                 StaffList.Add(staff);
-                Debug.WriteLine(staff.Name);
+                Debug.WriteLine(staff.username);
             }
         }
     }
