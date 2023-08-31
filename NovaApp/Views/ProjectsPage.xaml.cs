@@ -4,8 +4,6 @@ using System.Text.Json;
 
 namespace NovaApp.Views;
 
-
-
 public partial class ProjectsPage : ContentView
 {
 
@@ -15,8 +13,8 @@ public partial class ProjectsPage : ContentView
     public ProjectsPage()
     {
         InitializeComponent();
-         _ = LoadItems(); // Use _ to discard the task, as we're not doing anything with it in this context.
-        BindingContext = this; // Set the BindingContext after loading data
+         _ = LoadItems(); 
+        BindingContext = this; 
 
     }
 

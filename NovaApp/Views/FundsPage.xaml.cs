@@ -16,8 +16,8 @@ namespace NovaApp.Views
         public FundsPage()
         {
             InitializeComponent();
-            _ = LoadItems(); // Use _ to discard the task, as we're not doing anything with it in this context.
-            BindingContext = this; // Set the BindingContext after loading data
+            _ = LoadItems();
+            BindingContext = this;
             filterCards.SelectedIndex = 0;
 
             // dummy data for received entries
