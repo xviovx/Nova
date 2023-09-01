@@ -47,7 +47,7 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="400" HeightRequest="315" HorizontalOptions="Start" Margin="0,0,0,0">
+                                <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="400" HeightRequest="305" HorizontalOptions="Start" Margin="0,0,0,0">
                                         <Border.Shadow>
                                             <Shadow Brush="#E9E9E9"
                                                     Offset="10,10"
@@ -69,15 +69,29 @@
                                                 </Grid.ColumnDefinitions>
                                             <Image Source="{Binding profileImage, StringFormat='Assets/ProfileImages/{0}.png'}" WidthRequest="70" Grid.Row="0" Grid.Column="0" Margin="0,10,0,0"></Image>
                                                 <Label Text="{Binding username}" FontSize="22" FontFamily="PoppinsSemibold" Margin="15,15,0,0" Grid.Row="0" Grid.Column="1"/>
-                                                <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Margin="230,-10,0,0" Grid.Row="0" Grid.Column="2"/>
+                                            <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Margin="230,-10,0,0" Grid.Row="0" Grid.Column="2">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="OnCardTapped" />
+                                                </Image.GestureRecognizers>
+                                            </Image>
 
-                                                <!-- Row 2: Email -->
+                                            <!-- Row 2: Email -->
                                                 <Label Text="{Binding email}" FontSize="14" TextColor="#7D8DA6" Margin="15,-30,0,10" Grid.Row="1" Grid.Column="1" />
 
-                                                <!-- Row 3: Web Designer and Tech Lead -->
-                                            <Frame CornerRadius="18" BackgroundColor="#FF7070" Padding="10" BorderColor="#FF7070" WidthRequest="190" Grid.Row="2" Grid.Column="1" HorizontalOptions="Start">
+                                                <!-- Row 3: Positions -->
+                                            <Frame CornerRadius="18" BackgroundColor="#FF7070" Padding="10" BorderColor="#FF7070" Grid.Row="2" Grid.Column="1" HorizontalOptions="Start">
+                                                <Frame.Triggers>
+                                                    <DataTrigger TargetType="Frame" Binding="{Binding staffType}" Value="Administrative Staff">
+                                                        <Setter Property="WidthRequest" Value="90" />
+                                                    </DataTrigger>
+                                                    <DataTrigger TargetType="Frame" Binding="{Binding staffType}" Value="Employee">
+                                                        <Setter Property="WidthRequest" Value="200" />
+                                                    </DataTrigger>
+                                                    <!-- Add more DataTriggers for other conditions if needed -->
+                                                </Frame.Triggers>
                                                 <Label Text="{Binding position}" TextColor="White" FontSize="12" CharacterSpacing="3" FontAttributes="Bold" HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="PoppinsBold"/>
                                             </Frame>
+
 
                                             <!-- Row 4: Salary and Project -->
                                                 <StackLayout Orientation="Horizontal" Margin="0,20,0,0" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
@@ -101,17 +115,26 @@
                                                         </Label>
                                                     </Grid>
                                                     </Frame>
-                                                    <Frame CornerRadius="20" BackgroundColor="#B9DDFF" BorderColor="Transparent" WidthRequest="130" HeightRequest="120" >
-                                                        <Grid>
-                                                            <Grid.RowDefinitions>
-                                                                <RowDefinition Height="*" />
-                                                                <RowDefinition Height="Auto" />
-                                                            </Grid.RowDefinitions>
-                                                            <Image Source="Assets/Icons/project.png" Grid.Row="0" Grid.Column="0" WidthRequest="80" VerticalOptions="CenterAndExpand"></Image>
-                                                            <Label Text="24 Projects" FontSize="14" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="#8BACCA" Margin="0,10,0,0" FontFamily="PoppinsMedium"/>
-                                                        </Grid>
-                                                    </Frame>
-                                                </StackLayout>
+                                                <Frame CornerRadius="20" BackgroundColor="#B9DDFF" BorderColor="Transparent" WidthRequest="130" HeightRequest="120">
+                                                    <Frame.Triggers>
+                                                        <DataTrigger TargetType="Frame" Binding="{Binding staffType}" Value="Administrative Staff">
+                                                            <Setter Property="IsVisible" Value="False" />
+                                                        </DataTrigger>
+                                                        <DataTrigger TargetType="Frame" Binding="{Binding staffType}" Value="Employee">
+                                                            <Setter Property="IsVisible" Value="True" />
+                                                        </DataTrigger>
+                                                    </Frame.Triggers>
+                                                    <Grid>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*" />
+                                                            <RowDefinition Height="Auto" />
+                                                        </Grid.RowDefinitions>
+                                                        <Image Source="Assets/Icons/project.png" Grid.Row="0" Grid.Column="0" WidthRequest="80" VerticalOptions="CenterAndExpand"></Image>
+                                                        <Label Text="24 Projects" FontSize="14" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="#8BACCA" Margin="0,10,0,0" FontFamily="PoppinsMedium"/>
+                                                    </Grid>
+                                                </Frame>
+
+                                            </StackLayout>
                                             </Grid>
                                         </Frame>
                                     </Border>
@@ -133,6 +156,7 @@
                 Clicked="OnAddNewClicked"/>
 
             <!-- Column 3, All Rows: Client Info Block (Right-aligned) -->
+            
             <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="310"          
                 Grid.Row="0"
                 Grid.RowSpan="2"
@@ -175,7 +199,7 @@
 
 
 
-                                <Image Source="Assets/ProfileImages/1.png" WidthRequest="70"  Grid.Column="0" HorizontalOptions="Start"></Image>
+                                <Image Source="{Binding SelectedStaff.profileImage, StringFormat='Assets/ProfileImages/{0}.png'}" WidthRequest="70"  Grid.Column="0" HorizontalOptions="Start"></Image>
                                 <Image Source="Assets/Icons/edit.png" WidthRequest="35" Grid.Column="1" Margin="150,-28,0,0" ZIndex="99">
                                     <Image.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="OnEditTapped"/>
@@ -184,36 +208,51 @@
                             </Grid>
                         </Grid>
 
-                        <Label Text="Company Name" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,0,0,0" />
+                        <Label Text="{Binding SelectedStaff.username}" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,0,0,0" />
 
 
 
                         <!-- Row 2: Email -->
-                        <Label Text="Company@email.com" FontSize="16" TextColor="White" Margin="5,5,0,0" />
+                        <Label Text="{Binding SelectedStaff.email}" FontSize="16" TextColor="White" Margin="5,5,0,0" />
 
                         <!-- Row 3: Positions -->
                         <StackLayout Orientation="Horizontal" Margin="5,20,0,0" Grid.Row="2" Grid.Column="1">
                             <Frame CornerRadius="18" BackgroundColor="White" Padding="10" Margin="0,0,10,0" BorderColor="#FF7070" WidthRequest="140">
-                                <Label Text="WEB DESIGNER" TextColor="#FF7070" FontSize="12" CharacterSpacing="3" FontFamily="PoppinsBlack" HorizontalTextAlignment="Center"/>
+                                <Frame.Triggers>
+                                    <DataTrigger TargetType="Frame" Binding="{Binding SelectedStaff.staffType}" Value="Administrative Staff">
+                                        <Setter Property="WidthRequest" Value="90" />
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Frame" Binding="{Binding SelectedStaff.staffType}" Value="Employee">
+                                        <Setter Property="WidthRequest" Value="200" />
+                                    </DataTrigger>
+                                   
+                                    <!-- Add more DataTriggers for other conditions if needed -->
+                                </Frame.Triggers>
+                                <Label Text="{Binding SelectedStaff.position}" TextColor="#FF7070" FontSize="12" CharacterSpacing="3" FontAttributes="Bold" HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="PoppinsBold"/>
                             </Frame>
-                            <Frame CornerRadius="18" BackgroundColor="#FF7070" Padding="10" BorderColor="White" WidthRequest="110">
-                                <Label Text="TECH LEAD" TextColor="White" FontSize="12" CharacterSpacing="3" FontFamily="PoppinsBlack" HorizontalTextAlignment="Center"/>
-                            </Frame>
+
                         </StackLayout>
 
-                        <!-- Row 4: Salary  -->
+                        <!-- Row 4: Salary -->
+                        <Label Text="Salary:" FontSize="14" HorizontalTextAlignment="Start" Margin="0,20,0,0" TextColor="White" FontFamily="PoppinsBold" Grid.Row="3" Grid.Column="0" />
 
-
-                        <Label Text="Salary:" FontSize="14" HorizontalTextAlignment="Start" Margin="0,20,0,0" TextColor="White" FontFamily="PoppinsBold"/>
-
-                        <Frame  Margin="0,10,0,0" BackgroundColor="#FF8D8D"  BorderColor="Transparent" CornerRadius="20" Padding="20,10,10,10">
-                            <Label Text="R12 000 /m" FontSize="14" HorizontalTextAlignment="Start"  FontFamily="PoppinsMedium" TextColor="White" />
+                        <Frame Margin="0,10,0,0" BackgroundColor="#FF8D8D" BorderColor="Transparent" CornerRadius="15" Padding="20,10,10,10" Grid.Row="3" Grid.Column="0">
+                            <Label FontSize="14" HorizontalTextAlignment="Start" Margin="0,5,0,0" FontFamily="PoppinsMedium" TextColor="White">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.staffType}" Value="Administrative Staff">
+                                        <Setter Property="Text" Value="{Binding SelectedStaff.payPerHour, StringFormat='R{0}/month'}" />
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.staffType}" Value="Employee">
+                                        <Setter Property="Text" Value="{Binding SelectedStaff.payPerHour, StringFormat='R{0}/hour'}" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
                         </Frame>
 
 
 
 
-
+                        <!-- Label for Current Projects -->
                         <Label Text="Current Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -221,12 +260,17 @@
                                     <Span Text=" Projects" FontSize="14" FontFamily="PoppinsRegular" />
                                 </FormattedString>
                             </Label.FormattedText>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.staffType}" Value="Employee">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.staffType}" Value="Administrative Staff">
+                                    <Setter Property="IsVisible" Value="False" />
+                                </DataTrigger>
+                            </Label.Triggers>
                         </Label>
 
-                        <!-- TODO: Horizontal Carousel -->
-
-
-
+                        <!-- Label for Past Projects -->
                         <Label Text="Past Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -234,10 +278,22 @@
                                     <Span Text=" Projects" FontSize="14" FontFamily="PoppinsRegular"  />
                                 </FormattedString>
                             </Label.FormattedText>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.staffType}" Value="Employee">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.staffType}" Value="Administrative Staff">
+                                    <Setter Property="IsVisible" Value="False" />
+                                </DataTrigger>
+                            </Label.Triggers>
                         </Label>
+
+
+
 
                     </StackLayout>
                 </Frame>
+
             </Border>
         </Grid>
     </acrylic:AcrylicView>

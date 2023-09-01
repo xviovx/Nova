@@ -194,6 +194,40 @@ namespace NovaApp.Services
             }
         }
 
+        public async Task<Staff> GetStaffByIdAsync(string staffId)
+        {
+            Staff staff = null;
+
+            try
+            {
+                Uri uri = new Uri($"{baseUrl}{staffId}"); // Construct the URL with the staff ID
+                Debug.WriteLine("Fetching staff data by ID from: " + uri);
+
+                HttpResponseMessage response = await _client.GetAsync(uri);
+
+                Debug.WriteLine("HTTP Status Code: " + response.StatusCode);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    staff = JsonSerializer.Deserialize<Staff>(content, _serializerOptions);
+
+                    Debug.WriteLine("Fetched staff data by ID: " + content);
+                }
+                else
+                {
+                    Debug.WriteLine("Failed to fetch staff data by ID. HTTP Status Code: " + response.StatusCode);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.ToString());
+            }
+
+            return staff;
+        }
+
+
 
     }
 }

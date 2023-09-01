@@ -19,5 +19,6 @@ namespace NovaApp.Services
         //Staff
         Task<List<Staff>> RefreshStaffAsync(); //GET all staff
         Task SaveStaffAsync(Staff item, bool isNewItem = false);//POST/PUT staff
+        Task<Staff> GetStaffByIdAsync(string staffId); 
     }
 }

@@ -3,6 +3,7 @@ using NovaApp.Popups;
 using Mopups.Services;
 using NovaApp.ViewModels;
 using System.Diagnostics;
+using NovaApp.Models;
 
 namespace NovaApp.Views
 {
@@ -34,5 +35,16 @@ namespace NovaApp.Views
         {
             MopupService.Instance.PushAsync(new UpdateStaff());
         }
+
+        private async void OnCardTapped(object sender, EventArgs e)
+        {
+            var staffId = ((sender as Image)?.BindingContext as Staff)?.id; // Adjust property name accordingly
+            if (staffId != null)
+            {
+                await _viewModel.FetchStaffById(staffId);
+            }
+        }
+
+
     }
 }

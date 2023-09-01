@@ -72,6 +72,17 @@ namespace NovaApp.ViewModels
                 }
             }
         }
+        private Staff _selectedStaff;
+        public Staff SelectedStaff
+        {
+            get { return _selectedStaff; }
+            set
+            {
+                _selectedStaff = value;
+                OnPropertyChanged(nameof(SelectedStaff));
+            }
+        }
+
 
 
         // Error properties and visibility flags
@@ -284,20 +295,10 @@ namespace NovaApp.ViewModels
                     StaffList.Add(staff);
                     Debug.WriteLine($"Added staff: {staff.username}");
 
-                    // Set the ProfileImageUrl for the current staff member
-                    ProfileImageUrl = $"Assets/ProfileImages/{staff.profileImage}.png";
-                    Debug.WriteLine($"{ProfileImageUrl}");
-
-                    // Conditionally adjust payPerHour based on staff type (admin or not)
-                    if (staff.staffType != "Administrative Staff")
+                    // Set the selected staff to the first staff member fetched
+                    if (StaffList.Count == 1)
                     {
-                        // Assuming payPerHourValue and payPerHourUnit are variables with the appropriate values
-                        salary = $"R{staff.payPerHour}/hour"; // For admin staff
-                        Debug.WriteLine(salary);
-                    }
-                    else
-                    {
-                        salary = $"R{staff.payPerHour}/month"; // For non-admin staff
+                        SelectedStaff = staff;
                     }
                 }
             }
@@ -306,6 +307,31 @@ namespace NovaApp.ViewModels
                 Debug.WriteLine("ERROR: " + ex.ToString()); // Log any exceptions that occur
             }
         }
+
+        public async Task FetchStaffById(string staffId)
+        {
+            try
+            {
+                var staffMember = await _restService.GetStaffByIdAsync(staffId);
+                Debug.WriteLine("Running fetch staff by ID");
+
+                if (staffMember != null)
+                {
+                    SelectedStaff = staffMember;
+                }
+                else
+                {
+                    // Handle the case when no staff member with the specified ID was found
+                    Debug.WriteLine("Staff member not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.ToString()); // Log any exceptions that occur
+            }
+        }
+
+
 
 
     }
