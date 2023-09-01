@@ -57,7 +57,17 @@ public partial class AddStaff
 
                 // Set tapped image's opacity to 1 and update SelectedImageSource
                 tappedImage.Opacity = 1;
-                _viewModel.SelectedImageSource = tappedImage.Source.ToString(); // Store the selected image source
+
+                // Extract the numeric part of the image name (assuming the name is like "X.png")
+                string imageName = Path.GetFileNameWithoutExtension(tappedImage.Source.ToString());
+                if (int.TryParse(imageName, out int imageIndex))
+                {
+                    _viewModel.SelectedImageIndex = imageIndex; // Store the selected image index
+                }
+                else
+                {
+                    Debug.WriteLine("Failed to parse image index.");
+                }
             }
         }
         catch (Exception ex)

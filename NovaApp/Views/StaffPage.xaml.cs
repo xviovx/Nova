@@ -16,6 +16,7 @@ namespace NovaApp.Views
             _viewModel = new StaffViewModel(new Services.RestService());
             BindingContext = _viewModel;
 
+
             LoadStaff(); // Call the LoadStaff method in the constructor
         }
 

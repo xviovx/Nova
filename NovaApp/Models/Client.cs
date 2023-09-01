@@ -8,12 +8,12 @@ namespace NovaApp.Models
 {
     public class Client
     {
-        public int id { get; set; }
-        public string companyName { get; set; } = string.Empty;
+        public string id { get; set; }
+        public string username { get; set; } = string.Empty;
         public string email { get; set; } = string.Empty;
         public string clientType { get; set; } = string.Empty;
         public int availableHours { get; set; }
-        public bool active { get; set; }
+        public bool? active { get; set; }
 
     }
 }

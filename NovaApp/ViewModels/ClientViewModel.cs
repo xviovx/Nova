@@ -55,7 +55,7 @@ namespace NovaApp.ViewModels
 
             var newClient = new Client
             {
-                companyName = CompanyName,
+                username = CompanyName,
                 email = Email,
                 clientType = clientType,
                 availableHours = availableHours,
@@ -82,7 +82,7 @@ namespace NovaApp.ViewModels
             foreach (var client in clients)
             {
                 ClientList.Add(client);
-                Debug.WriteLine(client.companyName);
+                Debug.WriteLine(client.username);
             }
         }
     }

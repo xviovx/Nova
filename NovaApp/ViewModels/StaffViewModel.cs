@@ -1,10 +1,12 @@
-﻿using NovaApp.Models;
+﻿using Microsoft.Maui.Graphics;
+using NovaApp.Models;
 using NovaApp.Services;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Networking;
+using Windows.System;
 
 namespace NovaApp.ViewModels
 {
@@ -15,8 +17,21 @@ namespace NovaApp.ViewModels
         public ObservableCollection<Staff> StaffList { get; set; }
 
         // Adding Staff Properties
-        public string ProfileImage { get; set; }
+        public int ProfileImage { get; set; }
         public string SelectedImageSource { get; set; } // Changed from private to public
+        private int _selectedImageIndex;
+        public int SelectedImageIndex
+        {
+            get => _selectedImageIndex;
+            set
+            {
+                if (_selectedImageIndex != value)
+                {
+                    _selectedImageIndex = value;
+                    OnPropertyChanged(nameof(SelectedImageIndex));
+                }
+            }
+        }
 
         public string Username { get; set; }
         public string FirstName { get; set; }
@@ -39,8 +54,24 @@ namespace NovaApp.ViewModels
         // Boolean properties for radio button selection
         public bool IsEmployeeType { get; set; }
         public bool IsAdminType { get; set; }
+        public string salary { get; set; }
 
         public ICommand AddNewStaffCommand { get; }
+
+        private string _profileImageUrl;
+      
+        public string ProfileImageUrl
+        {
+            get { return _profileImageUrl; }
+            set
+            {
+                if (_profileImageUrl != value)
+                {
+                    _profileImageUrl = value;
+                    OnPropertyChanged(nameof(ProfileImageUrl)); // Implement INotifyPropertyChanged
+                }
+            }
+        }
 
 
         // Error properties and visibility flags
@@ -145,7 +176,6 @@ namespace NovaApp.ViewModels
 
         public async Task AddStaff()
         {
-            //do if Id doesnt exist
             Debug.WriteLine("AddStaff method started...");
             int maxAvailableHours = 40; // Assuming 40 hours is the max for a week
 
@@ -160,7 +190,6 @@ namespace NovaApp.ViewModels
                 // Validation failed, display error messages
                 return;
             }
-
 
             if (IsEmployeeType)
             {
@@ -188,7 +217,6 @@ namespace NovaApp.ViewModels
             {
                 staffType = "Administrative Staff";
                 salary = 17000; // R17000 per month for Administrative Staff
-
             }
             else
             {
@@ -199,16 +227,19 @@ namespace NovaApp.ViewModels
             }
 
             // Set password based on staff type
-            string password = IsAdminType ? Password : string.Empty;
+            string password = IsAdminType ? Password : "Invalid User";
 
             // Concatenate FirstName and LastName for the Name property
             string fullName = $"{FirstName} {LastName}";
 
-            Debug.WriteLine($"Creating newStaff object with: ProfileImage={SelectedImageSource}, Name={fullName}, Email={Email}, Position={Position}, StaffType={staffType}, Salary={salary}, Password={password}");
+            // Ensure SelectedImageIndex is an integer
+            int selectedImageInt = SelectedImageIndex;
+
+            Debug.WriteLine($"Creating newStaff object with: profileImage={selectedImageInt}, Name={fullName}, Email={Email}, Position={Position}, StaffType={staffType}, Salary={salary}, Password={password}");
 
             var newStaff = new Staff
             {
-                profileImage = SelectedImageSource,
+                profileImage = selectedImageInt,
                 username = fullName,
                 email = Email,
                 staffType = staffType,
@@ -225,7 +256,7 @@ namespace NovaApp.ViewModels
             await FetchAllStaff();
 
             // Clear input fields, radio button selections, and other properties
-            ProfileImage = string.Empty;
+            ProfileImage = 0;
             FirstName = string.Empty; // Clear the FirstName
             LastName = string.Empty;  // Clear the LastName
             Email = string.Empty;
@@ -238,13 +269,44 @@ namespace NovaApp.ViewModels
 
         public async Task FetchAllStaff()
         {
-            var staffMembers = await _restService.RefreshStaffAsync();
-            StaffList.Clear();
-            foreach (var staff in staffMembers)
+            try
             {
-                StaffList.Add(staff);
-                Debug.WriteLine(staff.username);
+                var staffMembers = await _restService.RefreshStaffAsync();
+                Debug.WriteLine("Running fetch staff");
+
+                // Log the count of staff members fetched
+                Debug.WriteLine($"Fetched {staffMembers.Count} staff members");
+
+                StaffList.Clear();
+
+                foreach (var staff in staffMembers)
+                {
+                    StaffList.Add(staff);
+                    Debug.WriteLine($"Added staff: {staff.username}");
+
+                    // Set the ProfileImageUrl for the current staff member
+                    ProfileImageUrl = $"Assets/ProfileImages/{staff.profileImage}.png";
+                    Debug.WriteLine($"{ProfileImageUrl}");
+
+                    // Conditionally adjust payPerHour based on staff type (admin or not)
+                    if (staff.staffType != "Administrative Staff")
+                    {
+                        // Assuming payPerHourValue and payPerHourUnit are variables with the appropriate values
+                        salary = $"R{staff.payPerHour}/hour"; // For admin staff
+                        Debug.WriteLine(salary);
+                    }
+                    else
+                    {
+                        salary = $"R{staff.payPerHour}/month"; // For non-admin staff
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.ToString()); // Log any exceptions that occur
             }
         }
+
+
     }
 }
