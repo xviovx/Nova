@@ -85,6 +85,7 @@
                                 <Entry Placeholder="Company Name" BackgroundColor="White" Text="{Binding CompanyName}" />
 
 
+
                                 <Label Text="Email" 
                                     FontSize="14"
                                     Margin="0,0,0,-15"

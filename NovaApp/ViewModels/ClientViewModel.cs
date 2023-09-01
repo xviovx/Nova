@@ -22,12 +22,51 @@ namespace NovaApp.ViewModels
         public bool Active { get; set; }
         public ICommand AddNewClientCommand { get; }
 
+        public string CompanyNameError { get; private set; }
+        public bool IsCompanyNameInvalid { get; private set; }
+
+        public string EmailError { get; private set; }
+        public bool IsEmailInvalid { get; private set; }
+
+        private Client _selectedClient;
+        public Client SelectedClient
+        {
+            get { return _selectedClient; }
+            set
+            {
+                _selectedClient = value;
+                OnPropertyChanged(nameof(SelectedClient));
+            }
+        }
+
         public ClientViewModel(RestService restService)
         {
             _restService = restService;
             ClientList = new ObservableCollection<Client>();
 
             AddNewClientCommand = new Command(async () => await AddClient());
+        }
+
+        private bool ValidateInput()
+        {
+            bool isValid = true;
+
+            // Validate CompanyName
+            CompanyNameError = ValidateField(CompanyName, "Company Name is required.");
+            IsCompanyNameInvalid = !string.IsNullOrEmpty(CompanyNameError);
+
+            // Validate Email
+            EmailError = ValidateField(Email, "Email is required.");
+            IsEmailInvalid = !string.IsNullOrEmpty(EmailError);
+
+            isValid = isValid && !IsCompanyNameInvalid && !IsEmailInvalid;
+
+            return isValid;
+        }
+
+        private string ValidateField(string fieldValue, string fieldName)
+        {
+            return string.IsNullOrWhiteSpace(fieldValue) ? $"{fieldName} is required." : string.Empty;
         }
 
         public async Task AddClient()
@@ -52,6 +91,14 @@ namespace NovaApp.ViewModels
             }
 
             Debug.WriteLine($"Adding new client with: CompanyName={CompanyName}, Email={Email}, ClientType={clientType}, AvailableHours={availableHours}");
+
+            bool isValid = ValidateInput();
+
+            if (!isValid)
+            {
+                // Validation failed, do not add the client
+                return;
+            }
 
             var newClient = new Client
             {
@@ -83,6 +130,61 @@ namespace NovaApp.ViewModels
             {
                 ClientList.Add(client);
                 Debug.WriteLine(client.username);
+
+
+                // Set the selected staff to the first staff member fetched
+                if (ClientList.Count == 1)
+                {
+                    SelectedClient = client;
+                }
+            }
+        }
+
+
+        public async Task FetchClientById(string clientId)
+        {
+            try
+            {
+                var client = await _restService.GetClientByIdAsync(clientId);
+                Debug.WriteLine("Running fetch staff by ID");
+
+                if (client != null)
+                {
+                    SelectedClient = client;
+                }
+                else
+                {
+                    // Handle the case when no staff member with the specified ID was found
+                    Debug.WriteLine("Client not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.ToString()); // Log any exceptions that occur
+            }
+        }
+
+
+        public async Task GetClientByIdAsync(string clientId)
+        {
+            try
+            {
+                var client = await _restService.GetClientByIdAsync(clientId);
+                Debug.WriteLine("Running fetch client by ID");
+
+                if (client != null)
+                {
+                    SelectedClient = client;
+                }
+                else
+                {
+                    // Handle the case when no client with the specified ID was found
+                    Debug.WriteLine("Client not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.ToString()); // Log any exceptions that occur
             }
         }
     }

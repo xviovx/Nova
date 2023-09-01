@@ -229,5 +229,39 @@ namespace NovaApp.Services
 
 
 
+        public async Task<Client> GetClientByIdAsync(string clientId)
+        {
+            Client client = null;
+
+            try
+            {
+                Uri uri = new Uri($"{baseUrl}{clientId}"); // Construct the URL with the staff ID
+                Debug.WriteLine("Fetching client data by ID from: " + uri);
+
+                HttpResponseMessage response = await _client.GetAsync(uri);
+
+                Debug.WriteLine("HTTP Status Code: " + response.StatusCode);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    client = JsonSerializer.Deserialize<Client>(content, _serializerOptions);
+
+                    Debug.WriteLine("Fetched client data by ID: " + content);
+                }
+                else
+                {
+                    Debug.WriteLine("Failed to fetch client data by ID. HTTP Status Code: " + response.StatusCode);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.ToString());
+            }
+
+            return client;
+        }
+
+
     }
 }
