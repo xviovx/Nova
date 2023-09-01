@@ -72,14 +72,14 @@
                                                                     <Label Text="{Binding note}" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
                                                                     <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
                                                                 </Grid>
-                                                                <Label Text="{Binding note}" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
+                                                                <Label Text="{Binding Owner}" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
                                                                 <Grid>
                                                                     <Grid.ColumnDefinitions>
                                                                         <ColumnDefinition Width="Auto" />
                                                                     </Grid.ColumnDefinitions>
                                                                     <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="10,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
                                                                         <StackLayout Orientation="Vertical">
-                                                                            <Label Text="{Binding expenses}" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
+                                                                            <Label Text="{Binding expenses, StringFormat='R{0}.00'}" TextColor="#FF7070" FontSize="20" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
                                                                             <StackLayout Orientation="Horizontal">
                                                                                 <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,15,5,0" />
                                                                                 <Label Text="Total Spent" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End" Margin="0,20,0,0" FontFamily="PoppinsMedium"  />
@@ -88,7 +88,7 @@
                                                                     </Frame>
                                                                     <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="155,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
                                                                         <StackLayout Orientation="Vertical">
-                                                                            <Label Text="{Binding income}" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
+                                                                            <Label Text="{Binding income, StringFormat='R{0}.00'}" TextColor="#5BDA8C" FontSize="20" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
                                                                             <StackLayout Orientation="Horizontal">
                                                                                 <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,20,5,0"/>
                                                                                 <Label Text="Total Received" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End"  Margin="0,15,0,0" FontFamily="PoppinsMedium"  />
