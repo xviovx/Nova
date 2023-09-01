@@ -48,64 +48,69 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
-                        <Grid BackgroundColor="Transparent" Margin="0,0,0,0">
-                            <CollectionView ItemsSource="{Binding ProjectsList}" SelectionMode="None">
-                                <CollectionView.ItemsLayout>
-                                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
-                                </CollectionView.ItemsLayout>
-                                <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="345" HeightRequest="250" HorizontalOptions="Start" Margin="20,0,0,0">
-                                            <Border.Shadow>
-                                                <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
-                                            </Border.Shadow>
-                                            <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
-                                                <StackLayout Orientation="Vertical">
-                                                    <Grid>
-                                                        <Grid.ColumnDefinitions>
-                                                            <ColumnDefinition Width="Auto" />
-                                                            <ColumnDefinition Width="Auto" />
-                                                        </Grid.ColumnDefinitions>
-                                                        <Label Text="{Binding title}" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
-                                                        <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
-                                                    </Grid>
-                                                    <Label Text="{Binding title}" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
-                                                    <Grid>
-                                                        <Grid.ColumnDefinitions>
-                                                            <ColumnDefinition Width="Auto" />
-                                                        </Grid.ColumnDefinitions>
-                                                        <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="10,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
+                        <CollectionView ItemsSource="{Binding GroupedProjectsList}" SelectionMode="None">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <CollectionView ItemsSource="{Binding}" HorizontalOptions="StartAndExpand" SelectionMode="None">
+                                            <CollectionView.ItemsLayout>
+                                                <GridItemsLayout Orientation="Vertical" Span="2"/>
+                                            </CollectionView.ItemsLayout>
+                                            <CollectionView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="350" HeightRequest="250" HorizontalOptions="StartAndExpand" Margin="20,20,0,0">
+                                                        <Border.Shadow>
+                                                            <Shadow Brush="#EBEBEB" Offset="10,10" Radius="20" Opacity="1"/>
+                                                        </Border.Shadow>
+                                                        <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
                                                             <StackLayout Orientation="Vertical">
-                                                                <Label Text="{Binding title}" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                                <StackLayout Orientation="Horizontal">
-                                                                    <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,15,5,0" />
-                                                                    <Label Text="Total Spent" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End" Margin="0,20,0,0" FontFamily="PoppinsMedium"  />
-                                                                </StackLayout>
+                                                                <Grid>
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition Width="Auto" />
+                                                                        <ColumnDefinition Width="Auto" />
+                                                                    </Grid.ColumnDefinitions>
+                                                                    <Label Text="{Binding title}" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
+                                                                    <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
+                                                                </Grid>
+                                                                <Label Text="{Binding title}" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
+                                                                <Grid>
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition Width="Auto" />
+                                                                    </Grid.ColumnDefinitions>
+                                                                    <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="10,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
+                                                                        <StackLayout Orientation="Vertical">
+                                                                            <Label Text="{Binding title}" TextColor="#FF7070" FontSize="18" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
+                                                                            <StackLayout Orientation="Horizontal">
+                                                                                <Label Text="•" FontSize="12" TextColor="#FF7070" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,15,5,0" />
+                                                                                <Label Text="Total Spent" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End" Margin="0,20,0,0" FontFamily="PoppinsMedium"  />
+                                                                            </StackLayout>
+                                                                        </StackLayout>
+                                                                    </Frame>
+                                                                    <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="155,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
+                                                                        <StackLayout Orientation="Vertical">
+                                                                            <Label Text="{Binding title}" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
+                                                                            <StackLayout Orientation="Horizontal">
+                                                                                <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,20,5,0"/>
+                                                                                <Label Text="Total Received" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End"  Margin="0,15,0,0" FontFamily="PoppinsMedium"  />
+                                                                            </StackLayout>
+                                                                        </StackLayout>
+                                                                    </Frame>
+                                                                </Grid>
                                                             </StackLayout>
                                                         </Frame>
-                                                        <Frame CornerRadius="10" BackgroundColor="#F2F9FF" Padding="10" HorizontalOptions="Start" Margin="155,20,0,0" BorderColor="Transparent" WidthRequest="130"  HeightRequest="110">
-                                                            <StackLayout Orientation="Vertical">
-                                                                <Label Text="{Binding title}" TextColor="#5BDA8C" FontSize="16" CharacterSpacing="1" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
-                                                                <StackLayout Orientation="Horizontal">
-                                                                    <Label Text="•" FontSize="12" TextColor="#5BDA8C" VerticalOptions="Center" HorizontalOptions="Start"  Margin="0,20,5,0"/>
-                                                                    <Label Text="Total Received" FontSize="12" TextColor="#7988A3" HorizontalOptions="StartAndExpand" VerticalOptions="End"  Margin="0,15,0,0" FontFamily="PoppinsMedium"  />
-                                                                </StackLayout>
-                                                            </StackLayout>
-                                                        </Frame>
-                                                    </Grid>
-                                                </StackLayout>
-                                            </Frame>
-                                        </Border>
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>
-                            </CollectionView>
-                        </Grid>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </CollectionView.ItemTemplate>
+                                        </CollectionView>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
                     </Grid>
                 </StackLayout>
             </ScrollView>
 
-            <!-- Button -->
-            <!-- TODO: turn button into dropdown -->
+            <!-- DROPDOWN : MAKE WORK -->
 
             <Picker x:Name="filterCards" Margin="160,30,0,0" TextColor="White" BackgroundColor="LightGrey" WidthRequest="200">
                 <Picker.Items>

@@ -11,6 +11,7 @@ namespace NovaApp.Views
         private ChartEntry[] receivedEntries;
         private ChartEntry[] spentEntries;
         public ObservableCollection<Project> ProjectsList { get; set; } = new ObservableCollection<Project>();
+        public ObservableCollection<ObservableCollection<Project>> GroupedProjectsList { get; set; } = new ObservableCollection<ObservableCollection<Project>>();
         static readonly string BaseUrl = "http://localhost:3000";
 
         public FundsPage()
@@ -95,14 +96,28 @@ namespace NovaApp.Views
             {
                 ProjectsList.Add(item);
             }
-
+            GroupProjects();
         }
 
-        // https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/rest
+        public void GroupProjects()
+        {
+            ObservableCollection<Project> tempGroup = null;
+
+            for (int i = 0; i < ProjectsList.Count; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    tempGroup = new ObservableCollection<Project>();
+                    GroupedProjectsList.Add(tempGroup);
+                }
+                tempGroup.Add(ProjectsList[i]);
+            }
+        }
+
         public static async Task<List<Project>> GetProjectsAsync()
         {
             using var httpClient = new HttpClient();
-            var response = await httpClient.GetAsync(new Uri(new Uri(BaseUrl), "/projects")); // Replace with your API URL
+            var response = await httpClient.GetAsync(new Uri(new Uri(BaseUrl), "/projects"));
             var json = await response.Content.ReadAsStringAsync();
             var projectsList = JsonSerializer.Deserialize<List<Project>>(json);
             return projectsList;
