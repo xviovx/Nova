@@ -8,10 +8,11 @@ namespace NovaApp.Views
 {
     public partial class FundsPage : ContentView
     {
+        private HttpClient httpClient = new HttpClient();
         private ChartEntry[] receivedEntries;
         private ChartEntry[] spentEntries;
-        public ObservableCollection<Project> ProjectsList { get; set; } = new ObservableCollection<Project>();
-        public ObservableCollection<ObservableCollection<Project>> GroupedProjectsList { get; set; } = new ObservableCollection<ObservableCollection<Project>>();
+        public ObservableCollection<Fund> FundsList { get; set; } = new ObservableCollection<Fund>();
+        public ObservableCollection<ObservableCollection<Fund>> GroupedFundsList { get; set; } = new ObservableCollection<ObservableCollection<Fund>>();
         static readonly string BaseUrl = "http://localhost:3000";
 
         public FundsPage()
@@ -91,36 +92,63 @@ namespace NovaApp.Views
 
         public async Task LoadItems()
         {
-            var items = await GetProjectsAsync();
-            foreach (var item in items)
+            try
             {
-                ProjectsList.Add(item);
+                var items = await GetFundsAsync();
+
+                if (items != null)
+                {
+                    FundsList.Clear();
+                    foreach (var item in items)
+                    {
+                        FundsList.Add(item);
+                    }
+                }
+
+                GroupProjects();
             }
-            GroupProjects();
+            catch (Exception e)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", $"Unhandled exception: {e.Message}", "OK");
+            }
+        }
+
+        public async Task<List<Fund>> GetFundsAsync()
+        {
+            try
+            {
+                var response = await httpClient.GetAsync($"{BaseUrl}/funds");
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    var fundsList = JsonSerializer.Deserialize<List<Fund>>(json);
+                    return fundsList;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception e)
+            {
+                await Application.Current.MainPage.DisplayAlert("Debug", $"Exception: {e.Message}", "OK");
+                return null;
+            }
         }
 
         public void GroupProjects()
         {
-            ObservableCollection<Project> tempGroup = null;
+            ObservableCollection<Fund> tempGroup = null;
 
-            for (int i = 0; i < ProjectsList.Count; i++)
+            for (int i = 0; i < FundsList.Count; i++)
             {
                 if (i % 2 == 0)
                 {
-                    tempGroup = new ObservableCollection<Project>();
-                    GroupedProjectsList.Add(tempGroup);
+                    tempGroup = new ObservableCollection<Fund>();
+                    GroupedFundsList.Add(tempGroup);
                 }
-                tempGroup.Add(ProjectsList[i]);
+                tempGroup.Add(FundsList[i]);
             }
-        }
-
-        public static async Task<List<Project>> GetProjectsAsync()
-        {
-            using var httpClient = new HttpClient();
-            var response = await httpClient.GetAsync(new Uri(new Uri(BaseUrl), "/projects"));
-            var json = await response.Content.ReadAsStringAsync();
-            var projectsList = JsonSerializer.Deserialize<List<Project>>(json);
-            return projectsList;
         }
     }
 }

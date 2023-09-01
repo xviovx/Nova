@@ -76,7 +76,8 @@ namespace NovaApp.Models
 
     public class Fund
     {
-        public long id { get; set; }
+        [JsonPropertyName("id")]
+        public string id { get; set; }
 
         public int expenses { get; set; } = 0;
 
