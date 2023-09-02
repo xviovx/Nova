@@ -230,6 +230,7 @@ namespace NovaApp.Views
             }
             GroupedFundsList.Clear();
             GroupProjects();
+            OnPropertyChanged(nameof(GroupedFundsList));
         }
 
         public void CalculateTotals()
