@@ -31,5 +31,7 @@ namespace NovaApp.Views
         {
             MopupService.Instance.PushAsync(new UpdateClient());
         }
+
+
     }
 }
