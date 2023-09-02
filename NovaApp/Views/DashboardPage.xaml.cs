@@ -1,10 +1,17 @@
 using Microcharts;
+using NovaApp.Models;
 using SkiaSharp;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Text.Json;
 
 namespace NovaApp.Views
 {
     public partial class DashboardPage : ContentView
     {
+        //NEW
+        private ProjectsPage projectsPage;
+
         private ChartEntry[] projectZeroCompletion;
         private ChartEntry[] projectOneCompletion;
         private ChartEntry[] projectTwoCompletion;
@@ -13,6 +20,14 @@ namespace NovaApp.Views
         public DashboardPage()
         {
             InitializeComponent();
+
+            //NEW
+            projectsPage = new ProjectsPage();
+            BindingContext = projectsPage;
+
+            int totalProjectsCount = projectsPage.TotalProjectsCount;
+
+
 
             // dummy data for charts
             //chart zero data
@@ -124,6 +139,11 @@ namespace NovaApp.Views
             chartViewOne.Chart = chartOne;
             chartViewTwo.Chart = chartTwo;
             chartViewThree.Chart = chartThree;
+
+
+
+
         }
+
     }
 }

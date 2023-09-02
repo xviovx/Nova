@@ -124,17 +124,18 @@
                                 <Label Text="Total Projects" FontSize="10" TextColor="#444444" Margin="25,0,0,0" />
 
                                 <!-- Total Number -->
-                                <Label Text="20" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,0" FontFamily="PoppinsSemibold"/>
+                                <!-- BINDING GOES HERE -->
+                                <Label Text="{Binding TotalProjectsCount}" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,0" FontFamily="PoppinsSemibold"/>
                             </StackLayout>
                         </Frame>
                     </Grid>
                 </Border>
             </Grid>
             <!-- Column 1, Row 1: Client Page Text -->
- 
 
 
-        <!-- Our Timeline -->
+
+            <!-- Our Timeline -->
             <Grid>
                 <Label 
                 Text="Our"
