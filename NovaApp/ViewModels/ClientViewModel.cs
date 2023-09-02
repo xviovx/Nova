@@ -117,7 +117,7 @@ namespace NovaApp.ViewModels
             {
                 username = CompanyName,
                 email = Email,
-                clientType = clientType,
+                clientsType = clientType,
                 availableHours = availableHours,
                 active = true
             };
@@ -128,6 +128,17 @@ namespace NovaApp.ViewModels
                 // Attempt to save the client
                 await _restService.SaveClientAsync(newClient, true);
                 MopupService.Instance.PopAllAsync();
+
+
+                // Add the new client to the ObservableCollection immediately
+                ClientList.Add(newClient);
+
+                // Clear input fields and radio button selections
+                CompanyName = string.Empty;
+                Email = string.Empty;
+                IsStandardType = false;
+                IsPriorityType = false;
+                AvailableHours = 0;
             }
             catch (Exception ex)
             {
@@ -137,15 +148,7 @@ namespace NovaApp.ViewModels
 
             }
 
-            // Refresh the list of clients after adding
-            await FetchAllClients();
 
-            // Clear input fields and radio button selections
-            CompanyName = string.Empty;
-            Email = string.Empty;
-            IsStandardType = false;
-            IsPriorityType = false;
-            AvailableHours = 0;
         }
 
         public async Task FetchAllClients()

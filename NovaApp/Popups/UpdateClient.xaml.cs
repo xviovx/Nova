@@ -54,11 +54,11 @@ namespace NovaApp.Popups
                 Email.Text = _viewModel.FetchedClientData.email;
 
                 // Set radio button values based on the fetched client data
-                if (_viewModel.FetchedClientData.clientType == "Standard")
+                if (_viewModel.FetchedClientData.clientsType == "Standard")
                 {
                     StandardRadioButton.IsChecked = true;
                 }
-                else if (_viewModel.FetchedClientData.clientType == "Priority")
+                else if (_viewModel.FetchedClientData.clientsType == "Priority")
                 {
                     PriorityRadioButton.IsChecked = true;
                 }

@@ -75,7 +75,7 @@
 
                                             <!-- Row 3: Client Type -->
                                             <Frame CornerRadius="18" BackgroundColor="Transparent" Padding="10" HorizontalOptions="Start" Margin="5,20,0,0" BorderColor="#FF7070" WidthRequest="120">
-                                                <Label Text="{Binding clientType}" TextColor="#FF7070" FontSize="12" CharacterSpacing="3" FontFamily="PoppinsBold" HorizontalTextAlignment="Center" TextTransform="Uppercase"/>
+                                                <Label Text="{Binding clientsType}" FontSize="12" CharacterSpacing="3" FontAttributes="Bold" HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="PoppinsBold" Margin="5,10,0,0" TextColor="#FF7070"/>
                                             </Frame>
 
                                             <!-- Row 4: Progress Bar and Labels -->
@@ -170,7 +170,7 @@
 
                         <!-- Row 3: STANDARD -->
                         <Frame CornerRadius="18" Padding="10" HorizontalOptions="Start" Margin="5,20,0,0" BackgroundColor="White" WidthRequest="120" BorderColor="Transparent">
-                            <Label Text="{Binding SelectedClient.clientType}" TextColor="#FF7070" FontSize="12" CharacterSpacing="3" FontFamily="PoppinsBold" HorizontalTextAlignment="Center" TextTransform="Uppercase"/>
+                            <Label Text="{Binding SelectedClient.clientsType}" TextColor="#FF7070" FontSize="12" CharacterSpacing="3" FontFamily="PoppinsBold" HorizontalTextAlignment="Center" TextTransform="Uppercase"/>
                         </Frame>
                         <!-- Row 4: Progress Bar and Labels -->
                         <Grid Margin="5,30,0,0">

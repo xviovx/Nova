@@ -232,8 +232,25 @@
 
 
 
-                        <Button Text="De-Activate" WidthRequest="150" HorizontalOptions="Start" Margin="235,33,20,-25" Command="{Binding RemoveStaffCommand}" ZIndex="99" BackgroundColor="Transparent" BorderColor='#84DCCF' BorderWidth="3"/>
-                        <Button Text="Update" WidthRequest="150" HorizontalOptions="End" Margin="0,-20,20,0" Command="{Binding UpdateStaffCommand}" CommandParameter="{Binding StaffId}"  ZIndex="99"/>
+                        <Button 
+                            x:Name="DeactivateButton"
+                            Text="De-Activate"
+                                WidthRequest="150"
+                                HorizontalOptions="Start"
+                                Margin="235,33,20,-25"
+                                Command="{Binding DeactivateStaffCommand}"
+                                CommandParameter="{Binding StaffId}" 
+                                ZIndex="99"
+                                BackgroundColor="Transparent"
+                                BorderColor='#84DCCF'
+                                BorderWidth="3"/>
+                        <Button Text="Update"
+                                WidthRequest="150"
+                                HorizontalOptions="End"
+                                Margin="0,-20,20,0"
+                                Command="{Binding UpdateStaffCommand}"
+                                CommandParameter="{Binding StaffId}" 
+                                ZIndex="99"/>
                     </StackLayout>
 
 

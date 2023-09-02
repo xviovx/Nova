@@ -135,9 +135,8 @@ public partial class UpdateStaff
                 // Set the selected position from the fetched data
                 _viewModel.Position = _viewModel.FetchedStaffData.position;
 
-                // The profile image selection is now set immediately in InitializeAsync
-
-                // The staff type is also set initially in InitializeAsync
+                // Set the button text based on the value of SelectedStaff.active
+                DeactivateButton.Text = (_viewModel.FetchedStaffData.active ?? false) ? "Deactivate" : "Activate";
             }
         }
     }

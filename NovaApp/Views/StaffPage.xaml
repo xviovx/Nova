@@ -79,6 +79,7 @@
                                                 <Label Text="{Binding email}" FontSize="14" TextColor="#7D8DA6" Margin="15,-30,0,10" Grid.Row="1" Grid.Column="1" />
 
                                                 <!-- Row 3: Positions -->
+                                                
                                             <Frame CornerRadius="18" BackgroundColor="#FF7070" Padding="10" BorderColor="#FF7070" Grid.Row="2" Grid.Column="1" HorizontalOptions="Start">
                                                 <Frame.Triggers>
                                                     <DataTrigger TargetType="Frame" Binding="{Binding staffType}" Value="Administrative Staff">
@@ -93,10 +94,12 @@
                                             </Frame>
 
 
+
+
                                             <!-- Row 4: Salary and Project -->
                                                 <StackLayout Orientation="Horizontal" Margin="0,20,0,0" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
                                                     <Frame CornerRadius="20" BackgroundColor="#B9DDFF" BorderColor="Transparent" Margin="0,0,10,0" WidthRequest="130" HeightRequest="120" >
-                                                        <Grid BackgroundColor="#B9DDFF">
+                                                        <Grid >
                                                             <Grid.RowDefinitions>
                                                                 <RowDefinition Height="*" />
                                                                 <RowDefinition Height="Auto" />
@@ -136,7 +139,12 @@
 
                                             </StackLayout>
                                             </Grid>
-                                        </Frame>
+                                        <Frame.Triggers>
+                                            <DataTrigger TargetType="Frame" Binding="{Binding active}" Value="False">
+                                                <Setter Property="Opacity" Value="0.5" />
+                                            </DataTrigger>
+                                        </Frame.Triggers>
+                                    </Frame>
                                     </Border>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
@@ -208,6 +216,24 @@
                             </Grid>
                         </Grid>
 
+                        <Label Text="Inactive"
+                               TextColor="White"
+                               FontSize="12"
+                               CharacterSpacing="3"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               TextTransform="Uppercase"
+                               FontFamily="PoppinsBold"
+                               Margin="-185,0,0,10">        
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.active}" Value="False">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.active}" Value="True">
+                                    <Setter Property="IsVisible" Value="False" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
                         <Label Text="{Binding SelectedStaff.username}" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,0,0,0" />
 
 

@@ -202,13 +202,13 @@ namespace NovaApp.Services
                 string json = JsonSerializer.Serialize<Staff>(item, _serializerOptions);
                 StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                // Create a new HttpRequestMessage with the HTTP PUT method
+                // Create a new HttpRequestMessage with the HTTP PATCH method
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Patch, uri);
                 request.Content = content; // Set the content of the request
 
                 HttpResponseMessage response = await _client.SendAsync(request); // Send the PUT request
 
-                Debug.WriteLine("PUT Request Sent to: " + uri); // Debug: Log PUT request
+                Debug.WriteLine("PATCH Request Sent to: " + uri); // Debug: Log PATCH request
 
                 if (response.IsSuccessStatusCode)
                 {

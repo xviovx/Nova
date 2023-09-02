@@ -62,6 +62,7 @@ namespace NovaApp.ViewModels
         public string salary { get; set; }
 
         public ICommand AddNewStaffCommand { get; }
+        public ICommand DeactivateStaffCommand { get; }
 
         private string _staffId;
         public string StaffId
@@ -168,6 +169,12 @@ namespace NovaApp.ViewModels
                 // Use the staffId parameter in your update logic
                 Debug.WriteLine(staffId);
                 await UpdateStaff(staffId);
+            });
+            DeactivateStaffCommand = new Command<string>(async (staffId) =>
+            {
+                // Use the staffId parameter in your update logic
+                Debug.WriteLine(staffId);
+                await DeactivateStaff(staffId);
             });
         }
 
@@ -339,9 +346,6 @@ namespace NovaApp.ViewModels
             AvailableHours = 0;
         
 
-        // Refresh the list of staff members after adding
-           await FetchAllStaff();
-
         // Clear input fields, radio button selections, and other properties
             ProfileImage = 0;
             FirstName = string.Empty; // Clear the FirstName
@@ -400,10 +404,78 @@ namespace NovaApp.ViewModels
             catch (Exception ex)
             {
                 // Handle the exception, log it, or display an error message as needed
-                Debug.WriteLine($"Error adding staff: {ex.Message}");
+                Debug.WriteLine($"Error updating staff: {ex.Message}");
                 // Validation logic
                ValidateInput();
 
+            }
+
+            // Refresh the list of staff members after updating
+            await FetchAllStaff();
+
+            // Clear input fields, radio button selections, and other properties
+            ProfileImage = 0;
+            FirstName = string.Empty;
+            LastName = string.Empty;
+            Email = string.Empty;
+            IsEmployeeType = false;
+            IsAdminType = false;
+            Position = string.Empty;
+            Password = string.Empty;
+            AvailableHours = 0;
+        }
+
+
+        public async Task DeactivateStaff(string staffId)
+        {
+            Debug.WriteLine("DeactivateStaff method started...", staffId);
+
+            // Validation logic
+            bool isValid = ValidateInput();
+
+            if (!isValid)
+            {
+                // Validation failed, display error messages
+                return;
+            }
+
+            if (_selectedStaff == null)
+            {
+                // Handle the case when no staff member is selected for update.
+                Debug.WriteLine("No staff member selected for Deactivate.");
+                return;
+            }
+
+            // Determine the new value for the 'active' property
+            bool newActiveValue = _selectedStaff.active.HasValue ? !_selectedStaff.active.Value : true; // Toggle if not null, default to true otherwise
+            // Prepare the updated data
+            Staff updatedStaff = new Staff
+            {
+                id = _selectedStaff.id, // Make sure to include the ID of the existing staff member
+                profileImage = SelectedImageIndex,
+                username = $"{FirstName} {LastName}",
+                email = Email,
+                staffType = IsEmployeeType ? "Employee" : "Administrative Staff",
+                position = IsEmployeeType ? Position : "admin", // Only set position for employees
+                payPerHour = IsEmployeeType ? (Position == "Junior Developer" ? 400 : 600) : 17000, // Set pay based on type and position
+                password = IsAdminType ? Password : "Invalid User",
+                availableHours = 40, // Assuming 40 hours is the max for a week
+                active = newActiveValue // Set the new value of the 'active' property
+                                        // Add other fields as needed
+            };
+
+            try
+            {
+                // Update the selected staff member with a PATCH request
+                await _restService.UpdateStaffAsync(updatedStaff);
+                MopupService.Instance.PopAllAsync();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception, log it, or display an error message as needed
+                Debug.WriteLine($"Error DeactivateStaff staff: {ex.Message}");
+                // Validation logic
+                ValidateInput();
             }
 
             // Refresh the list of staff members after updating
