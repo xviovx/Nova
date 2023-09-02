@@ -148,7 +148,6 @@
                 
                 >
 
-
                     <StackLayout Orientation="Vertical">
                         <Grid>
                             <!-- total headings -->
@@ -158,11 +157,10 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Text="Total Funds" HorizontalTextAlignment="Center" FontSize="18" FontAttributes="None" TextColor="White" Grid.Column="0" Margin="42,25,0,0" />
-                            <Label Text="R50 000.00" HorizontalTextAlignment="Center" FontSize="42" FontFamily="PoppinsSemibold" TextColor="White" Grid.Column="0" Margin="42,60,0,0" />
-
+                            <Label Text="{Binding TotalFundsLabel}" HorizontalTextAlignment="Center" FontSize="42" FontFamily="PoppinsSemibold" TextColor="White" Grid.Column="0" Margin="42,60,0,0" />
                         </Grid>
 
-                        <!-- total spent & received-->
+                        <!-- total spent & received -->
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
@@ -171,9 +169,8 @@
 
                             <Frame CornerRadius="10" BackgroundColor="#FFFFFF" Padding="10" HorizontalOptions="Start" Margin="10,20,0,0" BorderColor="Transparent" WidthRequest="140" HeightRequest="120">
                                 <StackLayout Orientation="Vertical">
-
                                     <StackLayout Orientation="Vertical">
-                                        <Label Text="R25 000.00" TextColor="#FF7070" FontSize="18" CharacterSpacing="0.7" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding TotalSpentLabel}" TextColor="#FF7070" FontSize="18" CharacterSpacing="0.7" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
                                     </StackLayout>
 
                                     <StackLayout Orientation="Horizontal">
@@ -185,9 +182,8 @@
 
                             <Frame CornerRadius="10" BackgroundColor="#FFFFFF" Padding="10" HorizontalOptions="Start" Margin="158,20,0,0" BorderColor="Transparent" WidthRequest="140" HeightRequest="120">
                                 <StackLayout Orientation="Vertical">
-
                                     <StackLayout Orientation="Vertical">
-                                        <Label Text="R25 000.00" TextColor="#5BDA8C" FontSize="18" FontAttributes="Bold" CharacterSpacing="0.7" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding TotalReceivedLabel}" TextColor="#5BDA8C" FontSize="18" FontAttributes="Bold" CharacterSpacing="0.7" HorizontalTextAlignment="Center" Margin="0,25,0,0" VerticalTextAlignment="Center"/>
                                     </StackLayout>
 
                                     <StackLayout Orientation="Horizontal">

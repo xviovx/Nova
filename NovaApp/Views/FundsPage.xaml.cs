@@ -4,11 +4,62 @@ using SkiaSharp;
 using System.Collections.ObjectModel;
 using System.Text.Json;
 using System.Linq;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace NovaApp.Views
 {
-    public partial class FundsPage : ContentView
+    public partial class FundsPage : ContentView, INotifyPropertyChanged
     {
+        private string _totalReceivedLabel;
+        public string TotalReceivedLabel
+        {
+            get { return _totalReceivedLabel; }
+            set
+            {
+                if (_totalReceivedLabel != value)
+                {
+                    _totalReceivedLabel = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private string _totalSpentLabel;
+        public string TotalSpentLabel
+        {
+            get { return _totalSpentLabel; }
+            set
+            {
+                if (_totalSpentLabel != value)
+                {
+                    _totalSpentLabel = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private string _totalFundsLabel;
+        public string TotalFundsLabel
+        {
+            get { return _totalFundsLabel; }
+            set
+            {
+                if (_totalFundsLabel != value)
+                {
+                    _totalFundsLabel = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public new event PropertyChangedEventHandler PropertyChanged;
+
+        protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         private HttpClient httpClient = new HttpClient();
         private ChartEntry[] receivedEntries;
         private ChartEntry[] spentEntries;
@@ -108,6 +159,7 @@ namespace NovaApp.Views
                 }
 
                 GroupProjects();
+                CalculateTotals();
             }
             catch (Exception e)
             {
@@ -179,5 +231,17 @@ namespace NovaApp.Views
             GroupedFundsList.Clear();
             GroupProjects();
         }
+
+        public void CalculateTotals()
+        {
+            decimal totalReceived = FundsList.Sum(f => f.income);
+            decimal totalSpent = FundsList.Sum(f => f.expenses);
+            decimal totalFunds = totalReceived - totalSpent;
+
+            TotalReceivedLabel = $"R{totalReceived:0,0.00}";
+            TotalSpentLabel = $"R{totalSpent:0,0.00}";
+            TotalFundsLabel = $"R{totalFunds:0,0.00}";
+        }
+
     }
 }
