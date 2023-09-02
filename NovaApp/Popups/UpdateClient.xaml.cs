@@ -5,6 +5,7 @@ using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using NovaApp.ViewModels;
+using Windows.Networking;
 
 namespace NovaApp.Popups
 {
@@ -23,6 +24,9 @@ namespace NovaApp.Popups
 
             // Set the BindingContext
             BindingContext = _viewModel;
+
+            // Set default values based on fetched client data
+            SetDefaultValues();
         }
 
         private async Task InitializeAsync(string clientId)
@@ -34,7 +38,30 @@ namespace NovaApp.Popups
 
             if (clientId != null)
             {
-                await _viewModel.FetchClientById(clientId);
+                await _viewModel.GetClientById(clientId);
+                Debug.WriteLine($"Fetched username: {_viewModel.FetchedClientData.username}");
+                Debug.WriteLine($"Fetched email: {_viewModel.FetchedClientData.email}");
+                SetDefaultValues();
+            }
+        }
+
+        private void SetDefaultValues()
+        {
+            // Set default values based on the fetched client data
+            if (_viewModel.FetchedClientData != null)
+            {
+                Username.Text = _viewModel.FetchedClientData.username;
+                Email.Text = _viewModel.FetchedClientData.email;
+
+                // Set radio button values based on the fetched client data
+                if (_viewModel.FetchedClientData.clientType == "Standard")
+                {
+                    StandardRadioButton.IsChecked = true;
+                }
+                else if (_viewModel.FetchedClientData.clientType == "Priority")
+                {
+                    PriorityRadioButton.IsChecked = true;
+                }
             }
         }
 

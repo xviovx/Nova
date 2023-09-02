@@ -58,6 +58,19 @@ namespace NovaApp.ViewModels
 
         public ICommand AddNewStaffCommand { get; }
 
+        private string _staffId;
+        public string StaffId
+        {
+            get => _staffId;
+            set
+            {
+                _staffId = value;
+                OnPropertyChanged(nameof(StaffId));
+            }
+        }
+
+        public ICommand UpdateStaffCommand { get; private set; }
+
         private string _profileImageUrl;
       
         public string ProfileImageUrl
@@ -82,6 +95,20 @@ namespace NovaApp.ViewModels
                 OnPropertyChanged(nameof(SelectedStaff));
             }
         }
+
+
+        private Staff _fetchedStaffData;
+
+        public Staff FetchedStaffData
+        {
+            get { return _fetchedStaffData; }
+            set
+            {
+                _fetchedStaffData = value;
+                OnPropertyChanged(nameof(FetchedStaffData));
+            }
+        }
+
 
 
 
@@ -120,6 +147,12 @@ namespace NovaApp.ViewModels
             Position = "Admin";
 
             AddNewStaffCommand = new Command(async () => await AddStaff());
+            UpdateStaffCommand = new Command<string>(async (staffId) =>
+            {
+                // Use the staffId parameter in your update logic
+                Debug.WriteLine(staffId);
+                await UpdateStaff(staffId);
+            });
         }
 
         private bool ValidateInput()
@@ -278,6 +311,62 @@ namespace NovaApp.ViewModels
             AvailableHours = 0;
         }
 
+        public async Task UpdateStaff(string staffId)
+        {
+            Debug.WriteLine("UpdateStaff method started...", staffId);
+
+            // Validation logic
+            bool isValid = ValidateInput();
+
+            if (!isValid)
+            {
+                // Validation failed, display error messages
+                return;
+            }
+
+            if (_selectedStaff == null)
+            {
+                // Handle the case when no staff member is selected for update.
+                Debug.WriteLine("No staff member selected for update.");
+                return;
+            }
+
+            // Prepare the updated data
+            Staff updatedStaff = new Staff
+            {
+                id = _selectedStaff.id, // Make sure to include the ID of the existing staff member
+                profileImage = SelectedImageIndex,
+                username = $"{FirstName} {LastName}",
+                email = Email,
+                staffType = IsEmployeeType ? "Employee" : "Administrative Staff",
+                position = IsEmployeeType ? Position : string.Empty, // Only set position for employees
+                payPerHour = IsEmployeeType ? (Position == "Junior Developer" ? 400 : 600) : 17000, // Set pay based on type and position
+                password = IsAdminType ? Password : "Invalid User",
+                availableHours = 40, // Assuming 40 hours is the max for a week
+                active = true
+                // Add other fields as needed
+            };
+
+            // Update the selected staff member with a PATCH request
+            await _restService.UpdateStaffAsync(updatedStaff);
+
+            // Refresh the list of staff members after updating
+            await FetchAllStaff();
+
+            // Clear input fields, radio button selections, and other properties
+            ProfileImage = 0;
+            FirstName = string.Empty;
+            LastName = string.Empty;
+            Email = string.Empty;
+            IsEmployeeType = false;
+            IsAdminType = false;
+            Position = string.Empty;
+            Password = string.Empty;
+            AvailableHours = 0;
+        }
+
+
+
         public async Task FetchAllStaff()
         {
             try
@@ -330,6 +419,30 @@ namespace NovaApp.ViewModels
                 Debug.WriteLine("ERROR: " + ex.ToString()); // Log any exceptions that occur
             }
         }
+
+        public async Task GetStaffById(string staffId)
+        {
+            try
+            {
+                var staff = await _restService.GetStaffByIdAsync(staffId);
+                Debug.WriteLine("Running fetch staff by ID");
+
+                if (staff != null)
+                {
+                    FetchedStaffData = staff; // Store the fetched staff data here
+                }
+                else
+                {
+                    // Handle the case when no staff with the specified ID was found
+                    Debug.WriteLine("Staff not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.ToString()); // Log any exceptions that occur
+            }
+        }
+
 
 
 

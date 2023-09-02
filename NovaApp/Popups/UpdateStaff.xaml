@@ -7,6 +7,8 @@
              x:Class="NovaApp.Popups.UpdateStaff"    
              Title="UpdateStaff"
              CloseWhenBackgroundIsClicked="False"
+            BindingContext="{Binding Source={x:Reference UpdateStaff}, Path=BindingContext}"
+
              >
     <mopups:PopupPage.Animation>
         <mopupsanim:ScaleAnimation
@@ -104,6 +106,7 @@
                                  Spacing="15"
                                  Margin="20,-150,0,0">
                         <Image Source="Assets/ProfileImages/1.png"
+                               x:Name="Image1"
                                WidthRequest="50"
                                HeightRequest="50">
                             <Image.GestureRecognizers>
@@ -111,6 +114,7 @@
                             </Image.GestureRecognizers>
                         </Image>
                         <Image Source="Assets/ProfileImages/2.png"
+                               x:Name="Image2"
                                WidthRequest="50"
                                HeightRequest="50">
                             <Image.GestureRecognizers>
@@ -119,6 +123,7 @@
                         </Image>
                         <Image Source="Assets/ProfileImages/3.png"
                                WidthRequest="50"
+                               x:Name="Image3"
                                HeightRequest="50">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnImageTapped" />
@@ -126,6 +131,7 @@
                         </Image>
                         <Image Source="Assets/ProfileImages/4.png"
                                WidthRequest="50"
+                               x:Name="Image4"
                                HeightRequest="50">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnImageTapped" />
@@ -133,6 +139,7 @@
                         </Image>
                         <Image Source="Assets/ProfileImages/5.png"
                                WidthRequest="50"
+                               x:Name="Image5"
                                HeightRequest="50">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnImageTapped" />
@@ -140,6 +147,7 @@
                         </Image>
                         <Image Source="Assets/ProfileImages/6.png"
                                WidthRequest="50"
+                               x:Name="Image6"
                                HeightRequest="50">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnImageTapped" />
@@ -162,10 +170,12 @@
                                          >
                                 <Entry Placeholder="First Name"
                                        WidthRequest="150"
+                                       x:Name="FirstName"
                                        BackgroundColor="White" 
                                        Text="{Binding FirstName}"/>
                                 <Entry Placeholder="Last Name"
                                        WidthRequest="150"
+                                       x:Name="LastName"
                                        BackgroundColor="White"
                                         Text="{Binding LastName}"/>
                             </StackLayout>
@@ -185,6 +195,7 @@
                             <Entry Placeholder="Email"
                                    WidthRequest="300"
                                    BackgroundColor="White"
+                                   x:Name="Email"
                                    Text="{Binding Email}"/>
 
 
@@ -199,6 +210,7 @@
                                    Placeholder="Password"
                                    WidthRequest="300"
                                    BackgroundColor="White"
+                                   IsPassword="true"
                                    Text="{Binding Password}"/>
                             </StackLayout>
 
@@ -221,7 +233,7 @@
 
 
                         <Button Text="De-Activate" WidthRequest="150" HorizontalOptions="Start" Margin="235,33,20,-25" Command="{Binding RemoveStaffCommand}" ZIndex="99" BackgroundColor="Transparent" BorderColor='#84DCCF' BorderWidth="3"/>
-                        <Button Text="Update" WidthRequest="150" HorizontalOptions="End" Margin="0,-20,20,0" Command="{Binding UpdateStaffCommand}" ZIndex="99"/>
+                        <Button Text="Update" WidthRequest="150" HorizontalOptions="End" Margin="0,-20,20,0" Command="{Binding UpdateStaffCommand}" CommandParameter="{Binding StaffId}"  ZIndex="99"/>
                     </StackLayout>
 
 

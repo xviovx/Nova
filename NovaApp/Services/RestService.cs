@@ -173,8 +173,8 @@ namespace NovaApp.Services
                 }
                 else
                 {
-                    response = await _client.PutAsync(uri, content);
-                    Debug.WriteLine("PUT Request Sent to: " + uri); // Debug: Log PUT request
+                    response = await _client.PatchAsync(uri, content);
+                    Debug.WriteLine("Patch Request Sent to: " + uri); // Debug: Log Patch request
                 }
 
                 if (response.IsSuccessStatusCode)
@@ -193,6 +193,42 @@ namespace NovaApp.Services
                 Debug.WriteLine("ERROR: " + ex.ToString()); // Debug: Log the exception details
             }
         }
+        public async Task UpdateStaffAsync(Staff item)
+        {
+            try
+            {
+                Uri uri = new Uri($"{baseUrl}{item.id}"); // Construct the URI with the item's ID
+
+                string json = JsonSerializer.Serialize<Staff>(item, _serializerOptions);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                // Create a new HttpRequestMessage with the HTTP PUT method
+                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Patch, uri);
+                request.Content = content; // Set the content of the request
+
+                HttpResponseMessage response = await _client.SendAsync(request); // Send the PUT request
+
+                Debug.WriteLine("PUT Request Sent to: " + uri); // Debug: Log PUT request
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine("Staff successfully updated.");
+                }
+                else
+                {
+                    Debug.WriteLine("HTTP Status Code: " + response.StatusCode); // Debug: Log HTTP status code
+                    string responseContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine("Response Content: " + responseContent); // Debug: Log response content
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.ToString()); // Debug: Log the exception details
+            }
+        }
+
+
+
 
         public async Task<Staff> GetStaffByIdAsync(string staffId)
         {

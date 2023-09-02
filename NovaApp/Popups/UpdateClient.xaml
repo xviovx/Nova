@@ -7,6 +7,7 @@
              x:Class="NovaApp.Popups.UpdateClient"    
              Title="UpdateClient"
              CloseWhenBackgroundIsClicked="False"
+             BindingContext="{Binding Source={x:Reference UpdateClient}, Path=BindingContext}"
              >
 
     <mopups:PopupPage.Animation>
@@ -82,7 +83,7 @@
                                 <Label Text="Company Name" 
                                       FontFamily="PoppinsLight"
                                        Margin="0,105,0,-10" />
-                                <Entry Placeholder="{Binding username}"  BackgroundColor="White" Text="{Binding username}" />
+                                <Entry Placeholder="{Binding username}"  x:Name="Username" BackgroundColor="White" Text="{Binding username}" />
 
 
                                 <Label Text="Email" 
@@ -91,7 +92,7 @@
                                     FontFamily="PoppinsLight"
                                    />
 
-                                <Entry Placeholder="Email" WidthRequest="300" BackgroundColor="White" Text="{Binding email}" />
+                                <Entry Placeholder="Email" WidthRequest="300" x:Name="Email" BackgroundColor="White" Text="{Binding email}" />
 
 
 
@@ -111,8 +112,8 @@
                                      Margin="20,5,0,0"
                                      Grid.Row="4">
 
-                            <RadioButton GroupName="RoleGroup" Content="Standard" IsChecked="{Binding IsStandardType}" CheckedChanged="OnStandardRadioButtonClicked"  />
-                            <RadioButton GroupName="RoleGroup" Content="Priority" IsChecked="{Binding IsPriorityType}" CheckedChanged="OnPriorityRadioButtonClicked" />
+                            <RadioButton GroupName="RoleGroup" Content="Standard" IsChecked="{Binding IsStandardType}" x:Name="StandardRadioButton" CheckedChanged="OnStandardRadioButtonClicked"  />
+                            <RadioButton GroupName="RoleGroup" Content="Priority" IsChecked="{Binding IsPriorityType}"  x:Name="PriorityRadioButton" CheckedChanged="OnPriorityRadioButtonClicked" />
                         </StackLayout>
                         <Label Text=""
                                x:Name="DescriptionLabel"

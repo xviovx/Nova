@@ -33,8 +33,14 @@ namespace NovaApp.Views
 
         private void OnEditTapped(object sender, EventArgs e)
         {
-            MopupService.Instance.PushAsync(new UpdateStaff());
+            var staffId = _viewModel.SelectedStaff?.id; 
+            if (staffId != null)
+            {
+                MopupService.Instance.PushAsync(new UpdateStaff(staffId));
+            }
+            
         }
+
 
         private async void OnCardTapped(object sender, EventArgs e)
         {

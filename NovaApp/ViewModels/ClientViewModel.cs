@@ -39,6 +39,18 @@ namespace NovaApp.ViewModels
             }
         }
 
+        private Client _fetchedClientData;
+
+        public Client FetchedClientData
+        {
+            get { return _fetchedClientData; }
+            set
+            {
+                _fetchedClientData = value;
+                OnPropertyChanged(nameof(FetchedClientData));
+            }
+        }
+
         public ClientViewModel(RestService restService)
         {
             _restService = restService;
@@ -165,7 +177,8 @@ namespace NovaApp.ViewModels
         }
 
 
-        public async Task GetClientByIdAsync(string clientId)
+
+        public async Task GetClientById(string clientId)
         {
             try
             {
@@ -174,7 +187,7 @@ namespace NovaApp.ViewModels
 
                 if (client != null)
                 {
-                    SelectedClient = client;
+                    FetchedClientData = client; // Store the fetched client data here
                 }
                 else
                 {
@@ -187,5 +200,9 @@ namespace NovaApp.ViewModels
                 Debug.WriteLine("ERROR: " + ex.ToString()); // Log any exceptions that occur
             }
         }
+
+
+
+
     }
 }
