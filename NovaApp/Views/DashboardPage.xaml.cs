@@ -1,5 +1,6 @@
 using Microcharts;
 using NovaApp.Models;
+using NovaApp.Services;
 using SkiaSharp;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -7,9 +8,13 @@ using System.Text.Json;
 
 namespace NovaApp.Views
 {
+
     public partial class DashboardPage : ContentView
     {
-        //NEW
+        //Client total count
+        private RestService _restService;
+        public string TotalClientsText { get; set; }
+
         private ProjectsPage projectsPage;
 
         private ChartEntry[] projectZeroCompletion;
@@ -20,6 +25,10 @@ namespace NovaApp.Views
         public DashboardPage()
         {
             InitializeComponent();
+
+            _restService = new RestService();
+            BindingContext = this;
+
 
             //NEW
             projectsPage = new ProjectsPage();
@@ -140,10 +149,28 @@ namespace NovaApp.Views
             chartViewTwo.Chart = chartTwo;
             chartViewThree.Chart = chartThree;
 
-
-
+            UpdateTotalClientsCount();
 
         }
+        private async void UpdateTotalClientsCount()
+        {
+            try
+            {
+                var clients = await _restService.RefreshClientsAsync();
+                if (clients != null)
+                {
+                    TotalClientsText = $"Total Clients: {clients.Count}";
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions here
+                Debug.WriteLine($"Error loading clients: {ex.Message}");
+            }
+        }
+
+
+
 
     }
 }

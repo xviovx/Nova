@@ -10,6 +10,7 @@ namespace NovaApp.ViewModels
     public class ClientViewModel : BaseViewModel
     {
         private readonly RestService _restService;
+        internal object Clients;
 
         public ObservableCollection<Client> ClientList { get; set; }
 
