@@ -16,12 +16,13 @@ namespace NovaApp.Services
         Task<List<Client>> RefreshClientsAsync(); //GET all clients
         Task SaveClientAsync(Client item, bool isNewItem = false);//POST/PUT clients
         Task<Client> GetClientByIdAsync(string clientId); //GET client by Id
+        Task UpdateClientAsync(Client item); //Update client
 
         //Staff
         Task<List<Staff>> RefreshStaffAsync(); //GET all staff
         Task SaveStaffAsync(Staff item, bool isNewItem = false);//POST/PUT staff
         Task<Staff> GetStaffByIdAsync(string staffId); //GET staff by Id
-        Task UpdateStaffAsync(Staff item);
+        Task UpdateStaffAsync(Staff item); //update client
 
     }
 }

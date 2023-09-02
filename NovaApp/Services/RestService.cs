@@ -118,6 +118,51 @@ namespace NovaApp.Services
             }
         }
 
+        //update client
+        public async Task UpdateClientAsync(Client item)
+        {
+
+            Debug.WriteLine($"Client: {item}");
+            try
+            {
+                Uri uri = new Uri($"{baseUrl}{item.id}"); // Construct the URI with the item's ID
+
+                Debug.WriteLine("URI: " + uri); // Debug: Log the constructed URI
+
+                string json = JsonSerializer.Serialize<Client>(item, _serializerOptions);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                Debug.WriteLine("Request JSON: " + json); // Debug: Log the request JSON data
+
+                // Create a new HttpRequestMessage with the HTTP PATCH method
+                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Patch, uri);
+                request.Content = content; // Set the content of the request
+
+                Debug.WriteLine("PATCH Request Content Set"); // Debug: Log content setting
+
+                HttpResponseMessage response = await _client.SendAsync(request); // Send the PATCH request
+
+                Debug.WriteLine("PATCH Request Sent to: " + uri); // Debug: Log PATCH request
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine("Client successfully updated.");
+                }
+                else
+                {
+                    Debug.WriteLine("HTTP Status Code: " + response.StatusCode); // Debug: Log HTTP status code
+                    string responseContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine("Response Content: " + responseContent); // Debug: Log response content
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.ToString()); // Debug: Log the exception details
+            }
+        }
+
+
+
         //Get all staff
         public async Task<List<Staff>> RefreshStaffAsync()
         {

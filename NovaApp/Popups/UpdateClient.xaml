@@ -83,7 +83,7 @@
                                 <Label Text="Company Name" 
                                       FontFamily="PoppinsLight"
                                        Margin="0,105,0,-10" />
-                                <Entry Placeholder="{Binding username}"  x:Name="Username" BackgroundColor="White" Text="{Binding username}" />
+                                <Entry Placeholder="Company Name"  x:Name="Username" BackgroundColor="White" Text="{Binding CompanyName}" />
 
 
                                 <Label Text="Email" 
@@ -92,7 +92,7 @@
                                     FontFamily="PoppinsLight"
                                    />
 
-                                <Entry Placeholder="Email" WidthRequest="300" x:Name="Email" BackgroundColor="White" Text="{Binding email}" />
+                                <Entry Placeholder="Email" WidthRequest="300" x:Name="Email" BackgroundColor="White" Text="{Binding Email}" />
 
 
 
@@ -123,8 +123,25 @@
                                Grid.Row="5"
                                Grid.Column="0" />
 
-                        <Button Text="De-Activate" WidthRequest="150" HorizontalOptions="Start" Margin="240,-5,20,0" ZIndex="99" BackgroundColor="Transparent" BorderColor='#84DCCF' BorderWidth="3"/>
-                        <Button Text="Update" WidthRequest="150" HorizontalOptions="End" Margin="0,-50,20,0" ZIndex="99"/>
+                        <Button 
+                            x:Name="DeactivateButton"
+                            Text="De-Activate"
+                                WidthRequest="150"
+                                HorizontalOptions="Start"
+                                Margin="240,-5,20,0"
+                                Command="{Binding DeactivateClientCommand}"
+                                CommandParameter="{Binding ClientId}" 
+                                ZIndex="99"
+                                BackgroundColor="Transparent"
+                                BorderColor='#84DCCF'
+                                BorderWidth="3"/>
+                        <Button Text="Update"
+                                WidthRequest="150"
+                                HorizontalOptions="End"
+                                Margin="0,-50,20,0"
+                                Command="{Binding UpdateClientCommand}"
+                                CommandParameter="{Binding ClientId}" 
+                                ZIndex="99"/>
 
 
                     </StackLayout>

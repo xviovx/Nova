@@ -38,12 +38,38 @@ namespace NovaApp.Popups
 
             if (clientId != null)
             {
-                await _viewModel.GetClientById(clientId);
-                Debug.WriteLine($"Fetched username: {_viewModel.FetchedClientData.username}");
-                Debug.WriteLine($"Fetched email: {_viewModel.FetchedClientData.email}");
-                SetDefaultValues();
+                try
+                {
+                    await _viewModel.GetClientById(clientId);
+                    if (_viewModel.FetchedClientData != null)
+                    {
+                        // Set the FetchedStaffData property with the fetched data
+                        _viewModel.FetchedClientData = _viewModel.FetchedClientData;
+
+                        // Set the selected staff member
+                        _viewModel.SelectedClient = _viewModel.FetchedClientData; // Add this line
+
+                        Debug.WriteLine($"Fetched username: {_viewModel.FetchedClientData.username}");
+                        Debug.WriteLine($"Fetched email: {_viewModel.FetchedClientData.email}");
+
+                        SetDefaultValues();
+                    }
+                    else
+                    {
+                        // Handle the case when fetched data is null
+                        Debug.WriteLine("Fetched staff data is null.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle exceptions that may occur during data fetching
+                    Debug.WriteLine($"Error fetching client data: {ex.Message}");
+                }
             }
-        }
+}
+
+
+
 
         private void SetDefaultValues()
         {
@@ -52,6 +78,8 @@ namespace NovaApp.Popups
             {
                 Username.Text = _viewModel.FetchedClientData.username;
                 Email.Text = _viewModel.FetchedClientData.email;
+                // Set the button text based on the value of SelectedStaff.active
+                DeactivateButton.Text = (_viewModel.FetchedClientData.active ?? false) ? "Deactivate" : "Activate";
 
                 // Set radio button values based on the fetched client data
                 if (_viewModel.FetchedClientData.clientsType == "Standard")
@@ -91,6 +119,22 @@ namespace NovaApp.Popups
             {
                 DescriptionLabel.Text = "Allocated 30 hours per week";
             }
+        }
+
+        private bool ValidateInput()
+        {
+            // Implement your validation logic here
+            bool isValid = true;
+
+            // Example validation: Check if the username is not empty
+            if (string.IsNullOrWhiteSpace(Username.Text))
+            {
+                isValid = false;
+                // Display an error message or set an error flag
+                Debug.WriteLine("Username is required.");
+            }
+
+            return isValid;
         }
     }
 }
