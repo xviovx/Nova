@@ -1,4 +1,5 @@
-﻿using NovaApp.Models;
+﻿using Mopups.Services;
+using NovaApp.Models;
 using NovaApp.Services;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -121,7 +122,20 @@ namespace NovaApp.ViewModels
                 active = true
             };
 
-            await _restService.SaveClientAsync(newClient, true);
+          
+            try
+            {
+                // Attempt to save the client
+                await _restService.SaveClientAsync(newClient, true);
+                MopupService.Instance.PopAllAsync();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception, log it, or display an error message as needed
+                Debug.WriteLine($"Error adding staff: {ex.Message}");
+                ValidateInput();
+
+            }
 
             // Refresh the list of clients after adding
             await FetchAllClients();

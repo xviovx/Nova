@@ -1,8 +1,13 @@
 ﻿using Microsoft.Maui.Graphics;
+using Microsoft.UI.Xaml.Controls.Primitives;
+using Microsoft.UI.Xaml.Documents;
+using Mopups.Services;
 using NovaApp.Models;
 using NovaApp.Services;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Diagnostics.Metrics;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Networking;
@@ -93,6 +98,7 @@ namespace NovaApp.ViewModels
             {
                 _selectedStaff = value;
                 OnPropertyChanged(nameof(SelectedStaff));
+                OnPropertyChanged(nameof(SelectedStaff.payPerHour));
             }
         }
 
@@ -109,7 +115,17 @@ namespace NovaApp.ViewModels
             }
         }
 
+        private bool isAddStaffSuccessful;
 
+        public bool IsAddStaffSuccessful
+        {
+            get { return isAddStaffSuccessful; }
+            set
+            {
+                isAddStaffSuccessful = true;
+                OnPropertyChanged(nameof(IsAddStaffSuccessful));
+            }
+        }
 
 
         // Error properties and visibility flags
@@ -294,12 +310,39 @@ namespace NovaApp.ViewModels
                 active = true
             };
 
-            await _restService.SaveStaffAsync(newStaff, true);
+            try
+            {
+                // Attempt to save the staff member
+                await _restService.SaveStaffAsync(newStaff, true);
+                MopupService.Instance.PopAllAsync();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception, log it, or display an error message as needed
+                Debug.WriteLine($"Error adding staff: {ex.Message}");
+                ValidateInput();
+
+            }
 
             // Refresh the list of staff members after adding
             await FetchAllStaff();
 
             // Clear input fields, radio button selections, and other properties
+            ProfileImage = 0;
+            FirstName = string.Empty; // Clear the FirstName
+            LastName = string.Empty;  // Clear the LastName
+            Email = string.Empty;
+            IsEmployeeType = false;
+            IsAdminType = false;
+            Position = string.Empty;
+            Password = string.Empty;
+            AvailableHours = 0;
+        
+
+        // Refresh the list of staff members after adding
+           await FetchAllStaff();
+
+        // Clear input fields, radio button selections, and other properties
             ProfileImage = 0;
             FirstName = string.Empty; // Clear the FirstName
             LastName = string.Empty;  // Clear the LastName
@@ -347,8 +390,21 @@ namespace NovaApp.ViewModels
                 // Add other fields as needed
             };
 
-            // Update the selected staff member with a PATCH request
-            await _restService.UpdateStaffAsync(updatedStaff);
+            
+            try
+            {
+                // Update the selected staff member with a PATCH request
+                await _restService.UpdateStaffAsync(updatedStaff);
+                MopupService.Instance.PopAllAsync();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception, log it, or display an error message as needed
+                Debug.WriteLine($"Error adding staff: {ex.Message}");
+                // Validation logic
+               ValidateInput();
+
+            }
 
             // Refresh the list of staff members after updating
             await FetchAllStaff();

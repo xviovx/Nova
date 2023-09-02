@@ -48,6 +48,7 @@ namespace NovaApp.Views
             if (staffId != null)
             {
                 await _viewModel.FetchStaffById(staffId);
+     
             }
         }
 
