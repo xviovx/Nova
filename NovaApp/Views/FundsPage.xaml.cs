@@ -6,6 +6,7 @@ using System.Text.Json;
 using System.Linq;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Diagnostics;
 
 namespace NovaApp.Views
 {

@@ -69,10 +69,10 @@
                                                                         <ColumnDefinition Width="Auto" />
                                                                         <ColumnDefinition Width="Auto" />
                                                                     </Grid.ColumnDefinitions>
-                                                                    <Label Text="{Binding note}" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
+                                                                    <Label Text="{Binding projectName}" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Column="0" Margin="5,15,0,0" />
                                                                     <Image Source="Assets/Icons/moreInfo.png" WidthRequest="80" Grid.Column="1" Margin="65,-5,0,0" />
                                                                 </Grid>
-                                                                <Label Text="{Binding Owner}" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
+                                                                <Label Text="{Binding clientOwnerName}" FontSize="16" TextColor="#7D8DA6" Margin="5,-25,0,0" />
                                                                 <Grid>
                                                                     <Grid.ColumnDefinitions>
                                                                         <ColumnDefinition Width="Auto" />

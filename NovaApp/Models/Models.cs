@@ -76,6 +76,12 @@ namespace NovaApp.Models
 
     public class Fund
     {
+        public string projectId { get; set; }
+
+        public string projectName { get; set; }
+
+        public string clientOwnerName { get; set; }
+
         [JsonPropertyName("id")]
         public string id { get; set; }
 
@@ -87,7 +93,7 @@ namespace NovaApp.Models
 
         public DateTime createdDate { get; set; } = DateTime.UtcNow;
 
-        public Project Project { get; set; }
+        public Project project { get; set; }
 
         public User Owner { get; set; }
     }
