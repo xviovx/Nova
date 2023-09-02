@@ -42,6 +42,7 @@ public partial class UpdateStaff
         // Find the image with the specified index and set its opacity to 1
         if (ImageStackLayout.Children.ElementAtOrDefault(imageIndex) is Image initialImage)
         {
+            _viewModel.SelectedImageIndex = imageIndex +1;
             Debug.WriteLine($"Initial image: {imageIndex}");
             initialImage.Opacity = 1;
         }

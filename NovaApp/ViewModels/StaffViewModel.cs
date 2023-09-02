@@ -339,7 +339,7 @@ namespace NovaApp.ViewModels
                 username = $"{FirstName} {LastName}",
                 email = Email,
                 staffType = IsEmployeeType ? "Employee" : "Administrative Staff",
-                position = IsEmployeeType ? Position : string.Empty, // Only set position for employees
+                position = IsEmployeeType ? Position : "admin", // Only set position for employees
                 payPerHour = IsEmployeeType ? (Position == "Junior Developer" ? 400 : 600) : 17000, // Set pay based on type and position
                 password = IsAdminType ? Password : "Invalid User",
                 availableHours = 40, // Assuming 40 hours is the max for a week
