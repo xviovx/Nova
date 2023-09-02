@@ -112,7 +112,7 @@
 
             <!-- DROPDOWN : MAKE WORK -->
 
-            <Picker x:Name="filterCards" Margin="160,30,0,0" TextColor="White" BackgroundColor="LightGrey" WidthRequest="200">
+            <Picker x:Name="filterCards" SelectedIndexChanged="OnFilterCardsSelectedIndexChanged" Margin="160,30,0,0" TextColor="White" BackgroundColor="LightGrey" WidthRequest="200">
                 <Picker.Items>
                     <x:String>Spent Asc.</x:String>
                     <x:String>Received Asc.</x:String>

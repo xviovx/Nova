@@ -3,6 +3,7 @@ using NovaApp.Models;
 using SkiaSharp;
 using System.Collections.ObjectModel;
 using System.Text.Json;
+using System.Linq;
 
 namespace NovaApp.Views
 {
@@ -21,6 +22,7 @@ namespace NovaApp.Views
             _ = LoadItems();
             BindingContext = this;
             filterCards.SelectedIndex = 0;
+            filterCards.SelectedIndexChanged += OnFilterCardsSelectedIndexChanged;
 
             // dummy data for received entries
             receivedEntries = new[]
@@ -149,6 +151,33 @@ namespace NovaApp.Views
                 }
                 tempGroup.Add(FundsList[i]);
             }
+        }
+
+        private void OnFilterCardsSelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedValue = filterCards.Items[filterCards.SelectedIndex];
+            SortFunds(selectedValue);
+        }
+
+        private void SortFunds(string selectedValue)
+        {
+            switch (selectedValue)
+            {
+                case "Spent Asc.":
+                    FundsList = new ObservableCollection<Fund>(FundsList.OrderBy(f => f.expenses));
+                    break;
+                case "Received Asc.":
+                    FundsList = new ObservableCollection<Fund>(FundsList.OrderBy(f => f.income));
+                    break;
+                case "Spent Desc.":
+                    FundsList = new ObservableCollection<Fund>(FundsList.OrderByDescending(f => f.expenses));
+                    break;
+                case "Received Desc.":
+                    FundsList = new ObservableCollection<Fund>(FundsList.OrderByDescending(f => f.income));
+                    break;
+            }
+            GroupedFundsList.Clear();
+            GroupProjects();
         }
     }
 }
