@@ -3,6 +3,7 @@ using NovaApp.Popups;
 using Mopups.Services;
 using NovaApp.ViewModels;
 using System.Diagnostics;
+using NovaApp.Models;
 
 namespace NovaApp.Views
 {
@@ -15,6 +16,7 @@ namespace NovaApp.Views
             InitializeComponent();
             _viewModel = new StaffViewModel(new Services.RestService());
             BindingContext = _viewModel;
+
 
             LoadStaff(); // Call the LoadStaff method in the constructor
         }
@@ -31,7 +33,25 @@ namespace NovaApp.Views
 
         private void OnEditTapped(object sender, EventArgs e)
         {
-            MopupService.Instance.PushAsync(new UpdateStaff());
+            var staffId = _viewModel.SelectedStaff?.id;
+            if (staffId != null)
+            {
+                MopupService.Instance.PushAsync(new UpdateStaff(staffId));
+            }
+
         }
+
+
+        private async void OnCardTapped(object sender, EventArgs e)
+        {
+            var staffId = ((sender as Image)?.BindingContext as Staff)?.id; // Adjust property name accordingly
+            if (staffId != null)
+            {
+                await _viewModel.FetchStaffById(staffId);
+
+            }
+        }
+
+
     }
 }

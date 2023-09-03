@@ -7,6 +7,7 @@
              x:Class="NovaApp.Popups.UpdateClient"    
              Title="UpdateClient"
              CloseWhenBackgroundIsClicked="False"
+             BindingContext="{Binding Source={x:Reference UpdateClient}, Path=BindingContext}"
              >
 
     <mopups:PopupPage.Animation>
@@ -82,7 +83,7 @@
                                 <Label Text="Company Name" 
                                       FontFamily="PoppinsLight"
                                        Margin="0,105,0,-10" />
-                                <Entry Placeholder="Company Name" BackgroundColor="White" Text="{Binding CompanyName}" />
+                                <Entry Placeholder="Company Name"  x:Name="Username" BackgroundColor="White" Text="{Binding CompanyName}" />
 
 
                                 <Label Text="Email" 
@@ -91,7 +92,7 @@
                                     FontFamily="PoppinsLight"
                                    />
 
-                                <Entry Placeholder="Email" WidthRequest="300" BackgroundColor="White" Text="{Binding Email}" />
+                                <Entry Placeholder="Email" WidthRequest="300" x:Name="Email" BackgroundColor="White" Text="{Binding Email}" />
 
 
 
@@ -111,8 +112,8 @@
                                      Margin="20,5,0,0"
                                      Grid.Row="4">
 
-                            <RadioButton GroupName="RoleGroup" Content="Standard" IsChecked="{Binding IsStandardType}" CheckedChanged="OnStandardRadioButtonClicked"  />
-                            <RadioButton GroupName="RoleGroup" Content="Priority" IsChecked="{Binding IsPriorityType}" CheckedChanged="OnPriorityRadioButtonClicked" />
+                            <RadioButton GroupName="RoleGroup" Content="Standard" IsChecked="{Binding IsStandardType}" x:Name="StandardRadioButton" CheckedChanged="OnStandardRadioButtonClicked"  />
+                            <RadioButton GroupName="RoleGroup" Content="Priority" IsChecked="{Binding IsPriorityType}"  x:Name="PriorityRadioButton" CheckedChanged="OnPriorityRadioButtonClicked" />
                         </StackLayout>
                         <Label Text=""
                                x:Name="DescriptionLabel"
@@ -122,8 +123,25 @@
                                Grid.Row="5"
                                Grid.Column="0" />
 
-                        <Button Text="De-Activate" WidthRequest="150" HorizontalOptions="Start" Margin="240,-5,20,0" Command="{Binding RemoveClientCommand}" ZIndex="99" BackgroundColor="Transparent" BorderColor='#84DCCF' BorderWidth="3"/>
-                        <Button Text="Update" WidthRequest="150" HorizontalOptions="End" Margin="0,-50,20,0" Command="{Binding UpdateClientCommand}" ZIndex="99"/>
+                        <Button 
+                            x:Name="DeactivateButton"
+                            Text="De-Activate"
+                                WidthRequest="150"
+                                HorizontalOptions="Start"
+                                Margin="240,-5,20,0"
+                                Command="{Binding DeactivateClientCommand}"
+                                CommandParameter="{Binding ClientId}" 
+                                ZIndex="99"
+                                BackgroundColor="Transparent"
+                                BorderColor='#84DCCF'
+                                BorderWidth="3"/>
+                        <Button Text="Update"
+                                WidthRequest="150"
+                                HorizontalOptions="End"
+                                Margin="0,-50,20,0"
+                                Command="{Binding UpdateClientCommand}"
+                                CommandParameter="{Binding ClientId}" 
+                                ZIndex="99"/>
 
 
                     </StackLayout>
