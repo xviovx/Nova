@@ -14,7 +14,6 @@ namespace NovaApp.Views
     public partial class DashboardPage : ContentView, INotifyPropertyChanged //Client Total
     {
         //Project total count
-
         private ProjectsPage projectsPage;
         private int _totalProjectsCount;
         public int TotalProjectsCount
@@ -33,6 +32,9 @@ namespace NovaApp.Views
         //Client total count
         private RestService _restService;
         private string _totalClientsText;
+        //Staff total count
+        private string _totalStaffText;
+
         public string TotalClientsText
         {
             get { return _totalClientsText; }
@@ -41,6 +43,20 @@ namespace NovaApp.Views
                 if (_totalClientsText != value)
                 {
                     _totalClientsText = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        
+        //staff total count
+        public string TotalStaffText
+        {
+            get { return _totalStaffText; }
+            set
+            {
+                if (_totalStaffText != value)
+                {
+                    _totalStaffText = value;
                     OnPropertyChanged();
                 }
             }
@@ -71,6 +87,7 @@ namespace NovaApp.Views
             TotalProjectsCount = projectsPage.TotalProjectsCount;
 
             UpdateTotalClientsCount();
+            UpdateTotalStaffCount();
 
             //BindingContext = projectsPage;
 
@@ -205,6 +222,23 @@ namespace NovaApp.Views
             {
                 // Handle exceptions here
                 Debug.WriteLine($"Error loading clients: {ex.Message}");
+            }
+        }
+
+        private async void UpdateTotalStaffCount()
+        {
+            try
+            {
+                var staff = await _restService.RefreshStaffAsync();
+                if (staff != null)
+                {
+                    TotalStaffText = $"{staff.Count}";
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions here
+                Debug.WriteLine($"Error loading staff: {ex.Message}");
             }
         }
 
