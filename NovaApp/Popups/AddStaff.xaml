@@ -209,6 +209,7 @@
 
                                 <Entry x:Name="PasswordEntry"
                                    Placeholder="Password"
+                                   IsPassword="true"
                                    WidthRequest="300"
                                    BackgroundColor="White"
                                    Text="{Binding Password}"/>
