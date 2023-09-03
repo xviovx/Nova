@@ -3,19 +3,55 @@ using NovaApp.Models;
 using NovaApp.Services;
 using SkiaSharp;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
 
 namespace NovaApp.Views
 {
 
-    public partial class DashboardPage : ContentView
+    public partial class DashboardPage : ContentView, INotifyPropertyChanged //Client Total
     {
-        //Client total count
-        private RestService _restService;
-        public string TotalClientsText { get; set; }
+        //Project total count
 
         private ProjectsPage projectsPage;
+        private int _totalProjectsCount;
+        public int TotalProjectsCount
+        {
+            get { return _totalProjectsCount; }
+            set
+            {
+                if (_totalProjectsCount != value)
+                {
+                    _totalProjectsCount = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        //Client total count
+        private RestService _restService;
+        private string _totalClientsText;
+        public string TotalClientsText
+        {
+            get { return _totalClientsText; }
+            set
+            {
+                if (_totalClientsText != value)
+                {
+                    _totalClientsText = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         private ChartEntry[] projectZeroCompletion;
         private ChartEntry[] projectOneCompletion;
@@ -29,10 +65,14 @@ namespace NovaApp.Views
             _restService = new RestService();
             BindingContext = this;
 
-
-            //NEW
             projectsPage = new ProjectsPage();
-            BindingContext = projectsPage;
+            projectsPage.LoadItems();
+
+            TotalProjectsCount = projectsPage.TotalProjectsCount;
+
+            UpdateTotalClientsCount();
+
+            //BindingContext = projectsPage;
 
             int totalProjectsCount = projectsPage.TotalProjectsCount;
 
@@ -149,7 +189,6 @@ namespace NovaApp.Views
             chartViewTwo.Chart = chartTwo;
             chartViewThree.Chart = chartThree;
 
-            UpdateTotalClientsCount();
 
         }
         private async void UpdateTotalClientsCount()
@@ -159,7 +198,7 @@ namespace NovaApp.Views
                 var clients = await _restService.RefreshClientsAsync();
                 if (clients != null)
                 {
-                    TotalClientsText = $"Total Clients: {clients.Count}";
+                    TotalClientsText = $"{clients.Count}";
                 }
             }
             catch (Exception ex)
@@ -168,7 +207,6 @@ namespace NovaApp.Views
                 Debug.WriteLine($"Error loading clients: {ex.Message}");
             }
         }
-
 
 
 
