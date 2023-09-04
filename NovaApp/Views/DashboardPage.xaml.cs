@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 
 namespace NovaApp.Views
+
 {
 
     public partial class DashboardPage : ContentView, INotifyPropertyChanged //Client Total
@@ -51,7 +52,7 @@ namespace NovaApp.Views
                 }
             }
         }
-        
+
         //staff total count
         public string TotalStaffText
         {
@@ -65,6 +66,8 @@ namespace NovaApp.Views
                 }
             }
         }
+
+        public object NavigationManager { get; private set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -107,78 +110,78 @@ namespace NovaApp.Views
             //chart zero data
             projectZeroCompletion = new[]
             {
-                new ChartEntry(95)
-                {
-                    Label = "Complete",
-                    ValueLabel = "95%",
-                    Color = SKColor.Parse("#343434"),
-                    ValueLabelColor = SKColors.Black,
-                },
-                new ChartEntry(5)
-                {
-                    Label = "Incomplete",
-                    ValueLabel = "5%",
-                    Color = SKColor.Parse("#EEEEEE"),
-                    ValueLabelColor = SKColors.Gray, // Change the color as needed
-                }
-            };
+            new ChartEntry(95)
+            {
+                Label = "Complete",
+                ValueLabel = "95%",
+                Color = SKColor.Parse("#343434"),
+                ValueLabelColor = SKColors.Black,
+            },
+            new ChartEntry(5)
+            {
+                Label = "Incomplete",
+                ValueLabel = "5%",
+                Color = SKColor.Parse("#EEEEEE"),
+                ValueLabelColor = SKColors.Gray, // Change the color as needed
+            }
+        };
 
             //chart one data
             projectOneCompletion = new[]
             {
-                new ChartEntry(80)
-                {
-                    Label = "Complete",
-                    ValueLabel = "80%",
-                    Color = SKColor.Parse("#343434"),
-                    ValueLabelColor = SKColors.Black,
-                },
-                new ChartEntry(20)
-                {
-                    Label = "Incomplete",
-                    ValueLabel = "20%",
-                    Color = SKColor.Parse("#EEEEEE"),
-                    ValueLabelColor = SKColors.Gray, // Change the color as needed
-                }
-            };
+            new ChartEntry(80)
+            {
+                Label = "Complete",
+                ValueLabel = "80%",
+                Color = SKColor.Parse("#343434"),
+                ValueLabelColor = SKColors.Black,
+            },
+            new ChartEntry(20)
+            {
+                Label = "Incomplete",
+                ValueLabel = "20%",
+                Color = SKColor.Parse("#EEEEEE"),
+                ValueLabelColor = SKColors.Gray, // Change the color as needed
+            }
+        };
 
             //chart two data
             projectTwoCompletion = new[]
             {
-                new ChartEntry(55)
-                {
-                    Label = "Complete",
-                    ValueLabel = "55%",
-                    Color = SKColor.Parse("#343434"),
-                    ValueLabelColor = SKColors.Black,
-                },
-                new ChartEntry(45)
-                {
-                    Label = "Incomplete",
-                    ValueLabel = "45%",
-                    Color = SKColor.Parse("#EEEEEE"),
-                    ValueLabelColor = SKColors.Gray, // Change the color as needed
-                }
-            };
+            new ChartEntry(55)
+            {
+                Label = "Complete",
+                ValueLabel = "55%",
+                Color = SKColor.Parse("#343434"),
+                ValueLabelColor = SKColors.Black,
+            },
+            new ChartEntry(45)
+            {
+                Label = "Incomplete",
+                ValueLabel = "45%",
+                Color = SKColor.Parse("#EEEEEE"),
+                ValueLabelColor = SKColors.Gray, // Change the color as needed
+            }
+        };
 
             //chart three data
             projectThreeCompletion = new[]
             {
-                new ChartEntry(20)
-                {
-                    Label = "Complete",
-                    ValueLabel = "20%",
-                    Color = SKColor.Parse("#343434"),
-                    ValueLabelColor = SKColors.Black,
-                },
-                new ChartEntry(80)
-                {
-                    Label = "Incomplete",
-                    ValueLabel = "80%",
-                    Color = SKColor.Parse("#EEEEEE"),
-                    ValueLabelColor = SKColors.Gray, // Change the color as needed
-                }
-            };
+            new ChartEntry(20)
+            {
+                Label = "Complete",
+                ValueLabel = "20%",
+                Color = SKColor.Parse("#343434"),
+                ValueLabelColor = SKColors.Black,
+            },
+            new ChartEntry(80)
+            {
+                Label = "Incomplete",
+                ValueLabel = "80%",
+                Color = SKColor.Parse("#EEEEEE"),
+                ValueLabelColor = SKColors.Gray, // Change the color as needed
+            }
+        };
 
             var chartZero = new DonutChart
             {
@@ -251,6 +254,21 @@ namespace NovaApp.Views
         }
 
 
+        //navigate folder1.png to staff page
+        //private async void OnImageTapped(object sender, EventArgs e)
+        //{
+            //var staffPageWrapper = new StaffPageWrapper();
+            //await Navigation.PushAsync(staffPageWrapper);
+        //}
+
+                private async void OnImageButtonClicked(object sender, EventArgs e)
+        {
+            // Navigate to another page when the image button is clicked
+            await Navigation.PushAsync(new StaffPageWrapper());
+        }
+
+
 
     }
 }
+

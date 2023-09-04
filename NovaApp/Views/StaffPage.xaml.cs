@@ -8,6 +8,7 @@ using NovaApp.Models;
 namespace NovaApp.Views
 {
     public partial class StaffPage : ContentView
+
     {
         private StaffViewModel _viewModel;
 
@@ -52,6 +53,5 @@ namespace NovaApp.Views
             }
         }
 
-
     }
-}
+} 

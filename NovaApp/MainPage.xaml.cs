@@ -125,5 +125,13 @@ namespace Nova
         //SetActiveButton(buttonView6);
         //}
 
+
+        private async void OnImageButtonClicked(object sender, EventArgs e)
+        {
+            // Navigate to another page when the image button is clicked
+            await Navigation.PushAsync(new StaffPageWrapper());
+        }
+
+
     }
 }
