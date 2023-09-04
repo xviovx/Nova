@@ -111,3 +111,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Views.StaffPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\StaffPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\StaffPage.xaml
+
+[C:/Users/anchi/OneDrive/Documents/GitHub/Nova/NovaApp/Views/StaffPageWrapper.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Views.StaffPageWrapper.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\StaffPageWrapper.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\StaffPageWrapper.xaml

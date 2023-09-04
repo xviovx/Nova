@@ -52,12 +52,16 @@
                            Opacity="1"/>
                     </Border.Shadow>
                     <Grid>
-                        <Image Source="../Assets/folder1.png" Aspect="AspectFit" />
+                        <ImageButton Source="../Assets/folder1.png" Clicked="OnImageButtonClicked">
+                        </ImageButton>
                         <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
                             <StackLayout Orientation="Vertical">
                                 <Grid>
                                     <Label Text="Staff" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="25,55,0,0" />
-                                    <Image Source="Assets/Icons/moreInfo.png" WidthRequest="50" Grid.Column="1" Margin="158,20,0,0" />
+
+                                    <Image Source="Assets/Icons/moreInfo.png" Aspect="AspectFit" WidthRequest="50" Grid.Column="1" Margin="158,20,0,0">
+                                    </Image>
+                                    
                                 </Grid>
 
                                 <!-- Staff -->
