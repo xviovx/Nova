@@ -10,78 +10,63 @@
            TintOpacity="0.2"
            BorderColor="Transparent"
            Padding="35">
-        <FlexLayout>
-            <FlexLayout FlexLayout.Grow="1"> <!-- -->
-                <FlexLayout FlexLayout.Grow="1" Direction="Column">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <!-- Left column for the title -->
-                            <ColumnDefinition Width="Auto" />
-                            <!-- Middle column for spacing -->
-                        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="450"/>
+            </Grid.ColumnDefinitions>
 
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-                        <StackLayout VerticalOptions="Start" Grid.Column="0" Grid.Row="0" Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Label 
-                                Text="Projects"
-                                FontSize="40"
-                                FontAttributes="Bold"/>
-                                <Label 
-                                Text="OverView"
-                                Padding="7,5,0,0"
-                                FontSize="35"
-                                FontAttributes="None"
-                                FontFamily="PoppinsThin"/>
-                            </StackLayout>
-                            <Label 
-                                Text="Let's get an overview!"
-                                FontSize="16"
-                            />
-                        </StackLayout>
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
 
-                        <!-- Spacer column -->
+                <!-- Title -->
+                <HorizontalStackLayout Grid.Row="0" Grid.Column="0">
+                    <Label Text="Projects" FontSize="40" FontFamily="PoppinsSemibold"  />
+                    <Label Text="Overview" FontFamily="PoppinsLight" Margin="10,0,0,0" FontSize="40"/>
+                </HorizontalStackLayout>
+                
 
-                        <Button 
-                        Text="+ Add New"
-                        CornerRadius="20"
-                        HeightRequest="50"
-                        Padding="15"
-                        Grid.Column="1"
-                        HorizontalOptions="End"
-                    />
-                    </Grid>
-                    <!--https://www.youtube.com/watch?v=gf6abNRAhuY-->
-                    <CollectionView ItemsSource="{Binding ProjectsList}" VerticalOptions="FillAndExpand" SelectionMode="Single" FlexLayout.Grow="1" ItemsLayout="VerticalGrid, 2">
+                <!-- Subtitle -->
+                <Label Text="Let’s get an overview!" FontSize="18" Grid.Row="1" Grid.Column="0" />
+
+                <!-- Button -->
+                <Button CornerRadius="15" WidthRequest="150" HeightRequest="50" Text="+ Add New" Grid.RowSpan="2" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" />
+            </Grid>
+
+            <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="50,0,0,0" BackgroundColor="#FF7070">
+                
+            </Frame>
+
+            <ScrollView Grid.Column="0" Grid.Row="1">
+                <StackLayout>
+                    <CollectionView ItemsSource="{Binding ProjectsList}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SelectionMode="Single">
+                        <CollectionView.ItemsLayout>
+                        <!-- Use GridItemsLayout with Span="2" to display two cards side by side -->
+                        <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10" />
+                        </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <VerticalStackLayout BackgroundColor="Red" Padding="20" Margin="0,0,0,0">
-                                    <Label Text="{Binding title}" />
-                                </VerticalStackLayout>
+                                <Border>
+                                    
+                                </Border>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-
-                </FlexLayout>
-                
-            </FlexLayout>
-            <Frame
-                HorizontalOptions="End"
-                BackgroundColor="#FF7070" 
-                CornerRadius="30" 
-                Margin="20,0,0,0"
-                Grid.RowSpan="2"
-                WidthRequest="310"
-                VerticalOptions="FillAndExpand"
-                BorderColor="Transparent">
-                
-            </Frame>
-        </FlexLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
         
         
         
