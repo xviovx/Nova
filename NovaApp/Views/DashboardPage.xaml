@@ -4,7 +4,7 @@
              xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
              x:Class="NovaApp.Views.DashboardPage"
              xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView">
-    
+
 
     <acrylic:AcrylicView CornerRadius="50"
            TintColor="#FFFFFF" 
@@ -43,7 +43,7 @@
             <!-- Column 1, Row 3: Container for client cards -->
             <!-- Total Staff -->
             <Grid BackgroundColor="Transparent" Margin="0,-180,0,0">
-              
+
                 <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="220" HeightRequest="180" HorizontalOptions="Start" Margin="20,0,0,0">
                     <Border.Shadow>
                         <Shadow Brush="#EBEBEB"
@@ -61,7 +61,7 @@
 
                                     <Image Source="Assets/Icons/moreInfo.png" Aspect="AspectFit" WidthRequest="50" Grid.Column="1" Margin="158,20,0,0">
                                     </Image>
-                                    
+
                                 </Grid>
 
                                 <!-- Staff -->
@@ -158,7 +158,7 @@
                 FontFamily="PoppinsSemibold"
                 Grid.Row="0"
                 Grid.Column="0" />
-                
+
                 <!-- Calendar -->
                 <Border BackgroundColor="Transparent" StrokeThickness="0"  WidthRequest="720" HeightRequest="200" HorizontalOptions="Start" Margin="20,330,0,0">
                     <Border.Shadow>
@@ -179,7 +179,7 @@
                     HorizontalOptions="End"/>
                 </Border>
             </Grid>
-            
+
             <!-- Column 3, All Rows: Client Info Block (Right-aligned) -->
             <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="380"          
                 Grid.Row="0"
@@ -208,6 +208,23 @@
                     <ScrollView>
 
                         <StackLayout Orientation="Vertical">
+                            <ListView BackgroundColor="Yellow" ItemsSource="{Binding ProjectsList}" HeightRequest="300">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate >
+                                        <ViewCell >
+                                            <!-- Define how each project item should be displayed -->
+                                            <StackLayout BackgroundColor="blue">
+                                                <Label Text="{Binding title}" />
+                                                <Label Text="{Binding Title}" />
+
+                                                <Label Text="{Binding clientOwner}" />
+                                                <!-- Add more labels or UI elements to display project details -->
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+
                             <Grid>
                                 <!-- Project Cards -->
                                 <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,120,0,0">
@@ -248,7 +265,7 @@
 
                             <!-- Row 2: Email -->
                             <Label Text="Project "  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
-                            
+
 
                             <!-- Project Cards 2 -->
                             <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
@@ -296,7 +313,7 @@
                                     >
                                     <microcharts:ChartView x:Name="chartViewTwo" Margin="0,2,0,0"/>
                                 </Frame>
-                                    
+
                             </Border>
                             <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
 

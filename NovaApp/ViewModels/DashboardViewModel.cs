@@ -1,4 +1,4 @@
-﻿﻿using NovaApp.Models;
+﻿using NovaApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,7 +9,11 @@ using System.Threading.Tasks;
 namespace NovaApp.ViewModels
 {
     public class DashboardViewModel
+
     {
+
+        private ProjectsViewModel _projectsViewModel; //NEW
+        public ObservableCollection<Project> BusyProjects => _projectsViewModel.ProjectsList; //NEW
         public ObservableCollection<Project> Projects { get; set; }
 
         //adding PROJECT properties
@@ -33,10 +37,23 @@ namespace NovaApp.ViewModels
         public List<Fund> Funds { get; set; } = new List<Fund>();
 
         public int? Profile { get; set; }
-        public DashboardViewModel()
+
+
+        public DashboardViewModel(ProjectsViewModel projectsViewModel)
         {
             Projects = new ObservableCollection<Project>();
+            _projectsViewModel = projectsViewModel;
         }
 
+        public void FetchBusyProjects()
+        {
+            _projectsViewModel.FetchBusyProjects();
+        }
+
+
+        //public static implicit operator DashboardViewModel(ProjectsViewModel v)
+        //{
+        //  throw new NotImplementedException();
+        //}
     }
 }
