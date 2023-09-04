@@ -7,6 +7,7 @@ using System.Linq;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace NovaApp.Views
 {
@@ -171,11 +172,39 @@ namespace NovaApp.Views
 
                 GroupProjects();
                 CalculateTotals();
+                UpdateChartData();
             }
             catch (Exception e)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", $"Unhandled exception: {e.Message}", "OK");
             }
+        }
+
+        private void UpdateChartData()
+        {
+            var receivedGroupedByMonth = FundsList
+                .GroupBy(f => f.createdDate.ToString("MMM", CultureInfo.InvariantCulture))
+                .Select(g => new ChartEntry((float)g.Sum(x => x.income))
+                {
+                    Label = g.Key,
+                    ValueLabel = g.Sum(x => x.income).ToString(),
+                    Color = SKColor.Parse("#5BDA8C")
+                }).ToArray();
+
+            var spentGroupedByMonth = FundsList
+                .GroupBy(f => f.createdDate.ToString("MMM", CultureInfo.InvariantCulture))
+                .Select(g => new ChartEntry((float)g.Sum(x => x.expenses))
+                {
+                    Label = g.Key,
+                    ValueLabel = g.Sum(x => x.expenses).ToString(),
+                    Color = SKColor.Parse("#EE6B8D")
+                }).ToArray();
+
+            receivedEntries = receivedGroupedByMonth;
+            spentEntries = spentGroupedByMonth;
+
+            // Update chart
+            OnDataPickerSelectedIndexChanged(null, null);
         }
 
         public async Task<List<Fund>> GetFundsAsync()
