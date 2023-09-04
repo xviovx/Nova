@@ -649,6 +649,7 @@ namespace NovaApp.ViewModels
                 if (staff != null)
                 {
                     FetchedStaffData = staff; // Store the fetched staff data here
+                    
                 }
                 else
                 {

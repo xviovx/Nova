@@ -3,15 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
              x:Class="NovaApp.Views.ClientPage">
+    <Grid>
+        <SearchBar x:Name="searchBar" Placeholder="SEARCH..."  Margin="0,-740,0,0"  HeightRequest="50" WidthRequest="300" HorizontalOptions="Start"
+                       PlaceholderColor="#DF5353" FontSize="32"  IsTextPredictionEnabled="True" TextChanged="OnTextChanged"  />
+  
     <acrylic:AcrylicView CornerRadius="50"
            TintColor="#FFFFFF" 
            TintOpacity="0.2"
            BorderColor="Transparent"
-           Padding="20">
+           Padding="20"
+        HeightRequest="650">
         <Grid>
 
 
-            <!-- Column 1, Row 1: Client Page Text -->
+                <!-- Column 1, Row 1: Client Page Text -->
             <Label 
                 Text="Client"
                 Padding="20,15,20,0"
@@ -39,7 +44,7 @@
             <!-- Column 1, Row 3: Container for client cards -->
             <ScrollView HeightRequest="400" Margin="0,70,0,0">
                 <StackLayout>
-                    <CollectionView ItemsSource="{Binding ClientList}" VerticalOptions="Start" HorizontalOptions="Start" SelectionMode="Single">
+                        <CollectionView ItemsSource="{Binding ClientList}" x:Name="MyCollectionViews"  VerticalOptions="Start" HorizontalOptions="Start" SelectionMode="Single">
                         <CollectionView.ItemsLayout>
                             <!-- Use GridItemsLayout with Span="2" to display two cards side by side -->
                             <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10" />
@@ -53,7 +58,7 @@
                                                 Radius="20"
                                                 Opacity="1"/>
                                     </Border.Shadow>
-                                    <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White" HorizontalOptions="Start"  WidthRequest="380">
+                                    <Frame CornerRadius="20"  BorderColor="Transparent" BackgroundColor="White" HorizontalOptions="Start"  WidthRequest="380">
                                         <StackLayout Orientation="Vertical">
                                             <Grid>
                                                 <!-- Row 1: Company Name and Image -->
@@ -109,8 +114,22 @@
                                             <DataTrigger TargetType="Frame" Binding="{Binding active}" Value="False">
                                                 <Setter Property="Opacity" Value="0.5" />
                                             </DataTrigger>
-                                        </Frame.Triggers>
-                                    </Frame>
+                                       
+                                          
+                                                <DataTrigger TargetType="Frame" Binding="{Binding username}" Value="{x:Null}">
+                                                    <Setter Property="Opacity" Value="0" />
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Frame" Binding="{Binding username}" Value="">
+                                                    <Setter Property="Opacity" Value="0" />
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Frame" Binding="{Binding username}" Value="">
+                                                    <Setter Property="Opacity" Value="0" />
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Frame" Binding="{Binding username}" Value=" ">
+                                                    <Setter Property="Opacity" Value="0" />
+                                                </DataTrigger>
+                                            </Frame.Triggers>
+                                        </Frame>
                                 </Border>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
@@ -224,31 +243,21 @@
                         <ProgressBar Progress="{Binding SelectedClient.availableHours}" Margin="0,10,0,0" HeightRequest="15" BackgroundColor="LightGray" ProgressColor="Black" />
 
 
-                        <Label Text="Current Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
+                        <Label Text="All Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Current" FontSize="14" FontAttributes="Bold" />
+                                    <Span Text="All" FontSize="14" FontAttributes="Bold" />
                                     <Span Text=" Projects" FontSize="14" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
 
-                        <!-- TODO: Horizontal Carousel -->
-
-
-
-                        <Label Text="Past Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="Past" FontSize="14" FontAttributes="Bold" />
-                                    <Span Text=" Projects" FontSize="14" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
 
                     </StackLayout>
                 </Frame>
             </Border>
         </Grid>
     </acrylic:AcrylicView>
+    </Grid>
+
 </ContentView>

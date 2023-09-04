@@ -187,7 +187,7 @@ namespace NovaApp.ViewModels
                 active = true
             };
 
-
+            Debug.WriteLine("Before adding: " + ClientList.Count());
             try
             {
                 // Attempt to save the client
@@ -195,8 +195,14 @@ namespace NovaApp.ViewModels
                 MopupService.Instance.PopAllAsync();
 
 
+            
                 // Add the new client to the ObservableCollection immediately
                 ClientList.Add(newClient);
+                Debug.WriteLine("After adding: " + ClientList.Count());
+
+                // Manually refresh the client list (you may need to implement a refresh method)
+                RefreshClientList();
+
 
                 // Clear input fields and radio button selections
                 CompanyName = string.Empty;
@@ -215,6 +221,19 @@ namespace NovaApp.ViewModels
 
 
         }
+
+        public async Task RefreshClientList()
+        {
+            var clients = await _restService.RefreshClientsAsync();
+            ClientList.Clear();
+            foreach (var client in clients)
+            {
+                ClientList.Add(client);
+                Debug.WriteLine(client.username);
+            }
+        }
+
+
 
         public async Task FetchAllClients()
         {
@@ -414,6 +433,7 @@ namespace NovaApp.ViewModels
         }
 
 
+       
 
 
     }

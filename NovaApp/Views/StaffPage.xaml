@@ -8,7 +8,8 @@
            TintOpacity="0.2"
         BorderColor="Transparent"
            Padding="20"
-                         x:Name="mainGrid">
+                         x:Name="mainGrid"
+                         HeightRequest="650">
         <Grid>
 
 
@@ -263,30 +264,26 @@
                         <Label Text="Salary:" FontSize="14" HorizontalTextAlignment="Start" Margin="0,20,0,0" TextColor="White" FontFamily="PoppinsBold" Grid.Row="3" Grid.Column="0" />
 
                         <Frame Margin="0,10,0,0" BackgroundColor="#FF8D8D" BorderColor="Transparent" CornerRadius="15" Padding="20,10,10,10" Grid.Row="3" Grid.Column="0">
-                            <Label FontSize="14" HorizontalTextAlignment="Start" Margin="0,5,0,0" FontFamily="PoppinsMedium" TextColor="White" BindingContext="{x:Reference mainGrid}">
+                            <Label FontSize="14" HorizontalTextAlignment="Start" Margin="0,5,0,0" FontFamily="PoppinsMedium" TextColor="White">
                                 <Label.Triggers>
-                                    <DataTrigger TargetType="Label" Binding="{Binding Path=BindingContext.SelectedStaff.position, Source={x:Reference mainGrid}}" Value="Junior Developer">
-                                        <Setter Property="Text" Value="{Binding Path=BindingContext.SelectedStaff.payPerHour, StringFormat='R{0}/hour', Source={x:Reference mainGrid}}" />
+                                    <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.staffType}" Value="Employee">
+                                        <Setter Property="Text" Value="{Binding SelectedStaff.payPerHour, StringFormat='R{0}/hour'}" />
                                     </DataTrigger>
-                                    <DataTrigger TargetType="Label" Binding="{Binding Path=BindingContext.SelectedStaff.position, Source={x:Reference mainGrid}}" Value="Senior Developer">
-                                        <Setter Property="Text" Value="{Binding Path=BindingContext.SelectedStaff.payPerHour, StringFormat='R{0}/hour', Source={x:Reference mainGrid}}" />
-                                    </DataTrigger>
-                                    <DataTrigger TargetType="Label" Binding="{Binding Path=BindingContext.SelectedStaff.position, Source={x:Reference mainGrid}}" Value="Admin">
-                                        <Setter Property="Text" Value="{Binding Path=BindingContext.SelectedStaff.payPerHour, StringFormat='R{0}/month', Source={x:Reference mainGrid}}" />
+                                    <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.staffType}" Value="Administrative Staff">
+                                        <Setter Property="Text" Value="{Binding SelectedStaff.payPerHour, StringFormat='R{0}/month'}" />
                                     </DataTrigger>
                                 </Label.Triggers>
                             </Label>
-
                         </Frame>
 
 
 
 
                         <!-- Label for Current Projects -->
-                        <Label Text="Current Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
+                        <Label Text="All Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Current" FontSize="14"  FontFamily="PoppinsBold" />
+                                    <Span Text="All" FontSize="14"  FontFamily="PoppinsBold" />
                                     <Span Text=" Projects" FontSize="14" FontFamily="PoppinsRegular" />
                                 </FormattedString>
                             </Label.FormattedText>
@@ -300,23 +297,7 @@
                             </Label.Triggers>
                         </Label>
 
-                        <!-- Label for Past Projects -->
-                        <Label Text="Past Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="Past" FontSize="14" FontFamily="PoppinsBold" />
-                                    <Span Text=" Projects" FontSize="14" FontFamily="PoppinsRegular"  />
-                                </FormattedString>
-                            </Label.FormattedText>
-                            <Label.Triggers>
-                                <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.staffType}" Value="Employee">
-                                    <Setter Property="IsVisible" Value="True" />
-                                </DataTrigger>
-                                <DataTrigger TargetType="Label" Binding="{Binding SelectedStaff.staffType}" Value="Administrative Staff">
-                                    <Setter Property="IsVisible" Value="False" />
-                                </DataTrigger>
-                            </Label.Triggers>
-                        </Label>
+                       
 
 
 

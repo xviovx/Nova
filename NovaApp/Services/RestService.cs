@@ -95,11 +95,11 @@ namespace NovaApp.Services
                 }
 
                 // Log JSON data
-                Debug.WriteLine("Serialized JSON data: " + json);
+                //Debug.WriteLine("Serialized JSON data: " + json);
 
                 // Log request details
-                Debug.WriteLine("Request URI: " + uri.ToString());
-                Debug.WriteLine("Request Type: " + (isNewItem ? "POST" : "PUT"));
+               // Debug.WriteLine("Request URI: " + uri.ToString());
+                //Debug.WriteLine("Request Type: " + (isNewItem ? "POST" : "PUT"));
 
                 if (response.IsSuccessStatusCode)
                 {
