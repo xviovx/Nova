@@ -3,6 +3,7 @@ using NovaApp.Models;
 using NovaApp.Services;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -30,6 +31,9 @@ namespace NovaApp.ViewModels
 
         public string EmailError { get; private set; }
         public bool IsEmailInvalid { get; private set; }
+
+        public string ClientTypeError { get; private set; }
+        public bool IsClientTypeInvalid { get; private set; }
 
         private Client _selectedClient;
         public Client SelectedClient
@@ -78,23 +82,70 @@ namespace NovaApp.ViewModels
         {
             bool isValid = true;
 
-            // Validate CompanyName
-            CompanyNameError = ValidateField(CompanyName, "Company Name is required.");
-            IsCompanyNameInvalid = !string.IsNullOrEmpty(CompanyNameError);
+            // Validate Company Name
+            if (string.IsNullOrWhiteSpace(CompanyName))
+            {
+                CompanyNameError = "Company Name is required.";
+                IsCompanyNameInvalid = true;
+                isValid = false;
+            }
+            else
+            {
+                CompanyNameError = string.Empty;
+                IsCompanyNameInvalid = false;
+            }
 
             // Validate Email
-            EmailError = ValidateField(Email, "Email is required.");
-            IsEmailInvalid = !string.IsNullOrEmpty(EmailError);
+            if (string.IsNullOrWhiteSpace(Email))
+            {
+                EmailError = "Email is required.";
+                IsEmailInvalid = true;
+                isValid = false;
+            }
+            else if (!IsValidEmail(Email)) // Use IsValidEmail method for email validation
+            {
+                EmailError = "Invalid email format.";
+                IsEmailInvalid = true;
+                isValid = false;
+            }
+            else
+            {
+                EmailError = string.Empty;
+                IsEmailInvalid = false;
+            }
 
-            isValid = isValid && !IsCompanyNameInvalid && !IsEmailInvalid;
+            // Validate Client Type
+            if (!IsStandardType && !IsPriorityType)
+            {
+                ClientTypeError = "Client Type is required.";
+                Debug.WriteLine(ClientTypeError);
+                IsClientTypeInvalid = true;
+                isValid = false;
+            }
+            else
+            {
+                ClientTypeError = string.Empty;
+                IsClientTypeInvalid = false;
+            }
+
+            // Notify property changes for error messages and visibility flags
+            OnPropertyChanged(nameof(CompanyNameError));
+            OnPropertyChanged(nameof(IsCompanyNameInvalid));
+            OnPropertyChanged(nameof(EmailError));
+            OnPropertyChanged(nameof(IsEmailInvalid));
+            OnPropertyChanged(nameof(ClientTypeError));
+            OnPropertyChanged(nameof(IsClientTypeInvalid));
 
             return isValid;
         }
-
-        private string ValidateField(string fieldValue, string fieldName)
+        // Email validation using regular expression
+        private bool IsValidEmail(string email)
         {
-            return string.IsNullOrWhiteSpace(fieldValue) ? $"{fieldName} is required." : string.Empty;
+            string emailPattern = @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$";
+            return Regex.IsMatch(email, emailPattern);
         }
+
+
 
         public async Task AddClient()
         {
@@ -188,7 +239,7 @@ namespace NovaApp.ViewModels
             Debug.WriteLine("UpdateClient method started...", clientId);
 
             // Validation logic
-
+            bool isValid = ValidateInput();
 
             if (SelectedClient == null)
             {
@@ -197,52 +248,60 @@ namespace NovaApp.ViewModels
                 return;
             }
 
-            Debug.WriteLine($"Selected client ID: {SelectedClient.id}");
-
-            // Prepare the updated data
-            Client updatedClient = new Client
+            // Continue with the update only if the input is valid
+            if (isValid)
             {
-                id = SelectedClient.id, // Make sure to include the ID of the existing client
-                username = CompanyName,
-                email = Email,
-                clientsType = IsStandardType ? "Standard" : "Priority",
-                availableHours = IsStandardType ? 15 : 30, // Set available hours based on type
-                active = true
-                // Add other fields as needed
-            };
+                Debug.WriteLine($"Selected client ID: {SelectedClient.id}");
 
-            Debug.WriteLine("Updated client data prepared.");
+                // Prepare the updated data
+                Client updatedClient = new Client
+                {
+                    id = SelectedClient.id, // Make sure to include the ID of the existing client
+                    username = CompanyName,
+                    email = Email,
+                    clientsType = IsStandardType ? "Standard" : "Priority",
+                    availableHours = IsStandardType ? 15 : 30, // Set available hours based on type
+                    active = true
+                    // Add other fields as needed
+                };
 
-            try
-            {
-                // Update the selected client with a PATCH request
-                Debug.WriteLine("Updating client...");
-                await _restService.UpdateClientAsync(updatedClient);
-                Debug.WriteLine("Client updated successfully.");
-                MopupService.Instance.PopAllAsync();
+                Debug.WriteLine("Updated client data prepared.");
+
+                try
+                {
+                    // Update the selected client with a PATCH request
+                    Debug.WriteLine("Updating client...");
+                    await _restService.UpdateClientAsync(updatedClient);
+                    Debug.WriteLine("Client updated successfully.");
+                    MopupService.Instance.PopAllAsync();
+                }
+                catch (Exception ex)
+                {
+                    // Handle the exception, log it, or display an error message as needed
+                    Debug.WriteLine($"Error updating client: {ex.Message}");
+                }
+
+                // Refresh the list of clients after updating
+                Debug.WriteLine("Fetching all clients...");
+                await FetchAllClients();
+                Debug.WriteLine("Clients fetched successfully.");
+
+                // Clear input fields, radio button selections, and other properties
+                CompanyName = string.Empty;
+                Email = string.Empty;
+                IsStandardType = false;
+                IsPriorityType = false;
+                AvailableHours = 0;
             }
-            catch (Exception ex)
+            else
             {
-                // Handle the exception, log it, or display an error message as needed
-                Debug.WriteLine($"Error updating client: {ex.Message}");
-                // Validation logic
-                ValidateInput();
+                // Validation failed, do not proceed with the update
+                Debug.WriteLine("Validation failed. Client not updated.");
             }
-
-            // Refresh the list of clients after updating
-            Debug.WriteLine("Fetching all clients...");
-            await FetchAllClients();
-            Debug.WriteLine("Clients fetched successfully.");
-
-            // Clear input fields, radio button selections, and other properties
-            CompanyName = string.Empty;
-            Email = string.Empty;
-            IsStandardType = false;
-            IsPriorityType = false;
-            AvailableHours = 0;
 
             Debug.WriteLine("UpdateClient method completed.");
         }
+
 
 
         public async Task DeactivateClient(string clientId)

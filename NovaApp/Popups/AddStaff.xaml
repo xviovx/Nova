@@ -94,6 +94,11 @@
 
 
                     </StackLayout>
+                    <Label Text="{Binding RoleGroupError}"
+                            IsVisible="{Binding IsRoleGroupInvalid}"
+                            TextColor="#FF7070"
+                            FontSize="12"
+                            Margin="20,172,0,0" />
 
                     <Label Text="Select a Profile Image"
                            FontFamily="PoppinsLight"
@@ -147,6 +152,11 @@
                             </Image.GestureRecognizers>
                         </Image>
                     </StackLayout>
+                    <Label Text="{Binding ProfileImageError}"
+                           IsVisible="{Binding IsProfileImageInvalid}"
+                            TextColor="#FF7070"
+                            FontSize="12"
+                            Margin="20,285,0,10" />
 
 
                     <!-- Column 1, Row 3: First Name and Last Name Input Fields -->
@@ -154,28 +164,37 @@
                         <StackLayout Orientation="Vertical">
                             <Label Text="First Name" 
                               FontFamily="PoppinsLight"
-                               Margin="20,295,0,5" />
+                               Margin="20,299,0,5" />
 
                             <StackLayout Orientation="Horizontal"
                                      HorizontalOptions="Start"
                                      Spacing="10"
                                      Margin="20,0,0,0" 
                                          >
-                                <Entry Placeholder="First Name"
+                                <StackLayout Orientation="Vertical">
+                                    <Entry Placeholder="First Name"
                                        WidthRequest="150"
                                        BackgroundColor="White" 
                                        Text="{Binding FirstName}"/>
-                                <Label Text="{Binding FirstNameError}"
+                                    <Label Text="{Binding FirstNameError}"
                                        IsVisible="{Binding IsFirstNameInvalid}"
-                                       TextColor="#FF7070" />
+                                       FontSize="12"
+                                       TextColor="#FF7070" 
+                                           Margin="0,5,0,-5"/>
+                                </StackLayout>
 
-                                <Entry Placeholder="Last Name"
+                                <StackLayout Orientation="Vertical">
+                                    <Entry Placeholder="Last Name"
                                        WidthRequest="150"
                                        BackgroundColor="White"
                                         Text="{Binding LastName}"/>
                                 <Label Text="{Binding LastNameError}"
+                                       FontSize="12"
                                         IsVisible="{Binding IsLastNameInvalid}"
-                                        TextColor="#FF7070" />
+                                        TextColor="#FF7070"
+                                       Margin="0,5,0,-5"
+                                        />
+                                </StackLayout>
                             </StackLayout>
                         </StackLayout>
 
@@ -197,7 +216,8 @@
                             <Label Text="{Binding EmailError}"
                                    IsVisible="{Binding IsEmailInvalid}"
                                    TextColor="#FF7070"
-                                   FontSize="Small"/>
+                                   FontSize="12"
+                                   Margin="0,-15,0,-5"/>
 
 
                             <!-- Password Entry and Label -->
@@ -216,7 +236,8 @@
                                 <Label Text="{Binding PasswordError}"
                                        IsVisible="{Binding IsPasswordInvalid}"
                                        TextColor="#FF7070"
-                                       FontSize="Small"/>
+                                       FontSize="12"
+                                       Margin="0,0,0,-5"/>
                             </StackLayout>
 
                             <!-- Position Picker -->
@@ -236,7 +257,8 @@
                             <Label Text="{Binding PositionError}"
                                    IsVisible="{Binding IsPositionInvalid}"
                                    TextColor="#FF7070"
-                                   FontSize="Small"/>
+                                   FontSize="12"
+                                   Margin="0,5,0,-5"/>
                         </StackLayout>
 
 

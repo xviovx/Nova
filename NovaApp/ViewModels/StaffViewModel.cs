@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Networking;
@@ -146,6 +147,13 @@ namespace NovaApp.ViewModels
         public string PositionError { get; private set; }
         public bool IsPositionInvalid { get; private set; }
 
+        public string RoleGroupError { get; private set; }
+        public bool IsRoleGroupInvalid { get; private set; }
+
+        public string ProfileImageError { get; private set; }
+        public bool IsProfileImageInvalid { get; private set; }
+
+
         // ObservableCollection to store position options for the Picker
         public ObservableCollection<string> PositionOptions { get; }
 
@@ -188,7 +196,6 @@ namespace NovaApp.ViewModels
             {
                 FirstNameError = "First Name is required.";
                 IsFirstNameInvalid = true;
-                Debug.WriteLine(FirstNameError);
                 isValid = false;
             }
             else
@@ -210,10 +217,36 @@ namespace NovaApp.ViewModels
                 IsLastNameInvalid = false;
             }
 
+            // Validate Email
+            if (string.IsNullOrWhiteSpace(Email))
+            {
+                EmailError = "Email is required.";
+                IsEmailInvalid = true;
+                isValid = false;
+            }
+            else if (!IsValidEmail(Email)) // Use IsValidEmail method for email validation
+            {
+                EmailError = "Invalid email format.";
+                IsEmailInvalid = true;
+                isValid = false;
+            }
+            else
+            {
+                EmailError = string.Empty;
+                IsEmailInvalid = false;
+            }
+
             // Validate Password
             if (IsAdminType && string.IsNullOrWhiteSpace(Password))
             {
                 PasswordError = "Password is required for administrative staff.";
+                Debug.WriteLine(PasswordError);
+                IsPasswordInvalid = true;
+                isValid = false;
+            }
+            else if (IsAdminType && !IsValidPassword(Password)) // Use IsValidPassword method for password validation
+            {
+                PasswordError = "Password must contain 8 characters.";
                 IsPasswordInvalid = true;
                 isValid = false;
             }
@@ -224,7 +257,7 @@ namespace NovaApp.ViewModels
             }
 
             // Validate Position
-            if (IsEmployeeType && string.IsNullOrWhiteSpace(Position))
+            if (IsEmployeeType && Position == null)
             {
                 PositionError = "Position is required for employees.";
                 IsPositionInvalid = true;
@@ -236,11 +269,68 @@ namespace NovaApp.ViewModels
                 IsPositionInvalid = false;
             }
 
+            // Validate Role Type
+            if (!IsEmployeeType && !IsAdminType)
+            {
+                RoleGroupError = "Role Type is required.";
+                IsRoleGroupInvalid = true;
+                isValid = false;
+            }
+            else
+            {
+                RoleGroupError = string.Empty;
+                IsRoleGroupInvalid = false;
+            }
 
+            // Validate Profile Image
+            if (SelectedImageIndex == 0)
+            {
+                ProfileImageError = "Profile Image is required.";
+                IsProfileImageInvalid = true;
+                isValid = false;
+            }
+            else
+            {
+                ProfileImageError = string.Empty;
+                IsProfileImageInvalid = false;
+            }
 
+            // Notify property changes for error messages and visibility flags
+            OnPropertyChanged(nameof(FirstNameError));
+            OnPropertyChanged(nameof(IsFirstNameInvalid));
+            OnPropertyChanged(nameof(LastNameError));
+            OnPropertyChanged(nameof(IsLastNameInvalid));
+            OnPropertyChanged(nameof(EmailError));
+            OnPropertyChanged(nameof(IsEmailInvalid));
+            OnPropertyChanged(nameof(RoleGroupError));
+            OnPropertyChanged(nameof(IsRoleGroupInvalid));
+            OnPropertyChanged(nameof(ProfileImageError));
+            OnPropertyChanged(nameof(IsProfileImageInvalid));
+            OnPropertyChanged(nameof(PositionError));
+            OnPropertyChanged(nameof(IsPositionInvalid));
+            OnPropertyChanged(nameof(PasswordError));
+            OnPropertyChanged(nameof(IsPasswordInvalid));
 
             return isValid;
         }
+
+        // Email validation using regular expression
+        private bool IsValidEmail(string email)
+        {
+            string emailPattern = @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$";
+            return Regex.IsMatch(email, emailPattern);
+        }
+
+        // Password validation method
+        private bool IsValidPassword(string password)
+        {
+            // Example: Password must be at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one digit.
+            string passwordPattern = @"^.{8}$";
+            return Regex.IsMatch(password, passwordPattern);
+        }
+
+
+
 
         public async Task AddStaff()
         {

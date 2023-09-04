@@ -84,7 +84,11 @@
                                       FontFamily="PoppinsLight"
                                        Margin="0,105,0,-10" />
                                 <Entry Placeholder="Company Name"  x:Name="Username" BackgroundColor="White" Text="{Binding CompanyName}" />
-
+                                <Label Text="{Binding CompanyNameError}"
+                                       IsVisible="{Binding IsCompanyNameInvalid}"
+                                       FontSize="12"
+                                       TextColor="#FF7070" 
+                                       Margin="0,-15,0,-10"/>
 
                                 <Label Text="Email" 
                                     FontSize="14"
@@ -93,7 +97,11 @@
                                    />
 
                                 <Entry Placeholder="Email" WidthRequest="300" x:Name="Email" BackgroundColor="White" Text="{Binding Email}" />
-
+                                <Label Text="{Binding EmailError}"
+                                       IsVisible="{Binding IsEmailInvalid}"
+                                       FontSize="12"
+                                       TextColor="#FF7070" 
+                                       Margin="0,-15,0,-10"/>
 
 
                             </StackLayout>
@@ -115,6 +123,11 @@
                             <RadioButton GroupName="RoleGroup" Content="Standard" IsChecked="{Binding IsStandardType}" x:Name="StandardRadioButton" CheckedChanged="OnStandardRadioButtonClicked"  />
                             <RadioButton GroupName="RoleGroup" Content="Priority" IsChecked="{Binding IsPriorityType}"  x:Name="PriorityRadioButton" CheckedChanged="OnPriorityRadioButtonClicked" />
                         </StackLayout>
+                        <Label Text="{Binding ClientTypeError}"
+                                       IsVisible="{Binding IsClientTypeInvalid}"
+                                       FontSize="12"
+                                       TextColor="#FF7070" 
+                                       Margin="0,-15,0,-5"/>
                         <Label Text=""
                                x:Name="DescriptionLabel"
                                Padding="20,0,0,0"

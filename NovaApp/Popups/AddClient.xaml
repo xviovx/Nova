@@ -83,6 +83,11 @@
                                       FontFamily="PoppinsLight"
                                        Margin="0,105,0,-10" />
                                 <Entry Placeholder="Company Name" BackgroundColor="White" Text="{Binding CompanyName}" />
+                                <Label Text="{Binding CompanyNameError}"
+                                       IsVisible="{Binding IsCompanyNameInvalid}"
+                                       FontSize="12"
+                                       TextColor="#FF7070" 
+                                       Margin="0,-15,0,-10"/>
 
 
 
@@ -93,6 +98,11 @@
                                    />
 
                                 <Entry Placeholder="Email" WidthRequest="300" BackgroundColor="White" Text="{Binding Email}" />
+                                <Label Text="{Binding EmailError}"
+                                       IsVisible="{Binding IsEmailInvalid}"
+                                       FontSize="12"
+                                       TextColor="#FF7070" 
+                                       Margin="0,-15,0,-10"/>
 
 
 
@@ -114,7 +124,13 @@
 
                             <RadioButton GroupName="RoleGroup" Content="Standard" IsChecked="{Binding IsStandardType}" CheckedChanged="OnStandardRadioButtonClicked"  />
                             <RadioButton GroupName="RoleGroup" Content="Priority" IsChecked="{Binding IsPriorityType}" CheckedChanged="OnPriorityRadioButtonClicked" />
+                            
                         </StackLayout>
+                        <Label Text="{Binding ClientTypeError}"
+                                       IsVisible="{Binding IsClientTypeInvalid}"
+                                       FontSize="12"
+                                       TextColor="#FF7070" 
+                                       Margin="0,-15,0,-5"/>
                         <Label Text=""
                                x:Name="DescriptionLabel"
                                Padding="20,0,0,0"
@@ -123,7 +139,9 @@
                                Grid.Row="5"
                                Grid.Column="0" />
 
-                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="0,0,20,50" Command="{Binding AddNewClientCommand}" ZIndex="99"/>
+                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="20,-20,20,70" Command="{Binding AddNewClientCommand}" ZIndex="99"/>
+
+
 
                     </StackLayout>
 
