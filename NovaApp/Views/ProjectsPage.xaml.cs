@@ -3,6 +3,8 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Text.Json;
 using System.ComponentModel; // Add this namespace for INotifyPropertyChanged
+using Mopups.Services;
+using NovaApp.Popups;
 
 namespace NovaApp.Views
 {
@@ -14,6 +16,11 @@ namespace NovaApp.Views
             InitializeComponent();
             _ = LoadItems();
             BindingContext = this;
+        }
+
+        private void OnAddNewClicked(object sender, EventArgs e)
+        {
+            MopupService.Instance.PushAsync(new AddProject());
         }
 
         // ObservableCollection for your projects list

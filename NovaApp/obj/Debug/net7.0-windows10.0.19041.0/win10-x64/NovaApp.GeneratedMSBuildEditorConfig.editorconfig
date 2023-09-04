@@ -40,6 +40,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Popups.AddClient.x
 build_metadata.AdditionalFiles.TargetPath = Popups\AddClient.xaml
 build_metadata.AdditionalFiles.RelativePath = Popups\AddClient.xaml
 
+[C:/Users/alexa/OneDrive/Documents/GitHub/Nova/NovaApp/Popups/AddNote.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Popups.AddNote.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\AddNote.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\AddNote.xaml
+
+[C:/Users/alexa/OneDrive/Documents/GitHub/Nova/NovaApp/Popups/AddProject.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Popups.AddProject.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\AddProject.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\AddProject.xaml
+
 [C:/Users/alexa/OneDrive/Documents/GitHub/Nova/NovaApp/Popups/AddStaff.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Popups.AddStaff.xaml

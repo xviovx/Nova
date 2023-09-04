@@ -56,7 +56,7 @@
                         <ImageButton Source="../Assets/folder1.png" Clicked="OnImageButtonClicked">
                         </ImageButton>
                         <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
-                            <StackLayout Orientation="Vertical" BackgroundColor="Transparent" >
+                            <StackLayout Orientation="Vertical">
                                 <Grid>
                                     <Label Text="Staff" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="25,55,0,0" />
 

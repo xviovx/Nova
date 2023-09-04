@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             x:Class="NovaApp.Popups.AddNote"    
+             Title="AddNote"
+             CloseWhenBackgroundIsClicked="False"
+             >
+
+    <mopups:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+            DurationIn="400"
+            EasingIn="Fade"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1"
+            ScaleOut="0.7"></mopupsanim:ScaleAnimation>
+    </mopups:PopupPage.Animation>
+
+    <acrylic:AcrylicView CornerRadius="0"
+                         TintColor="#FF7070" 
+                         TintOpacity="0.3"
+                         BorderColor="Transparent"
+                         Padding="20">
+        <Grid>
+            <acrylic:AcrylicView CornerRadius="50"
+                                 TintColor="#FFFFFF" 
+                                 TintOpacity="0.5"
+                                 BorderColor="Transparent"
+                                 Padding="20"
+                                 WidthRequest="610"
+                                 HeightRequest="500"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center">
+
+                <Grid>
+                    <Button Text="X"
+                            FontSize="24"
+                            FontAttributes="Bold"
+                            BackgroundColor="Transparent"
+                            TextColor="#000000"
+                            HorizontalOptions="End"
+                            VerticalOptions="Start"
+                            Margin="0,10,10,0"
+                            Clicked="OnCloseButtonClicked"
+                            ZIndex="10"/>
+                    <!-- Heading -->
+                    <Label Text="Add a New"
+                           Padding="20,15,20,0"
+                           FontSize="34"
+                           FontFamily="PoppinsLight"
+                           Grid.Row="0"
+                           Grid.Column="0" />
+                    <Label Text="Note"
+                           Padding="210,15,20,0"
+                           FontSize="34"
+                           FontAttributes="None"
+                           FontFamily="PoppinsSemibold"
+                           Grid.Row="0"
+                           Grid.Column="0" />
+
+                    <!-- Description -->
+                    <Label Text="Project notes - essential information."
+                           Padding="20,68,0,0"
+                           FontSize="16"
+                           Grid.Row="1"
+                           Grid.Column="0" />
+
+
+
+                    <!-- Column 1, Row 3: Input Fields -->
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Vertical">
+
+                            <StackLayout Orientation="Vertical"
+                                     HorizontalOptions="StartAndExpand"
+                                     Spacing="20"
+                                      Margin="20,20,0,5">
+
+                                <Label Text="Note Name" 
+                                      FontFamily="PoppinsLight"
+                                       Margin="0,105,0,-10" />
+                                <Entry Placeholder="Project Name" BackgroundColor="White" Text="{Binding NoteName}" />
+                                <Label 
+                                       Text="{Binding NoteNameError}"
+                                       IsVisible="{Binding IsNoteNameInvalid}"
+                                       FontSize="12"
+                                       TextColor="#FF7070" 
+                                       Margin="0,-15,0,-10"/>
+
+
+
+
+
+
+                            </StackLayout>
+                        </StackLayout>
+
+
+
+                        <Button Text="+ Add New" WidthRequest="150" HorizontalOptions="End" Margin="20,-20,20,70" Command="{Binding AddNewNoteCommand}" ZIndex="99"/>
+
+
+
+                    </StackLayout>
+
+
+
+                </Grid>
+            </acrylic:AcrylicView>
+        </Grid>
+    </acrylic:AcrylicView>
+</mopups:PopupPage>
