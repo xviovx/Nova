@@ -250,6 +250,18 @@ namespace NovaApp.Views
             }
         }
 
+        public delegate void DashboardFunctionEventHandler(object sender, EventArgs e);
+
+        public event DashboardFunctionEventHandler ExecuteDashboardFunction;
+
+
+        private void OnDashboardButtonClicked(object sender, EventArgs e)
+        {
+            // Trigger the ExecuteDashboardFunction event
+            ExecuteDashboardFunction?.Invoke(this, EventArgs.Empty);
+        }
+
+
 
 
     }

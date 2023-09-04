@@ -118,11 +118,6 @@ namespace Nova
             SetupPageContentAsync();
         }
 
-        private void SearchBar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         //private void OnLogInClicked(object sender, EventArgs e)
         //{
         // Set the content to MyView2 when the "View 6" button is clicked
