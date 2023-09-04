@@ -1,6 +1,7 @@
 using Microcharts;
 using NovaApp.Models;
 using NovaApp.Services;
+using NovaApp.ViewModels;
 using SkiaSharp;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -13,6 +14,9 @@ namespace NovaApp.Views
 
     public partial class DashboardPage : ContentView, INotifyPropertyChanged //Client Total
     {
+
+        private DashboardViewModel viewModel;
+
         //Project total count
         private ProjectsPage projectsPage;
         private int _totalProjectsCount;
@@ -76,6 +80,10 @@ namespace NovaApp.Views
 
         public DashboardPage()
         {
+
+            viewModel = new DashboardViewModel();
+            BindingContext = viewModel;
+
             InitializeComponent();
 
             _restService = new RestService();
