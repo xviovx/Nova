@@ -46,11 +46,10 @@
         <!-- Top navigation area -->
         <StackLayout Orientation="Horizontal" Padding="20" VerticalOptions="Start">
             <!-- Add SearchBar and Logout Button as needed -->
-            <SearchBar x:Name="searchBar" Placeholder="SEARCH..." VerticalOptions="CenterAndExpand" Margin="250,25,0,0" 
-                       PlaceholderColor="#DF5353" FontSize="32"  Style="{StaticResource CustomSearchBarStyle}" IsTextPredictionEnabled="True"/>
+     
 
             <!--Navigate to Sign In Page: x:Name="buttonView6" Text="Logout" Clicked="OnLogInClicked" Style="{StaticResource NoDefaultButtonStyle}" HorizontalOptions="Start" -->
-            <Button  Text="Logout" BorderColor="Transparent" VerticalOptions="CenterAndExpand"  Clicked="OnLogInClicked"  Margin="860,25,0,0" WidthRequest="100" CornerRadius="16"/>
+            <Button  Text="Logout" BorderColor="Transparent" VerticalOptions="CenterAndExpand"  Clicked="OnLogInClicked"  Margin="1300,25,0,0" WidthRequest="120" CornerRadius="16"/>
         </StackLayout>
         
         <!-- Left navigation area -->
@@ -99,7 +98,7 @@
         </StackLayout>
 
         <!-- Content area -->
-        <Grid  WidthRequest="1250" HeightRequest="650" BackgroundColor="Transparent"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+        <Grid  WidthRequest="1250" HeightRequest="950" BackgroundColor="Transparent"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
             
                Margin="180,70,0,0" >
             <!--<Grid.Shadow>

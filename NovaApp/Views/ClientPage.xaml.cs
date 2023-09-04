@@ -47,5 +47,37 @@ namespace NovaApp.Views
                 await _viewModel.FetchClientById(clientId);
             }
         }
+
+
+        void OnTextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
+        {
+            var filteredList = new List<Client>(_viewModel.ClientList);
+
+            if (string.IsNullOrWhiteSpace(e.NewTextValue))
+            {
+                // Reset the CollectionView's ItemsSource to the original list
+                MyCollectionViews.ItemsSource = _viewModel.ClientList;
+            }
+            else
+            {
+                // Filter the items based on the search text
+                filteredList = filteredList
+                    .Where(client => client.username.ToLower().Contains(e.NewTextValue.ToLower()))
+                    .ToList();
+
+                // If there's only one in the filtered list, add a blank card
+                if (filteredList.Count == 1)
+                {
+                    var blankCard = new Client(); // Create a new instance with default or empty values
+                    filteredList.Add(blankCard);
+                }
+
+                MyCollectionViews.ItemsSource = filteredList;
+            }
+        }
+
+
+
+
     }
 }

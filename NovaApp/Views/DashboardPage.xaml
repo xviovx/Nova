@@ -10,7 +10,8 @@
            TintColor="#FFFFFF" 
            TintOpacity="0.2"
            BorderColor="Transparent"
-           Padding="20">
+           Padding="20"
+           HeightRequest="650">
         <Grid>
 
 
@@ -55,7 +56,7 @@
                         <ImageButton Source="../Assets/folder1.png" Clicked="OnImageButtonClicked">
                         </ImageButton>
                         <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
-                            <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Vertical" BackgroundColor="Transparent" >
                                 <Grid>
                                     <Label Text="Staff" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="25,55,0,0" />
 
