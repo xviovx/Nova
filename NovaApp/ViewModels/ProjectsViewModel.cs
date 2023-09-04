@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 
 namespace NovaApp.ViewModels
 {
-    internal class ProjectsViewModel: BaseViewModel
+    public class ProjectsViewModel: BaseViewModel
     {
+
         public ProjectsRestService _projectsRestService { get; set; }
 
         public ObservableCollection<Project> ProjectsList { get; set; }
@@ -22,15 +23,25 @@ namespace NovaApp.ViewModels
             ProjectsList = new ObservableCollection<Project>();
         }
 
-        public async Task FetchAllProjects()
+        public async Task FetchBusyProjects() //DASHBOARD
         {
             var items = await _projectsRestService.RefreshProjectsListAsync();
             ProjectsList.Clear();
-            foreach (var item in items)
+
+            // Filter projects based on the Status property
+            var busyProjects = items.Where(project => project.Status == "Busy").ToList();
+
+            foreach (var item in busyProjects)
             {
                 ProjectsList.Add(item);
             }
+
+            foreach (var project in busyProjects)
+            {
+                Debug.WriteLine($"Busy Project ID: {project.id}, Title: {project.title}, Status: {project.Status}");
+            }
         }
+
 
     }
 }

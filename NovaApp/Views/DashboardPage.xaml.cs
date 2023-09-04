@@ -83,11 +83,12 @@ namespace NovaApp.Views
 
         public DashboardPage()
         {
-
-            viewModel = new DashboardViewModel();
+            viewModel = new DashboardViewModel(new ProjectsViewModel(new ProjectsRestService()));
             BindingContext = viewModel;
 
             InitializeComponent();
+
+            viewModel.FetchBusyProjects();
 
             _restService = new RestService();
             BindingContext = this;

@@ -208,6 +208,23 @@
                     <ScrollView>
 
                         <StackLayout Orientation="Vertical">
+                            <ListView BackgroundColor="Yellow" ItemsSource="{Binding ProjectsList}" HeightRequest="300">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate >
+                                        <ViewCell >
+                                            <!-- Define how each project item should be displayed -->
+                                            <StackLayout BackgroundColor="blue">
+                                                <Label Text="{Binding title}" />
+                                                <Label Text="{Binding Title}" />
+
+                                                <Label Text="{Binding clientOwner}" />
+                                                <!-- Add more labels or UI elements to display project details -->
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            
                             <Grid>
                                 <!-- Project Cards -->
                                 <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,120,0,0">
