@@ -83,10 +83,12 @@ namespace NovaApp.Views
 
         public DashboardPage()
         {
+
+            InitializeComponent();
+
             viewModel = new DashboardViewModel(new ProjectsViewModel(new ProjectsRestService()));
             BindingContext = viewModel;
 
-            InitializeComponent();
 
             viewModel.FetchBusyProjects();
 
@@ -267,6 +269,7 @@ namespace NovaApp.Views
             // Navigate to another page when the image button is clicked
             await Navigation.PushAsync(new StaffPageWrapper());
         }
+
 
 
 

@@ -206,18 +206,16 @@
                 HorizontalOptions="End">
 
                     <ScrollView>
-
                         <StackLayout Orientation="Vertical">
                             <ListView BackgroundColor="Yellow" ItemsSource="{Binding ProjectsList}" HeightRequest="300">
                                 <ListView.ItemTemplate>
                                     <DataTemplate >
                                         <ViewCell >
                                             <!-- Define how each project item should be displayed -->
-                                            <StackLayout BackgroundColor="blue">
-                                                <Label Text="{Binding title}" />
-                                                <Label Text="{Binding Title}" />
-
-                                                <Label Text="{Binding clientOwner}" />
+                                            <StackLayout Orientation="Vertical">
+                                                <Label Text="{Binding title}" TextColor="Red"/>
+                                                <Label Text="text" />
+                                                <Label Text="{Binding clientOwner.username}" />
                                                 <!-- Add more labels or UI elements to display project details -->
                                             </StackLayout>
                                         </ViewCell>
@@ -225,147 +223,11 @@
                                 </ListView.ItemTemplate>
                             </ListView>
 
-                            <Grid>
-                                <!-- Project Cards -->
-                                <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,120,0,0">
-                                    <Border.Shadow>
-                                        <Shadow Brush="Transparent"
-                                       Offset="10,10"
-                                       Radius="20"
-                                       Opacity="1"/>
-                                    </Border.Shadow>
-                                    <Frame 
-                                BackgroundColor="White" 
-                                CornerRadius="10" 
-                                WidthRequest="270" 
-                                HeightRequest="100" 
-                                BorderColor="Transparent"
-                                Grid.Row="0"
-                                Grid.RowSpan="2"
-                                Grid.Column="2"
-                                HorizontalOptions="End">
-                                        <microcharts:ChartView x:Name="chartViewZero" Margin="0,2,0,0"/>
-                                    </Frame>
-                                </Border>
 
-                                <!-- Project Title -->
-                                <Label Text="Past Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="10,15,0,0">
-                                    <Label.FormattedText>
-                                        <FormattedString>
-                                            <Span Text="Past" FontSize="24" FontFamily="PoppinsSemibold" />
-                                            <Span Text=" Projects" FontSize="24" FontFamily="PoppinsLight" />
-                                        </FormattedString>
-                                    </Label.FormattedText>
-                                </Label>
-
-                                <Label Text="A summary of the impending projects nearing completion." FontSize="12" HorizontalTextAlignment="Start" TextColor="White" Margin="10,55,0,0"></Label>
-
-
-                            </Grid>
-
-                            <!-- Row 2: Email -->
-                            <Label Text="Project "  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
-
-
-                            <!-- Project Cards 2 -->
-                            <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
-                                <Border.Shadow>
-                                    <Shadow Brush="Transparent"
-                                       Offset="10,10"
-                                       Radius="20"
-                                       Opacity="1"/>
-                                </Border.Shadow>
-                                <Frame 
-                                BackgroundColor="White" 
-                                CornerRadius="10" 
-                                WidthRequest="270" 
-                                HeightRequest="100" 
-                                BorderColor="Transparent"
-                                Grid.Row="0"
-                                Grid.RowSpan="2"
-                                Grid.Column="2"
-                                HorizontalOptions="End">
-
-                                    <microcharts:ChartView x:Name="chartViewOne" Margin="0,2,0,0"/>
-                                </Frame>
-                            </Border>
-                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
-
-
-                            <!-- Project Cards 3 -->
-                            <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
-                                <Border.Shadow>
-                                    <Shadow Brush="Transparent"
-                                       Offset="10,10"
-                                       Radius="20"
-                                       Opacity="1"/>
-                                </Border.Shadow>
-                                <Frame 
-                                BackgroundColor="White" 
-                                CornerRadius="10" 
-                                WidthRequest="270" 
-                                HeightRequest="100" 
-                                BorderColor="Transparent"
-                                Grid.Row="0"
-                                Grid.RowSpan="2"
-                                Grid.Column="2"
-                                HorizontalOptions="End"
-                                    >
-                                    <microcharts:ChartView x:Name="chartViewTwo" Margin="0,2,0,0"/>
-                                </Frame>
-
-                            </Border>
-                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
-
-
-                            <!-- Project Cards 4 -->
-                            <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
-                                <Border.Shadow>
-                                    <Shadow Brush="Transparent"
-                                       Offset="10,10"
-                                       Radius="20"
-                                       Opacity="1"/>
-                                </Border.Shadow>
-                                <Frame 
-                                BackgroundColor="White" 
-                                CornerRadius="10" 
-                                WidthRequest="270" 
-                                HeightRequest="100" 
-                                BorderColor="Transparent"
-                                Grid.Row="0"
-                                Grid.RowSpan="2"
-                                Grid.Column="2"
-                                HorizontalOptions="End">
-                                    <microcharts:ChartView x:Name="chartViewThree" Margin="0,2,0,0"/>
-                                </Frame>
-
-                            </Border>
-                            <Label Text="Project Name"  FontSize="16" TextColor="Black" Margin="10,-90,0,0" />
-
-                            <!-- Project Cards 5 -->
-                            <Border BackgroundColor="Transparent" StrokeThickness="0" HorizontalOptions="Start" Margin="0,100,0,0">
-                                <Border.Shadow>
-                                    <Shadow Brush="Transparent"
-                                       Offset="10,10"
-                                       Radius="20"
-                                       Opacity="1"/>
-                                </Border.Shadow>
-                                <Frame 
-                                BackgroundColor="White" 
-                                CornerRadius="10" 
-                                WidthRequest="270" 
-                                HeightRequest="100" 
-                                BorderColor="Transparent"
-                                Grid.Row="0"
-                                Grid.RowSpan="2"
-                                Grid.Column="2"
-                                HorizontalOptions="End"/>
-                            </Border>
-                            <Label Text="Why can't I scroll down here lmao???"  FontSize="10" TextColor="Black" Margin="10,-90,0,0" />
-
-
-
-
+                            <microcharts:ChartView x:Name="chartViewZero" Margin="0,2,0,0"/>
+                            <microcharts:ChartView x:Name="chartViewOne" Margin="0,2,0,0"/>
+                            <microcharts:ChartView x:Name="chartViewTwo" Margin="0,2,0,0"/>
+                            <microcharts:ChartView x:Name="chartViewThree" Margin="0,2,0,0"/>
                         </StackLayout>
                     </ScrollView>
 
