@@ -133,6 +133,7 @@ namespace NovaApp.ViewModels
         public string FirstNameError { get; private set; }
         public bool IsFirstNameInvalid { get; private set; }
 
+
         public string LastNameError { get; private set; }
         public bool IsLastNameInvalid { get; private set; }
 
@@ -510,7 +511,7 @@ namespace NovaApp.ViewModels
                 foreach (var staff in staffMembers)
                 {
                     StaffList.Add(staff);
-                    Debug.WriteLine($"Added staff: {staff.username}");
+                    Debug.WriteLine($"Fetched staff: {staff.username}, {staff.payPerHour}");
 
                     // Set the selected staff to the first staff member fetched
                     if (StaffList.Count == 1)

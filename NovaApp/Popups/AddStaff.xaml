@@ -166,8 +166,8 @@
                                        BackgroundColor="White" 
                                        Text="{Binding FirstName}"/>
                                 <Label Text="{Binding FirstNameError}"
-                                        IsVisible="{Binding IsFirstNameInvalid}"
-                                         TextColor="#FF7070" />
+                                       IsVisible="{Binding IsFirstNameInvalid}"
+                                       TextColor="#FF7070" />
 
                                 <Entry Placeholder="Last Name"
                                        WidthRequest="150"

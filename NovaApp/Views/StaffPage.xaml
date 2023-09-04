@@ -47,14 +47,14 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="400" HeightRequest="305" HorizontalOptions="Start" Margin="0,0,0,0">
+                                <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="400" HeightRequest="305" HorizontalOptions="Start" >
                                     <Border.Shadow>
                                         <Shadow Brush="#E9E9E9"
                                                     Offset="10,10"
                                                     Radius="20"
                                                     Opacity="1"/>
                                     </Border.Shadow>
-                                    <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White">
+                                    <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="White" HorizontalOptions="Start">
                                         <Grid>
                                             <!-- Row 1: Profile Image and Company Name -->
                                             <Grid.RowDefinitions>
