@@ -12,7 +12,6 @@ namespace NovaApp.ViewModels
 {
     public class ProjectsViewModel : BaseViewModel
     {
-
         public ProjectsRestService _projectsRestService { get; set; }
 
         public ObservableCollection<Project> ProjectsList { get; set; }
@@ -34,8 +33,13 @@ namespace NovaApp.ViewModels
                 item.deadlineDateString = FormattedDate;
                 ProjectsList.Add(item);
             }
+
+            Debug.WriteLine($"Number of projects fetched: {ProjectsList.Count}");
         }
 
 
+
+
     }
+
 }

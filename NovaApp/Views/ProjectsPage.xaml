@@ -10,7 +10,8 @@
            TintColor="#FFFFFF" 
            TintOpacity="0.2"
            BorderColor="Transparent"
-           Padding="35">
+           Padding="35"
+           HeightRequest="650">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>

@@ -86,11 +86,15 @@ namespace NovaApp.Views
 
             InitializeComponent();
 
-            viewModel = new DashboardViewModel(new ProjectsViewModel(new ProjectsRestService()));
+
+            var projectsViewModel = new ProjectsViewModel(new ProjectsRestService()); //NEW
+            viewModel = new DashboardViewModel(projectsViewModel); //NEW
             BindingContext = viewModel;
+            projectsViewModel.FetchAllProjects();
+            //viewModel = new DashboardViewModel(new ProjectsViewModel(new ProjectsRestService()));
+            //BindingContext = viewModel;
 
-
-            viewModel.FetchBusyProjects();
+            //viewModel.FetchBusyProjects();
 
             _restService = new RestService();
             BindingContext = this;
@@ -209,10 +213,10 @@ namespace NovaApp.Views
             };
 
             // assign chart to view
-            chartViewZero.Chart = chartZero;
-            chartViewOne.Chart = chartOne;
-            chartViewTwo.Chart = chartTwo;
-            chartViewThree.Chart = chartThree;
+            //chartViewZero.Chart = chartZero;
+            //chartViewOne.Chart = chartOne;
+            //chartViewTwo.Chart = chartTwo;
+            //chartViewThree.Chart = chartThree;
 
 
         }

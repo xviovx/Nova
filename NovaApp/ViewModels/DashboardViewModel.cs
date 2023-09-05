@@ -11,49 +11,38 @@ namespace NovaApp.ViewModels
     public class DashboardViewModel
 
     {
+        private ProjectsViewModel _projectsViewModel;
+        public ObservableCollection<Project> Projects
+        {
+            get { return _projectsViewModel.ProjectsList; }
+        }
 
-        private ProjectsViewModel _projectsViewModel; //NEW
-        public ObservableCollection<Project> BusyProjects => _projectsViewModel.ProjectsList; //NEW
-        public ObservableCollection<Project> Projects { get; set; }
+        public DashboardViewModel(ProjectsViewModel projectsViewModel)
+        {
+            _projectsViewModel = projectsViewModel;
+        }
+
+        public void PrintProjectTitles()
+        {
+            foreach (var project in Projects)
+            {
+                Console.WriteLine(project.title); // Print project title to console
+            }
+        }
+
 
         //adding PROJECT properties
         public long Id { get; set; }
         public string title { get; set; }
-
         public string Description { get; set; } = string.Empty;
-
         public User ClientOwner { get; set; }
-
         public List<int> Jobs { get; set; } = new List<int>();
-
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
-
         public DateTime? DeadlineDate { get; set; }
-
         public DateTime? CompletedDate { get; set; }
-
         public List<Note> Notes { get; set; } = new List<Note>();
-
         public List<Fund> Funds { get; set; } = new List<Fund>();
-
         public int? Profile { get; set; }
 
-
-        public DashboardViewModel(ProjectsViewModel projectsViewModel)
-        {
-            Projects = new ObservableCollection<Project>();
-            _projectsViewModel = projectsViewModel;
-        }
-
-        public async Task FetchBusyProjects()
-        {
-            await _projectsViewModel.FetchAllProjects();
-        }
-
-
-        //public static implicit operator DashboardViewModel(ProjectsViewModel v)
-        //{
-        //  throw new NotImplementedException();
-        //}
     }
 }

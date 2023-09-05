@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
              x:Class="NovaApp.Views.StaffPage">
-    <acrylic:AcrylicView CornerRadius="50"
+    <Grid>
+        <SearchBar x:Name="searchBar" Placeholder="SEARCH..."  Margin="0,-740,0,0"  HeightRequest="50" WidthRequest="300" HorizontalOptions="Start"
+                       PlaceholderColor="#DF5353" FontSize="32"  IsTextPredictionEnabled="True" TextChanged="OnTextChanged"  />
+        <acrylic:AcrylicView CornerRadius="50"
            TintColor="#FFFFFF" 
            TintOpacity="0.2"
-        BorderColor="Transparent"
+           BorderColor="Transparent"
            Padding="20"
-                         x:Name="mainGrid">
+           HeightRequest="650"
+           x:Name="mainGrid">
         <Grid>
 
 
@@ -40,7 +44,7 @@
             <!-- Column 1, Row 3: Container for client cards -->
             <ScrollView HeightRequest="400" Margin="0,70,0,0">
                 <StackLayout>
-                    <CollectionView ItemsSource="{Binding StaffList}" VerticalOptions="Start" HorizontalOptions="Start" SelectionMode="Single">
+                    <CollectionView ItemsSource="{Binding StaffList}" x:Name="MyCollectionViews" VerticalOptions="Start" HorizontalOptions="Start" SelectionMode="Single">
                         <CollectionView.ItemsLayout>
                             <!-- Use GridItemsLayout with Span="2" to display two cards side by side -->
                             <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10" />
@@ -143,7 +147,20 @@
                                             <DataTrigger TargetType="Frame" Binding="{Binding active}" Value="False">
                                                 <Setter Property="Opacity" Value="0.5" />
                                             </DataTrigger>
-                                        </Frame.Triggers>
+
+                                                <DataTrigger TargetType="Frame" Binding="{Binding username}" Value="{x:Null}">
+                                                    <Setter Property="Opacity" Value="0" />
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Frame" Binding="{Binding username}" Value="">
+                                                    <Setter Property="Opacity" Value="0" />
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Frame" Binding="{Binding username}" Value="">
+                                                    <Setter Property="Opacity" Value="0" />
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Frame" Binding="{Binding username}" Value=" ">
+                                                    <Setter Property="Opacity" Value="0" />
+                                                </DataTrigger>
+                                            </Frame.Triggers>
                                     </Frame>
                                 </Border>
                             </DataTemplate>
@@ -327,4 +344,5 @@
             </Border>
         </Grid>
     </acrylic:AcrylicView>
+        </Grid>
 </ContentView>
