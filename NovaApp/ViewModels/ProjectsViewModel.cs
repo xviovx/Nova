@@ -146,7 +146,7 @@ namespace NovaApp.ViewModels
             var newProject = new Project
             {
                 title = Title,
-                //description = Description,
+                description = Description,
                 deadlineDateString = FormattedDate,
                 deadlineDate = DeadlineDate,
                 clientOwner = newClientOwner,
