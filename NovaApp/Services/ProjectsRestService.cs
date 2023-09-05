@@ -18,6 +18,8 @@ namespace NovaApp.Services
 
         public List<Project> Projects { get; set; }
 
+        public Project SelectedProject { get; set; }
+
         public ProjectsRestService()
         {
             _client = new HttpClient();
@@ -63,6 +65,39 @@ namespace NovaApp.Services
 
             return Projects;
 
+        }
+
+        public async Task<Project> GetProject(string ProjectId)
+        {
+            SelectedProject = new Project();
+            Uri uri = new Uri(string.Format(BaseUrl + "projects/" + ProjectId));
+
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(uri);
+
+                Debug.WriteLine("Request URI: " + uri.ToString());
+                Debug.WriteLine("Request Type: GET");
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    SelectedProject = JsonSerializer.Deserialize<Project>(content, _serializerOptions);
+
+                    // Log the successful response content
+                    Debug.WriteLine("Successful Response Content: " + content);
+                }
+                else
+                {
+                    // Log error response content
+                    string errorContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine("Error Response Content: " + errorContent);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.Message);
+            }
+            return SelectedProject;
         }
     }
 }

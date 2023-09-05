@@ -44,15 +44,15 @@
                         </HorizontalStackLayout>
                         <Button
                             Margin="0,-10,0,0"
-                        Grid.Row="0" Grid.Column="1"
-                        Text="X"
-                        FontSize="30"
-                        FontAttributes="Bold"
-                        BackgroundColor="Transparent"
-                        TextColor="#000000"
-                        HorizontalOptions="End"
-                        Clicked="OnCloseButtonClicked" 
-                        ZIndex="10"/>
+                            Grid.Row="0" Grid.Column="1"
+                            Text="X"
+                            FontSize="30"
+                            FontAttributes="Bold"
+                            BackgroundColor="Transparent"
+                            TextColor="#000000"
+                            HorizontalOptions="End"
+                            Clicked="OnCloseButtonClicked" 
+                            ZIndex="10"/>
                     </Grid>
                     <Label Text="Lets add a new project and get busy working." Margin="0,-10,0,0" FontSize="16"/>
                     <Label Text="Project Name" Margin="0,10,0,5" FontSize="14" />

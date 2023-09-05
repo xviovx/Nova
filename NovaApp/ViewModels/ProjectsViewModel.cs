@@ -16,10 +16,25 @@ namespace NovaApp.ViewModels
 
         public ObservableCollection<Project> ProjectsList { get; set; }
 
+        private Project _selectedProject;
+        public Project SelectedProject
+        {
+            get { return _selectedProject; }
+            set
+            {
+                if (_selectedProject != value)
+                {
+                    _selectedProject = value;
+                    OnPropertyChanged(nameof(SelectedProject));
+                }
+            }
+        }
+
         public ProjectsViewModel(ProjectsRestService projectsRestService)
         {
             _projectsRestService = projectsRestService;
             ProjectsList = new ObservableCollection<Project>();
+            SelectedProject = new Project();
         }
 
         public async Task FetchAllProjects()
@@ -35,6 +50,18 @@ namespace NovaApp.ViewModels
             }
 
             Debug.WriteLine($"Number of projects fetched: {ProjectsList.Count}");
+        }
+
+        public async Task FetchProject(string ProjectId)
+        {
+            var Project = await _projectsRestService.GetProject(ProjectId);
+
+            DateTime dateToConvert = Project.deadlineDate;
+            var FormattedDate = dateToConvert.ToString("MMMM dd, yyyy");
+            Project.deadlineDateString = FormattedDate;
+            SelectedProject = Project;
+            Debug.WriteLine("project title: ", SelectedProject.title);
+
         }
 
 

@@ -10,5 +10,6 @@ namespace NovaApp.Services
     public interface IRestProjectsService
     {
         Task<List<Project>> RefreshProjectsListAsync();
+        Task<Project> GetProject(string ProjectId);
     }
 }
