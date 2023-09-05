@@ -10,6 +10,8 @@ namespace NovaApp.Models
     {
         public string id { get; set; }
         public string title { get; set; }
+        public string description { get; set; }
+
         public string Status { get; set; } //DASHBOARD
         public DateTime? CompletedDate { get; set; } //DASHBAORD
 
