@@ -69,9 +69,9 @@
                                                     TextColor="Black"
                                                     Thickness="8" />
                                             </StackLayout>
-                                            <StackLayout Orientation="Vertical" Margin="20,0,0,0" Grid.Column="1" VerticalOptions="Center">
+                                            <StackLayout Orientation="Vertical" Margin="20,0,0,0" Grid.Column="1" Grid.Row="0" VerticalOptions="Center">
                                                 <Label FontSize="22" FontFamily="PoppinsSemibold" Text="{Binding title}"/>
-                                                <Label FontSize="14" TextColor="#7D8DA6" Text="{Binding clientOwner.username}"/>
+                                                <Label FontSize="14" TextColor="#7D8DA6" Text="{Binding clientOwner.username}" LineBreakMode="NoWrap"/>
                                             </StackLayout>
                                         </Grid>
                                         <BoxView Margin="10" Color="#E4F0FB" HeightRequest="1" HorizontalOptions="FillAndExpand" />
@@ -92,7 +92,7 @@
                                             </StackLayout>
                                             <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
                                                 <Label VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6"  Text="DeadLine"/>
-                                                <Label  HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6"  Text="December 08, 2023"/>
+                                                <Label HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6"  Text="{ Binding deadlineDateString }"/>
                                             </StackLayout>
                                         </VerticalStackLayout>
                                     </StackLayout>

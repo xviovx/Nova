@@ -13,6 +13,9 @@ namespace NovaApp.Models
         public string Status { get; set; } //DASHBOARD
         public DateTime? CompletedDate { get; set; } //DASHBAORD
 
+        public DateTime deadlineDate { get; set; }
+        public string deadlineDateString { get; set; }
+
         public ClientOwner clientOwner { get; set; }
     }
 

@@ -46,18 +46,6 @@ namespace NovaApp.Services
                     string content = await response.Content.ReadAsStringAsync();
                     Projects = JsonSerializer.Deserialize<List<Project>>(content, _serializerOptions);
 
-                    // Filter projects based on the completedDate property -DASHBOARD
-                    var busyProjects = Projects.Where(project => project.CompletedDate == null).ToList();
-
-                    // Set the Status property based on the completedDate - DASHBOARD
-                    foreach (var project in busyProjects)
-                    {
-                        project.Status = "Busy";
-                    }
-
-                    // Add filtered projects to the Projects list - DASHBOARD
-                    Projects.AddRange(busyProjects);
-
                     // Log the successful response content
                     Debug.WriteLine("Successful Response Content: " + content);
                 }

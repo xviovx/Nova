@@ -9,6 +9,6 @@ namespace NovaApp.Services
 {
     public interface IRestProjectsService
     {
-        Task<List<Project>> RefreshProjectsListAsync(); //GET all clients
+        Task<List<Project>> RefreshProjectsListAsync();
     }
 }

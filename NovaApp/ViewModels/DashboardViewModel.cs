@@ -47,7 +47,7 @@ namespace NovaApp.ViewModels
 
         public async Task FetchBusyProjects()
         {
-            _projectsViewModel.FetchBusyProjects();
+            await _projectsViewModel.FetchAllProjects();
         }
 
 

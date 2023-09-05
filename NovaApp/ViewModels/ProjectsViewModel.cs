@@ -23,22 +23,16 @@ namespace NovaApp.ViewModels
             ProjectsList = new ObservableCollection<Project>();
         }
 
-        public async Task FetchBusyProjects() //DASHBOARD
+        public async Task FetchAllProjects()
         {
             var items = await _projectsRestService.RefreshProjectsListAsync();
             ProjectsList.Clear();
-
-            // Filter projects based on the Status property
-            var busyProjects = items.Where(project => project.Status == "Busy").ToList();
-
-            foreach (var item in busyProjects)
+            foreach (var item in items)
             {
+                DateTime dateToConvert = item.deadlineDate;
+                var FormattedDate = dateToConvert.ToString("MMMM dd, yyyy");
+                item.deadlineDateString = FormattedDate;
                 ProjectsList.Add(item);
-            }
-
-            foreach (var project in busyProjects)
-            {
-                Debug.WriteLine($"Busy Project ID: {project.id}, Title: {project.title}, Status: {project.Status}");
             }
         }
 
