@@ -14,5 +14,7 @@ namespace NovaApp.Services
 
         //add project
         Task SaveProjectAsync(createProjectDto project, bool isNewItem = false);
+
+        Task<List<TaskDisplay>> GetTaskList(string ProjectId);
     }
 }

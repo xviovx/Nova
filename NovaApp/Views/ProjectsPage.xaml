@@ -191,21 +191,32 @@
                             <Label VerticalOptions="Center" Margin="5,0,0,0" FontFamily="PoppinsSemibold" Text="Tasks" TextColor="White"/>
                             <Button Clicked="OnAddTaskProjectClicked" Margin="120,0,0,0" Text="+ Add new"/>
                         </HorizontalStackLayout>
-                        <Frame BackgroundColor="#FFBCBC" BorderColor="Transparent" Margin="0,0,0,20">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="40"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="40"/>
-                                </Grid.ColumnDefinitions>
-                                <Image VerticalOptions="Start" Grid.Column="0" Source="Assets/ProfileImages/2.png" HeightRequest="40" Margin="0,0,0,0"  />
-                                <VerticalStackLayout Grid.Column="1" Margin="20,0,20,0">
-                                    <Label FontFamily="PoppinsSemibold" Text="Task Name"/>
-                                    <Label Text="task description danow;d aawd noadaw d awdaw dawd awd"/>
-                                </VerticalStackLayout>
-                                <Image VerticalOptions="Start" Grid.Column="2" Margin="0,0,0,0" Source="Assets/Icons/TaskCompleted.png" HeightRequest="40"  />
-                            </Grid>
-                        </Frame>
+                        <CollectionView ItemsSource="{Binding TaskList}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SelectionMode="Single">
+                            <CollectionView.ItemsLayout>
+                                <!-- Use GridItemsLayout with Span="2" to display two cards side by side -->
+                                <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="10" HorizontalItemSpacing="0" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BackgroundColor="#FFBCBC" BorderColor="Transparent" Margin="0,0,0,20">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="40"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="40"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image VerticalOptions="Start" Grid.Column="0" Source="Assets/ProfileImages/2.png" HeightRequest="40" Margin="0,0,0,0"  />
+                                            <VerticalStackLayout Grid.Column="1" Margin="20,0,20,0">
+                                                <Label FontFamily="PoppinsSemibold" Text="Task Name"/>
+                                                <Label Text="task description danow;d aawd noadaw d awdaw dawd awd"/>
+                                            </VerticalStackLayout>
+                                            <Image VerticalOptions="Start" Grid.Column="2" Margin="0,0,0,0" Source="Assets/Icons/TaskCompleted.png" HeightRequest="40"  />
+                                        </Grid>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                        
 
                     </VerticalStackLayout>
                 </ScrollView>

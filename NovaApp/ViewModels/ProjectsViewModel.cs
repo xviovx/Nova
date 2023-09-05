@@ -19,6 +19,8 @@ namespace NovaApp.ViewModels
 
         public ObservableCollection<Project> ProjectsList { get; set; }
 
+        public ObservableCollection<TaskDisplay> TaskList { get; set; }
+
         public ObservableCollection<ClientOwner> ClientList { get; set; }
 
         private Project _selectedProject;
@@ -73,8 +75,13 @@ namespace NovaApp.ViewModels
         public ProjectsViewModel(ProjectsRestService projectsRestService)
         {
             _projectsRestService = projectsRestService;
+
             ProjectsList = new ObservableCollection<Project>();
+
+            TaskList = new ObservableCollection<TaskDisplay>();
+
             SelectedProject = new Project();
+
             NumberOfProjects = ProjectsList.Count;
 
             AddNewProjectCommand = new Command(async () => await AddProject());
@@ -105,6 +112,16 @@ namespace NovaApp.ViewModels
             Project.deadlineDateString = FormattedDate;
             SelectedProject = Project;
             Debug.WriteLine("project title: ", SelectedProject.title);
+
+            // setup task list
+
+            var items = await _projectsRestService.GetTaskList(ProjectId);
+            TaskList.Clear();
+            foreach (var item in items)
+            {
+                TaskList.Add(item);
+            }
+
 
         }
 
