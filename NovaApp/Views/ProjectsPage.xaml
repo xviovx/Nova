@@ -189,7 +189,7 @@
                         <HorizontalStackLayout Margin="0,0,0,10">
                             <Label VerticalOptions="Center" Text="Current" TextColor="White"/>
                             <Label VerticalOptions="Center" Margin="5,0,0,0" FontFamily="PoppinsSemibold" Text="Tasks" TextColor="White"/>
-                            <Button Margin="120,0,0,0" Text="+ Add new"/>
+                            <Button Clicked="OnAddTaskProjectClicked" Margin="120,0,0,0" Text="+ Add new"/>
                         </HorizontalStackLayout>
                         <Frame BackgroundColor="#FFBCBC" BorderColor="Transparent" Margin="0,0,0,20">
                             <Grid>

@@ -2,7 +2,7 @@ using System.ComponentModel;
 using NovaApp.ViewModels;
 using Mopups.Services;
 using NovaApp.Popups.Projects;
-using NovaApp.Models;
+using NovaApp.Popups.Tasks;
 using System.Diagnostics;
 
 namespace NovaApp.Views
@@ -28,6 +28,15 @@ namespace NovaApp.Views
         private void OnAddNewProjectClicked(object sender, EventArgs e)
         {
             MopupService.Instance.PushAsync(new AddProject());
+        }
+
+        private void OnAddTaskProjectClicked(object sender, EventArgs e)
+        {
+            var ProjectId = ProjectsViewModel.SelectedProject?.id;
+            if (ProjectId != null)
+            {
+                MopupService.Instance.PushAsync(new AddTask(ProjectId));
+            }
         }
 
         private async void OnProjectClicked(object sender, EventArgs e)

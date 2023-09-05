@@ -10,15 +10,13 @@ namespace NovaApp.Models
     {
         public string id { get; set; }
         public string title { get; set; }
-        public string description { get; set; }
-
-        public string Status { get; set; } //DASHBOARD
-        public DateTime? CompletedDate { get; set; } //DASHBAORD
-
+        public bool status { get; set; } //DASHBOARD
         public DateTime deadlineDate { get; set; }
         public string deadlineDateString { get; set; }
-
+        public string description { get; set; }
         public ClientOwner clientOwner { get; set; }
+
+
     }
 
     public class ClientOwner

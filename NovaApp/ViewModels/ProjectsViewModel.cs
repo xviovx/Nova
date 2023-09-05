@@ -30,11 +30,26 @@ namespace NovaApp.ViewModels
             }
         }
 
+        public int _numberOfProjects;
+        public int NumberOfProjects
+        {
+            get { return _numberOfProjects; }
+            set
+            {
+                if (_numberOfProjects != value)
+                {
+                    _numberOfProjects = value;
+                    OnPropertyChanged(nameof(NumberOfProjects));
+                }
+            }
+        }
+
         public ProjectsViewModel(ProjectsRestService projectsRestService)
         {
             _projectsRestService = projectsRestService;
             ProjectsList = new ObservableCollection<Project>();
             SelectedProject = new Project();
+            NumberOfProjects = ProjectsList.Count;
         }
 
         public async Task FetchAllProjects()
@@ -48,6 +63,7 @@ namespace NovaApp.ViewModels
                 item.deadlineDateString = FormattedDate;
                 ProjectsList.Add(item);
             }
+            NumberOfProjects = ProjectsList.Count;
 
             Debug.WriteLine($"Number of projects fetched: {ProjectsList.Count}");
         }
