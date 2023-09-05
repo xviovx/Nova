@@ -67,7 +67,7 @@ namespace NovaApp.Services
 
 
         // Add or update a Project
-        public async Task SaveProjectAsync(Project project, bool isNewItem = false)
+        public async Task SaveProjectAsync(createProjectDto project, bool isNewItem = false)
         {
             string itemType = "projects"; // Specify that we're working with projects
             Uri uri = new Uri(string.Format($"{BaseUrl}{itemType}", string.Empty));

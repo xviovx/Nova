@@ -13,6 +13,6 @@ namespace NovaApp.Services
 
 
         //Add Project
-        Task SaveProjectAsync(Project project, bool isNewItem = false);
+        Task SaveProjectAsync(createProjectDto project, bool isNewItem = false);
     }
 }

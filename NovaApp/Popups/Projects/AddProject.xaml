@@ -57,12 +57,13 @@
                         ZIndex="10"/>
                     </Grid>
                     <Label Text="Lets add a new project and get busy working." Margin="0,-10,0,0" FontSize="16"/>
-                    <Label Text="Project Name" Margin="0,10,0,5" FontSize="14" />
-                    <Entry Placeholder="Project Name" BackgroundColor="White" Text="{Binding Title}"/>
+                    <Label Text="Project Name" Margin="0,20,0,5" FontSize="14" />
+                    <Entry Placeholder="Project Name" BackgroundColor="White" Text="{Binding Title}" WidthRequest="405" HorizontalOptions="Start"/>
                     <Label Margin="0,20,0,5" FontSize="14" Text="Description"/>
-                    <Entry Placeholder="Description" BackgroundColor="White" Text="{Binding Description}"/>
-
-                    <Picker WidthRequest="200" HeightRequest="70" Margin="5,20,0,0" HorizontalOptions="Start" TitleColor="Black" TextColor="Black" BackgroundColor="White" 
+                    <Editor Placeholder="Description" BackgroundColor="White" Text="{Binding Description}" HeightRequest="150" WidthRequest="405" HorizontalOptions="Start"/>
+                    <HorizontalStackLayout>
+                        <VerticalStackLayout>
+                            <Picker WidthRequest="200" HeightRequest="70" Margin="5,20,0,0" HorizontalOptions="Start" TitleColor="Black" TextColor="Black" BackgroundColor="White" 
                             Title="Select Client Owner" 
                             x:Name="PickerClientOwner"
                             ItemsSource="{Binding ClientList}"
@@ -70,16 +71,23 @@
                             SelectedItem="{Binding SelectedClient, Mode=TwoWay}" 
                              SelectedIndexChanged="OnPickerClientOwnerSelectedIndexChanged"
                             />
-
-                    <Label Text="Select deadline date" Margin="5,20,0,0" FontSize="14" />
-                    <DatePicker HorizontalOptions="FillAndExpand" Margin="5,10,0,0" Format="MMMM dd, yyyy" Date="{Binding DeadlineDate}"
+                        </VerticalStackLayout>
+                       
+                        <VerticalStackLayout>
+                            <Label Text="Select deadline date" Margin="25,20,0,0" FontSize="14" />
+                            <DatePicker HorizontalOptions="FillAndExpand" Margin="25,5,0,0" Format="MMMM dd, yyyy" Date="{Binding DeadlineDate}"
                                 BackgroundColor="White"
                                 MinimumDate="2023-09-15"
                                 MaximumDate="2025-12-31"
                                 TextColor="Black"
-                                FontSize="14">  
-                        
-                    </DatePicker>
+                                FontSize="14">
+
+                            </DatePicker>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                    <Label Text="Project Cost" Margin="5,20,0,0" FontSize="14" />
+                    <Entry Placeholder="Project Cost" BackgroundColor="White" Text="{Binding BaseCost}" WidthRequest="200" HorizontalOptions="Start"/>
+
                     <Button HorizontalOptions="End" VerticalOptions="End" Text="+ Add New"  Command="{Binding AddNewProjectCommand}"
     FontSize="16"
     BackgroundColor="#84DCCF"

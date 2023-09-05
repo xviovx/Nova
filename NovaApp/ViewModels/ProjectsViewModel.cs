@@ -23,6 +23,7 @@ namespace NovaApp.ViewModels
 
         public string Title { get; set; }
         public string Description { get; set; }
+        public int BaseCost { get; set; }
         public DateTime DeadlineDate { get; set; }
         public ClientOwner ClientOwner { get; set; }
         public ICommand AddNewProjectCommand { get; }
@@ -143,14 +144,13 @@ namespace NovaApp.ViewModels
             };
 
             Debug.WriteLine($"Selected Client viewmodel: {SelectedClient.username}, ID: {SelectedClient.id}, ...");
-            var newProject = new Project
+            var newProject = new createProjectDto
             {
                 title = Title,
                 description = Description,
-                deadlineDateString = FormattedDate,
                 deadlineDate = DeadlineDate,
-                clientOwner = newClientOwner,
-                status = "In Progress",
+                clientOwner = SelectedClient.id,
+                basecost = BaseCost
                 
             };
 
