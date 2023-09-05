@@ -1,10 +1,7 @@
-using NovaApp.Models;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Text.Json;
-using System.ComponentModel; // Add this namespace for INotifyPropertyChanged
+using System.ComponentModel; 
 using NovaApp.ViewModels;
-using System.Security.Cryptography.X509Certificates;
+using Mopups.Services;
+using NovaApp.Popups.Projects;
 
 namespace NovaApp.Views
 {
@@ -23,6 +20,11 @@ namespace NovaApp.Views
         public async void LoadProjects()
         {
             await ProjectsViewModel.FetchAllProjects();
+        }
+
+        private void OnAddNewProjectClicked(object sender, EventArgs e)
+        {
+            MopupService.Instance.PushAsync(new AddProject());
         }
     }
 }

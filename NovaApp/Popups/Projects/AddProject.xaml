@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             x:Class="NovaApp.Popups.Projects.AddProject"
+             Title="AddClient"
+             CloseWhenBackgroundIsClicked="True">
+    <mopups:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+            DurationIn="400"
+            EasingIn="Fade"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1"
+            ScaleOut="0.7"></mopupsanim:ScaleAnimation>
+    </mopups:PopupPage.Animation>
+
+    <acrylic:AcrylicView CornerRadius="0"
+                         TintColor="#FF7070" 
+                         TintOpacity="0.3"
+                         BorderColor="Transparent"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         Padding="20">
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <acrylic:AcrylicView CornerRadius="50"
+                                 TintColor="#FFFFFF" 
+                                 TintOpacity="0.5"
+                                 BorderColor="Transparent"
+                                 Padding="40"
+                                 WidthRequest="610">
+
+                <VerticalStackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <HorizontalStackLayout Grid.Row="0" Grid.Column="0">
+                            <Label Text="Add a New" FontSize="34" FontFamily="PoppinsLight"/>
+                            <Label Grid.Column="0" Margin="10,0,0,0" Text="Project" FontSize="34" FontAttributes="None" FontFamily="PoppinsSemibold"/>
+                        </HorizontalStackLayout>
+                        <Button
+                            Margin="0,-10,0,0"
+                        Grid.Row="0" Grid.Column="1"
+                        Text="X"
+                        FontSize="30"
+                        FontAttributes="Bold"
+                        BackgroundColor="Transparent"
+                        TextColor="#000000"
+                        HorizontalOptions="End"
+                        Clicked="OnCloseButtonClicked" 
+                        ZIndex="10"/>
+                    </Grid>
+                    <Label Text="Lets add a new project and get busy working." Margin="0,-10,0,0" FontSize="16"/>
+                    <Label Text="Project Name" Margin="0,10,0,5" FontSize="14" />
+                    <Entry Placeholder="Project Name" BackgroundColor="LightGrey"/>
+                    <Label Text="Project Description" Margin="0,20,0,5" FontSize="14" />
+                    <Entry Placeholder="Description" BackgroundColor="LightGrey"/>
+                    <Picker WidthRequest="200" HeightRequest="70" Margin="5,20,0,0" HorizontalOptions="Start" TitleColor="Black" Title="Select Client Owner" x:Name="filterCards" TextColor="Black" BackgroundColor="LightGray" >
+                        <Picker.Items>
+                            <x:String>Caidyn</x:String>
+                            <x:String>Alexa</x:String>
+                            <x:String>Kyle</x:String>
+                            <x:String>Anchen</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="Select deadline date" Margin="5,20,0,0" FontSize="14" />
+                    <DatePicker HorizontalOptions="FillAndExpand" Margin="5,10,0,0" Format="MMMM dd, yyyy"
+                                MaximumDate="2100-12-31"
+                                MinimumDate="2000-01-01"
+                                BackgroundColor="LightGrey"
+                                TextColor="Black"
+                                FontSize="18">
+                    </DatePicker>
+                    <Button HorizontalOptions="End" VerticalOptions="End" Text="+ Add New"
+                        FontSize="16"
+                        BackgroundColor="#84DCCF"
+                        TextColor="Black"
+                            ZIndex="10">
+                        
+                    </Button>
+
+                </VerticalStackLayout>
+            </acrylic:AcrylicView>
+        </StackLayout>
+    </acrylic:AcrylicView>
+</mopups:PopupPage>

@@ -42,7 +42,7 @@
                 <Label Text="Let’s get an overview!" FontSize="18" Grid.Row="1" Grid.Column="0" />
 
                 <!-- Button -->
-                <Button CornerRadius="15" WidthRequest="150" HeightRequest="50" Text="+ Add New" Grid.RowSpan="2" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" />
+                <Button Clicked="OnAddNewProjectClicked" CornerRadius="15" WidthRequest="150" HeightRequest="50" Text="+ Add New" Grid.RowSpan="2" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" />
             </Grid>
             <ScrollView Grid.Row="1" Grid.Column="0">
                 <StackLayout>

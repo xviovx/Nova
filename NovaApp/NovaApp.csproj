@@ -97,6 +97,9 @@
 	  <MauiXaml Update="Popups\AddStaff.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Popups\Projects\AddProject.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Popups\UpdateClient.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
