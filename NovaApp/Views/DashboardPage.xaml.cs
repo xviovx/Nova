@@ -84,10 +84,13 @@ namespace NovaApp.Views
         public DashboardPage()
         {
 
-            viewModel = new DashboardViewModel();
+            InitializeComponent();
+
+            viewModel = new DashboardViewModel(new ProjectsViewModel(new ProjectsRestService()));
             BindingContext = viewModel;
 
-            InitializeComponent();
+
+            viewModel.FetchBusyProjects();
 
             _restService = new RestService();
             BindingContext = this;
@@ -251,11 +254,11 @@ namespace NovaApp.Views
         //navigate folder1.png to staff page
         //private async void OnImageTapped(object sender, EventArgs e)
         //{
-            //var staffPageWrapper = new StaffPageWrapper();
-            //await Navigation.PushAsync(staffPageWrapper);
+        //var staffPageWrapper = new StaffPageWrapper();
+        //await Navigation.PushAsync(staffPageWrapper);
         //}
 
-                private async void OnImageButtonClicked(object sender, EventArgs e)
+        private async void OnImageButtonClicked(object sender, EventArgs e)
         {
             // Navigate to another page when the image button is clicked
             await Navigation.PushAsync(new StaffPageWrapper());
@@ -263,6 +266,6 @@ namespace NovaApp.Views
 
 
 
+
     }
 }
-

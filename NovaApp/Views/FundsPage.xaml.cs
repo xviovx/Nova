@@ -7,6 +7,7 @@ using System.Linq;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace NovaApp.Views
 {
@@ -76,28 +77,38 @@ namespace NovaApp.Views
             filterCards.SelectedIndex = 0;
             filterCards.SelectedIndexChanged += OnFilterCardsSelectedIndexChanged;
 
-            // dummy data for received entries
+            // received entries
             receivedEntries = new[]
             {
-                new ChartEntry(200) { Label = "Mon", ValueLabel = "200", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(250) { Label = "Tue", ValueLabel = "250", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(400) { Label = "Wed", ValueLabel = "400", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(300) { Label = "Thu", ValueLabel = "300", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(190) { Label = "Fri", ValueLabel = "190", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(600) { Label = "Sat", ValueLabel = "600", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(110) { Label = "Sun", ValueLabel = "110", Color = SKColor.Parse("#5BDA8C") }
+                new ChartEntry(200) { Label = "Jan", ValueLabel = "200", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(250) { Label = "Feb", ValueLabel = "250", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(400) { Label = "Mar", ValueLabel = "400", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(300) { Label = "Apr", ValueLabel = "300", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(190) { Label = "May", ValueLabel = "190", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(600) { Label = "Jun", ValueLabel = "600", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(110) { Label = "Jul", ValueLabel = "110", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(120) { Label = "Aug", ValueLabel = "120", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(130) { Label = "Sep", ValueLabel = "130", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(140) { Label = "Oct", ValueLabel = "140", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(150) { Label = "Nov", ValueLabel = "150", Color = SKColor.Parse("#5BDA8C") },
+                new ChartEntry(160) { Label = "Dec", ValueLabel = "160", Color = SKColor.Parse("#5BDA8C") }
             };
 
-            // dummy data for spent entries
+            //spent entries
             spentEntries = new[]
             {
-                new ChartEntry(110) { Label = "Mon", ValueLabel = "110", Color = SKColor.Parse("#EE6B8D") },
-                new ChartEntry(600) { Label = "Tue", ValueLabel = "600", Color = SKColor.Parse("#EE6B8D") },
-                new ChartEntry(190) { Label = "Wed", ValueLabel = "190", Color = SKColor.Parse("#EE6B8D") },
-                new ChartEntry(300) { Label = "Thu", ValueLabel = "300", Color = SKColor.Parse("#EE6B8D") },
-                new ChartEntry(400) { Label = "Fri", ValueLabel = "400", Color = SKColor.Parse("#EE6B8D") },
-                new ChartEntry(250) { Label = "Sat", ValueLabel = "250", Color = SKColor.Parse("#EE6B8D") },
-                new ChartEntry(200) { Label = "Sun", ValueLabel = "200", Color = SKColor.Parse("#EE6B8D") }
+                new ChartEntry(110) { Label = "Jan", ValueLabel = "110", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(600) { Label = "Feb", ValueLabel = "600", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(190) { Label = "Mar", ValueLabel = "190", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(300) { Label = "Apr", ValueLabel = "300", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(400) { Label = "May", ValueLabel = "400", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(250) { Label = "Jun", ValueLabel = "250", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(200) { Label = "Jul", ValueLabel = "200", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(210) { Label = "Aug", ValueLabel = "210", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(220) { Label = "Sep", ValueLabel = "220", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(230) { Label = "Oct", ValueLabel = "230", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(240) { Label = "Nov", ValueLabel = "240", Color = SKColor.Parse("#EE6B8D") },
+                new ChartEntry(250) { Label = "Dec", ValueLabel = "250", Color = SKColor.Parse("#EE6B8D") }
             };
 
             dataPicker.SelectedIndex = 0;
@@ -161,11 +172,39 @@ namespace NovaApp.Views
 
                 GroupProjects();
                 CalculateTotals();
+                UpdateChartData();
             }
             catch (Exception e)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", $"Unhandled exception: {e.Message}", "OK");
             }
+        }
+
+        private void UpdateChartData()
+        {
+            var receivedGroupedByMonth = FundsList
+                .GroupBy(f => f.createdDate.ToString("MMM", CultureInfo.InvariantCulture))
+                .Select(g => new ChartEntry((float)g.Sum(x => x.income))
+                {
+                    Label = g.Key,
+                    ValueLabel = g.Sum(x => x.income).ToString(),
+                    Color = SKColor.Parse("#5BDA8C")
+                }).ToArray();
+
+            var spentGroupedByMonth = FundsList
+                .GroupBy(f => f.createdDate.ToString("MMM", CultureInfo.InvariantCulture))
+                .Select(g => new ChartEntry((float)g.Sum(x => x.expenses))
+                {
+                    Label = g.Key,
+                    ValueLabel = g.Sum(x => x.expenses).ToString(),
+                    Color = SKColor.Parse("#EE6B8D")
+                }).ToArray();
+
+            receivedEntries = receivedGroupedByMonth;
+            spentEntries = spentGroupedByMonth;
+
+            // Update chart
+            OnDataPickerSelectedIndexChanged(null, null);
         }
 
         public async Task<List<Fund>> GetFundsAsync()
