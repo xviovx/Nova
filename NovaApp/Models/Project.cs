@@ -19,6 +19,15 @@ namespace NovaApp.Models
 
     }
 
+    public class createProjectDto
+    {
+        public string title { get; set; }
+        public string description { get; set; }
+        public DateTime deadlineDate { get; set; }
+        public string clientOwner { get; set; }
+        public int basecost { get; set; }
+    }
+
     public class ClientOwner
     {
         public string id { get; set; }

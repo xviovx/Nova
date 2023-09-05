@@ -2441,24 +2441,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\anchi\\.nuget\\packages\\": {},
+    "C:\\Users\\alexa\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anchi\\OneDrive\\Documents\\GitHub\\Nova\\NovaApp\\NovaApp.csproj",
+      "projectUniqueName": "C:\\Users\\alexa\\OneDrive\\Documents\\GitHub\\Nova\\NovaApp\\NovaApp.csproj",
       "projectName": "NovaApp",
-      "projectPath": "C:\\Users\\anchi\\OneDrive\\Documents\\GitHub\\Nova\\NovaApp\\NovaApp.csproj",
-      "packagesPath": "C:\\Users\\anchi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anchi\\OneDrive\\Documents\\GitHub\\Nova\\NovaApp\\obj\\",
+      "projectPath": "C:\\Users\\alexa\\OneDrive\\Documents\\GitHub\\Nova\\NovaApp\\NovaApp.csproj",
+      "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexa\\OneDrive\\Documents\\GitHub\\Nova\\NovaApp\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\anchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

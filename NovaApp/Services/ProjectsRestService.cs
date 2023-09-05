@@ -99,5 +99,51 @@ namespace NovaApp.Services
             }
             return SelectedProject;
         }
+
+
+        // Add or update a Project
+        public async Task SaveProjectAsync(createProjectDto project, bool isNewItem = false)
+        {
+            string itemType = "projects"; // Specify that we're working with projects
+            Uri uri = new Uri(string.Format($"{BaseUrl}{itemType}", string.Empty));
+
+            try
+            {
+                string json = JsonSerializer.Serialize(project, _serializerOptions);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = null;
+                if (isNewItem)
+                {
+                    response = await _client.PostAsync(uri, content);
+                }
+                else
+                {
+                    response = await _client.PostAsync(uri, content);
+                }
+
+                // Log JSON data
+                Debug.WriteLine("Serialized JSON data: " + json);
+
+                // Log request details
+                Debug.WriteLine("Request URI: " + uri.ToString());
+                Debug.WriteLine("Request Type: " + (isNewItem ? "POST" : "PUT"));
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine("Project successfully saved.");
+                }
+                else
+                {
+                    // Log error response content
+                    string errorContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine("Error Response Content: " + errorContent);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.Message);
+            }
+        }
     }
 }
