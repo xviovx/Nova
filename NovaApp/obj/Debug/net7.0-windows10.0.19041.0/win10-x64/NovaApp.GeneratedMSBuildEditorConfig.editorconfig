@@ -58,6 +58,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Popups.Projects.Ad
 build_metadata.AdditionalFiles.TargetPath = Popups\Projects\AddProject.xaml
 build_metadata.AdditionalFiles.RelativePath = Popups\Projects\AddProject.xaml
 
+[C:/Users/anchi/OneDrive/Documents/GitHub/Nova/NovaApp/Popups/Projects/UpdateProject.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Popups.Projects.UpdateProject.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\Projects\UpdateProject.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\Projects\UpdateProject.xaml
+
+[C:/Users/anchi/OneDrive/Documents/GitHub/Nova/NovaApp/Popups/Tasks/AddTask.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Popups.Tasks.AddTask.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\Tasks\AddTask.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\Tasks\AddTask.xaml
+
 [C:/Users/anchi/OneDrive/Documents/GitHub/Nova/NovaApp/Popups/UpdateClient.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NovaApp.Popups.UpdateClient.xaml
