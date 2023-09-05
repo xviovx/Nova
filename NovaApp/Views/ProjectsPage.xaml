@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
              x:Class="NovaApp.Views.ProjectsPage"
+             xmlns:controls="clr-namespace:NovaApp.Controls"
              x:Name="this">
 
     <acrylic:AcrylicView CornerRadius="50"
@@ -20,7 +21,6 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-
             <Grid Grid.Column="0" Grid.Row="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -36,7 +36,7 @@
                     <Label Text="Projects" FontSize="40" FontFamily="PoppinsSemibold"  />
                     <Label Text="Overview" FontFamily="PoppinsLight" Margin="10,0,0,0" FontSize="40"/>
                 </HorizontalStackLayout>
-                
+
 
                 <!-- Subtitle -->
                 <Label Text="Let’s get an overview!" FontSize="18" Grid.Row="1" Grid.Column="0" />
@@ -44,33 +44,67 @@
                 <!-- Button -->
                 <Button CornerRadius="15" WidthRequest="150" HeightRequest="50" Text="+ Add New" Grid.RowSpan="2" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" />
             </Grid>
-
-            <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="50,0,0,0" BackgroundColor="#FF7070">
-                
-            </Frame>
-
-            <ScrollView Grid.Column="0" Grid.Row="1">
+            <ScrollView Grid.Row="1" Grid.Column="0">
                 <StackLayout>
                     <CollectionView ItemsSource="{Binding ProjectsList}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SelectionMode="Single">
                         <CollectionView.ItemsLayout>
-                        <!-- Use GridItemsLayout with Span="2" to display two cards side by side -->
-                        <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10" />
+                            <!-- Use GridItemsLayout with Span="2" to display two cards side by side -->
+                            <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="10" HorizontalItemSpacing="10" />
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Border>
-                                    
-                                </Border>
+                                <Frame CornerRadius="20" BorderColor="White" BackgroundColor="White">
+                                    <StackLayout>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout Grid.Column="0" VerticalOptions="Center">
+                                                <controls:CircularProgressBar
+                                                    Progress="40"
+                                                    ProgressColor="#FF7070"
+                                                    ProgressLeftColor="#E4F0FB"
+                                                    Size="100"
+                                                    TextColor="Black"
+                                                    Thickness="8" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Vertical" Margin="20,0,0,0" Grid.Column="1" VerticalOptions="Center">
+                                                <Label FontSize="22" FontFamily="PoppinsSemibold" Text="{Binding title}"/>
+                                                <Label FontSize="14" TextColor="#7D8DA6" Text="{Binding clientOwner.username}"/>
+                                            </StackLayout>
+                                        </Grid>
+                                        <BoxView Margin="10" Color="#E4F0FB" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+                                        <VerticalStackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6" Text="Status"/>
+                                                <Frame HorizontalOptions="EndAndExpand" VerticalOptions="Center" BorderColor="Transparent" CornerRadius="15" Padding="0" BackgroundColor="#D2F2EE" WidthRequest="100">
+                                                    <Label  Padding="5" TextColor="#54A69A" HorizontalTextAlignment="Center" Text="Status"/>
+                                                </Frame>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                                                <Label VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6" Text="Assignee"/>
+                                                <Grid  VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0,0,-35,0">
+                                                    <Image Source="Assets/ProfileImages/1.png" HeightRequest="40" ZIndex="3" Margin="0,0,80,0"  />
+                                                    <Image Source="Assets/ProfileImages/3.png" HeightRequest="40" ZIndex="2" Margin="0,0,40,0" />
+                                                    <Image Source="Assets/ProfileImages/2.png" HeightRequest="40" Margin="0,0,0,0"  />
+                                                </Grid>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                                                <Label VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6"  Text="DeadLine"/>
+                                                <Label  HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6"  Text="December 08, 2023"/>
+                                            </StackLayout>
+                                        </VerticalStackLayout>
+                                    </StackLayout>
+                                </Frame>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
                 </StackLayout>
             </ScrollView>
+            <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="50,0,0,0" BackgroundColor="#FF7070">
+                
+            </Frame>
         </Grid>
-        
-        
-        
-        
-
     </acrylic:AcrylicView>
 </ContentView>

@@ -93,17 +93,11 @@ namespace NovaApp.Views
             BindingContext = this;
 
             projectsPage = new ProjectsPage();
-            projectsPage.LoadItems();
-
-            TotalProjectsCount = projectsPage.TotalProjectsCount;
 
             UpdateTotalClientsCount();
             UpdateTotalStaffCount();
 
             //BindingContext = projectsPage;
-
-            int totalProjectsCount = projectsPage.TotalProjectsCount;
-
 
 
             // dummy data for charts
