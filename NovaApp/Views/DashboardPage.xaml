@@ -70,7 +70,7 @@
                                 <Label Text="Total Staff" FontSize="10" TextColor="#898989" Margin="25,0,0,0" />
 
                                 <!-- Total Number -->
-                                <Label Text="{Binding NumberOfStaff}" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
+                                <Label Text="3" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
                             </StackLayout>
                         </Frame>
                     </Grid>
@@ -100,7 +100,7 @@
                                 <Label Text="Total Clients" FontSize="10" TextColor="#898989" Margin="25,0,0,0" />
 
                                 <!-- Total Number -->
-                                <Label Text="{Binding NumberOfStaff}" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
+                                <Label Text="6" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
                             </StackLayout>
                         </Frame>
                     </Grid>
@@ -145,19 +145,28 @@
             <Grid>
                 <Label 
                 Text="Our"
-                Padding="20,290,20,0"
+                Padding="20,310,20,0"
                 FontSize="24"
                 FontAttributes="None"
                     FontFamily="PoppinsRegular"
                 Grid.Row="0"
                 Grid.Column="0" />
                 <Label 
-                Text="Timeline"
+                Text="Finances"
                 Padding="72
-                    ,290,20,0"
+                    ,311,20,0"
                 FontSize="24"
                 FontAttributes="Bold"
                 FontFamily="PoppinsSemibold"
+                Grid.Row="0"
+                Grid.Column="0" />
+                
+                <Label 
+                Text="A break down of this year's finances"
+                Padding="20
+                    ,355,20,0"
+                FontSize="15"
+                FontFamily="PoppinsLight"
                 Grid.Row="0"
                 Grid.Column="0" />
 
@@ -169,7 +178,7 @@
                            Radius="20"
                            Opacity="1"/>
                     </Border.Shadow>
-                    <Frame CornerRadius="10" BackgroundColor="#FFFFFF" Padding="10" HorizontalOptions="Start" Margin="10,10,0,0" BorderColor="Transparent" WidthRequest="700" HeightRequest="180">
+                    <Frame CornerRadius="10" BackgroundColor="#FFFFFF" Padding="10" HorizontalOptions="Start" Margin="10,30,0,0" BorderColor="Transparent" WidthRequest="700" HeightRequest="170">
                         <microcharts:ChartView x:Name="chartView"/>
                     </Frame>
                 </Border>
@@ -180,8 +189,10 @@
 
             <Frame BorderColor="Transparent" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" HorizontalOptions="End" Margin="0,0,15,0" HeightRequest="544" BackgroundColor="#FF7070" WidthRequest="380">
                 <Grid>
-                        <Label Margin="0,0,0,0"  FontSize="22"  Text="Our Projects"/>
-                    <Label   Padding="0,40,0,0" FontSize="12" Text="Here is a overview of all the projects"/>
+                    <Label Margin="0,0,0,0" FontFamily="PoppinsRegular" FontSize="22"  Text="Our"/>
+                    <Label Margin="46,0,0,0" FontFamily="PoppinsSemibold" FontSize="22"  Text="Projects"/>
+
+                    <Label   Padding="0,40,0,0" FontFamily="PoppinsLight" FontSize="12" Text="Here is a overview of all the projects"/>
 
                     <ScrollView Padding="10" Margin="0,50,0,0">
                     <CollectionView ItemsSource="{Binding ProjectsList}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SelectionMode="Single">
@@ -199,7 +210,7 @@
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
-                                            <Label FontSize="20" FontFamily="PoppinsSemibold" Text="{Binding title}" LineBreakMode="NoWrap"/>
+                                                <Label FontSize="20" FontFamily="PoppinsRegular" Text="{Binding title}" LineBreakMode="NoWrap"/>
                                             <Label FontSize="14" TextColor="#7D8DA6" Text="{Binding clientOwner.username}" Padding="0,30,0,0" LineBreakMode="NoWrap"/>
                                             <controls:CircularProgressBar
                                                     Progress="40"

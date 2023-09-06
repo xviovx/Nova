@@ -42,18 +42,18 @@ namespace NovaApp.Views
 
             receivedEntries = new[]
             {
-                new ChartEntry(200) { Label = "Jan", ValueLabel = "200", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(250) { Label = "Feb", ValueLabel = "250", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(400) { Label = "Mar", ValueLabel = "400", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(300) { Label = "Apr", ValueLabel = "300", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(190) { Label = "May", ValueLabel = "190", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(600) { Label = "Jun", ValueLabel = "600", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(110) { Label = "Jul", ValueLabel = "110", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(120) { Label = "Aug", ValueLabel = "120", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(130) { Label = "Sep", ValueLabel = "130", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(140) { Label = "Oct", ValueLabel = "140", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(150) { Label = "Nov", ValueLabel = "150", Color = SKColor.Parse("#5BDA8C") },
-                new ChartEntry(160) { Label = "Dec", ValueLabel = "160", Color = SKColor.Parse("#5BDA8C") }
+                new ChartEntry(200) { Label = "Jan", ValueLabel = "200", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(250) { Label = "Feb", ValueLabel = "250", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(400) { Label = "Mar", ValueLabel = "400", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(300) { Label = "Apr", ValueLabel = "300", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(190) { Label = "May", ValueLabel = "190", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(600) { Label = "Jun", ValueLabel = "600", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(110) { Label = "Jul", ValueLabel = "110", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(120) { Label = "Aug", ValueLabel = "120", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(130) { Label = "Sep", ValueLabel = "130", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(140) { Label = "Oct", ValueLabel = "140", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(150) { Label = "Nov", ValueLabel = "150", Color = SKColor.Parse("#FF7070") },
+                new ChartEntry(160) { Label = "Dec", ValueLabel = "160", Color = SKColor.Parse("#FF7070") }
             };
 
             var chart = new LineChart
