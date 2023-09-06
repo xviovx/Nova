@@ -53,5 +53,14 @@ namespace NovaApp.Views
             var clickedTaskId = (string)button.CommandParameter;
             await ProjectsViewModel.ChangeTaskStatus(clickedTaskId);
         }
+
+        private void OnEditTapped(object sender, EventArgs e)
+        {
+            var projectId = ProjectsViewModel.SelectedProject?.id;
+            if (projectId != null)
+            {
+                MopupService.Instance.PushAsync(new UpdateProject(projectId));
+            }
+        }
     }
 }
