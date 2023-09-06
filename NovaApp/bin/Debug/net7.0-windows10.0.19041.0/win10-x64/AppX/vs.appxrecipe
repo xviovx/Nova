@@ -30,25 +30,45 @@
     <AppXManifest Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:41.576</Modified>
+=======
+      <Modified>2023-09-06T10:11:17.031</Modified>
+>>>>>>> Stashed changes
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:41.335</Modified>
+=======
+      <Modified>2023-09-06T09:56:50.224</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.runtimeconfig.json">
       <PackagePath>NovaApp.runtimeconfig.json</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:41.256</Modified>
+=======
+      <Modified>2023-09-06T09:56:50.008</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.dll">
       <PackagePath>NovaApp.dll</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:39.302</Modified>
+=======
+      <Modified>2023-09-06T10:11:15.132</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NovaApp.exe</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:39.381</Modified>
+=======
+      <Modified>2023-09-06T10:11:15.147</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.deps.json">
       <PackagePath>NovaApp.deps.json</PackagePath>
@@ -958,7 +978,15 @@
       <PackagePath>libSkiaSharp.dll</PackagePath>
       <Modified>2022-10-03T22:36:56.000</Modified>
     </AppxPackagedFile>
+<<<<<<< Updated upstream
     <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\microsoft.maui.controls.ref.win\7.0.92\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
+=======
+    <AppxPackagedFile Include="C:\Users\pharo\Desktop\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.deps.json">
+      <PackagePath>NovaApp.deps.json</PackagePath>
+      <Modified>2023-09-06T10:11:16.889</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
+>>>>>>> Stashed changes
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
       <Modified>2023-06-30T16:51:22.000</Modified>
     </AppxPackagedFile>
@@ -972,387 +1000,771 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T13:41:52.032</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.271</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.622</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.638</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.654</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.848</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.669</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.848</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.763</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.848</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OFL.txt">
       <PackagePath>OFL.txt</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T19:46:40.709</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.770</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T13:41:52.027</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.770</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T13:41:52.029</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.770</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Poppins-Black.ttf">
       <PackagePath>Poppins-Black.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T19:46:40.691</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.770</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Poppins-Bold.ttf">
       <PackagePath>Poppins-Bold.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T19:46:40.655</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.785</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Poppins-ExtraBold.ttf">
       <PackagePath>Poppins-ExtraBold.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T19:46:40.673</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.785</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Poppins-Light.ttf">
       <PackagePath>Poppins-Light.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T19:46:40.578</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.785</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Poppins-Medium.ttf">
       <PackagePath>Poppins-Medium.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T19:46:40.615</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.785</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Poppins-Regular.ttf">
       <PackagePath>Poppins-Regular.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T19:46:40.597</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.785</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Poppins-SemiBold.ttf">
       <PackagePath>Poppins-SemiBold.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T19:46:40.636</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.801</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Poppins-Thin.ttf">
       <PackagePath>Poppins-Thin.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T19:46:40.557</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.810</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.999</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:39.014</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:39.030</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:39.030</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:39.091</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.859</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.859</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.876</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.873</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.876</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.851</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.857</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.804</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.859</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.859</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.859</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.810</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.826</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.826</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.826</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.833</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.833</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.841</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.851</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.841</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.841</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.920</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.920</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.920</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.936</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.952</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.890</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.905</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.905</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.817</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.905</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.920</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.876</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.890</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.890</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.890</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.890</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.952</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.952</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.967</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.967</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.999</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.841</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.851</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.859</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.876</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T12:14:38.905</Modified>
+=======
+      <Modified>2023-09-06T09:54:05.832</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\BackgroundImage.png">
       <PackagePath>Assets\BackgroundImage.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-16T22:02:50.508</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.193</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\BackgroundImageLogin.png">
       <PackagePath>Assets\BackgroundImageLogin.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-11T06:09:05.017</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.193</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\folder1.png">
       <PackagePath>Assets\folder1.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-16T18:04:12.536</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\folder2.png">
       <PackagePath>Assets\folder2.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-16T18:16:55.279</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\folder3.png">
       <PackagePath>Assets\folder3.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-16T18:17:10.648</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\GraphImgDel.png">
       <PackagePath>Assets\GraphImgDel.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-07T13:27:54.176</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.193</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\edit.png">
       <PackagePath>Assets\Icons\edit.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-03T13:34:48.277</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\lock.png">
       <PackagePath>Assets\Icons\lock.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-11T05:35:52.109</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\moreInfo.png">
       <PackagePath>Assets\Icons\moreInfo.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-03T10:50:42.778</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\project.png">
       <PackagePath>Assets\Icons\project.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-04T08:55:50.836</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\salary.png">
       <PackagePath>Assets\Icons\salary.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-04T08:55:39.683</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\TaskCompleted.png">
       <PackagePath>Assets\Icons\TaskCompleted.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-05T17:13:35.979</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\TasknotCompleted.png">
       <PackagePath>Assets\Icons\TasknotCompleted.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-09-06T07:26:18.770</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\Icons\user.png">
       <PackagePath>Assets\Icons\user.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-11T05:35:52.110</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\logo.png">
       <PackagePath>Assets\logo.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T13:21:50.709</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\navImg.png">
       <PackagePath>Assets\navImg.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-16T22:00:36.385</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\nav\navImg1.png">
       <PackagePath>Assets\nav\navImg1.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-16T22:18:54.893</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\nav\navImg2.png">
       <PackagePath>Assets\nav\navImg2.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-16T22:18:40.482</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\nav\navImg3.png">
       <PackagePath>Assets\nav\navImg3.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-16T22:19:24.513</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\nav\navImg4.png">
       <PackagePath>Assets\nav\navImg4.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-16T22:19:30.740</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\nav\navImg5.png">
       <PackagePath>Assets\nav\navImg5.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-16T22:19:36.018</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\1.png">
       <PackagePath>Assets\ProfileImages\1.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-04T08:52:25.504</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\2.png">
       <PackagePath>Assets\ProfileImages\2.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-19T06:49:00.333</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\3.png">
       <PackagePath>Assets\ProfileImages\3.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-19T06:49:00.335</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\4.png">
       <PackagePath>Assets\ProfileImages\4.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-19T06:49:00.336</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.197</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\5.png">
       <PackagePath>Assets\ProfileImages\5.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-19T06:49:00.337</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImages\6.png">
       <PackagePath>Assets\ProfileImages\6.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-08-19T06:49:00.339</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\ProfileImg.png">
       <PackagePath>Assets\ProfileImg.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2023-07-30T14:18:03.992</Modified>
+=======
+      <Modified>2023-09-06T09:54:02.209</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
