@@ -3,6 +3,9 @@ using Microsoft.Maui.Controls;
 using NovaApp.Views;
 using Microsoft.Maui.Graphics;
 using System.Diagnostics;
+using NovaApp.Models;
+using NovaApp.ViewModels;
+using NovaApp.Services.Auth;
 
 namespace Nova
 {
@@ -45,29 +48,20 @@ namespace Nova
                 imageButton5.Opacity = 1;
         }
 
+        public UserData UserData { get; set; }
+
+        private MainPageViewModel MainPageViewModel;
+
         public MainPage()
         {
             InitializeComponent();
             NavigationPage.SetHasBackButton(this, false);
             NavigationPage.SetHasNavigationBar(this, false);
 
-            SetupPageContentAsync();
-
-        }
-
-        private async void SetupPageContentAsync()
-        {
-            string JWT = await SecureStorage.GetAsync("JWT") ?? string.Empty;
-
-            if (string.IsNullOrEmpty(JWT))
-            {
-                await Navigation.PushAsync(new LoginPage());
-            }
-            else
-            {
-                contentFrame.Content = new DashboardPage(); // Set the initial content to MyView1
-                SetActiveButton(buttonView1);
-            }
+            MainPageViewModel = new MainPageViewModel(new AuthRestService());
+            BindingContext = MainPageViewModel;
+            // check local storage
+            CheckForLoggedInUser();
         }
 
         private void OnView1Clicked(object sender, EventArgs e)
@@ -115,7 +109,20 @@ namespace Nova
         {
             // Navigate to the LoginPage
             SecureStorage.Remove("JWT");
-            SetupPageContentAsync();
+        }
+
+        private async void CheckForLoggedInUser()
+        {
+            var localDataCheck = await MainPageViewModel.GetLocalData();
+            if (localDataCheck)
+            {
+                contentFrame.Content = new DashboardPage();
+                SetActiveButton(buttonView1);
+                return;
+            }
+            await Navigation.PushAsync(new LoginPage());
+            return;
+
         }
 
         //private void OnLogInClicked(object sender, EventArgs e)

@@ -1,4 +1,6 @@
 using Nova;
+using NovaApp.Models;
+using NovaApp.ViewModels;
 using System.Diagnostics;
 using System.Text;
 using System.Text.Json;
@@ -10,56 +12,37 @@ public partial class LoginPage : ContentPage
 {
     static string BaseUrl = "http://localhost:3000";
     static HttpClient client = new HttpClient();
+
+    private MainPageViewModel MainPageViewModel;
     public LoginPage()
     {
         InitializeComponent();
         NavigationPage.SetHasBackButton(this, false);
         NavigationPage.SetHasNavigationBar(this, false);
+        MainPageViewModel = new MainPageViewModel(new Services.Auth.AuthRestService());
+        BindingContext = MainPageViewModel;
     }
 
-    private async void OnLoginButtonClicked(object sender, EventArgs e)
+    public async void OnLoginButtonClicked(object sender, EventArgs e)
     {
-        string username = UsernameEntry.Text;
-        string password = PasswordEntry.Text;
+        var email = EmailEntry.Text;
+        var password = PasswordEntry.Text;
+        await MainPageViewModel.onLogin(email, password);
+        CheckForLoggedInUser();
+    }
 
-        bool loginResult = await OnLogoutHandler(username, password);
-
-        if (loginResult)
+    private async void CheckForLoggedInUser()
+    {
+        var localDataCheck = await MainPageViewModel.GetLocalData();
+        if (localDataCheck)
         {
             await Navigation.PushAsync(new MainPage());
-            // Navigate to the dashboard or main page
+            return;
         }
-        else
-        {
-            await DisplayAlert("Login Failed", "Invalid credentials. Please try again.", "OK");
-        }
+        await Navigation.PushAsync(new LoginPage());
+        return;
+
     }
 
 
-
-
-    public async Task<bool> OnLogoutHandler(string username, string password)
-    {
-        if (username != null && password != null)
-        {
-            string loginUrl = $"{BaseUrl}/users/signin";
-
-            var postData = new { email = username, password = password };
-            string jsonData = JsonSerializer.Serialize(postData);
-            StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-
-            HttpResponseMessage response = await client.PostAsync(loginUrl, content);
-
-            string responseBody = await response.Content.ReadAsStringAsync();
-
-            Debug.WriteLine(responseBody);
-
-            string jwtToken = "your_jwt_token_here";
-
-            await SecureStorage.SetAsync("JWT", jwtToken);
-
-            return true; //Login Successful
-        }
-        return false;
-    }
 }

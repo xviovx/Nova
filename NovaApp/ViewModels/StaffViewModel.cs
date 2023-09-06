@@ -664,6 +664,11 @@ namespace NovaApp.ViewModels
             try
             {
                 var staff = await _restService.GetStaffByIdAsync(staffId);
+
+                // var staf tasks 
+
+                // get tasks
+
                 Debug.WriteLine("Running fetch staff by ID");
 
                 if (staff != null)
