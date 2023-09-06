@@ -209,5 +209,41 @@ namespace NovaApp.Services
 
             return TaskList;
         }
+
+
+        public async Task UpdateProjectAsync(string projectId, createProjectDto updatedProject)
+        {
+            try
+            {
+                Uri uri = new Uri($"{BaseUrl}projects/{projectId}"); // Construct the URI with the project's ID
+
+                string json = JsonSerializer.Serialize(updatedProject, _serializerOptions);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                // Create a new HttpRequestMessage with the HTTP Put method
+                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Put, uri);
+                request.Content = content; // Set the content of the request
+
+                HttpResponseMessage response = await _client.SendAsync(request); // Send the PUT request
+
+                Debug.WriteLine("PUT Request Sent to: " + uri); // Debug: Log PUT request
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine("Project successfully updated.");
+                }
+                else
+                {
+                    Debug.WriteLine("HTTP Status Code: " + response.StatusCode); // Debug: Log HTTP status code
+                    string responseContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine("Response Content: " + responseContent); // Debug: Log response content
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.ToString()); // Debug: Log the exception details
+            }
+        }
+
     }
 }

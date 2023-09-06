@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                  xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
              xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
              xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
              x:Class="NovaApp.Popups.Projects.UpdateProject"
              Title="UpdateProject"
              CloseWhenBackgroundIsClicked="True"
-             BindingContext="{Binding Source={x:Reference UpdateProject}, Path=BindingContext}">
+             BindingContext="{Binding Source={x:Reference _projectsViewModel}}">
+
     <mopups:PopupPage.Animation>
         <mopupsanim:ScaleAnimation
             DurationIn="400"
@@ -32,6 +33,7 @@
                                  BorderColor="Transparent"
                                  Padding="40"
                                  WidthRequest="610">
+
                 <VerticalStackLayout>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -39,26 +41,61 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <HorizontalStackLayout Grid.Row="0" Grid.Column="0">
-                            <Label Text="Add a New" FontSize="34" FontFamily="PoppinsLight"/>
-                            <Label Grid.Column="0" Margin="10,0,0,0" Text="Project" FontSize="34" FontAttributes="None" FontFamily="PoppinsSemibold"/>
+                            <Label Text="Update" FontSize="34" FontFamily="PoppinsLight"/>
+                            <Label Grid.Column="0" Margin="10,0,0,0" Text="Your Project" FontSize="34" FontAttributes="None" FontFamily="PoppinsSemibold"/>
                         </HorizontalStackLayout>
                         <Button
                             Margin="0,-10,0,0"
-                            Grid.Row="0" Grid.Column="1"
-                            Text="X"
-                            FontSize="30"
-                            FontAttributes="Bold"
-                            BackgroundColor="Transparent"
-                            TextColor="#000000"
-                            HorizontalOptions="End"
-                            Clicked="OnCloseButtonClicked" 
-                            ZIndex="10"/>
+                        Grid.Row="0" Grid.Column="1"
+                        Text="X"
+                        FontSize="30"
+                        FontAttributes="Bold"
+                        BackgroundColor="Transparent"
+                        TextColor="#000000"
+                        HorizontalOptions="End"
+                        Clicked="OnCloseButtonClicked" 
+                        ZIndex="10"/>
                     </Grid>
                     <Label Text="Lets add a new project and get busy working." Margin="0,-10,0,0" FontSize="16"/>
-                    <Label Text="Project Name" Margin="0,10,0,5" FontSize="14" />
-                    <Entry Placeholder="Project Name" BackgroundColor="LightGrey"/>
-                    <Label Text="Project Description" Margin="0,20,0,5" FontSize="14" />
-                    <Entry Placeholder="Description" BackgroundColor="LightGrey"/>
+                    <Label Text="Project Name" Margin="0,20,0,5" FontSize="14" />
+                    <Entry Placeholder="Project Name" BackgroundColor="White" Text="{Binding Title}" WidthRequest="405" HorizontalOptions="Start" x:Name="Title"/>
+                    <Label Margin="0,20,0,5" FontSize="14" Text="Description"/>
+                    <Editor Placeholder="Description" BackgroundColor="White" Text="{Binding Description}" HeightRequest="150" WidthRequest="405" HorizontalOptions="Start" x:Name="Description"/>
+                    <HorizontalStackLayout>
+                        <VerticalStackLayout>
+                            <Picker WidthRequest="200" HeightRequest="70" Margin="5,20,0,0" HorizontalOptions="Start" TitleColor="Black" TextColor="Black" BackgroundColor="White" 
+                            Title="Select Client Owner" 
+                            x:Name="PickerClientOwner"
+                            ItemsSource="{Binding ClientList}"
+                            ItemDisplayBinding="{Binding username}"
+                            SelectedItem="{Binding SelectedClient, Mode=TwoWay}" 
+                             SelectedIndexChanged="OnPickerClientOwnerSelectedIndexChanged"
+                            />
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout>
+                            <Label Text="Select deadline date" Margin="25,20,0,0" FontSize="14" />
+                            <DatePicker HorizontalOptions="FillAndExpand" Margin="25,5,0,0" Format="MMMM dd, yyyy" Date="{Binding DeadlineDate}" x:Name="DeadlineDate"
+                                BackgroundColor="White"
+                                MinimumDate="2023-09-15"
+                                MaximumDate="2025-12-31"
+                                TextColor="Black"
+                                FontSize="14">
+
+                            </DatePicker>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                    <Label Text="Project Cost" Margin="5,20,0,5" FontSize="14" />
+                    <Entry Placeholder="Project Cost" BackgroundColor="White" Text="{Binding BaseCost}" WidthRequest="200" HorizontalOptions="Start"  x:Name="BaseCost"/>
+
+                    <Button HorizontalOptions="End" VerticalOptions="End" Text="Update Project"     Command="{Binding UpdateProjectCommand}"
+    CommandParameter="{Binding SelectedProject}"
+                            FontSize="16"
+                            BackgroundColor="#84DCCF"
+                            TextColor="Black"
+                            ZIndex="10">
+                    </Button>
+
                 </VerticalStackLayout>
             </acrylic:AcrylicView>
         </StackLayout>

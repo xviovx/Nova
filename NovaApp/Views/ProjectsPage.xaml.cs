@@ -4,6 +4,7 @@ using Mopups.Services;
 using NovaApp.Popups.Projects;
 using NovaApp.Popups.Tasks;
 using System.Diagnostics;
+using NovaApp.Popups;
 
 namespace NovaApp.Views
 {
@@ -22,7 +23,7 @@ namespace NovaApp.Views
         public async void LoadProjects()
         {
             await ProjectsViewModel.FetchAllProjects();
-            await ProjectsViewModel.FetchProject(ProjectsViewModel.ProjectsList[0].id);
+            //await ProjectsViewModel.FetchProject(ProjectsViewModel.ProjectsList[0].id);
         }
 
         private void OnAddNewProjectClicked(object sender, EventArgs e)
@@ -48,11 +49,20 @@ namespace NovaApp.Views
             await ProjectsViewModel.FetchProject(clickedProjectId);
         }
 
+        private void OnEditTapped(object sender, EventArgs e)
+        {
+            var projectId = ProjectsViewModel.SelectedProject?.id;
+            if (projectId != null)
+            {
+                MopupService.Instance.PushAsync(new UpdateProject(projectId));
+            }
+        }
+
         private async void OnChangeTaskStatusClicked(object sender, EventArgs e)
         {
             var button = (ImageButton)sender;
             var clickedTaskId = (string)button.CommandParameter;
-            await ProjectsViewModel.ChangeTaskStatus(clickedTaskId);
+            //await ProjectsViewModel.ChangeTaskStatus(clickedTaskId);
         }
     }
 }
