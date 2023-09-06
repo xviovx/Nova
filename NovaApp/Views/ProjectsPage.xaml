@@ -118,7 +118,7 @@
                                 <Label FontSize="22" TextColor="White" FontFamily="PoppinsSemibold" Text="{Binding SelectedProject.title}" LineBreakMode="NoWrap"/>
                                 <Label FontSize="14" TextColor="White" Text="{Binding SelectedProject.clientOwner.username}" LineBreakMode="NoWrap"/>
                             </StackLayout>
-                            <ImageButton Clicked="OnUpdateProjectClicked" BackgroundColor="Transparent" Source="Assets/Icons/edit.png" WidthRequest="40" Grid.Column="2" Grid.Row="0" Margin="0,-10,0,0"  HorizontalOptions="End"/>
+                            <ImageButton BackgroundColor="Transparent" Source="Assets/Icons/edit.png" WidthRequest="40" Grid.Column="2" Grid.Row="0" Margin="0,-10,0,0"  HorizontalOptions="End"/>
                             
                         </Grid>
                         <Label TextColor="White" FontSize="14" Margin="-4,15,0,0" FontFamily="PoppinsSemibold" Text=" Description"/>
