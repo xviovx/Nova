@@ -14,7 +14,9 @@ namespace NovaApp.Models
         public DateTime deadlineDate { get; set; }
         public string deadlineDateString { get; set; }
         public string description { get; set; }
+        public List<TaskDisplay> jobs { get; set; }
         public ClientOwner clientOwner { get; set; }
+        public int progress { get; set; }
 
 
     }

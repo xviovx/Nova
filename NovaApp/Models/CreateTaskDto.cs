@@ -21,5 +21,14 @@ namespace NovaApp.Models
         public string assignedUserId { get; set; }
         public int workHours { get; set; }
         public string profileImage { get; set; }
+        public bool status { get; set; }
+        public AssignedUser assignedUser { get; set; }
+    }
+
+    public class AssignedUser
+    {
+        public string userId { get; set; }
+        public int profileImage { get; set; }
+        public string profileImageUrl { get; set; }
     }
 }

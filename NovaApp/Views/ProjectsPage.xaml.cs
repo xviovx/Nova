@@ -47,5 +47,12 @@ namespace NovaApp.Views
 
             await ProjectsViewModel.FetchProject(clickedProjectId);
         }
+
+        private async void OnChangeTaskStatusClicked(object sender, EventArgs e)
+        {
+            var button = (ImageButton)sender;
+            var clickedTaskId = (string)button.CommandParameter;
+            await ProjectsViewModel.ChangeTaskStatus(clickedTaskId);
+        }
     }
 }
