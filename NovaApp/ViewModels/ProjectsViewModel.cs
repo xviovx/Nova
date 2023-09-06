@@ -120,6 +120,15 @@ namespace NovaApp.ViewModels
             int progress = totalJobs == 0 ? 0 : completedJobs * 100 / totalJobs;
 
             Project.progress = progress;
+
+            // funds set up
+            var totalExpense = Project.funds.Sum(fund => fund.expenses);
+            var totalIincome = Project.funds.Sum(fund => fund.income);
+
+
+            Project.totalExpenses = totalExpense;
+            Project.totalIncome = totalIincome;
+
             SelectedProject = Project;
 
 
@@ -204,7 +213,7 @@ namespace NovaApp.ViewModels
                     description = Description,
                     deadlineDate = DeadlineDate,
                     clientOwner = SelectedClient.id,
-                    basecost = baseCostValue // Assign the parsed integer value
+                    baseCost = baseCostValue // Assign the parsed integer value
                 };
 
                 try

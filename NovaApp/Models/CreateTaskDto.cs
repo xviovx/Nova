@@ -11,11 +11,12 @@ namespace NovaApp.Models
         public string title { get; set; }
         public string description { get; set; }
         public string assignedUserId { get; set; }
-        public string workHours { get; set; }
+        public int workHours { get; set; }
     }
 
     public class TaskDisplay
     {
+        public string id { get; set; }
         public string title { get; set; }
         public string description { get; set; }
         public string assignedUserId { get; set; }

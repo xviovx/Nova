@@ -42,10 +42,10 @@ public partial class AddTask
         createTaskDto.title = TitleEntry.Text;
         createTaskDto.description = DescriptionEntry.Text;
         createTaskDto.assignedUserId = assignedUser;
-        createTaskDto.workHours = WorkHoursEntry.Text;
+        createTaskDto.workHours = int.Parse(WorkHoursEntry.Text);
 
         await taskService.SaveTaskAsync(createTaskDto, projectId);
-        MopupService.Instance.PopAllAsync();
+        // await MopupService.Instance.PopAllAsync();
     }
 
     

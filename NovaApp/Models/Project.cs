@@ -17,8 +17,20 @@ namespace NovaApp.Models
         public List<TaskDisplay> jobs { get; set; }
         public ClientOwner clientOwner { get; set; }
         public int progress { get; set; }
+        public List<FundItem> funds { get; set; }
+        public int totalExpenses { get; set; }
+        public int totalIncome { get; set; }
+
+        public int baseCost { get; set; }
 
 
+    }
+
+    public class FundItem
+    {
+        public string id { get; set; }
+        public int expenses { get; set; }
+        public int income { get; set; }
     }
 
     public class createProjectDto
@@ -27,7 +39,7 @@ namespace NovaApp.Models
         public string description { get; set; }
         public DateTime deadlineDate { get; set; }
         public string clientOwner { get; set; }
-        public int basecost { get; set; }
+        public int baseCost { get; set; }
     }
 
     public class ClientOwner
