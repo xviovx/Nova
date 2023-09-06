@@ -20,6 +20,7 @@ namespace NovaApp.ViewModels
 
         public ObservableCollection<Project> ProjectsList { get; set; }
 
+
         public ObservableCollection<TaskDisplay> TaskList { get; set; }
 
         public ObservableCollection<ClientOwner> ClientList { get; set; }
@@ -73,6 +74,27 @@ namespace NovaApp.ViewModels
             }
         }
 
+        private Client _selectedUser;
+
+        public Client SelectedUser
+        {
+            get { return _selectedUser; }
+            set
+            {
+                if (_selectedUser != value)
+                {
+                    _selectedUser = value;
+                    OnPropertyChanged(nameof(SelectedUser));
+                }
+            }
+        }
+
+        private string selectedClientID;
+        public string SelectedClientID
+        {
+            get { return selectedClientID; }
+            set { SetProperty(ref selectedClientID, value); }
+        }
 
         public ProjectsViewModel(ProjectsRestService projectsRestService)
         {
@@ -158,6 +180,69 @@ namespace NovaApp.ViewModels
 
 
         }
+
+        private List<Project> _filteredProjectsList;
+
+        public List<Project> FilteredProjectsList
+        {
+            get => _filteredProjectsList;
+            set
+            {
+                _filteredProjectsList = value;
+                OnPropertyChanged(nameof(FilteredProjectsList));
+            }
+        }
+
+
+        public async Task FilterProjectsByClient(string clientId)
+        {
+            // Fetch all projects
+            var items = await _projectsRestService.RefreshProjectsListAsync();
+            ProjectsList.Clear();
+            foreach (var item in items)
+            {
+                DateTime dateToConvert = item.deadlineDate;
+                var FormattedDate = dateToConvert.ToString("MMMM dd, yyyy");
+                item.deadlineDateString = FormattedDate;
+                int totalJobs = item.jobs.Count;
+                int completedJobs = item.jobs.Count(job => job.status);
+                int progress = totalJobs == 0 ? 0 : completedJobs * 100 / totalJobs;
+                item.progress = progress;
+                ProjectsList.Add(item);
+            }
+
+            Debug.WriteLine($"FilterProjectsByClient - clientId: {clientId}");
+
+            if (!string.IsNullOrEmpty(clientId))
+            {
+                Debug.WriteLine("FilterProjectsByClient - Filtering by client ID");
+
+                // Filter the projects by client ID
+                FilteredProjectsList = ProjectsList.Where(project =>
+                {
+                    Debug.WriteLine($"Project ID: {project.id}");
+                    Debug.WriteLine($"Client ID: {project.clientOwner?.id}");
+                    return project.clientOwner?.id == clientId;
+                }).ToList();
+
+                // Log the number of projects after filtering
+                Debug.WriteLine($"FilterProjectsByClient - Number of projects after filtering: {FilteredProjectsList.Count}");
+            }
+            else
+            {
+                Debug.WriteLine("FilterProjectsByClient - No client selected, showing all projects");
+
+                // Handle the case where no client is selected (show all projects)
+                FilteredProjectsList = ProjectsList.ToList(); // Copy all projects to filtered list
+
+                // Log the number of projects after clearing the filter
+                Debug.WriteLine($"FilterProjectsByClient - Number of projects after clearing the filter: {FilteredProjectsList.Count}");
+            }
+        }
+
+
+
+
 
         private Project _fetchedProjectData;
 

@@ -2,7 +2,8 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
-             x:Class="NovaApp.Views.ClientPage">
+             x:Class="NovaApp.Views.ClientPage"
+               xmlns:controls="clr-namespace:NovaApp.Controls">
     <Grid>
         <SearchBar x:Name="searchBar" Placeholder="SEARCH..."  Margin="0,-740,0,0"  HeightRequest="50" WidthRequest="300" HorizontalOptions="Start"
                        PlaceholderColor="#DF5353" FontSize="32"  IsTextPredictionEnabled="True" TextChanged="OnTextChanged"  />
@@ -148,7 +149,7 @@
                 Clicked="OnAddNewClicked"/>
 
                 <!-- Column 3, All Rows: Client Info Block (Right-aligned) -->
-                <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="310"          
+                <Border BackgroundColor="Transparent" StrokeThickness="0" WidthRequest="350"          
                 Grid.Row="0"
                 Grid.RowSpan="2"
                 Grid.Column="2"
@@ -163,13 +164,15 @@
                     <Frame 
                 BackgroundColor="#FF7070" 
                 CornerRadius="30" 
-                WidthRequest="310" 
+                WidthRequest="350" 
+                        Margin="-50,0,0,0"
                 HeightRequest="544" 
                 BorderColor="Transparent"
                 Grid.Row="0"
                 Grid.RowSpan="2"
                 Grid.Column="2"
                 HorizontalOptions="End">
+                        <ScrollView>
 
 
                         <StackLayout Orientation="Vertical">
@@ -252,9 +255,65 @@
                             </Label>
 
                             <!-- TODO: Horizontal Carousel -->
+                            <ScrollView Padding="10" Margin="0,0,0,0">
+                                    <CollectionView x:Name='ProjectList' ItemsSource="{Binding FilteredProjectsList}"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SelectionMode="Single">
+                                    <CollectionView.ItemTemplate>
 
+                                        <DataTemplate>
+
+                                            <Frame CornerRadius="20" BorderColor="White" BackgroundColor="White" Margin="0,25,0,0"  HeightRequest="250">
+
+                                                <StackLayout>
+
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label FontSize="20" FontFamily="PoppinsRegular" Text="{Binding title}" LineBreakMode="NoWrap"/>
+                                                        <Label FontSize="14" TextColor="#7D8DA6" Text="{Binding clientOwner.username}" Padding="0,30,0,0" LineBreakMode="NoWrap"/>
+                                                        <controls:CircularProgressBar
+                                                    Progress="40"
+                                                    ProgressColor="#FF7070"
+                                                    ProgressLeftColor="#E4F0FB"
+                                                    Size="50"
+                                                    Margin="200,0,0,0"
+                                                    TextColor="Black"
+                                                    Thickness="8" />
+
+                                                    </Grid>
+                                                    <BoxView Margin="10" Color="#E4F0FB" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+                                                    <VerticalStackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6" Text="Status"/>
+                                                            <Frame HorizontalOptions="EndAndExpand" VerticalOptions="Center" BorderColor="Transparent" CornerRadius="15" Padding="0" BackgroundColor="#D2F2EE" WidthRequest="100">
+                                                                <Label  Padding="5" TextColor="#54A69A" HorizontalTextAlignment="Center" Text="Status"/>
+                                                            </Frame>
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                                                            <Label VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6" Text="Assignee"/>
+                                                            <Grid  VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0,0,-35,0">
+                                                                <Image Source="Assets/ProfileImages/1.png" HeightRequest="40" ZIndex="3" Margin="0,0,80,0"  />
+                                                                <Image Source="Assets/ProfileImages/3.png" HeightRequest="40" ZIndex="2" Margin="0,0,40,0" />
+                                                                <Image Source="Assets/ProfileImages/2.png" HeightRequest="40" Margin="0,0,0,0"  />
+                                                            </Grid>
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                                                            <Label VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6"  Text="DeadLine"/>
+                                                            <Label HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6"  Text="{ Binding deadlineDateString }"/>
+                                                        </StackLayout>
+                                                    </VerticalStackLayout>
+                                                </StackLayout>
+                                            </Frame>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+
+                            </ScrollView>
 
                         </StackLayout>
+                        </ScrollView>
                     </Frame>
                 </Border>
             </Grid>

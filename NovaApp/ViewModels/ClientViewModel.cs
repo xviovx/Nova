@@ -162,7 +162,12 @@ namespace NovaApp.ViewModels
             return Regex.IsMatch(email, emailPattern);
         }
 
-
+        private string selectedClientID;
+        public string SelectedClientID
+        {
+            get { return selectedClientID; }
+            set { SetProperty(ref selectedClientID, value); }
+        }
 
         public async Task AddClient()
         {

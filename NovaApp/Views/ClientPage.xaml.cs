@@ -3,16 +3,23 @@ using NovaApp.Models;
 using NovaApp.Popups;
 using NovaApp.ViewModels;
 using System.Diagnostics;
+using NovaApp.Services;
+
 
 namespace NovaApp.Views
 {
     public partial class ClientPage : ContentView
     {
         private ClientViewModel _viewModel;
+        private ProjectsViewModel ProjectsViewModel;
 
         public ClientPage()
         {
             InitializeComponent();
+            ProjectsViewModel = new ProjectsViewModel(new Services.ProjectsRestService());
+
+            ProjectList.BindingContext = ProjectsViewModel;
+
             _viewModel = new ClientViewModel(new Services.RestService());
             BindingContext = _viewModel;
 
@@ -45,8 +52,17 @@ namespace NovaApp.Views
             if (clientId != null)
             {
                 await _viewModel.FetchClientById(clientId);
+                _viewModel.SelectedClientID = clientId; // Set the selected client's ID
+                ProjectsViewModel.FilterProjectsByClient(clientId); // Filter projects by client
+            }
+            else
+            {
+                // Clear the selection, show all projects
+                _viewModel.SelectedClientID = null;
+                ProjectsViewModel.FilterProjectsByClient(null); // Show all projects
             }
         }
+
 
         void OnTextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
         {
@@ -75,5 +91,13 @@ namespace NovaApp.Views
             }
         }
 
+        public async Task LoadAllProjects()
+        {
+            await ProjectsViewModel.FetchAllProjects(); // Call the FetchAllProjects method from your ProjectsViewModel
+        }
+
+
+
     }
+
 }
