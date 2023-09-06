@@ -59,6 +59,7 @@ namespace NovaApp.ViewModels
             UserData.email = email;
             UserData.password = password;
             await _authRestService.OnLogin(UserData);
+            await GetLocalData();
         }
     }
 }

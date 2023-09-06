@@ -48,7 +48,7 @@
             <!-- Add SearchBar and Logout Button as needed -->
 
             <!--Navigate to Sign In Page: x:Name="buttonView6" Text="Logout" Clicked="OnLogInClicked" Style="{StaticResource NoDefaultButtonStyle}" HorizontalOptions="Start" -->
-            <Button  Text="Logout" BorderColor="Transparent" VerticalOptions="CenterAndExpand"  Clicked="OnLogoutClicked"  Margin="1290,25,0,0" WidthRequest="120" CornerRadius="16"/>
+            <Button  Text="Logout" BorderColor="Transparent" VerticalOptions="CenterAndExpand"  Clicked="OnLogoutClicked"  Margin="1290,25,0,0" WidthRequest="120" CornerRadius="16" ZIndex="99"/>
         </StackLayout>
         
         <!-- Left navigation area -->

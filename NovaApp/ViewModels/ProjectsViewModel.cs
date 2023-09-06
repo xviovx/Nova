@@ -110,9 +110,9 @@ namespace NovaApp.ViewModels
                 ProjectsList.Add(item);
             }
             NumberOfProjects = ProjectsList.Count;
-            if (ProjectsList.Count == 1)
+            if (ProjectsList.Count >= 1)
             {
-                SelectedProject = ProjectsList[0];
+                SelectedProject = items[0];
             }
 
             Debug.WriteLine($"Number of projects fetched: {ProjectsList.Count}");
