@@ -19,7 +19,7 @@ namespace NovaApp.Views
         private DashboardViewModel viewModel;
         private StaffViewModel StaffViewModel;
         private ProjectsViewModel ProjectsViewModel;
-        //private ClientViewModel ClientViewModel;
+        private ClientViewModel ClientViewModel;
 
 
         //Project total count
@@ -35,18 +35,20 @@ namespace NovaApp.Views
             InitializeComponent();
             ProjectsViewModel = new ProjectsViewModel(new Services.ProjectsRestService());
             StaffViewModel = new StaffViewModel(new Services.RestService());
-            //ClientViewModel = new ClientViewModel(new Services.RestService());
+            ClientViewModel = new ClientViewModel(new Services.RestService());
 
             ShowStaffNum.BindingContext = StaffViewModel;
             ShowProjectNum.BindingContext = ProjectsViewModel;
             ProjectList.BindingContext = ProjectsViewModel;
+            ShowClientNum.BindingContext = ClientViewModel;
+
 
 
 
             BindingContext = ProjectsViewModel; //bind NumberOfProjects
             //this is the problem, when there is 2 binding
             BindingContext = StaffViewModel; //bind NumberOfStaff
-            //BindingContext = ClientViewModel;
+            BindingContext = ClientViewModel;
 
             LoadProjects();
 
@@ -84,7 +86,7 @@ namespace NovaApp.Views
         {
             await ProjectsViewModel.FetchAllProjects();
             await StaffViewModel.FetchAllStaff();
-            //await ClientViewModel.FetchAllClients();
+            await ClientViewModel.FetchAllClients();
 
         }
 

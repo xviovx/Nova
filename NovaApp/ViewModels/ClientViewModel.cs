@@ -59,24 +59,26 @@ namespace NovaApp.ViewModels
         }
 
         //Clientcount
-       // public int _numberOfClients;
-        //public int NumberOfClients
-        //{
-          //  get { return _numberOfClients; }
-            //set
-            //{
-              //  if (_numberOfClients != value)
-                //{
-                  //  _numberOfClients = value;
-                    //OnPropertyChanged(nameof(NumberOfClients));
-                //}
-            //}
-        //}
+            public int _numberOfClients;
+            public int NumberOfClients
+        {
+            get { return _numberOfClients; }
+            set
+            {
+                if (_numberOfClients != value)
+                {
+                    _numberOfClients = value;
+                    OnPropertyChanged(nameof(NumberOfClients));
+                }
+            }
+        }
 
         public ClientViewModel(RestService restService)
         {
             _restService = restService;
             ClientList = new ObservableCollection<Client>();
+            NumberOfClients = ClientList.Count;
+
 
             AddNewClientCommand = new Command(async () => await AddClient());
             UpdateClientCommand = new Command<string>(async (clientId) =>
@@ -246,6 +248,9 @@ namespace NovaApp.ViewModels
                 {
                     SelectedClient = client;
                 }
+                NumberOfClients = ClientList.Count;
+                Debug.WriteLine($"Number of staff fetched: {ClientList.Count}");
+
             }
         }
 

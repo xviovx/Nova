@@ -89,7 +89,7 @@
                     </Border.Shadow>
                     <Grid>
                         <Image Source="../Assets/folder2.png" Aspect="AspectFit" />
-                        <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
+                        <Frame x:Name='ShowClientNum' CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
                             <StackLayout Orientation="Vertical">
                                 <Grid>
                                     <Label Text="Clients" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="25,55,0,0" />
@@ -100,7 +100,7 @@
                                 <Label Text="Total Clients" FontSize="10" TextColor="#898989" Margin="25,0,0,0" />
 
                                 <!-- Total Number -->
-                                <Label Text="6" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
+                                <Label Text="{Binding NumberOfClients}" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
                             </StackLayout>
                         </Frame>
                     </Grid>
