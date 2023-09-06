@@ -30,29 +30,29 @@
     <AppXManifest Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-06T13:13:52.761</Modified>
+      <Modified>2023-09-06T15:46:12.706</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-09-06T13:13:52.563</Modified>
+      <Modified>2023-09-06T15:46:12.420</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.runtimeconfig.json">
       <PackagePath>NovaApp.runtimeconfig.json</PackagePath>
-      <Modified>2023-09-06T13:08:16.993</Modified>
+      <Modified>2023-09-06T15:45:05.742</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.dll">
       <PackagePath>NovaApp.dll</PackagePath>
-      <Modified>2023-09-06T13:13:51.091</Modified>
+      <Modified>2023-09-06T15:46:10.662</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NovaApp.exe</PackagePath>
-      <Modified>2023-09-06T13:13:51.173</Modified>
+      <Modified>2023-09-06T15:46:10.738</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NovaApp.deps.json">
       <PackagePath>NovaApp.deps.json</PackagePath>
-      <Modified>2023-09-06T13:08:16.880</Modified>
+      <Modified>2023-09-06T15:45:05.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.9\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -976,23 +976,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.622</Modified>
+      <Modified>2023-09-06T15:45:03.354</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.638</Modified>
+      <Modified>2023-09-06T15:45:03.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.654</Modified>
+      <Modified>2023-09-06T15:45:03.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.669</Modified>
+      <Modified>2023-09-06T15:45:03.405</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.763</Modified>
+      <Modified>2023-09-06T15:45:03.499</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OFL.txt">
       <PackagePath>OFL.txt</PackagePath>
@@ -1040,207 +1040,207 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-09-06T12:14:38.810</Modified>
+      <Modified>2023-09-06T15:45:03.515</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.999</Modified>
+      <Modified>2023-09-06T15:45:03.742</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-09-06T12:14:39.014</Modified>
+      <Modified>2023-09-06T15:45:03.742</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-09-06T12:14:39.030</Modified>
+      <Modified>2023-09-06T15:45:03.758</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-09-06T12:14:39.030</Modified>
+      <Modified>2023-09-06T15:45:03.773</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-09-06T12:14:39.091</Modified>
+      <Modified>2023-09-06T15:45:03.821</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.859</Modified>
+      <Modified>2023-09-06T15:45:03.593</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.859</Modified>
+      <Modified>2023-09-06T15:45:03.593</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.876</Modified>
+      <Modified>2023-09-06T15:45:03.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.873</Modified>
+      <Modified>2023-09-06T15:45:03.593</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.876</Modified>
+      <Modified>2023-09-06T15:45:03.593</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.851</Modified>
+      <Modified>2023-09-06T15:45:03.574</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.857</Modified>
+      <Modified>2023-09-06T15:45:03.579</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.859</Modified>
+      <Modified>2023-09-06T15:45:03.591</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.859</Modified>
+      <Modified>2023-09-06T15:45:03.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.859</Modified>
+      <Modified>2023-09-06T15:45:03.585</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.810</Modified>
+      <Modified>2023-09-06T15:45:03.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.826</Modified>
+      <Modified>2023-09-06T15:45:03.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.826</Modified>
+      <Modified>2023-09-06T15:45:03.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.826</Modified>
+      <Modified>2023-09-06T15:45:03.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.833</Modified>
+      <Modified>2023-09-06T15:45:03.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.833</Modified>
+      <Modified>2023-09-06T15:45:03.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.841</Modified>
+      <Modified>2023-09-06T15:45:03.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.851</Modified>
+      <Modified>2023-09-06T15:45:03.563</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.841</Modified>
+      <Modified>2023-09-06T15:45:03.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.841</Modified>
+      <Modified>2023-09-06T15:45:03.563</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.920</Modified>
+      <Modified>2023-09-06T15:45:03.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.920</Modified>
+      <Modified>2023-09-06T15:45:03.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.920</Modified>
+      <Modified>2023-09-06T15:45:03.655</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.936</Modified>
+      <Modified>2023-09-06T15:45:03.655</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.952</Modified>
+      <Modified>2023-09-06T15:45:03.674</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.890</Modified>
+      <Modified>2023-09-06T15:45:03.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.905</Modified>
+      <Modified>2023-09-06T15:45:03.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.905</Modified>
+      <Modified>2023-09-06T15:45:03.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.905</Modified>
+      <Modified>2023-09-06T15:45:03.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.920</Modified>
+      <Modified>2023-09-06T15:45:03.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.876</Modified>
+      <Modified>2023-09-06T15:45:03.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.890</Modified>
+      <Modified>2023-09-06T15:45:03.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.890</Modified>
+      <Modified>2023-09-06T15:45:03.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.890</Modified>
+      <Modified>2023-09-06T15:45:03.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.890</Modified>
+      <Modified>2023-09-06T15:45:03.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.952</Modified>
+      <Modified>2023-09-06T15:45:03.674</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.952</Modified>
+      <Modified>2023-09-06T15:45:03.687</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.967</Modified>
+      <Modified>2023-09-06T15:45:03.687</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.967</Modified>
+      <Modified>2023-09-06T15:45:03.705</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.999</Modified>
+      <Modified>2023-09-06T15:45:03.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.841</Modified>
+      <Modified>2023-09-06T15:45:03.515</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.851</Modified>
+      <Modified>2023-09-06T15:45:03.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.859</Modified>
+      <Modified>2023-09-06T15:45:03.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.876</Modified>
+      <Modified>2023-09-06T15:45:03.563</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-09-06T12:14:38.905</Modified>
+      <Modified>2023-09-06T15:45:03.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexa\OneDrive\Documents\GitHub\Nova\NovaApp\Assets\BackgroundImage.png">
       <PackagePath>Assets\BackgroundImage.png</PackagePath>

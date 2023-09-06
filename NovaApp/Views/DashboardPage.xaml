@@ -19,20 +19,13 @@
 
             <!-- Column 1, Row 1: Client Page Text -->
             <Label 
-                Text="Hello,"
+                Text="Hey There!"
                 Padding="20,15,20,0"
                 FontSize="40"
                 FontFamily="PoppinsSemibold"
                 Grid.Row="0"
                 Grid.Column="0" />
-            <Label 
-                Text="Jessica"
-                Padding="140,15,20,0"
-                FontSize="40"
-                FontAttributes="None"
-                FontFamily="PoppinsLight"
-                Grid.Row="0"
-                Grid.Column="0" />
+
 
             <!-- Column 1, Row 2: "Let's get an overview" Text -->
             <Label 
