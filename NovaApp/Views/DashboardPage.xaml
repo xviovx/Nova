@@ -170,16 +170,9 @@
                            Radius="20"
                            Opacity="1"/>
                     </Border.Shadow>
-                    <Frame 
-                    BackgroundColor="White" 
-                    CornerRadius="30" 
-                    WidthRequest="720" 
-                    HeightRequest="200" 
-                    BorderColor="Transparent"
-                    Grid.Row="0"
-                    Grid.RowSpan="2"
-                    Grid.Column="2"
-                    HorizontalOptions="End"/>
+                    <Frame CornerRadius="10" BackgroundColor="#FFFFFF" Padding="10" HorizontalOptions="Start" Margin="10,10,0,0" BorderColor="Transparent" WidthRequest="700" HeightRequest="180">
+                        <microcharts:ChartView x:Name="chartView"/>
+                    </Frame>
                 </Border>
             </Grid>
 
