@@ -56,7 +56,7 @@
                     </Border.Shadow>
                     <Grid>
                         <Image Source="../Assets/folder1.png"/>
-                        <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
+                        <Frame x:Name='ShowStaffNum' CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
                             <StackLayout Orientation="Vertical">
                                 <Grid>
                                     <Label Text="Staff" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="25,55,0,0" />
@@ -119,7 +119,7 @@
                     </Border.Shadow>
                     <Grid>
                         <Image Source="../Assets/folder3.png" Aspect="AspectFit" />
-                        <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
+                        <Frame x:Name='ShowProjectNum' CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
                             <StackLayout Orientation="Vertical">
                                 <Grid>
                                     <Label Text="Projects" FontSize="20" FontAttributes="Bold" Grid.Column="0" Margin="25,55,0,0" />
@@ -195,7 +195,7 @@
                     <Label   Padding="0,40,0,0" FontFamily="PoppinsLight" FontSize="12" Text="Here is a overview of all the projects"/>
 
                     <ScrollView Padding="10" Margin="0,50,0,0">
-                    <CollectionView ItemsSource="{Binding ProjectsList}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SelectionMode="Single">
+                        <CollectionView x:Name='ProjectList' ItemsSource="{Binding ProjectsList}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SelectionMode="Single">
                         <CollectionView.ItemTemplate>
                             
                             <DataTemplate>
