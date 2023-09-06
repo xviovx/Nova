@@ -57,17 +57,20 @@ namespace NovaApp.Services
 
                     // Log the successful response content
                     Debug.WriteLine("Successful Response Content: " + content);
-                }
+
+                } 
                 else
                 {
                     // Log error response content
                     string errorContent = await response.Content.ReadAsStringAsync();
                     Debug.WriteLine("Error Response Content: " + errorContent);
+
                 }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine("ERROR: " + ex.Message);
+
             }
 
             return Clients;
