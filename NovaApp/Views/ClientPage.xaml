@@ -34,7 +34,7 @@
 
                 <!-- Column 1, Row 2: "Let's get an overview" Text -->
                 <Label 
-                Text="Let's get an overview!"
+                Text="A comprehensive view of all our valued clients."
                 Padding="20,75,0,0"
                 FontSize="16"
                 Grid.Row="1"
@@ -242,10 +242,10 @@
                             <ProgressBar Progress="{Binding SelectedClient.availableHours}" Margin="0,10,0,0" HeightRequest="15" BackgroundColor="LightGray" ProgressColor="Black" />
 
 
-                            <Label Text="Current Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
+                            <Label Text="All Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="Current" FontSize="14" FontAttributes="Bold" />
+                                        <Span Text="All" FontSize="14" FontAttributes="Bold" />
                                         <Span Text=" Projects" FontSize="14" />
                                     </FormattedString>
                                 </Label.FormattedText>
@@ -253,16 +253,6 @@
 
                             <!-- TODO: Horizontal Carousel -->
 
-
-
-                            <Label Text="Past Projects" FontSize="14" HorizontalTextAlignment="Start" TextColor="White" Margin="0,20,0,0">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="Past" FontSize="14" FontAttributes="Bold" />
-                                        <Span Text=" Projects" FontSize="14" />
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
 
                         </StackLayout>
                     </Frame>

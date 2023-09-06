@@ -342,7 +342,7 @@ namespace NovaApp.ViewModels
         private bool IsValidPassword(string password)
         {
             // Example: Password must be at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one digit.
-            string passwordPattern = @"^.{8}$";
+            string passwordPattern = @"^.{8,}$"; // The '{8,}' specifies at least 8 characters
             return Regex.IsMatch(password, passwordPattern);
         }
 
