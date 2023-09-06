@@ -55,8 +55,7 @@
                            Opacity="1"/>
                     </Border.Shadow>
                     <Grid>
-                        <ImageButton Source="../Assets/folder1.png" Clicked="OnImageButtonClicked">
-                        </ImageButton>
+                        <Image Source="../Assets/folder1.png"/>
                         <Frame CornerRadius="20" BorderColor="Transparent" BackgroundColor="Transparent" Padding="0">
                             <StackLayout Orientation="Vertical">
                                 <Grid>

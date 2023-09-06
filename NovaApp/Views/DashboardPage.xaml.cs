@@ -12,12 +12,12 @@ namespace NovaApp.Views
 
 {
 
-    public partial class DashboardPage : ContentView //Client Total
+    public partial class DashboardPage : ContentView 
     {
 
         private ChartEntry[] receivedEntries;
         private DashboardViewModel viewModel;
-
+        private StaffViewModel StaffViewModel;
         private ProjectsViewModel ProjectsViewModel;
 
         //Project total count
@@ -32,6 +32,8 @@ namespace NovaApp.Views
         {
             InitializeComponent();
             ProjectsViewModel = new ProjectsViewModel(new Services.ProjectsRestService());
+            StaffViewModel = new StaffViewModel(new Services.RestService());
+
             BindingContext = ProjectsViewModel;
             LoadProjects();
 
@@ -68,6 +70,8 @@ namespace NovaApp.Views
         public async void LoadProjects()
         {
             await ProjectsViewModel.FetchAllProjects();
+            await StaffViewModel.FetchAllStaff();
+
         }
 
         private async void OnImageButtonClicked(object sender, EventArgs e)

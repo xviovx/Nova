@@ -12,6 +12,7 @@ namespace NovaApp.ViewModels
 
     {
         private ProjectsViewModel _projectsViewModel;
+
         public ObservableCollection<Project> Projects
         {
             get { return _projectsViewModel.ProjectsList; }
