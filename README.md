@@ -8,7 +8,7 @@
 
 <p align="center">
     <a href="https://github.com/xviovx/Nova">
-        <img src="nova/src/assets/logo.png" alt="Logo" width="230">
+        <img src="MockUps/logo.png" alt="Logo" width="230">
     </a>
 </p>
 
@@ -26,7 +26,7 @@
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
-![image0](mockups/2.png)
+![image0](./MockUps/1.png)
 
 ## About the Project
 
@@ -85,7 +85,7 @@ This project was developed using .NET MAUI.
 
 For more help on .NET MAUI and its development process, refer to the official .NET MAUI documentation.
 
-![image1](mockups/4.png)
+![image1](./MockUps/2.png)
 
 ## Development Process
 
@@ -99,7 +99,19 @@ Nova leverages the power of .NET MAUI to create a versatile and feature-rich man
 - Leveraged C# and XAML to create intuitive user interfaces.
 - Integrated SQLite for efficient data storage and retrieval.
 
-![image2](mockups/1.png)
+### Above and Beyond
+
+To ensure Nova was able to provide users with a seamless experience - we went above and beyond. Using the folloing:
+
+- Acrylic View NuGet Package
+- Mopups NuGet Package
+- Filter through funds
+- Drawable graphs
+- Search functionality
+- Create Tasks functionality
+- Custom navigation
+
+![image2](./MockUps/3.png)
 
 ### Core Functionalities
 
@@ -119,16 +131,42 @@ Nova's intuitive dashboard provides visual representations of project timelines,
 
 Nova facilitates client interactions by providing a dedicated page for clients to track project progress, and stay informed about the development process.
 
+### Specific Functionalities
+
+#### User Management 
+
+Nova Admins can securely perform login and logout actions, supported by hashed passwords to safeguard their information. Additionally, they have the ability to add and update users as required.
+
+#### Dashboard Overview 
+
+Nova's dashboard offers a comprehensive snapshot of the company's data, displaying key metrics such as client count, staff size, and project statistics. Additionally, it features a graphical representation of our annual financial performance and provides a convenient glimpse into our ongoing projects.
+
+#### Client Management
+
+Nova empowers you to effectively manage your clients by providing features that allow for easy searching, addition, updates, and deactivation. Furthermore, it offers a comprehensive overview of all their associated projects.
+
+
+#### Staff Management
+
+The staff page offers a comprehensive overview of the entire team, providing a centralized repository for storing their vital information. It enables effortless actions such as adding, searching, updating, and deactivating staff members.
+
+#### Project Management
+
+Nova simplifies project management by offering a seamless experience. You have the flexibility to add and update projects as needed, and you can assign tasks to different team members effortlessly. All the essential project information you require is readily available within the system.
+
+#### Finance Management
+
+Nova's funds page streamlines financial management, providing a comprehensive solution. Users can access an overview of all projects and their respective financial details, monitor the company's overall financial health, view a monthly breakdown of income and expenses through a graphical representation, and conveniently filter through the data for ease of use.
 
 ## Challenges, Highlights & Learnings
 
 ### Challenges
 
-Add challenges here
+Maui posed a substantial challenge for our team, with every member encountering their own set of difficulties. Moreover, establishing a connection with the backend proved to be a notably intricate task.
 
 ### Highlights
 
-Add highlightd here
+A highlight for all of us was the opportunity to acquire proficiency in a new framework. Despite its inherent complexity, we relished the challenge and firmly believe that it contributed to our growth as developers.
 
 ### Key Learnings
 
@@ -136,9 +174,9 @@ Nova's development journey emphasized the importance of thoughtful architecture,
 
 ## Future Enhancements
 
-In the future, Nova could explore enhancements such as ...
+In the future, we aspire to delve deeper into Nova's functionalities, including the capability to generate project notes. We would also like to ensure that Nova provides a seamless experience for all.
 
-![image4](mockups/3.png)
+![image4](./MockUps/4.png)
 
 Visit the [GitHub repository](https://github.com/xviovx/Nova) for an overview of proposed features and ongoing development (if applicable).
 
