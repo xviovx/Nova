@@ -24,11 +24,23 @@ namespace NovaApp.Views
             BindingContext = _viewModel;
 
             LoadClients(); // Call the LoadClients method in the constructor
+
+            // Check if there are clients loaded
+           
         }
 
         public async void LoadClients()
         {
             await _viewModel.FetchAllClients();
+            if (_viewModel.ClientList.Count > 0)
+            {
+                // Get the first client's ID
+                var firstClient = _viewModel.ClientList[0];
+                var firstClientId = firstClient?.id;
+
+                // Fetch projects and filter by the first client
+                await ProjectsViewModel.FilterProjectsByClient(firstClientId);
+            }
         }
 
         private void OnAddNewClicked(object sender, EventArgs e)
