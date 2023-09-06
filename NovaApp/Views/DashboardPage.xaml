@@ -70,7 +70,7 @@
                                 <Label Text="Total Staff" FontSize="10" TextColor="#898989" Margin="25,0,0,0" />
 
                                 <!-- Total Number -->
-                                <Label Text="{Binding TotalStaffText}" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
+                                <Label Text="{Binding NumberOfStaff}" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
                             </StackLayout>
                         </Frame>
                     </Grid>
@@ -100,7 +100,7 @@
                                 <Label Text="Total Clients" FontSize="10" TextColor="#898989" Margin="25,0,0,0" />
 
                                 <!-- Total Number -->
-                                <Label x:Name="totalClientsLabel" Text="{Binding TotalClientsText}" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
+                                <Label Text="{Binding NumberOfStaff}" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" Margin="0,0,20,50" FontFamily="PoppinsSemibold"/>
                             </StackLayout>
                         </Frame>
                     </Grid>

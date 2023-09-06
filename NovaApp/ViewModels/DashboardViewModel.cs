@@ -12,15 +12,28 @@ namespace NovaApp.ViewModels
 
     {
         private ProjectsViewModel _projectsViewModel;
+        private StaffViewModel _staffViewModel; //staff
 
         public ObservableCollection<Project> Projects
         {
             get { return _projectsViewModel.ProjectsList; }
         }
 
+        public ObservableCollection<Staff> Staff //staff
+        {
+            get { return _staffViewModel.StaffList; }
+        }
+
+
+
         public DashboardViewModel(ProjectsViewModel projectsViewModel)
         {
             _projectsViewModel = projectsViewModel;
+        }
+
+        public DashboardViewModel(StaffViewModel staffViewModel) //staff
+        {
+            _staffViewModel = staffViewModel;
         }
 
         public void PrintProjectTitles()

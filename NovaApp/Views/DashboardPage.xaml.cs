@@ -34,7 +34,10 @@ namespace NovaApp.Views
             ProjectsViewModel = new ProjectsViewModel(new Services.ProjectsRestService());
             StaffViewModel = new StaffViewModel(new Services.RestService());
 
-            BindingContext = ProjectsViewModel;
+            BindingContext = ProjectsViewModel; //this is the problem, when there is 2 binding
+            //BindingContext = StaffViewModel;
+
+
             LoadProjects();
 
             receivedEntries = new[]
