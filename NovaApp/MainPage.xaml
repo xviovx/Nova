@@ -87,9 +87,9 @@
 
 
             <StackLayout Orientation="Horizontal" Padding="20" VerticalOptions="Start" Margin="-46,225,0,0" >
-                <StackLayout VerticalOptions="CenterAndExpand" Spacing="5" Margin="10,0,0,0">
-                    <Label Text="{Binding UserData.username}" FontSize="14" />
-                    <Label Text="{Binding UserData.email}" TextColor="#AAAAAA" FontSize="14" />
+                <StackLayout  VerticalOptions="CenterAndExpand" Spacing="5" Margin="10,0,0,0">
+                    <Label x:Name="Username" Text="{Binding UserData.username}" FontSize="14" />
+                    <Label x:Name="Email" Text="{Binding UserData.email}" TextColor="#AAAAAA" FontSize="14" />
                 </StackLayout>
             </StackLayout>
 
