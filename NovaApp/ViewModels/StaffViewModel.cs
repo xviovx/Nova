@@ -161,6 +161,8 @@ namespace NovaApp.ViewModels
         {
             _restService = restService;
             StaffList = new ObservableCollection<Staff>();
+            NumberOfStaff = StaffList.Count;
+
 
             // Initialize PositionOptions
             PositionOptions = new ObservableCollection<string>
@@ -185,6 +187,20 @@ namespace NovaApp.ViewModels
                 Debug.WriteLine(staffId);
                 await DeactivateStaff(staffId);
             });
+        }
+
+        public int _numberOfStaff;
+        public int NumberOfStaff
+        {
+            get { return _numberOfStaff; }
+            set
+            {
+                if (_numberOfStaff != value)
+                {
+                    _numberOfStaff = value;
+                    OnPropertyChanged(nameof(NumberOfStaff));
+                }
+            }
         }
 
         private bool ValidateInput()
@@ -608,6 +624,9 @@ namespace NovaApp.ViewModels
                     {
                         SelectedStaff = staff;
                     }
+                    NumberOfStaff = StaffList.Count;
+                    Debug.WriteLine($"Number of staff fetched: {StaffList.Count}");
+
                 }
             }
             catch (Exception ex)
