@@ -22,7 +22,6 @@ namespace NovaApp.Views
         public async void LoadProjects()
         {
             await ProjectsViewModel.FetchAllProjects();
-            await ProjectsViewModel.FetchProject(ProjectsViewModel.ProjectsList[0].id);
         }
 
         private void OnAddNewProjectClicked(object sender, EventArgs e)
