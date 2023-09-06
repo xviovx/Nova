@@ -35,7 +35,7 @@
 
             <!-- Column 1, Row 2: "Let's get an overview" Text -->
             <Label 
-                Text="Let's get an overview!"
+                Text="A comprehensive overview of our staff members."
                 Padding="20,75,0,0"
                 FontSize="16"
                 Grid.Row="1"

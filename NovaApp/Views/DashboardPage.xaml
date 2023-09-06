@@ -187,7 +187,7 @@
 
             <!-- Column 3, All Rows: Client Info Block (Right-aligned) -->
 
-            <Frame BorderColor="Transparent" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" HorizontalOptions="End" Margin="0,0,15,0" HeightRequest="544" BackgroundColor="#FF7070" WidthRequest="380">
+            <Frame BorderColor="Transparent" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" HorizontalOptions="End" Margin="0,0,15,0" HeightRequest="544" BackgroundColor="#FF7070" WidthRequest="380" CornerRadius="30">
                 <Grid>
                     <Label Margin="0,0,0,0" FontFamily="PoppinsRegular" FontSize="22"  Text="Our"/>
                     <Label Margin="46,0,0,0" FontFamily="PoppinsSemibold" FontSize="22"  Text="Projects"/>
