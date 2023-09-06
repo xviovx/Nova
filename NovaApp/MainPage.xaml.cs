@@ -64,7 +64,12 @@ namespace Nova
             // check local storage
             CheckForLoggedInUser();
 
+            Username.BindingContext = MainPageViewModel;
+            Email.BindingContext = MainPageViewModel;
+
         }
+
+        
 
         private void OnView1Clicked(object sender, EventArgs e)
         {
