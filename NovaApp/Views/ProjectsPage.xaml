@@ -91,8 +91,28 @@
                                         <VerticalStackLayout Margin="0,20,0,0">
                                             <StackLayout Orientation="Horizontal">
                                                 <Label VerticalOptions="Center" FontSize="14" TextColor="#7D8DA6" Text="Status"/>
-                                                <Frame HorizontalOptions="EndAndExpand" VerticalOptions="Center" BorderColor="Transparent" CornerRadius="15" Padding="0" BackgroundColor="#D2F2EE" WidthRequest="100">
-                                                    <Label  Padding="5" TextColor="#54A69A" HorizontalTextAlignment="Center" Text="Status"/>
+                                                <Frame BackgroundColor="#E5E6C1" HorizontalOptions="EndAndExpand" VerticalOptions="Center" BorderColor="Transparent" CornerRadius="15" Padding="0" WidthRequest="100">
+                                                    <Frame.Triggers>
+                                                        <DataTrigger TargetType="Frame" Binding="{Binding progress}" Value="0">
+                                                            <Setter Property="BackgroundColor" Value="#E6C1C1" />
+                                                        </DataTrigger>
+                                                        <DataTrigger TargetType="Frame" Binding="{Binding progress}" Value="100">
+                                                            <Setter Property="BackgroundColor" Value="#C1E6E0" />
+                                                        </DataTrigger>
+                                                    </Frame.Triggers>
+                                                    <Label Padding="5" TextColor="#A6A254" Text="In Progress" HorizontalTextAlignment="Center">
+                                                        <Label.Triggers>
+                                                            <DataTrigger TargetType="Label" Binding="{Binding progress}" Value="0">
+                                                                <Setter Property="Text" Value="Not Started" />
+                                                                <Setter Property="TextColor" Value="#A65454" />
+                                                            </DataTrigger>
+                                                            <DataTrigger TargetType="Label" Binding="{Binding progress}" Value="100">
+                                                                <Setter Property="Text" Value="Finished" />
+                                                                <Setter Property="TextColor" Value="#54A69A" />
+
+                                                            </DataTrigger>
+                                                        </Label.Triggers>
+                                                    </Label>
                                                 </Frame>
                                             </StackLayout>
                                             <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
@@ -137,8 +157,27 @@
                         <VerticalStackLayout Margin="0,20,0,0">
                             <StackLayout Orientation="Horizontal">
                                 <Label VerticalOptions="Center" FontSize="14" TextColor="White" Text="Status"/>
-                                <Frame HorizontalOptions="EndAndExpand" VerticalOptions="Center" BorderColor="Transparent" CornerRadius="15" Padding="0" BackgroundColor="#D2F2EE" WidthRequest="100">
-                                    <Label  Padding="5" TextColor="#54A69A" HorizontalTextAlignment="Center" Text="Status"/>
+                                <Frame BackgroundColor="#E5E6C1"  HorizontalOptions="EndAndExpand" VerticalOptions="Center" BorderColor="Transparent" CornerRadius="15" Padding="5,0,5,0" WidthRequest="120" >
+                                    <Frame.Triggers>
+                                        <DataTrigger TargetType="Frame" Binding="{Binding SelectedProject.progress}" Value="0">
+                                            <Setter Property="BackgroundColor" Value="#E6C1C1" />
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Frame" Binding="{Binding SelectedProject.progress}" Value="100">
+                                            <Setter Property="BackgroundColor" Value="#C1E6E0" />
+                                        </DataTrigger>
+                                    </Frame.Triggers>
+                                    <Label Padding="5" TextColor="#A6A254" Text="In Progress" HorizontalTextAlignment="Center">
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding SelectedProject.progress}" Value="0">
+                                                <Setter Property="Text" Value="Not Started" />
+                                                <Setter Property="TextColor" Value="#A65454" />
+                                            </DataTrigger>
+                                            <DataTrigger TargetType="Label" Binding="{Binding SelectedProject.progress}" Value="100">
+                                                <Setter Property="Text" Value="Finished" />
+                                                <Setter Property="TextColor" Value="#54A69A" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
                                 </Frame>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal" Margin="0,20,0,0">

@@ -12,6 +12,7 @@ namespace NovaApp.ViewModels
     {
         public AuthRestService _authRestService { get; set; }
 
+
         private UserData _userDatat;
         public UserData UserData
         {
@@ -42,7 +43,6 @@ namespace NovaApp.ViewModels
             if (profileImage != null)
             {
                 UserData.profileImage = int.Parse(profileImage);
-                Debug.WriteLine("dawbdnouawd: ", UserData.profileImage.ToString());
 
             }
 

@@ -45,7 +45,7 @@ public partial class AddTask
         createTaskDto.workHours = int.Parse(WorkHoursEntry.Text);
 
         await taskService.SaveTaskAsync(createTaskDto, projectId);
-        // await MopupService.Instance.PopAllAsync();
+        await MopupService.Instance.PopAllAsync();
     }
 
     

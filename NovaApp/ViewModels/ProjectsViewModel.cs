@@ -2,6 +2,7 @@
 using NovaApp.Models;
 using NovaApp.Services;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -109,6 +110,10 @@ namespace NovaApp.ViewModels
                 ProjectsList.Add(item);
             }
             NumberOfProjects = ProjectsList.Count;
+            if (ProjectsList.Count == 1)
+            {
+                SelectedProject = ProjectsList[0];
+            }
 
             Debug.WriteLine($"Number of projects fetched: {ProjectsList.Count}");
         }
