@@ -58,6 +58,21 @@ namespace NovaApp.ViewModels
             }
         }
 
+        //Clientcount
+       // public int _numberOfClients;
+        //public int NumberOfClients
+        //{
+          //  get { return _numberOfClients; }
+            //set
+            //{
+              //  if (_numberOfClients != value)
+                //{
+                  //  _numberOfClients = value;
+                    //OnPropertyChanged(nameof(NumberOfClients));
+                //}
+            //}
+        //}
+
         public ClientViewModel(RestService restService)
         {
             _restService = restService;

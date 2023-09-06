@@ -189,6 +189,7 @@ namespace NovaApp.ViewModels
             });
         }
 
+        //staffcount
         public int _numberOfStaff;
         public int NumberOfStaff
         {
