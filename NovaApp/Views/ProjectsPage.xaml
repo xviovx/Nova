@@ -64,7 +64,7 @@
                                             </Grid.ColumnDefinitions>
                                             <StackLayout Grid.Column="0" VerticalOptions="Center">
                                                 <controls:CircularProgressBar
-                                                    Progress="40"
+                                                    Progress="{Binding progress}"
                                                     ProgressColor="#FF7070"
                                                     ProgressLeftColor="#E4F0FB"
                                                     Size="100"
@@ -114,16 +114,7 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="50"/>
                             </Grid.ColumnDefinitions>
-                            <StackLayout Grid.Column="0" VerticalOptions="Center">
-                                <controls:CircularProgressBar
-                                                    Progress="40"
-                                                    ProgressColor="#FF8D8D"
-                                                    ProgressLeftColor="#FFFFFF"
-                                                    Size="100"
-                                                    TextColor="White"
-                                                    Thickness="8" />
-                            </StackLayout>
-                            <StackLayout Orientation="Vertical" Margin="20,0,0,0" Grid.Column="1" Grid.Row="0" VerticalOptions="Center">
+                            <StackLayout Orientation="Vertical" Margin="0,0,0,0" Grid.Column="1" Grid.Row="0" VerticalOptions="Center">
                                 <Label FontSize="22" TextColor="White" FontFamily="PoppinsSemibold" Text="{Binding SelectedProject.title}" LineBreakMode="NoWrap"/>
                                 <Label FontSize="14" TextColor="White" Text="{Binding SelectedProject.clientOwner.username}" LineBreakMode="NoWrap"/>
                             </StackLayout>
@@ -203,14 +194,35 @@
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="40"/>
                                                 <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="40"/>
+                                                <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
-                                            <Image VerticalOptions="Start" Grid.Column="0" Source="Assets/ProfileImages/2.png" HeightRequest="40" Margin="0,0,0,0"  />
+                                            <Image VerticalOptions="Start" Grid.Column="0" Source="{Binding assignedUser.profileImage, StringFormat='Assets/ProfileImages/{0}.png'}" HeightRequest="40" Margin="0,0,0,0"  />
                                             <VerticalStackLayout Grid.Column="1" Margin="20,0,20,0">
-                                                <Label FontFamily="PoppinsSemibold" Text="Task Name"/>
-                                                <Label Text="task description danow;d aawd noadaw d awdaw dawd awd"/>
+                                                <Label FontFamily="PoppinsSemibold" Text="{Binding title}"/>
+                                                <Label Text="{Binding description}"/>
                                             </VerticalStackLayout>
-                                            <Image VerticalOptions="Start" Grid.Column="2" Margin="0,0,0,0" Source="Assets/Icons/TaskCompleted.png" HeightRequest="40"  />
+                                            <VerticalStackLayout Grid.Column="2">
+                                                <ImageButton CommandParameter="{Binding taskId}" Clicked="OnChangeTaskStatusClicked" BackgroundColor="Transparent" Margin="0,0,0,0" Source="Assets\Icons\TaskCompleted.png" HeightRequest="40"  >
+                                                    <ImageButton.Triggers>
+                                                        <DataTrigger TargetType="ImageButton" Binding="{Binding status}" Value="True">
+                                                            <Setter Property="IsVisible" Value="True" />
+                                                        </DataTrigger>
+                                                        <DataTrigger TargetType="ImageButton" Binding="{Binding status}" Value="False">
+                                                            <Setter Property="IsVisible" Value="False" />
+                                                        </DataTrigger>
+                                                    </ImageButton.Triggers>
+                                                </ImageButton>
+                                                <ImageButton CommandParameter="{Binding taskId}" Clicked="OnChangeTaskStatusClicked" BackgroundColor="Transparent" Margin="0,0,0,0" Source="Assets\Icons\TaskNotCompleted.png" HeightRequest="40"  >
+                                                    <ImageButton.Triggers>
+                                                        <DataTrigger TargetType="ImageButton" Binding="{Binding status}" Value="True">
+                                                            <Setter Property="IsVisible" Value="False" />
+                                                        </DataTrigger>
+                                                        <DataTrigger TargetType="ImageButton" Binding="{Binding status}" Value="False">
+                                                            <Setter Property="IsVisible" Value="True" />
+                                                        </DataTrigger>
+                                                    </ImageButton.Triggers>
+                                                </ImageButton>
+                                            </VerticalStackLayout>
                                         </Grid>
                                     </Frame>
                                 </DataTemplate>

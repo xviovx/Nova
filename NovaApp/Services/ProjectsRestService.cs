@@ -147,6 +147,35 @@ namespace NovaApp.Services
             }
         }
 
+        public async Task ChangeTaskStatus(string TaskId)
+        {
+            Uri uri = new Uri(string.Format(BaseUrl + "jobs/change-status/" + TaskId));
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(uri);
+
+                Debug.WriteLine("Request URI: " + uri.ToString());
+                Debug.WriteLine("Request Type: GET");
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+
+                    // Log the successful response content
+                    Debug.WriteLine("Successful Response Content: " + content);
+                }
+                else
+                {
+                    // Log error response content
+                    string errorContent = await response.Content.ReadAsStringAsync();
+                    Debug.WriteLine("Error Response Content: " + errorContent);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("ERROR: " + ex.Message);
+            }
+        }
+
         public async Task<List<TaskDisplay>> GetTaskList(string ProjectId)
         {
             TaskList = new List<TaskDisplay>();

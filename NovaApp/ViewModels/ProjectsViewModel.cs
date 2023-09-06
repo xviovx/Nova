@@ -96,6 +96,10 @@ namespace NovaApp.ViewModels
                 DateTime dateToConvert = item.deadlineDate;
                 var FormattedDate = dateToConvert.ToString("MMMM dd, yyyy");
                 item.deadlineDateString = FormattedDate;
+                int totalJobs = item.jobs.Count;
+                int completedJobs = item.jobs.Count(job => job.status);
+                int progress = totalJobs == 0 ? 0 : completedJobs * 100 / totalJobs;
+                item.progress = progress;
                 ProjectsList.Add(item);
             }
             NumberOfProjects = ProjectsList.Count;
@@ -110,8 +114,18 @@ namespace NovaApp.ViewModels
             DateTime dateToConvert = Project.deadlineDate;
             var FormattedDate = dateToConvert.ToString("MMMM dd, yyyy");
             Project.deadlineDateString = FormattedDate;
+
+            int totalJobs = Project.jobs.Count;
+            int completedJobs = Project.jobs.Count(job => job.status);
+            int progress = totalJobs == 0 ? 0 : completedJobs * 100 / totalJobs;
+
+            Project.progress = progress;
             SelectedProject = Project;
+
+
             Debug.WriteLine("project title: ", SelectedProject.title);
+
+
 
             // setup task list
 
@@ -222,8 +236,10 @@ namespace NovaApp.ViewModels
             }
         }
 
-
-
+        public async Task ChangeTaskStatus(string taskId)
+        {
+            await _projectsRestService.ChangeTaskStatus(taskId);
+        }
     }
 
 }
