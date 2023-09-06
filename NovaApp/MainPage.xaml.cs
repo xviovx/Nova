@@ -3,6 +3,9 @@ using Microsoft.Maui.Controls;
 using NovaApp.Views;
 using Microsoft.Maui.Graphics;
 using System.Diagnostics;
+using NovaApp.Models;
+using NovaApp.ViewModels;
+using NovaApp.Services.Auth;
 
 namespace Nova
 {
@@ -45,29 +48,22 @@ namespace Nova
                 imageButton5.Opacity = 1;
         }
 
+        public UserData UserData { get; set; }
+
+        private MainPageViewModel MainPageViewModel;
+
+
         public MainPage()
         {
             InitializeComponent();
             NavigationPage.SetHasBackButton(this, false);
             NavigationPage.SetHasNavigationBar(this, false);
 
-            SetupPageContentAsync();
+            MainPageViewModel = new MainPageViewModel(new AuthRestService());
+            BindingContext = MainPageViewModel;
+            // check local storage
+            CheckForLoggedInUser();
 
-        }
-
-        private async void SetupPageContentAsync()
-        {
-            string JWT = await SecureStorage.GetAsync("JWT") ?? string.Empty;
-
-            if (string.IsNullOrEmpty(JWT))
-            {
-                await Navigation.PushAsync(new LoginPage());
-            }
-            else
-            {
-                contentFrame.Content = new DashboardPage(); // Set the initial content to MyView1
-                SetActiveButton(buttonView1);
-            }
         }
 
         private void OnView1Clicked(object sender, EventArgs e)
@@ -111,11 +107,19 @@ namespace Nova
         //    contentFrame.Content = new SignInPage();
         //    SetActiveButton(buttonView7);
         //}
-        private void OnLogInClicked(object sender, EventArgs e)
+
+        private async void CheckForLoggedInUser()
         {
-            // Navigate to the LoginPage
-            SecureStorage.Remove("JWT");
-            SetupPageContentAsync();
+            var localDataCheck = await MainPageViewModel.GetLocalData();
+            if (localDataCheck)
+            {
+                contentFrame.Content = new DashboardPage();
+                SetActiveButton(buttonView1);
+                return;
+            }
+            await Navigation.PushAsync(new LoginPage());
+            return;
+
         }
 
         //private void OnLogInClicked(object sender, EventArgs e)
@@ -124,7 +128,13 @@ namespace Nova
         //contentFrame.Content = new LoginPage();
         //SetActiveButton(buttonView6);
         //}
-
+        
+        private void OnLogoutClicked(object sender, EventArgs e)
+        {
+            Debug.WriteLine("awdawdawda");
+            SecureStorage.RemoveAll();
+            CheckForLoggedInUser();
+        }
 
         private async void OnImageButtonClicked(object sender, EventArgs e)
         {

@@ -48,7 +48,7 @@
             <!-- Add SearchBar and Logout Button as needed -->
 
             <!--Navigate to Sign In Page: x:Name="buttonView6" Text="Logout" Clicked="OnLogInClicked" Style="{StaticResource NoDefaultButtonStyle}" HorizontalOptions="Start" -->
-            <Button  Text="Logout" BorderColor="Transparent" VerticalOptions="CenterAndExpand"  Clicked="OnLogInClicked"  Margin="1290,25,0,0" WidthRequest="120" CornerRadius="16"/>
+            <Button  Text="Logout" BorderColor="Transparent" VerticalOptions="CenterAndExpand"  Clicked="OnLogoutClicked"  Margin="1290,25,0,0" WidthRequest="120" CornerRadius="16"/>
         </StackLayout>
         
         <!-- Left navigation area -->
@@ -87,10 +87,9 @@
 
 
             <StackLayout Orientation="Horizontal" Padding="20" VerticalOptions="Start" Margin="-46,225,0,0" >
-                <Image Source="Assets/ProfileImg.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFit" VerticalOptions="CenterAndExpand" />
                 <StackLayout VerticalOptions="CenterAndExpand" Spacing="5" Margin="10,0,0,0">
-                    <Label Text="Staff Name" FontSize="14" />
-                    <Label Text="StaffEmail@gmail.com" TextColor="#AAAAAA" FontSize="14" />
+                    <Label Text="{Binding UserData.username}" FontSize="14" />
+                    <Label Text="{Binding UserData.email}" TextColor="#AAAAAA" FontSize="14" />
                 </StackLayout>
             </StackLayout>
 
