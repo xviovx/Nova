@@ -184,7 +184,7 @@ Visit the [GitHub repository](https://github.com/xviovx/Nova) for an overview of
 
 - **Alexa Pettitt** - [AlexaPea](https://github.com/AlexaPea)
 - **Caidyn Ginger** - [CaidynGinger](https://github.com/CaidynGinger)
-- **Kyle Pharogh** - [xviovx](https://github.com/xviovx)
+- **Kyle Pharoah** - [xviovx](https://github.com/xviovx)
 - **Anchen Ayres** - [anchenayres](https://github.com/anchenayres)
 
 ## License
